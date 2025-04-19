@@ -158,6 +158,7 @@ nav { z-index: 1100; }
 }
 
 .clock-container:hover {
+    cursor: pointer; /* 손가락 커서로 클릭 가능 표시 */
     transform: scale(1.5);
     z-index: 10;
 }
