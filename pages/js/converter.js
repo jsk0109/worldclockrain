@@ -571,44 +571,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function fetchWeather(city) {
-        const cacheKey = `${city.name}_${city.lat}_${city.lon}`;
-        const now = Date.now();
-        const cached = weatherCache[cacheKey];
-    
-        // 캐시 있으면 10분 내 데이터 재사용
-        if (cached && now - cached.timestamp < 600000) {
-            console.log('Using cached weather for', city.name);
+    const cacheKey = `${city.name}_${city.lat}_${city.lon}`;
+    const now = Date.now();
+    const cached = weatherCache[cacheKey];
+
+    if (cached && now - cached.timestamp < 600000) {
+        console.log('Using cached weather for', city.name);
+        return cached.data;
+    }
+
+    try {
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current_weather=true`;
+        console.log('Fetching weather:', url);
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+
+        if (!data.current_weather) throw new Error('No current weather data');
+
+        const weatherData = {
+            temp: Math.round(data.current_weather.temperature),
+            humidity: null  // 습도는 current_weather엔 없음!
+        };
+
+        weatherCache[cacheKey] = { data: weatherData, timestamp: now };
+        localStorage.setItem('weatherCache', JSON.stringify(weatherCache));
+        console.log('Saved to weatherCache:', weatherCache[cacheKey]);
+        return weatherData;
+    } catch (error) {
+        console.error('Weather fetch error:', error);
+        if (cached) {
+            console.log('Falling back to cached weather for', city.name);
             return cached.data;
         }
-    
-        try {
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m`;
-            console.log('Fetching weather:', url);
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            if (!data.current) throw new Error('No current weather data');
-    
-            const weatherData = {
-                temp: Math.round(data.current.temperature_2m),
-                humidity: data.current.relative_humidity_2m
-            };
-    
-            // 캐시에 저장
-            weatherCache[cacheKey] = { data: weatherData, timestamp: now };
-            localStorage.setItem('weatherCache', JSON.stringify(weatherCache));
-            console.log('Saved to weatherCache:', weatherCache[cacheKey]);
-            return weatherData;
-        } catch (error) {
-            console.error('Weather fetch error:', error);
-            // 캐시 있으면 에러 시 이전 데이터 반환
-            if (cached) {
-                console.log('Falling back to cached weather for', city.name);
-                return cached.data;
-            }
-            throw error;
-        }
+        throw error;
     }
+}
+
 
     // 도시 추가
     function addCity(city) {
