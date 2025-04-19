@@ -1,0 +1,1510 @@
+[
+  {
+    "name": "Dublin",
+    "timezone": "UTC+1 (IST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Silicon Docks, a tech hub with companies like Google and Facebook.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Guinness Storehouse",
+        "description": "A cultural experience with a rooftop bar, perfect for client entertainment.",
+        "proximityToBusinessDistrict": "15-minute drive from Silicon Docks"
+      },
+      {
+        "name": "Trinity College",
+        "description": "A historic university with the Book of Kells, ideal for a cultural outing.",
+        "proximityToBusinessDistrict": "10-minute drive from Silicon Docks"
+      }
+    ],
+    "localLifestyle": "Dubliners enjoy a lively pub culture, often socializing over pints after work.",
+    "localCulture": "Friendliness and humor are key; business culture values relationship-building.",
+    "signatureDish": "Irish Stew - A hearty lamb stew with potatoes and carrots.",
+    "networkingEvents": [
+      {
+        "name": "Dublin Tech Summit",
+        "date": "Jun 18-20, 2025 (tentative)",
+        "description": "A tech summit, offering networking with European startups."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; schedule meetings mid-morning for a relaxed pace."
+  },
+  {
+    "name": "Oslo",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Aker Brygge, a modern business district with tech and energy companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Oslo Opera House",
+        "description": "A stunning building, perfect for hosting clients at a performance.",
+        "proximityToBusinessDistrict": "5-minute walk from Aker Brygge"
+      },
+      {
+        "name": "Vigeland Sculpture Park",
+        "description": "A large park with sculptures, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Aker Brygge"
+      }
+    ],
+    "localLifestyle": "Oslovians value nature, often skiing or hiking in their free time.",
+    "localCulture": "Equality and transparency are key; business culture emphasizes collaboration.",
+    "signatureDish": "Rakfisk - Fermented fish, often served with flatbread and sour cream.",
+    "networkingEvents": [
+      {
+        "name": "Oslo Business Summit",
+        "date": "May 20-22, 2025 (tentative)",
+        "description": "A summit for professionals in energy and tech, offering networking with Norwegian firms."
+      }
+    ],
+    "businessTip": "Punctuality is crucial; arrive on time for all meetings."
+  },
+  {
+    "name": "Zurich",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Paradeplatz, the financial heart of Zurich, hosting major banks like UBS.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Lake Zurich",
+        "description": "A scenic lake, perfect for a business walk-and-talk or client outing.",
+        "proximityToBusinessDistrict": "10-minute drive from Paradeplatz"
+      },
+      {
+        "name": "Bahnhofstrasse",
+        "description": "A luxury shopping street, ideal for high-end client dinners or gift shopping.",
+        "proximityToBusinessDistrict": "5-minute walk from Paradeplatz"
+      }
+    ],
+    "localLifestyle": "Zurichers are efficient, often enjoying fondue dinners and lake activities.",
+    "localCulture": "Precision and professionalism are key; business culture values punctuality.",
+    "signatureDish": "Zürcher Geschnetzeltes - Veal in a creamy mushroom sauce, served with rösti.",
+    "networkingEvents": [
+      {
+        "name": "Zurich Business Summit",
+        "date": "Jun 25-27, 2025 (tentative)",
+        "description": "A summit for professionals in finance and tech, offering networking with Swiss firms."
+      }
+    ],
+    "businessTip": "Dress formally; punctuality is non-negotiable in Swiss business culture."
+  },
+  {
+    "name": "Athens",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Syntagma, the central business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Acropolis",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Syntagma"
+      },
+      {
+        "name": "Plaka",
+        "description": "A historic neighborhood with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "5-minute walk from Syntagma"
+      }
+    ],
+    "localLifestyle": "Athenians enjoy a relaxed pace, often dining late and socializing at tavernas.",
+    "localCulture": "Hospitality and warmth are key; expect personal conversations before business discussions.",
+    "signatureDish": "Moussaka - A layered dish with eggplant, minced meat, and béchamel sauce.",
+    "networkingEvents": [
+      {
+        "name": "Athens Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and shipping, offering networking with Greek firms."
+      }
+    ],
+    "businessTip": "Meetings may start with coffee; be open to casual conversation."
+  },
+  {
+    "name": "Prague",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Pankrác, a business district with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Prague Castle",
+        "description": "A historic castle, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Pankrác"
+      },
+      {
+        "name": "Old Town Square",
+        "description": "A historic square with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Pankrác"
+      }
+    ],
+    "localLifestyle": "Praguers enjoy a cultural lifestyle, often visiting beer gardens and attending concerts.",
+    "localCulture": "Politeness and formality are valued; use formal titles in business settings.",
+    "signatureDish": "Svíčková - Marinated beef with cream sauce and dumplings, a Czech classic.",
+    "networkingEvents": [
+      {
+        "name": "Prague Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Czech firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; arrive on time for all meetings."
+  },
+{
+  "name": "Budapest",
+  "timezone": "UTC+1 (CET), Daylight saving applies (Mar 30-Oct 26, 2025, UTC+2)",
+  "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+  "businessHub": "District V, the financial district with corporate offices and international firms.",
+  "topAttractionsForProfessionals": [
+    {
+      "name": "Buda Castle",
+      "description": "A historic castle, perfect for a cultural outing with clients.",
+      "proximityToBusinessDistrict": "10-minute drive from District V"
+    },
+    {
+      "name": "Danube Promenade",
+      "description": "A scenic riverside, ideal for a business walk-and-talk.",
+      "proximityToBusinessDistrict": "5-minute walk from District V"
+    }
+  ],
+  "localLifestyle": "Budapest residents enjoy a cultured lifestyle, often gathering for goulash or visiting thermal baths.",
+  "localCulture": "Hospitality and history are key; expect a warm but professional approach in business.",
+  "signatureDish": "Goulash - A hearty stew with beef, paprika, and vegetables.",
+  "networkingEvents": [
+    {
+      "name": "Budapest Business Forum",
+      "date": "May 15-17, 2025 (tentative)",
+      "description": "A forum for professionals in finance and tourism, offering networking with Hungarian firms."
+    }
+  ],
+  "businessTip": "Punctuality is expected; dress smartly for business meetings."
+},
+  {
+    "name": "Dublin",
+    "timezone": "UTC+1 (IST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Silicon Docks, a tech hub with companies like Google and Facebook.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Guinness Storehouse",
+        "description": "A cultural experience with a rooftop bar, perfect for client entertainment.",
+        "proximityToBusinessDistrict": "15-minute drive from Silicon Docks"
+      },
+      {
+        "name": "Trinity College",
+        "description": "A historic university with the Book of Kells, ideal for a cultural outing.",
+        "proximityToBusinessDistrict": "10-minute drive from Silicon Docks"
+      }
+    ],
+    "localLifestyle": "Dubliners enjoy a lively pub culture, often socializing over pints after work.",
+    "localCulture": "Friendliness and humor are key; business culture values relationship-building.",
+    "signatureDish": "Irish Stew - A hearty lamb stew with potatoes and carrots.",
+    "networkingEvents": [
+      {
+        "name": "Dublin Tech Summit",
+        "date": "Jun 18-20, 2025 (tentative)",
+        "description": "A tech summit, offering networking with European startups."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; schedule meetings mid-morning for a relaxed pace."
+  },
+  {
+    "name": "Oslo",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Aker Brygge, a modern business district with tech and energy companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Oslo Opera House",
+        "description": "A stunning building, perfect for hosting clients at a performance.",
+        "proximityToBusinessDistrict": "5-minute walk from Aker Brygge"
+      },
+      {
+        "name": "Vigeland Sculpture Park",
+        "description": "A large park with sculptures, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Aker Brygge"
+      }
+    ],
+    "localLifestyle": "Oslovians value nature, often skiing or hiking in their free time.",
+    "localCulture": "Equality and transparency are key; business culture emphasizes collaboration.",
+    "signatureDish": "Rakfisk - Fermented fish, often served with flatbread and sour cream.",
+    "networkingEvents": [
+      {
+        "name": "Oslo Business Summit",
+        "date": "May 20-22, 2025 (tentative)",
+        "description": "A summit for professionals in energy and tech, offering networking with Norwegian firms."
+      }
+    ],
+    "businessTip": "Punctuality is crucial; arrive on time for all meetings."
+  },
+  {
+    "name": "Zurich",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Paradeplatz, the financial heart of Zurich, hosting major banks like UBS.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Lake Zurich",
+        "description": "A scenic lake, perfect for a business walk-and-talk or client outing.",
+        "proximityToBusinessDistrict": "10-minute drive from Paradeplatz"
+      },
+      {
+        "name": "Bahnhofstrasse",
+        "description": "A luxury shopping street, ideal for high-end client dinners or gift shopping.",
+        "proximityToBusinessDistrict": "5-minute walk from Paradeplatz"
+      }
+    ],
+    "localLifestyle": "Zurichers are efficient, often enjoying fondue dinners and lake activities.",
+    "localCulture": "Precision and professionalism are key; business culture values punctuality.",
+    "signatureDish": "Zürcher Geschnetzeltes - Veal in a creamy mushroom sauce, served with rösti.",
+    "networkingEvents": [
+      {
+        "name": "Zurich Business Summit",
+        "date": "Jun 25-27, 2025 (tentative)",
+        "description": "A summit for professionals in finance and tech, offering networking with Swiss firms."
+      }
+    ],
+    "businessTip": "Dress formally; punctuality is non-negotiable in Swiss business culture."
+  },
+  {
+    "name": "Athens",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Syntagma, the central business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Acropolis",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Syntagma"
+      },
+      {
+        "name": "Plaka",
+        "description": "A historic neighborhood with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "5-minute walk from Syntagma"
+      }
+    ],
+    "localLifestyle": "Athenians enjoy a relaxed pace, often dining late and socializing at tavernas.",
+    "localCulture": "Hospitality and warmth are key; expect personal conversations before business discussions.",
+    "signatureDish": "Moussaka - A layered dish with eggplant, minced meat, and béchamel sauce.",
+    "networkingEvents": [
+      {
+        "name": "Athens Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and shipping, offering networking with Greek firms."
+      }
+    ],
+    "businessTip": "Meetings may start with coffee; be open to casual conversation."
+  },
+  {
+    "name": "Prague",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Pankrác, a business district with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Prague Castle",
+        "description": "A historic castle, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Pankrác"
+      },
+      {
+        "name": "Old Town Square",
+        "description": "A historic square with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Pankrác"
+      }
+    ],
+    "localLifestyle": "Praguers enjoy a cultural lifestyle, often visiting beer gardens and attending concerts.",
+    "localCulture": "Politeness and formality are valued; use formal titles in business settings.",
+    "signatureDish": "Svíčková - Marinated beef with cream sauce and dumplings, a Czech classic.",
+    "networkingEvents": [
+      {
+        "name": "Prague Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Czech firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; arrive on time for all meetings."
+  },
+  {
+    "name": "Budapest",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Váci Street, a commercial area with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Buda Castle",
+        "description": "A historic castle, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Váci Street"
+      },
+      {
+        "name": "Széchenyi Thermal Bath",
+        "description": "A famous thermal spa, ideal for a unique client experience.",
+        "proximityToBusinessDistrict": "20-minute drive from Váci Street"
+      }
+    ],
+    "localLifestyle": "Budapesters enjoy a vibrant lifestyle, often visiting ruin bars and thermal baths.",
+    "localCulture": "Hospitality and tradition are valued; expect a warm approach in business settings.",
+    "signatureDish": "Goulash - A hearty beef stew with paprika and vegetables.",
+    "networkingEvents": [
+      {
+        "name": "Budapest Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Hungarian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; bring a small gift like chocolate to meetings as a gesture."
+  },
+  {
+    "name": "Warsaw",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Śródmieście, the central business district with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Palace of Culture and Science",
+        "description": "A landmark building with event spaces, perfect for hosting clients.",
+        "proximityToBusinessDistrict": "Located in Śródmieście"
+      },
+      {
+        "name": "Old Town Market Square",
+        "description": "A historic square with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute walk from Śródmieście"
+      }
+    ],
+    "localLifestyle": "Warsaw residents enjoy a mix of modern and traditional, often visiting parks or dining on pierogi.",
+    "localCulture": "Formality and respect are key; use formal titles in initial business interactions.",
+    "signatureDish": "Pierogi - Dumplings filled with meat, cheese, or mushrooms, a Polish favorite.",
+    "networkingEvents": [
+      {
+        "name": "Warsaw Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in finance and tech, offering networking with Polish firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress conservatively for business meetings."
+  },
+  {
+    "name": "Vienna",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Donau City, a modern business district with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Schönbrunn Palace",
+        "description": "A historic palace, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Donau City"
+      },
+      {
+        "name": "Naschmarkt",
+        "description": "A vibrant market with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Donau City"
+      }
+    ],
+    "localLifestyle": "Viennese enjoy a cultured lifestyle, often attending concerts and sipping coffee at historic cafes.",
+    "localCulture": "Formality and tradition are valued; business culture emphasizes professionalism.",
+    "signatureDish": "Wiener Schnitzel - Breaded veal cutlet, often served with potato salad.",
+    "networkingEvents": [
+      {
+        "name": "Vienna Business Summit",
+        "date": "May 28-30, 2025 (tentative)",
+        "description": "A summit for professionals in finance and culture, offering networking with Austrian firms."
+      }
+    ],
+    "businessTip": "Punctuality is crucial; address colleagues with their titles in formal settings."
+  },
+  {
+    "name": "Bucharest",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Pipera, a tech and business hub with corporate offices and startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Palace of the Parliament",
+        "description": "A massive government building, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Pipera"
+      },
+      {
+        "name": "Old Town",
+        "description": "A historic area with restaurants, perfect for a business dinner.",
+        "proximityToBusinessDistrict": "15-minute drive from Pipera"
+      }
+    ],
+    "localLifestyle": "Bucharest residents enjoy a lively lifestyle, often dining out and attending cultural events.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Sarmale - Cabbage rolls stuffed with meat and rice, a Romanian classic.",
+    "networkingEvents": [
+      {
+        "name": "Bucharest Business Forum",
+        "date": "Jun 19-21, 2025 (tentative)",
+        "description": "A forum for professionals in tech and manufacturing, offering networking with Romanian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; bring a small gift like flowers to meetings as a gesture."
+  },
+  {
+    "name": "Sofia",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Mladost, a business district with tech companies and corporate offices.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Alexander Nevsky Cathedral",
+        "description": "A stunning cathedral, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Mladost"
+      },
+      {
+        "name": "Vitosha Boulevard",
+        "description": "A lively street with cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "20-minute drive from Mladost"
+      }
+    ],
+    "localLifestyle": "Sofians enjoy a relaxed pace, often hiking on Vitosha Mountain or dining on traditional meals.",
+    "localCulture": "Hospitality and tradition are valued; expect a warm approach in business settings.",
+    "signatureDish": "Banitsa - A flaky pastry filled with cheese and eggs, a Bulgarian favorite.",
+    "networkingEvents": [
+      {
+        "name": "Sofia Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Bulgarian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress conservatively for business meetings."
+  },
+  {
+    "name": "Belgrade",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "New Belgrade, a modern business district with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Belgrade Fortress",
+        "description": "A historic fortress, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from New Belgrade"
+      },
+      {
+        "name": "Skadarlija",
+        "description": "A bohemian street with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "10-minute drive from New Belgrade"
+      }
+    ],
+    "localLifestyle": "Belgraders enjoy a vibrant lifestyle, often gathering at kafanas (traditional restaurants) for music and food.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Ćevapi - Grilled minced meat sausages, often served with onions and bread.",
+    "networkingEvents": [
+      {
+        "name": "Belgrade Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tech and trade, offering networking with Serbian firms."
+      }
+    ],
+    "businessTip": "Meetings may start with rakija (a local spirit); be open to casual conversation."
+  },
+  {
+    "name": "Zagreb",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "West Gate, a business district with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Zagreb Cathedral",
+        "description": "A historic cathedral, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from West Gate"
+      },
+      {
+        "name": "Dolac Market",
+        "description": "A vibrant market with cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from West Gate"
+      }
+    ],
+    "localLifestyle": "Zagrebians enjoy a relaxed pace, often sipping coffee at outdoor cafes or visiting parks.",
+    "localCulture": "Politeness and warmth are valued; expect a friendly approach in business settings.",
+    "signatureDish": "Štrukli - A dough pastry filled with cheese, baked or boiled, a Croatian specialty.",
+    "networkingEvents": [
+      {
+        "name": "Zagreb Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Croatian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; schedule meetings mid-morning for a relaxed pace."
+  },
+  {
+    "name": "Ljubljana",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "BTC City, a business and commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Ljubljana Castle",
+        "description": "A historic castle, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from BTC City"
+      },
+      {
+        "name": "Triple Bridge",
+        "description": "A scenic spot with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from BTC City"
+      }
+    ],
+    "localLifestyle": "Ljubljanans enjoy a green lifestyle, often cycling along the Ljubljanica River or visiting markets.",
+    "localCulture": "Sustainability and collaboration are valued; business culture emphasizes transparency.",
+    "signatureDish": "Štruklji - Rolled dumplings with various fillings, a Slovenian favorite.",
+    "networkingEvents": [
+      {
+        "name": "Ljubljana Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in tech and tourism, offering networking with Slovenian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Bratislava",
+    "timezone": "UTC+2 (CEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Eurovea, a modern business district with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Bratislava Castle",
+        "description": "A historic castle, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Eurovea"
+      },
+      {
+        "name": "Old Town",
+        "description": "A charming area with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "5-minute walk from Eurovea"
+      }
+    ],
+    "localLifestyle": "Bratislavans enjoy a relaxed pace, often visiting cafes or exploring the Danube River.",
+    "localCulture": "Politeness and professionalism are valued; expect a formal approach in business.",
+    "signatureDish": "Bryndzové Halušky - Potato dumplings with sheep cheese and bacon.",
+    "networkingEvents": [
+      {
+        "name": "Bratislava Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and manufacturing, offering networking with Slovak firms."
+      }
+    ],
+    "businessTip": "Punctuality is crucial; address colleagues with their titles in formal settings."
+  },
+  {
+    "name": "Tallinn",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Ülemiste City, a tech hub with companies like Skype and other startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Alexander Nevsky Cathedral",
+        "description": "A historic cathedral, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Ülemiste City"
+      },
+      {
+        "name": "Old Town",
+        "description": "A UNESCO historic site with cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Ülemiste City"
+      }
+    ],
+    "localLifestyle": "Tallinners enjoy a digital lifestyle, often using tech for daily tasks and visiting saunas.",
+    "localCulture": "Innovation and efficiency are key; business culture values transparency.",
+    "signatureDish": "Kama - A traditional Estonian dish made from mixed grains, often served with yogurt.",
+    "networkingEvents": [
+      {
+        "name": "Tallinn Tech Summit",
+        "date": "Jun 19-21, 2025 (tentative)",
+        "description": "A tech summit, offering networking with Estonian startups."
+      }
+    ],
+    "businessTip": "Punctuality is expected; bring business cards for networking."
+  },
+  {
+    "name": "Riga",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Skanste, a modern business district with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Riga Old Town",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Skanste"
+      },
+      {
+        "name": "House of the Blackheads",
+        "description": "A historic building with event spaces, ideal for hosting clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Skanste"
+      }
+    ],
+    "localLifestyle": "Rigans enjoy a cultural lifestyle, often visiting markets or attending concerts.",
+    "localCulture": "Politeness and professionalism are valued; expect a formal approach in business.",
+    "signatureDish": "Rye Bread Soup - A sweet soup made from rye bread, often served with whipped cream.",
+    "networkingEvents": [
+      {
+        "name": "Riga Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in tech and trade, offering networking with Latvian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress conservatively for business meetings."
+  },
+  {
+    "name": "Vilnius",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Saltoniškės, a business district with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Gediminas Castle Tower",
+        "description": "A historic tower, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Saltoniškės"
+      },
+      {
+        "name": "Užupis",
+        "description": "An artistic district with cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Saltoniškės"
+      }
+    ],
+    "localLifestyle": "Vilnius residents enjoy a relaxed pace, often visiting parks or dining on cepelinai.",
+    "localCulture": "Hospitality and creativity are valued; expect a warm approach in business settings.",
+    "signatureDish": "Cepelinai - Potato dumplings filled with meat, often served with sour cream.",
+    "networkingEvents": [
+      {
+        "name": "Vilnius Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in tech and tourism, offering networking with Lithuanian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; schedule meetings mid-morning for a relaxed pace."
+  },
+  {
+    "name": "Kyiv",
+    "timezone": "UTC+3 (EEST), Daylight saving applies (Mar 30-Oct 26, 2025)",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Pecherskyi District, a business area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Saint Sophia's Cathedral",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Pecherskyi District"
+      },
+      {
+        "name": "Khreshchatyk Street",
+        "description": "A main street with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from Pecherskyi District"
+      }
+    ],
+    "localLifestyle": "Kyivans enjoy a vibrant lifestyle, often gathering at cafes or visiting parks.",
+    "localCulture": "Hospitality and resilience are key; expect a warm but formal approach in business.",
+    "signatureDish": "Borscht - A beet soup with sour cream, a Ukrainian classic.",
+    "networkingEvents": [
+      {
+        "name": "Kyiv Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and agriculture, offering networking with Ukrainian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; bring a small gift like chocolate to meetings as a gesture."
+  },
+  {
+    "name": "Minsk",
+    "timezone": "UTC+3 (MSK), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Nezavisimosti Avenue, a central business area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Library of Belarus",
+        "description": "A modern building with a viewing platform, perfect for a client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from Nezavisimosti Avenue"
+      },
+      {
+        "name": "Victory Square",
+        "description": "A historic square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from Nezavisimosti Avenue"
+      }
+    ],
+    "localLifestyle": "Minsk residents enjoy a quiet lifestyle, often visiting parks or dining on draniki.",
+    "localCulture": "Formality and respect are key; use formal titles in business settings.",
+    "signatureDish": "Draniki - Potato pancakes, often served with sour cream.",
+    "networkingEvents": [
+      {
+        "name": "Minsk Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tech and manufacturing, offering networking with Belarusian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress conservatively for business meetings."
+  },
+  {
+    "name": "Tbilisi",
+    "timezone": "UTC+4 (GET), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Vake, a commercial area with corporate offices and upscale dining.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Narikala Fortress",
+        "description": "A historic fortress, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Vake"
+      },
+      {
+        "name": "Rustaveli Avenue",
+        "description": "A main street with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Vake"
+      }
+    ],
+    "localLifestyle": "Tbilisians enjoy a social lifestyle, often gathering for supra feasts and wine tasting.",
+    "localCulture": "Hospitality and tradition are key; expect a warm, communal approach in business.",
+    "signatureDish": "Khachapuri - A cheese-filled bread, often with an egg on top.",
+    "networkingEvents": [
+      {
+        "name": "Tbilisi Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in tourism and trade, offering networking with Georgian firms."
+      }
+    ],
+    "businessTip": "Meetings may start with wine; be open to casual conversation."
+  },
+  {
+    "name": "Yerevan",
+    "timezone": "UTC+4 (AMT), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Kentron, the central business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Cascade Complex",
+        "description": "A cultural complex with art galleries, perfect for a client outing.",
+        "proximityToBusinessDistrict": "5-minute walk from Kentron"
+      },
+      {
+        "name": "Republic Square",
+        "description": "A historic square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from Kentron"
+      }
+    ],
+    "localLifestyle": "Yerevanians enjoy a social lifestyle, often gathering at cafes or visiting historical sites.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Khorovats - Grilled meat skewers, often served with lavash bread.",
+    "networkingEvents": [
+      {
+        "name": "Yerevan Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in tech and tourism, offering networking with Armenian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; bring a small gift like fruit to meetings as a gesture."
+  },
+  {
+    "name": "Baku",
+    "timezone": "UTC+4 (AZT), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Port Baku, a business district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Flame Towers",
+        "description": "Iconic skyscrapers with a viewing platform, perfect for a client meeting with a view.",
+        "proximityToBusinessDistrict": "5-minute drive from Port Baku"
+      },
+      {
+        "name": "Old City",
+        "description": "A UNESCO historic site with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "10-minute drive from Port Baku"
+      }
+    ],
+    "localLifestyle": "Baku residents enjoy a modern lifestyle, often gathering for tea or visiting the Caspian Sea.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Plov - A rice dish with lamb, dried fruits, and spices, an Azerbaijani favorite.",
+    "networkingEvents": [
+      {
+        "name": "Baku Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in energy and trade, offering networking with Azerbaijani firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Astana",
+    "timezone": "UTC+5 (ALMT), No daylight saving",
+    "timeDifference": "4 hours behind Seoul (UTC+9), 9 hours ahead of New York (UTC-4), 4 hours ahead of London (UTC+1)",
+    "businessHub": "Left Bank, a modern business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Bayterek Tower",
+        "description": "A landmark tower with a viewing platform, perfect for a client outing.",
+        "proximityToBusinessDistrict": "5-minute drive from Left Bank"
+      },
+      {
+        "name": "Khan Shatyr",
+        "description": "A unique tent-shaped mall with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Left Bank"
+      }
+    ],
+    "localLifestyle": "Astana residents enjoy a modern lifestyle, often visiting cultural sites or dining on traditional meals.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Beshbarmak - A noodle dish with boiled meat, often served on special occasions.",
+    "networkingEvents": [
+      {
+        "name": "Astana Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in energy and tech, offering networking with Kazakh firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; winters are cold, so schedule indoor meetings."
+  },
+  {
+    "name": "Tashkent",
+    "timezone": "UTC+5 (UZT), No daylight saving",
+    "timeDifference": "4 hours behind Seoul (UTC+9), 9 hours ahead of New York (UTC-4), 4 hours ahead of London (UTC+1)",
+    "businessHub": "Chilanzar, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Chorsu Bazaar",
+        "description": "A traditional market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "15-minute drive from Chilanzar"
+      },
+      {
+        "name": "Amir Timur Square",
+        "description": "A historic square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Chilanzar"
+      }
+    ],
+    "localLifestyle": "Tashkent residents enjoy a social lifestyle, often gathering for plov meals and tea.",
+    "localCulture": "Hospitality and tradition are key; expect a warm, communal approach in business.",
+    "signatureDish": "Plov - A rice dish with lamb, carrots, and spices, an Uzbek staple.",
+    "networkingEvents": [
+      {
+        "name": "Tashkent Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Uzbek firms."
+      }
+    ],
+    "businessTip": "Meetings may start with tea; be open to casual conversation."
+  },
+  {
+    "name": "Bishkek",
+    "timezone": "UTC+6 (KGT), No daylight saving",
+    "timeDifference": "3 hours behind Seoul (UTC+9), 10 hours ahead of New York (UTC-4), 5 hours ahead of London (UTC+1)",
+    "businessHub": "Ala-Too Square area, a central business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Osh Bazaar",
+        "description": "A traditional market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "10-minute drive from Ala-Too Square"
+      },
+      {
+        "name": "Panfilov Park",
+        "description": "A peaceful park, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute walk from Ala-Too Square"
+      }
+    ],
+    "localLifestyle": "Bishkek residents enjoy a relaxed pace, often gathering for shashlik meals and visiting mountains.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Shashlik - Grilled meat skewers, often served with bread and onions.",
+    "networkingEvents": [
+      {
+        "name": "Bishkek Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and tourism, offering networking with Kyrgyz firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; bring a small gift like nuts to meetings as a gesture."
+  },
+  {
+    "name": "Dushanbe",
+    "timezone": "UTC+5 (TJT), No daylight saving",
+    "timeDifference": "4 hours behind Seoul (UTC+9), 9 hours ahead of New York (UTC-4), 4 hours ahead of London (UTC+1)",
+    "businessHub": "Rudaki Avenue, a central business area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Museum of Tajikistan",
+        "description": "A cultural museum, ideal for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Rudaki Avenue"
+      },
+      {
+        "name": "Dushanbe Flagpole",
+        "description": "A scenic spot with nearby cafes, perfect for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from Rudaki Avenue"
+      }
+    ],
+    "localLifestyle": "Dushanbe residents enjoy a social lifestyle, often gathering for plov meals and tea.",
+    "localCulture": "Hospitality and tradition are key; expect a warm, communal approach in business.",
+    "signatureDish": "Qurutob - A bread dish with yogurt and vegetables, a Tajik specialty.",
+    "networkingEvents": [
+      {
+        "name": "Dushanbe Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Tajik firms."
+      }
+    ],
+    "businessTip": "Meetings may start with tea; be open to casual conversation."
+  },
+  {
+    "name": "Ashgabat",
+    "timezone": "UTC+5 (TMT), No daylight saving",
+    "timeDifference": "4 hours behind Seoul (UTC+9), 9 hours ahead of New York (UTC-4), 4 hours ahead of London (UTC+1)",
+    "businessHub": "Archabil Avenue, a business area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Independence Monument",
+        "description": "A landmark monument, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Archabil Avenue"
+      },
+      {
+        "name": "Ashgabat Park",
+        "description": "A peaceful park, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Archabil Avenue"
+      }
+    ],
+    "localLifestyle": "Ashgabat residents enjoy a quiet lifestyle, often gathering for traditional meals and visiting monuments.",
+    "localCulture": "Formality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Ishlykly - A stuffed dumpling, often served with yogurt sauce.",
+    "networkingEvents": [
+      {
+        "name": "Ashgabat Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Turkmen firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress conservatively for business meetings."
+  },
+  {
+    "name": "Ulaanbaatar",
+    "timezone": "UTC+8 (ULAT), No daylight saving",
+    "timeDifference": "1 hour behind Seoul (UTC+9), 12 hours ahead of New York (UTC-4), 7 hours ahead of London (UTC+1)",
+    "businessHub": "Sukhbaatar Square area, a central business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Chinggis Khaan Statue",
+        "description": "A massive statue, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "1-hour drive from Sukhbaatar Square"
+      },
+      {
+        "name": "Zaisan Memorial",
+        "description": "A scenic hill with a monument, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Sukhbaatar Square"
+      }
+    ],
+    "localLifestyle": "Ulaanbaatar residents enjoy a nomadic-influenced lifestyle, often gathering for buuz meals and visiting gers.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Buuz - Steamed dumplings filled with meat, a Mongolian favorite.",
+    "networkingEvents": [
+      {
+        "name": "Ulaanbaatar Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in mining and tourism, offering networking with Mongolian firms."
+      }
+    ],
+    "businessTip": "Winters are extremely cold; schedule indoor meetings and dress warmly."
+  },
+  {
+    "name": "Kathmandu",
+    "timezone": "UTC+5:45 (NPT), No daylight saving",
+    "timeDifference": "3 hours and 15 minutes behind Seoul (UTC+9), 9 hours and 45 minutes ahead of New York (UTC-4), 4 hours and 45 minutes ahead of London (UTC+1)",
+    "businessHub": "Thamel, a commercial area with corporate offices and tourism businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Swayambhunath Stupa",
+        "description": "A historic stupa, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Thamel"
+      },
+      {
+        "name": "Durbar Square",
+        "description": "A UNESCO historic site with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Thamel"
+      }
+    ],
+    "localLifestyle": "Kathmandu residents enjoy a spiritual lifestyle, often visiting temples or dining on momos.",
+    "localCulture": "Hospitality and respect are key; expect a warm, communal approach in business.",
+    "signatureDish": "Momo - Steamed dumplings filled with meat or vegetables, a Nepali favorite.",
+    "networkingEvents": [
+      {
+        "name": "Kathmandu Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with Nepali firms."
+      }
+    ],
+    "businessTip": "Traffic can be unpredictable; allow extra time for travel to meetings."
+  },
+  {
+    "name": "Thimphu",
+    "timezone": "UTC+6 (BTT), No daylight saving",
+    "timeDifference": "3 hours behind Seoul (UTC+9), 10 hours ahead of New York (UTC-4), 5 hours ahead of London (UTC+1)",
+    "businessHub": "Changzamtok, a commercial area with government offices and small businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Tashichho Dzong",
+        "description": "A historic fortress, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Changzamtok"
+      },
+      {
+        "name": "Buddha Dordenma",
+        "description": "A massive Buddha statue, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Changzamtok"
+      }
+    ],
+    "localLifestyle": "Thimphu residents enjoy a peaceful lifestyle, often practicing archery or visiting monasteries.",
+    "localCulture": "Respect for tradition is key; expect a calm, respectful approach in business.",
+    "signatureDish": "Ema Datshi - A spicy stew with chilies and cheese, a Bhutanese staple.",
+    "networkingEvents": [
+      {
+        "name": "Thimphu Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and agriculture, offering networking with Bhutanese firms."
+      }
+    ],
+    "businessTip": "Dress modestly; be open to cultural practices like offering a khata (scarf) during meetings."
+  },
+  {
+    "name": "Malé",
+    "timezone": "UTC+5 (MVT), No daylight saving",
+    "timeDifference": "4 hours behind Seoul (UTC+9), 9 hours ahead of New York (UTC-4), 4 hours ahead of London (UTC+1)",
+    "businessHub": "Hulhumalé, a business area with corporate offices and tourism businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Malé Friday Mosque",
+        "description": "A historic mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute ferry ride from Hulhumalé"
+      },
+      {
+        "name": "Hulhumalé Beach",
+        "description": "A scenic beach, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute walk from Hulhumalé"
+      }
+    ],
+    "localLifestyle": "Malé residents enjoy a tropical lifestyle, often fishing or gathering for seafood meals.",
+    "localCulture": "Respect for community is key; expect a warm, communal approach in business.",
+    "signatureDish": "Garudhiya - A fish soup with rice, often served with lime and chili.",
+    "networkingEvents": [
+      {
+        "name": "Malé Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with Maldivian firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during Friday prayers (12-2 PM)."
+  },
+  {
+    "name": "Colombo",
+    "timezone": "UTC+5:30 (SLST), No daylight saving",
+    "timeDifference": "3 hours and 30 minutes behind Seoul (UTC+9), 9 hours and 30 minutes ahead of New York (UTC-4), 4 hours and 30 minutes ahead of London (UTC+1)",
+    "businessHub": "Fort, the financial district of Colombo, hosting banks and corporate offices.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Galle Face Green",
+        "description": "A scenic promenade, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute walk from Fort"
+      },
+      {
+        "name": "Pettah Market",
+        "description": "A bustling market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "10-minute drive from Fort"
+      }
+    ],
+    "localLifestyle": "Colombo residents enjoy a vibrant lifestyle, often gathering for kottu roti meals and beach visits.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Kottu Roti - Chopped flatbread with vegetables, meat, and spices, a Sri Lankan favorite.",
+    "networkingEvents": [
+      {
+        "name": "Colombo Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in tourism and trade, offering networking with Sri Lankan firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Dhaka",
+    "timezone": "UTC+6 (BDT), No daylight saving",
+    "timeDifference": "3 hours behind Seoul (UTC+9), 10 hours ahead of New York (UTC-4), 5 hours ahead of London (UTC+1)",
+    "businessHub": "Gulshan, a commercial area with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Lalbagh Fort",
+        "description": "A historic fort, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Gulshan"
+      },
+      {
+        "name": "Hatirjheel Lake",
+        "description": "A scenic lake, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Gulshan"
+      }
+    ],
+    "localLifestyle": "Dhaka residents lead a busy lifestyle, often navigating traffic and enjoying street food like fuchka.",
+    "localCulture": "Respect for hierarchy is key; address senior colleagues formally in business settings.",
+    "signatureDish": "Biryani - A spiced rice dish with meat, a Bangladeshi favorite.",
+    "networkingEvents": [
+      {
+        "name": "Dhaka Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in textiles and trade, offering networking with Bangladeshi firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Islamabad",
+    "timezone": "UTC+5 (PKT), No daylight saving",
+    "timeDifference": "4 hours behind Seoul (UTC+9), 9 hours ahead of New York (UTC-4), 4 hours ahead of London (UTC+1)",
+    "businessHub": "Blue Area, the central business district with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Faisal Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Blue Area"
+      },
+      {
+        "name": "Daman-e-Koh",
+        "description": "A scenic hill with a view, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "20-minute drive from Blue Area"
+      }
+    ],
+    "localLifestyle": "Islamabad residents enjoy a calm lifestyle, often visiting parks or dining on traditional meals.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Nihari - A slow-cooked beef stew with spices, a Pakistani favorite.",
+    "networkingEvents": [
+      {
+        "name": "Islamabad Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and trade, offering networking with Pakistani firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during Friday prayers (12-2 PM)."
+  },
+  {
+    "name": "Kabul",
+    "timezone": "UTC+4:30 (AFT), No daylight saving",
+    "timeDifference": "4 hours and 30 minutes behind Seoul (UTC+9), 8 hours and 30 minutes ahead of New York (UTC-4), 3 hours and 30 minutes ahead of London (UTC+1)",
+    "businessHub": "Wazir Akbar Khan, a commercial area with corporate offices and embassies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Babur's Gardens",
+        "description": "A historic garden, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Wazir Akbar Khan"
+      },
+      {
+        "name": "Chicken Street",
+        "description": "A market street, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "10-minute drive from Wazir Akbar Khan"
+      }
+    ],
+    "localLifestyle": "Kabul residents lead a resilient lifestyle, often gathering for traditional meals and tea.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Kabuli Pulao - A rice dish with lamb, raisins, and carrots, an Afghan favorite.",
+    "networkingEvents": [
+      {
+        "name": "Kabul Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in trade and agriculture, offering networking with Afghan firms."
+      }
+    ],
+    "businessTip": "Dress modestly; be prepared for security considerations when scheduling meetings."
+  },
+  {
+    "name": "Tehran",
+    "timezone": "UTC+3:30 (IRST), Daylight saving applies (Mar 21-Sep 20, 2025)",
+    "timeDifference": "5 hours and 30 minutes behind Seoul (UTC+9), 7 hours and 30 minutes ahead of New York (UTC-4), 2 hours and 30 minutes ahead of London (UTC+1)",
+    "businessHub": "Valiasr Street, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Golestan Palace",
+        "description": "A historic palace, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Valiasr Street"
+      },
+      {
+        "name": "Grand Bazaar",
+        "description": "A traditional market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "10-minute drive from Valiasr Street"
+      }
+    ],
+    "localLifestyle": "Tehran residents enjoy a busy lifestyle, often gathering at cafes or visiting parks.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Ghormeh Sabzi - A herb stew with lamb and kidney beans, an Iranian favorite.",
+    "networkingEvents": [
+      {
+        "name": "Tehran Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in energy and trade, offering networking with Iranian firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during Friday prayers (12-2 PM)."
+  },
+  {
+    "name": "Baghdad",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Karrada, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Al-Mutanabbi Street",
+        "description": "A historic street with bookstores, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Karrada"
+      },
+      {
+        "name": "Baghdad Zoo",
+        "description": "A family-friendly spot, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Karrada"
+      }
+    ],
+    "localLifestyle": "Baghdad residents lead a resilient lifestyle, often gathering for traditional meals and tea.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Masgouf - Grilled carp, often seasoned with tamarind and spices, an Iraqi favorite.",
+    "networkingEvents": [
+      {
+        "name": "Baghdad Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Iraqi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; be prepared for security considerations when scheduling meetings."
+  },
+  {
+    "name": "Riyadh",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Olaya, the financial district of Riyadh, hosting banks and corporate offices.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kingdom Centre Tower",
+        "description": "A skyscraper with a skybridge, perfect for a client meeting with a view.",
+        "proximityToBusinessDistrict": "Located in Olaya"
+      },
+      {
+        "name": "Riyadh Season",
+        "description": "A cultural festival, ideal for client entertainment (seasonal).",
+        "proximityToBusinessDistrict": "20-minute drive from Olaya"
+      }
+    ],
+    "localLifestyle": "Riyadh residents enjoy a modern lifestyle, often gathering for coffee or visiting malls.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Kabsa - A spiced rice dish with lamb or chicken, a Saudi favorite.",
+    "networkingEvents": [
+      {
+        "name": "Riyadh Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in finance and energy, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Jeddah",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Al-Balad, a commercial area with corporate offices and trading companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Jeddah Corniche",
+        "description": "A scenic waterfront, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Al-Balad"
+      },
+      {
+        "name": "Al-Rajhi Grand Mosque",
+        "description": "A stunning mosque, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Al-Balad"
+      }
+    ],
+    "localLifestyle": "Jeddah residents enjoy a coastal lifestyle, often gathering for seafood meals and beach visits.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Saleeg - A creamy rice dish with chicken, a Jeddah specialty.",
+    "networkingEvents": [
+      {
+        "name": "Jeddah Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Dubai",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Downtown Dubai, a financial hub with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Burj Khalifa",
+        "description": "The tallest building in the world, perfect for a client meeting with a view.",
+        "proximityToBusinessDistrict": "Located in Downtown Dubai"
+      },
+      {
+        "name": "Dubai Marina",
+        "description": "A scenic waterfront with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "20-minute drive from Downtown Dubai"
+      }
+    ],
+    "localLifestyle": "Dubai residents enjoy a luxurious lifestyle, often shopping at malls or dining at high-end restaurants.",
+    "localCulture": "Hospitality and innovation are key; expect a professional approach in business settings.",
+    "signatureDish": "Shawarma - Grilled meat wrapped in flatbread with garlic sauce and pickles.",
+    "networkingEvents": [
+      {
+        "name": "Dubai Business Expo",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "An expo for professionals in finance and tech, offering networking with UAE firms."
+      }
+    ],
+    "businessTip": "Dress smartly; avoid scheduling meetings during Friday prayers (12-2 PM)."
+  },
+  {
+    "name": "Abu Dhabi",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Al Maryah Island, a financial hub with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sheikh Zayed Grand Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Al Maryah Island"
+      },
+      {
+        "name": "Emirates Palace",
+        "description": "A luxury hotel, ideal for high-end client meetings.",
+        "proximityToBusinessDistrict": "25-minute drive from Al Maryah Island"
+      }
+    ],
+    "localLifestyle": "Abu Dhabi residents enjoy a modern lifestyle, often visiting cultural sites or dining on traditional meals.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Harees - A wheat and meat porridge, often served during Ramadan.",
+    "networkingEvents": [
+      {
+        "name": "Abu Dhabi Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in energy and finance, offering networking with UAE firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Doha",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "West Bay, the financial district of Doha, hosting banks and corporate offices.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "The Pearl-Qatar",
+        "description": "A luxury waterfront, perfect for a business dinner.",
+        "proximityToBusinessDistrict": "10-minute drive from West Bay"
+      },
+      {
+        "name": "Museum of Islamic Art",
+        "description": "A cultural landmark, ideal for a client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from West Bay"
+      }
+    ],
+    "localLifestyle": "Doha residents enjoy a modern lifestyle, often gathering for coffee or visiting souqs.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Machboos - A spiced rice dish with meat, a Qatari favorite.",
+    "networkingEvents": [
+      {
+        "name": "Doha Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in energy and finance, offering networking with Qatari firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Kuwait City",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Sharq, a financial district with corporate offices and banks.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kuwait Towers",
+        "description": "Iconic towers with a viewing platform, perfect for a client meeting with a view.",
+        "proximityToBusinessDistrict": "10-minute drive from Sharq"
+      },
+      {
+        "name": "Souq Al-Mubarakiya",
+        "description": "A traditional market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "15-minute drive from Sharq"
+      }
+    ],
+    "localLifestyle": "Kuwait City residents enjoy a modern lifestyle, often gathering for coffee or visiting malls.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Machboos - A spiced rice dish with lamb or chicken, a Kuwaiti favorite.",
+    "networkingEvents": [
+      {
+        "name": "Kuwait City Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in energy and finance, offering networking with Kuwaiti firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Manama",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Seef, a financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Bahrain Fort",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Seef"
+      },
+      {
+        "name": "Bahrain Financial Harbour",
+        "description": "A modern complex with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from Seef"
+      }
+    ],
+    "localLifestyle": "Manama residents enjoy a modern lifestyle, often gathering for coffee or visiting souqs.",
+    "localCulture": "Hospitality and respect are key; expect a formal approach in business settings.",
+    "signatureDish": "Muhammar - Sweet rice with dates, a Bahraini favorite.",
+    "networkingEvents": [
+      {
+        "name": "Manama Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in finance and trade, offering networking with Bahraini firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Muscat",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Al Khuwair, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sultan Qaboos Grand Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Khuwair"
+      },
+      {
+        "name": "Muttrah Souq",
+        "description": "A traditional market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "20-minute drive from Al Khuwair"
+      }
+    ],
+    "localLifestyle": "Muscat residents enjoy a relaxed lifestyle, often gathering for coffee or visiting beaches.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Shuwa - Slow-cooked lamb wrapped in banana leaves, an Omani favorite.",
+    "networkingEvents": [
+      {
+        "name": "Muscat Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in energy and tourism, offering networking with Omani firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+  "name": "Amman",
+  "timezone": "UTC+3 (AST), No daylight saving",
+  "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+  "businessHub": "Shmeisani, a commercial area with corporate offices and banks.",
+  "topAttractionsForProfessionals": [
+    {
+      "name": "Roman Theatre",
+      "description": "A historic theatre, perfect for a cultural outing with clients.",
+      "proximityToBusinessDistrict": "15-minute drive from Shmeisani"
+    },
+    {
+      "name": "Rainbow Street",
+      "description": "A vibrant street with cafes and restaurants, ideal for a business lunch.",
+      "proximityToBusinessDistrict": "10-minute drive from Shmeisani"
+    }
+  ],
+  "localLifestyle": "Amman residents enjoy a social lifestyle, often gathering at cafes or visiting historical sites.",
+  "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+  "signatureDish": "Mansaf - A traditional dish of lamb cooked in fermented yogurt, served with rice.",
+  "networkingEvents": [
+    {
+      "name": "Amman Business Forum",
+      "date": "May 22-24, 2025 (tentative)",
+      "description": "A forum for professionals in trade and tourism, offering networking with Jordanian firms."
+    }
+  ],
+  "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+}
+]
