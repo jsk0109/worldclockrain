@@ -1,0 +1,1249 @@
+[
+  {
+    "name": "Durban",
+    "timezone": "UTC+2 (SAST), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Umhlanga, a commercial area with corporate offices and tourism businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "uShaka Marine World",
+        "description": "A marine theme park, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from Umhlanga"
+      },
+      {
+        "name": "Durban Beachfront",
+        "description": "A scenic promenade, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Umhlanga"
+      }
+    ],
+    "localLifestyle": "Durban residents enjoy a coastal lifestyle, often gathering for bunny chow or surfing.",
+    "localCulture": "Hospitality and vibrancy are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Bunny Chow - A hollowed-out bread loaf filled with curry, a Durban specialty.",
+    "networkingEvents": [
+      {
+        "name": "Durban Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with South African firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Casablanca",
+    "timezone": "UTC+1 (WEST), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Maarif, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Hassan II Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Maarif"
+      },
+      {
+        "name": "Corniche",
+        "description": "A scenic waterfront, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Maarif"
+      }
+    ],
+    "localLifestyle": "Casablanca residents enjoy a modern lifestyle, often gathering for couscous or visiting beaches.",
+    "localCulture": "Hospitality and professionalism are key; expect a formal approach in business settings.",
+    "signatureDish": "Couscous with Lamb - Steamed couscous with lamb and vegetables.",
+    "networkingEvents": [
+      {
+        "name": "Casablanca Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in trade and finance, offering networking with Moroccan firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Rabat",
+    "timezone": "UTC+1 (WEST), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Agdal, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kasbah of the Udayas",
+        "description": "A historic fortress, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Agdal"
+      },
+      {
+        "name": "Royal Palace",
+        "description": "A historic site, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Agdal"
+      }
+    ],
+    "localLifestyle": "Rabat residents enjoy a relaxed lifestyle, often gathering for tagine or visiting parks.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Tagine - A slow-cooked stew with meat, vegetables, and spices.",
+    "networkingEvents": [
+      {
+        "name": "Rabat Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in government and trade, offering networking with Moroccan firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Algiers",
+    "timezone": "UTC+1 (CET), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Bab Ezzouar, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Casbah of Algiers",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Bab Ezzouar"
+      },
+      {
+        "name": "Jardin d'Essai",
+        "description": "A botanical garden, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Bab Ezzouar"
+      }
+    ],
+    "localLifestyle": "Algiers residents enjoy a coastal lifestyle, often gathering for shakshuka or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Shakshuka - Poached eggs in a spiced tomato and pepper sauce.",
+    "networkingEvents": [
+      {
+        "name": "Algiers Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Algerian firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+  "name": "Tunis",
+  "timezone": "UTC+1 (CET), No daylight saving",
+  "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+  "businessHub": "Les Berges du Lac, a commercial area with corporate offices and tech companies.",
+  "topAttractionsForProfessionals": [
+    {
+      "name": "Medina of Tunis",
+      "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+      "proximityToBusinessDistrict": "15-minute drive from Les Berges du Lac"
+    },
+    {
+      "name": "Carthage Ruins",
+      "description": "Ancient ruins, ideal for a historical outing with clients.",
+      "proximityToBusinessDistrict": "20-minute drive from Les Berges du Lac"
+    }
+  ],
+  "localLifestyle": "Tunis residents enjoy a cultural lifestyle, often gathering for brik or visiting souks.",
+  "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+  "signatureDish": "Brik - A fried pastry with egg, tuna, and spices.",
+  "networkingEvents": [
+    {
+      "name": "Tunis Business Forum",
+      "date": "Jun 12-14, 2025 (tentative)",
+      "description": "A forum for professionals in trade and tourism, offering networking with Tunisian firms."
+    }
+  ],
+  "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+},
+  {
+    "name": "Durban",
+    "timezone": "UTC+2 (SAST), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Umhlanga, a commercial area with corporate offices and tourism businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "uShaka Marine World",
+        "description": "A marine theme park, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from Umhlanga"
+      },
+      {
+        "name": "Durban Beachfront",
+        "description": "A scenic promenade, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Umhlanga"
+      }
+    ],
+    "localLifestyle": "Durban residents enjoy a coastal lifestyle, often gathering for bunny chow or surfing.",
+    "localCulture": "Hospitality and vibrancy are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Bunny Chow - A hollowed-out bread loaf filled with curry, a Durban specialty.",
+    "networkingEvents": [
+      {
+        "name": "Durban Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with South African firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Casablanca",
+    "timezone": "UTC+1 (WEST), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Maarif, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Hassan II Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Maarif"
+      },
+      {
+        "name": "Corniche",
+        "description": "A scenic waterfront, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Maarif"
+      }
+    ],
+    "localLifestyle": "Casablanca residents enjoy a modern lifestyle, often gathering for couscous or visiting beaches.",
+    "localCulture": "Hospitality and professionalism are key; expect a formal approach in business settings.",
+    "signatureDish": "Couscous with Lamb - Steamed couscous with lamb and vegetables.",
+    "networkingEvents": [
+      {
+        "name": "Casablanca Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in trade and finance, offering networking with Moroccan firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Rabat",
+    "timezone": "UTC+1 (WEST), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Agdal, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kasbah of the Udayas",
+        "description": "A historic fortress, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Agdal"
+      },
+      {
+        "name": "Royal Palace",
+        "description": "A historic site, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Agdal"
+      }
+    ],
+    "localLifestyle": "Rabat residents enjoy a relaxed lifestyle, often gathering for tagine or visiting parks.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Tagine - A slow-cooked stew with meat, vegetables, and spices.",
+    "networkingEvents": [
+      {
+        "name": "Rabat Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in government and trade, offering networking with Moroccan firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Algiers",
+    "timezone": "UTC+1 (CET), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Bab Ezzouar, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Casbah of Algiers",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Bab Ezzouar"
+      },
+      {
+        "name": "Jardin d'Essai",
+        "description": "A botanical garden, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Bab Ezzouar"
+      }
+    ],
+    "localLifestyle": "Algiers residents enjoy a coastal lifestyle, often gathering for shakshuka or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Shakshuka - Poached eggs in a spiced tomato and pepper sauce.",
+    "networkingEvents": [
+      {
+        "name": "Algiers Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Algerian firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Tunis",
+    "timezone": "UTC+1 (CET), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Les Berges du Lac, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Medina of Tunis",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Les Berges du Lac"
+      },
+      {
+        "name": "Carthage Ruins",
+        "description": "Ancient ruins, ideal for a historical outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Les Berges du Lac"
+      }
+    ],
+    "localLifestyle": "Tunis residents enjoy a cultural lifestyle, often gathering for brik or visiting souks.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Brik - A fried pastry with egg, tuna, and spices.",
+    "networkingEvents": [
+      {
+        "name": "Tunis Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Tunisian firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Tripoli",
+    "timezone": "UTC+2 (EET), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Dahra, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Tripoli Old City",
+        "description": "A historic district, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "5-minute walk from Dahra"
+      },
+      {
+        "name": "Martyrs' Square",
+        "description": "A central square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from Dahra"
+      }
+    ],
+    "localLifestyle": "Tripoli residents enjoy a coastal lifestyle, often gathering for couscous or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Libyan Couscous - Steamed couscous with lamb and vegetables.",
+    "networkingEvents": [
+      {
+        "name": "Tripoli Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Libyan firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Cairo",
+    "timezone": "UTC+2 (EET), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "New Cairo, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Giza Pyramids",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "45-minute drive from New Cairo"
+      },
+      {
+        "name": "Khan el-Khalili",
+        "description": "A historic bazaar, ideal for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "30-minute drive from New Cairo"
+      }
+    ],
+    "localLifestyle": "Cairo residents lead a bustling lifestyle, often gathering for koshari or visiting the Nile.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Koshari - A street food mix of lentils, rice, pasta, and chickpeas with sauce.",
+    "networkingEvents": [
+      {
+        "name": "Cairo Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in trade and tourism, offering networking with Egyptian firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Alexandria",
+    "timezone": "UTC+2 (EET), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "San Stefano, a commercial area with corporate offices and tourism businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Bibliotheca Alexandrina",
+        "description": "A modern library, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from San Stefano"
+      },
+      {
+        "name": "Montaza Palace",
+        "description": "A historic palace with gardens, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from San Stefano"
+      }
+    ],
+    "localLifestyle": "Alexandria residents enjoy a coastal lifestyle, often gathering for seafood or visiting the Corniche.",
+    "localCulture": "Hospitality and history are key; expect a warm but formal approach in business.",
+    "signatureDish": "Seafood Platter - Fresh fish and shrimp, often grilled with spices.",
+    "networkingEvents": [
+      {
+        "name": "Alexandria Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Egyptian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Khartoum",
+    "timezone": "UTC+2 (CAT), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Al Amarat, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Museum of Sudan",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Amarat"
+      },
+      {
+        "name": "Nile Street",
+        "description": "A scenic riverside, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Al Amarat"
+      }
+    ],
+    "localLifestyle": "Khartoum residents enjoy a cultural lifestyle, often gathering for ful medames or visiting the Nile.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Ful Medames - Stewed fava beans with spices, often served with bread.",
+    "networkingEvents": [
+      {
+        "name": "Khartoum Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Sudanese firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Juba",
+    "timezone": "UTC+2 (CAT), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Hai Malakal, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Juba Bridge",
+        "description": "A scenic spot on the Nile, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Hai Malakal"
+      },
+      {
+        "name": "John Garang Mausoleum",
+        "description": "A historic site, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Hai Malakal"
+      }
+    ],
+    "localLifestyle": "Juba residents lead a resilient lifestyle, often gathering for kisra or visiting the Nile.",
+    "localCulture": "Hospitality and community are key; expect a warm but formal approach in business.",
+    "signatureDish": "Kisra with Stew - A sorghum flatbread with a meat or vegetable stew.",
+    "networkingEvents": [
+      {
+        "name": "Juba Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in energy and agriculture, offering networking with South Sudanese firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Riyadh",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Olaya, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kingdom Centre Tower",
+        "description": "A modern skyscraper with a sky bridge, perfect for a client outing.",
+        "proximityToBusinessDistrict": "Located in Olaya"
+      },
+      {
+        "name": "Riyadh Season",
+        "description": "A cultural festival, ideal for hosting clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Olaya"
+      }
+    ],
+    "localLifestyle": "Riyadh residents enjoy a modern lifestyle, often gathering for kabsa or visiting malls.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Kabsa - A spiced rice dish with lamb or chicken.",
+    "networkingEvents": [
+      {
+        "name": "Riyadh Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in finance and energy, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Jeddah",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Al Hamra, a commercial area with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Jeddah Corniche",
+        "description": "A scenic waterfront, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Al Hamra"
+      },
+      {
+        "name": "Al-Balad",
+        "description": "A UNESCO historic district, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Hamra"
+      }
+    ],
+    "localLifestyle": "Jeddah residents enjoy a coastal lifestyle, often gathering for shawarma or visiting the Red Sea.",
+    "localCulture": "Hospitality and openness are key; expect a warm but formal approach in business.",
+    "signatureDish": "Saleeg - A creamy rice dish with chicken, a Jeddah specialty.",
+    "networkingEvents": [
+      {
+        "name": "Jeddah Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Dammam",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Al Rajhi Tower area, a commercial area with corporate offices and energy companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Dammam Corniche",
+        "description": "A scenic waterfront, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Al Rajhi Tower area"
+      },
+      {
+        "name": "Al Marjan Island",
+        "description": "A man-made island, ideal for a casual client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Rajhi Tower area"
+      }
+    ],
+    "localLifestyle": "Dammam residents enjoy a coastal lifestyle, often gathering for machboos or visiting beaches.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Machboos - A spiced rice dish with fish or meat.",
+    "networkingEvents": [
+      {
+        "name": "Dammam Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Mecca",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Al Aziziyah, a commercial area with corporate offices and hospitality businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Abraj Al Bait",
+        "description": "A modern complex with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Al Aziziyah"
+      },
+      {
+        "name": "Jabal Ali",
+        "description": "A historic mountain, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Aziziyah"
+      }
+    ],
+    "localLifestyle": "Mecca residents lead a spiritual lifestyle, often gathering for prayer or traditional meals.",
+    "localCulture": "Hospitality and reverence are key; expect a formal approach in business settings.",
+    "signatureDish": "Haneeth - Slow-cooked lamb with spices, a Meccan specialty.",
+    "networkingEvents": [
+      {
+        "name": "Mecca Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in hospitality and trade, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times or Hajj season."
+  },
+  {
+    "name": "Medina",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Central Area, a commercial area with corporate offices and hospitality businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Quba Mosque",
+        "description": "A historic mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Central Area"
+      },
+      {
+        "name": "Al Madinah International Market",
+        "description": "A modern market, ideal for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "15-minute drive from Central Area"
+      }
+    ],
+    "localLifestyle": "Medina residents lead a spiritual lifestyle, often gathering for prayer or traditional meals.",
+    "localCulture": "Hospitality and reverence are key; expect a formal approach in business settings.",
+    "signatureDish": "Yaghmush - A creamy dish with bread and meat, a Medina specialty.",
+    "networkingEvents": [
+      {
+        "name": "Medina Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in hospitality and trade, offering networking with Saudi firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times or Ramadan."
+  },
+  {
+    "name": "Dubai",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Downtown Dubai, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Burj Khalifa",
+        "description": "The tallest building in the world, perfect for a client outing.",
+        "proximityToBusinessDistrict": "Located in Downtown Dubai"
+      },
+      {
+        "name": "Dubai Marina",
+        "description": "A scenic waterfront, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "20-minute drive from Downtown Dubai"
+      }
+    ],
+    "localLifestyle": "Dubai residents enjoy a luxurious lifestyle, often gathering for shawarma or visiting malls.",
+    "localCulture": "Hospitality and ambition are key; expect a professional approach in business settings.",
+    "signatureDish": "Al Harees - A slow-cooked dish with wheat and meat.",
+    "networkingEvents": [
+      {
+        "name": "Dubai Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in finance and tech, offering networking with Emirati firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Abu Dhabi",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Al Maryah Island, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sheikh Zayed Grand Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Al Maryah Island"
+      },
+      {
+        "name": "Corniche",
+        "description": "A scenic waterfront, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Maryah Island"
+      }
+    ],
+    "localLifestyle": "Abu Dhabi residents enjoy a modern lifestyle, often gathering for luqaimat or visiting beaches.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Luqaimat - Sweet dumplings drizzled with date syrup.",
+    "networkingEvents": [
+      {
+        "name": "Abu Dhabi Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in energy and finance, offering networking with Emirati firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Sharjah",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Al Majaz, a commercial area with corporate offices and cultural businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sharjah Museum of Islamic Civilization",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Al Majaz"
+      },
+      {
+        "name": "Al Noor Island",
+        "description": "A scenic island, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Majaz"
+      }
+    ],
+    "localLifestyle": "Sharjah residents enjoy a cultural lifestyle, often gathering for shawarma or visiting museums.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Mandi - A spiced rice dish with meat, slow-cooked in a pit.",
+    "networkingEvents": [
+      {
+        "name": "Sharjah Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in culture and trade, offering networking with Emirati firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Doha",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "West Bay, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "The Pearl-Qatar",
+        "description": "A luxurious island, perfect for a business dinner.",
+        "proximityToBusinessDistrict": "10-minute drive from West Bay"
+      },
+      {
+        "name": "Souq Waqif",
+        "description": "A traditional market, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from West Bay"
+      }
+    ],
+    "localLifestyle": "Doha residents enjoy a modern lifestyle, often gathering for machboos or visiting the Corniche.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Machboos - A spiced rice dish with chicken or lamb.",
+    "networkingEvents": [
+      {
+        "name": "Doha Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in energy and finance, offering networking with Qatari firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Kuwait City",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Sharq, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kuwait Towers",
+        "description": "An iconic landmark, perfect for a client outing.",
+        "proximityToBusinessDistrict": "10-minute drive from Sharq"
+      },
+      {
+        "name": "Souk Al-Mubarakiya",
+        "description": "A traditional market, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Sharq"
+      }
+    ],
+    "localLifestyle": "Kuwait City residents enjoy a modern lifestyle, often gathering for kabsa or visiting the Gulf.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Kabsa - A spiced rice dish with chicken or lamb.",
+    "networkingEvents": [
+      {
+        "name": "Kuwait City Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in energy and finance, offering networking with Kuwaiti firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Manama",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Seef District, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Bahrain National Museum",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Seef District"
+      },
+      {
+        "name": "Manama Souq",
+        "description": "A traditional market, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Seef District"
+      }
+    ],
+    "localLifestyle": "Manama residents enjoy a modern lifestyle, often gathering for machboos or visiting the Gulf.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Machboos - A spiced rice dish with fish or chicken.",
+    "networkingEvents": [
+      {
+        "name": "Manama Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in finance and trade, offering networking with Bahraini firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Muscat",
+    "timezone": "UTC+4 (GST), No daylight saving",
+    "timeDifference": "5 hours behind Seoul (UTC+9), 8 hours ahead of New York (UTC-4), 3 hours ahead of London (UTC+1)",
+    "businessHub": "Al Khuwair, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sultan Qaboos Grand Mosque",
+        "description": "A stunning mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Al Khuwair"
+      },
+      {
+        "name": "Muttrah Souq",
+        "description": "A traditional market, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Al Khuwair"
+      }
+    ],
+    "localLifestyle": "Muscat residents enjoy a coastal lifestyle, often gathering for shuwa or visiting beaches.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Shuwa - Slow-cooked lamb with spices, wrapped in banana leaves.",
+    "networkingEvents": [
+      {
+        "name": "Muscat Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in energy and tourism, offering networking with Omani firms."
+      }
+    ],
+    "businessTip": "Dress modestly; avoid scheduling meetings during prayer times."
+  },
+  {
+    "name": "Baghdad",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Karrada, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Al-Mutanabbi Street",
+        "description": "A historic street with bookstores, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Karrada"
+      },
+      {
+        "name": "Baghdad Zoo",
+        "description": "A local attraction, ideal for a casual client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Karrada"
+      }
+    ],
+    "localLifestyle": "Baghdad residents lead a resilient lifestyle, often gathering for masgouf or visiting the Tigris.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Masgouf - Grilled carp, a traditional Iraqi dish.",
+    "networkingEvents": [
+      {
+        "name": "Baghdad Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Iraqi firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Tehran",
+    "timezone": "UTC+3:30 (IRST), No daylight saving",
+    "timeDifference": "5 hours 30 minutes behind Seoul (UTC+9), 7 hours 30 minutes ahead of New York (UTC-4), 2 hours 30 minutes ahead of London (UTC+1)",
+    "businessHub": "Valiasr Street, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Golestan Palace",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Valiasr Street"
+      },
+      {
+        "name": "Milad Tower",
+        "description": "A modern tower with views, ideal for a client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Valiasr Street"
+      }
+    ],
+    "localLifestyle": "Tehran residents enjoy a cultural lifestyle, often gathering for kebabs or visiting bazaars.",
+    "localCulture": "Hospitality and tradition are key; expect a formal approach in business settings.",
+    "signatureDish": "Chelo Kebab - Grilled kebabs with saffron rice.",
+    "networkingEvents": [
+      {
+        "name": "Tehran Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in energy and trade, offering networking with Iranian firms."
+      }
+    ],
+    "businessTip": "Dress modestly; be prepared for a formal meeting pace."
+  },
+  {
+    "name": "Kabul",
+    "timezone": "UTC+4:30 (AFT), No daylight saving",
+    "timeDifference": "4 hours 30 minutes behind Seoul (UTC+9), 8 hours 30 minutes ahead of New York (UTC-4), 3 hours 30 minutes ahead of London (UTC+1)",
+    "businessHub": "Shahr-e Naw, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Babur Gardens",
+        "description": "A historic garden, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Shahr-e Naw"
+      },
+      {
+        "name": "Kabul Museum",
+        "description": "A cultural museum, ideal for a historical outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Shahr-e Naw"
+      }
+    ],
+    "localLifestyle": "Kabul residents lead a resilient lifestyle, often gathering for kabuli pulao or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Kabuli Pulao - Rice with lamb, raisins, and carrots.",
+    "networkingEvents": [
+      {
+        "name": "Kabul Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Afghan firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Beirut",
+    "timezone": "UTC+2 (EET), Daylight saving applies (Mar 30-Oct 26, 2025, UTC+3)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Hamra, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Pigeon Rocks",
+        "description": "A scenic coastal spot, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Hamra"
+      },
+      {
+        "name": "Beirut Souks",
+        "description": "A modern market, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Hamra"
+      }
+    ],
+    "localLifestyle": "Beirut residents enjoy a vibrant lifestyle, often gathering for shawarma or visiting the Mediterranean.",
+    "localCulture": "Hospitality and resilience are key; expect a warm but professional approach in business.",
+    "signatureDish": "Tabbouleh - A fresh salad with parsley, bulgur, and tomatoes.",
+    "networkingEvents": [
+      {
+        "name": "Beirut Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Lebanese firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Damascus",
+    "timezone": "UTC+2 (EET), Daylight saving applies (Mar 30-Oct 26, 2025, UTC+3)",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Mezzeh, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Umayyad Mosque",
+        "description": "A historic mosque, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Mezzeh"
+      },
+      {
+        "name": "Souq Al-Hamidiyeh",
+        "description": "A traditional market, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Mezzeh"
+      }
+    ],
+    "localLifestyle": "Damascus residents lead a resilient lifestyle, often gathering for kibbeh or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Kibbeh - A minced meat and bulgur dish, often fried or baked.",
+    "networkingEvents": [
+      {
+        "name": "Damascus Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in trade and agriculture, offering networking with Syrian firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Sana'a",
+    "timezone": "UTC+3 (AST), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Hadda, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Old City of Sana'a",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Hadda"
+      },
+      {
+        "name": "Dar al-Hajar",
+        "description": "A historic palace, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "30-minute drive from Hadda"
+      }
+    ],
+    "localLifestyle": "Sana'a residents lead a traditional lifestyle, often gathering for saltah or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Saltah - A spicy stew with meat and vegetables, topped with fenugreek foam.",
+    "networkingEvents": [
+      {
+        "name": "Sana'a Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Yemeni firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Sydney",
+    "timezone": "UTC+10 (AEST), Daylight saving applies (Oct 5, 2025-Apr 5, 2026, UTC+11)",
+    "timeDifference": "1 hour ahead of Seoul (UTC+9), 14 hours ahead of New York (UTC-4), 9 hours ahead of London (UTC+1)",
+    "businessHub": "Sydney CBD, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sydney Opera House",
+        "description": "An iconic landmark, perfect for hosting clients at a performance.",
+        "proximityToBusinessDistrict": "5-minute drive from Sydney CBD"
+      },
+      {
+        "name": "The Rocks",
+        "description": "A historic district with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "5-minute walk from Sydney CBD"
+      }
+    ],
+    "localLifestyle": "Sydney residents enjoy a coastal lifestyle, often gathering for fish and chips or surfing.",
+    "localCulture": "Professionalism and friendliness are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Fish and Chips - Freshly fried fish with thick-cut fries.",
+    "networkingEvents": [
+      {
+        "name": "Sydney Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in finance and tech, offering networking with Australian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Melbourne",
+    "timezone": "UTC+10 (AEST), Daylight saving applies (Oct 5, 2025-Apr 5, 2026, UTC+11)",
+    "timeDifference": "1 hour ahead of Seoul (UTC+9), 14 hours ahead of New York (UTC-4), 9 hours ahead of London (UTC+1)",
+    "businessHub": "Docklands, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Federation Square",
+        "description": "A cultural hub with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Docklands"
+      },
+      {
+        "name": "Yarra River",
+        "description": "A scenic river, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute drive from Docklands"
+      }
+    ],
+    "localLifestyle": "Melbourne residents enjoy a cultured lifestyle, often gathering for coffee or visiting art galleries.",
+    "localCulture": "Creativity and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Meat Pie - A savory pastry filled with minced meat and gravy.",
+    "networkingEvents": [
+      {
+        "name": "Melbourne Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Australian firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Brisbane",
+    "timezone": "UTC+10 (AEST), No daylight saving",
+    "timeDifference": "1 hour ahead of Seoul (UTC+9), 14 hours ahead of New York (UTC-4), 9 hours ahead of London (UTC+1)",
+    "businessHub": "Riverside, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "South Bank",
+        "description": "A cultural precinct with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from Riverside"
+      },
+      {
+        "name": "Lone Pine Koala Sanctuary",
+        "description": "A unique attraction, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Riverside"
+      }
+    ],
+    "localLifestyle": "Brisbane residents enjoy a relaxed lifestyle, often gathering for barbecues or visiting the river.",
+    "localCulture": "Friendliness and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Moreton Bay Bugs - Grilled local lobster with garlic butter.",
+    "networkingEvents": [
+      {
+        "name": "Brisbane Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Australian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Perth",
+    "timezone": "UTC+8 (AWST), No daylight saving",
+    "timeDifference": "1 hour behind Seoul (UTC+9), 12 hours ahead of New York (UTC-4), 7 hours ahead of London (UTC+1)",
+    "businessHub": "St Georges Terrace, a commercial area with corporate offices and mining companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kings Park",
+        "description": "A scenic park, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute drive from St Georges Terrace"
+      },
+      {
+        "name": "Elizabeth Quay",
+        "description": "A modern waterfront with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from St Georges Terrace"
+      }
+    ],
+    "localLifestyle": "Perth residents enjoy a coastal lifestyle, often gathering for seafood or visiting beaches.",
+    "localCulture": "Friendliness and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Chilli Mussels - Fresh mussels in a spicy tomato sauce.",
+    "networkingEvents": [
+      {
+        "name": "Perth Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in mining and tourism, offering networking with Australian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Adelaide",
+    "timezone": "UTC+9:30 (ACST), Daylight saving applies (Oct 5, 2025-Apr 5, 2026, UTC+10:30)",
+    "timeDifference": "30 minutes ahead of Seoul (UTC+9), 13 hours 30 minutes ahead of New York (UTC-4), 8 hours 30 minutes ahead of London (UTC+1)",
+    "businessHub": "North Terrace, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Adelaide Botanic Garden",
+        "description": "A peaceful garden, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute walk from North Terrace"
+      },
+      {
+        "name": "Rundle Mall",
+        "description": "A shopping precinct with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from North Terrace"
+      }
+    ],
+    "localLifestyle": "Adelaide residents enjoy a relaxed lifestyle, often gathering for pie floaters or visiting wineries.",
+    "localCulture": "Friendliness and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Pie Floater - A meat pie in pea soup, topped with tomato sauce.",
+    "networkingEvents": [
+      {
+        "name": "Adelaide Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and tourism, offering networking with Australian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Auckland",
+    "timezone": "UTC+12 (NZST), Daylight saving applies (Sep 28, 2025-Apr 5, 2026, UTC+13)",
+    "timeDifference": "3 hours ahead of Seoul (UTC+9), 16 hours ahead of New York (UTC-4), 11 hours ahead of London (UTC+1)",
+    "businessHub": "Queen Street, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sky Tower",
+        "description": "A modern tower with views, perfect for a client outing.",
+        "proximityToBusinessDistrict": "5-minute walk from Queen Street"
+      },
+      {
+        "name": "Wynyard Quarter",
+        "description": "A waterfront area with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Queen Street"
+      }
+    ],
+    "localLifestyle": "Auckland residents enjoy a coastal lifestyle, often gathering for fish and chips or sailing.",
+    "localCulture": "Friendliness and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Hangi - A traditional Maori dish cooked in an earth oven.",
+    "networkingEvents": [
+      {
+        "name": "Auckland Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with New Zealand firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Wellington",
+    "timezone": "UTC+12 (NZST), Daylight saving applies (Sep 28, 2025-Apr 5, 2026, UTC+13)",
+    "timeDifference": "3 hours ahead of Seoul (UTC+9), 16 hours ahead of New York (UTC-4), 11 hours ahead of London (UTC+1)",
+    "businessHub": "Lambton Quay, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Te Papa Museum",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Lambton Quay"
+      },
+      {
+        "name": "Wellington Cable Car",
+        "description": "A scenic ride, ideal for a casual client outing.",
+        "proximityToBusinessDistrict": "5-minute walk from Lambton Quay"
+      }
+    ],
+    "localLifestyle": "Wellington residents enjoy a cultured lifestyle, often gathering for coffee or visiting the waterfront.",
+    "localCulture": "Creativity and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Lamb Shank - Slow-cooked lamb with rosemary and garlic.",
+    "networkingEvents": [
+      {
+        "name": "Wellington Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in government and tech, offering networking with New Zealand firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Christchurch",
+    "timezone": "UTC+12 (NZST), Daylight saving applies (Sep 28, 2025-Apr 5, 2026, UTC+13)",
+    "timeDifference": "3 hours ahead of Seoul (UTC+9), 16 hours ahead of New York (UTC-4), 11 hours ahead of London (UTC+1)",
+    "businessHub": "Addington, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Hagley Park",
+        "description": "A large park, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute drive from Addington"
+      },
+      {
+        "name": "Canterbury Museum",
+        "description": "A cultural museum, ideal for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Addington"
+      }
+    ],
+    "localLifestyle": "Christchurch residents enjoy a relaxed lifestyle, often gathering for roast lamb or visiting gardens.",
+    "localCulture": "Friendliness and professionalism are key; expect a relaxed but professional approach in business.",
+    "signatureDish": "Roast Lamb - Slow-cooked lamb with rosemary and garlic.",
+    "networkingEvents": [
+      {
+        "name": "Christchurch Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and tourism, offering networking with New Zealand firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Suva",
+    "timezone": "UTC+12 (FJT), No daylight saving",
+    "timeDifference": "3 hours ahead of Seoul (UTC+9), 16 hours ahead of New York (UTC-4), 11 hours ahead of London (UTC+1)",
+    "businessHub": "Downtown Suva, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Fiji Museum",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "5-minute walk from Downtown Suva"
+      },
+      {
+        "name": "Colo-i-Suva Forest Park",
+        "description": "A scenic park, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Downtown Suva"
+      }
+    ],
+    "localLifestyle": "Suva residents enjoy a tropical lifestyle, often gathering for kokoda or enjoying the beach.",
+    "localCulture": "Hospitality and community are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Kokoda - Raw fish marinated in coconut cream and lime.",
+    "networkingEvents": [
+      {
+        "name": "Suva Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with Fijian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed island pace."
+  },
+  {
+    "name": "Port Moresby",
+    "timezone": "UTC+10 (PGT), No daylight saving",
+    "timeDifference": "1 hour ahead of Seoul (UTC+9), 14 hours ahead of New York (UTC-4), 9 hours ahead of London (UTC+1)",
+    "businessHub": "Waigani, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Museum and Art Gallery",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Waigani"
+      },
+      {
+        "name": "Port Moresby Nature Park",
+        "description": "A scenic park, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Waigani"
+      }
+    ],
+    "localLifestyle": "Port Moresby residents enjoy a tropical lifestyle, often gathering for sago or visiting markets.",
+    "localCulture": "Hospitality and diversity are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Sago with Fish - Sago starch with grilled fish and greens.",
+    "networkingEvents": [
+      {
+        "name": "Port Moresby Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Papua New Guinean firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  }
+]
