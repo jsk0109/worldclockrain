@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-fetch('../pages/footer.html')
+fetch('pages/footer.html')
     .then(response => {
       if (!response.ok) throw new Error('Footer fetch failed');
       return response.text();
