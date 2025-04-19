@@ -1,0 +1,1133 @@
+[
+  {
+    "name": "Medellín",
+    "timezone": "UTC-5 (COT), No daylight saving",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "El Poblado, a commercial area with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Plaza Botero",
+        "description": "A cultural square with sculptures, perfect for a client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from El Poblado"
+      },
+      {
+        "name": "Parque Lleras",
+        "description": "A lively area with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "5-minute walk from El Poblado"
+      }
+    ],
+    "localLifestyle": "Medellín residents enjoy a vibrant lifestyle, often gathering for coffee or exploring parks.",
+    "localCulture": "Innovation and warmth are key; business culture values relationship-building.",
+    "signatureDish": "Bandeja Paisa - A hearty platter with beans, rice, meat, and plantains.",
+    "networkingEvents": [
+      {
+        "name": "Medellín Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and tourism, offering networking with Colombian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; schedule meetings mid-morning for a relaxed pace."
+  },
+  {
+    "name": "Lima",
+    "timezone": "UTC-5 (PET), No daylight saving",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "San Isidro, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Miraflores Boardwalk",
+        "description": "A scenic cliffside walk, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from San Isidro"
+      },
+      {
+        "name": "Plaza de Armas",
+        "description": "A historic square with nearby restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "20-minute drive from San Isidro"
+      }
+    ],
+    "localLifestyle": "Lima residents enjoy a coastal lifestyle, often dining on ceviche and visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Ceviche - Fresh fish marinated in lime juice, served with onions and chili.",
+    "networkingEvents": [
+      {
+        "name": "Lima Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in trade and agriculture, offering networking with Peruvian firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Santiago",
+    "timezone": "UTC-4 (CLT), Daylight saving applies (Sep 7, 2025-Apr 5, 2026, UTC-3)",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Las Condes, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Cerro San Cristóbal",
+        "description": "A hill with panoramic views, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Las Condes"
+      },
+      {
+        "name": "Costanera Center",
+        "description": "A modern mall with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from Las Condes"
+      }
+    ],
+    "localLifestyle": "Santiago residents enjoy a modern lifestyle, often gathering for wine tastings or hiking in the Andes.",
+    "localCulture": "Professionalism and punctuality are key; expect a formal approach in business settings.",
+    "signatureDish": "Empanada de Pino - A pastry filled with beef, onions, and olives.",
+    "networkingEvents": [
+      {
+        "name": "Santiago Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in finance and mining, offering networking with Chilean firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Buenos Aires",
+    "timezone": "UTC-3 (ART), No daylight saving",
+    "timeDifference": "12 hours behind Seoul (UTC+9), 1 hour ahead of New York (UTC-4), 4 hours behind London (UTC+1)",
+    "businessHub": "Puerto Madero, a modern business district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Teatro Colón",
+        "description": "A historic opera house, perfect for hosting clients at a performance.",
+        "proximityToBusinessDistrict": "15-minute drive from Puerto Madero"
+      },
+      {
+        "name": "Palermo Soho",
+        "description": "A trendy area with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "20-minute drive from Puerto Madero"
+      }
+    ],
+    "localLifestyle": "Buenos Aires residents enjoy a cultured lifestyle, often gathering for tango shows or dining on steak.",
+    "localCulture": "Warmth and passion are key; business culture values relationship-building.",
+    "signatureDish": "Asado - Grilled beef, often served with chimichurri sauce.",
+    "networkingEvents": [
+      {
+        "name": "Buenos Aires Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in finance and agriculture, offering networking with Argentine firms."
+      }
+    ],
+    "businessTip": "Meetings may run late; be flexible with scheduling."
+  },
+  {
+    "name": "Montevideo",
+    "timezone": "UTC-3 (UYT), No daylight saving",
+    "timeDifference": "12 hours behind Seoul (UTC+9), 1 hour ahead of New York (UTC-4), 4 hours behind London (UTC+1)",
+    "businessHub": "Ciudad Vieja, a commercial area with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Rambla of Montevideo",
+        "description": "A scenic waterfront promenade, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Ciudad Vieja"
+      },
+      {
+        "name": "Mercado del Puerto",
+        "description": "A historic market with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from Ciudad Vieja"
+      }
+    ],
+    "localLifestyle": "Montevideo residents enjoy a relaxed lifestyle, often gathering for mate tea or beach visits.",
+    "localCulture": "Hospitality and calmness are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Chivito - A steak sandwich with egg, cheese, and vegetables.",
+    "networkingEvents": [
+      {
+        "name": "Montevideo Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Uruguayan firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; schedule meetings mid-morning for a relaxed pace."
+  },
+  {
+    "name": "Asunción",
+    "timezone": "UTC-4 (PYT), Daylight saving applies (Oct 5, 2025-Mar 29, 2026, UTC-3)",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Villa Morra, a commercial area with corporate offices and upscale dining.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Palacio de López",
+        "description": "A historic government palace, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Villa Morra"
+      },
+      {
+        "name": "Costanera de Asunción",
+        "description": "A scenic riverside promenade, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Villa Morra"
+      }
+    ],
+    "localLifestyle": "Asunción residents enjoy a relaxed lifestyle, often gathering for tereré (cold mate tea) or barbecues.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Sopa Paraguaya - A cornbread with cheese and onions, a Paraguayan specialty.",
+    "networkingEvents": [
+      {
+        "name": "Asunción Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Paraguayan firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be open to casual conversation before business."
+  },
+  {
+    "name": "La Paz",
+    "timezone": "UTC-4 (BOT), No daylight saving",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Sopocachi, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Valle de la Luna",
+        "description": "A unique geological site, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Sopocachi"
+      },
+      {
+        "name": "Plaza Murillo",
+        "description": "A historic square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Sopocachi"
+      }
+    ],
+    "localLifestyle": "La Paz residents enjoy a high-altitude lifestyle, often gathering for traditional meals or visiting markets.",
+    "localCulture": "Respect for tradition is key; expect a warm but formal approach in business.",
+    "signatureDish": "Salteña - A savory pastry filled with meat, potatoes, and spices.",
+    "networkingEvents": [
+      {
+        "name": "La Paz Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in mining and tourism, offering networking with Bolivian firms."
+      }
+    ],
+    "businessTip": "Altitude can be challenging for visitors; schedule meetings with rest breaks."
+  },
+  {
+    "name": "Quito",
+    "timezone": "UTC-5 (ECT), No daylight saving",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "La Carolina, a commercial area with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Old Town Quito",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from La Carolina"
+      },
+      {
+        "name": "Mitad del Mundo",
+        "description": "A monument on the equator, ideal for a unique client experience.",
+        "proximityToBusinessDistrict": "30-minute drive from La Carolina"
+      }
+    ],
+    "localLifestyle": "Quito residents enjoy a high-altitude lifestyle, often gathering for traditional meals or visiting churches.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Locro de Papa - A creamy potato soup with cheese and avocado.",
+    "networkingEvents": [
+      {
+        "name": "Quito Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and agriculture, offering networking with Ecuadorian firms."
+      }
+    ],
+    "businessTip": "Altitude can affect visitors; schedule meetings with rest breaks."
+  },
+  {
+    "name": "Caracas",
+    "timezone": "UTC-4 (VET), No daylight saving",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Chacao, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Ávila National Park",
+        "description": "A scenic park, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "20-minute drive from Chacao"
+      },
+      {
+        "name": "Plaza Bolívar",
+        "description": "A historic square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Chacao"
+      }
+    ],
+    "localLifestyle": "Caracas residents lead a vibrant lifestyle, often gathering for arepas or enjoying music.",
+    "localCulture": "Warmth and resilience are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Arepa - A cornmeal patty filled with cheese, meat, or avocado.",
+    "networkingEvents": [
+      {
+        "name": "Caracas Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in energy and trade, offering networking with Venezuelan firms."
+      }
+    ],
+    "businessTip": "Be prepared for potential logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Panama City",
+    "timezone": "UTC-5 (EST), No daylight saving",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "Punta Pacífica, a financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Panama Canal",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "30-minute drive from Punta Pacífica"
+      },
+      {
+        "name": "Casco Viejo",
+        "description": "A historic district with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "15-minute drive from Punta Pacífica"
+      }
+    ],
+    "localLifestyle": "Panama City residents enjoy a tropical lifestyle, often gathering for seafood meals or visiting beaches.",
+    "localCulture": "Hospitality and professionalism are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Sancocho - A chicken soup with yuca and plantains, a Panamanian favorite.",
+    "networkingEvents": [
+      {
+        "name": "Panama City Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in logistics and trade, offering networking with Panamanian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; dress smartly for business meetings."
+  },
+  {
+    "name": "San José",
+    "timezone": "UTC-6 (CST), No daylight saving",
+    "timeDifference": "15 hours behind Seoul (UTC+9), 2 hours behind New York (UTC-4), 7 hours behind London (UTC+1)",
+    "businessHub": "Escazú, a commercial area with corporate offices and tech companies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Theatre of Costa Rica",
+        "description": "A historic theatre, perfect for hosting clients at a performance.",
+        "proximityToBusinessDistrict": "20-minute drive from Escazú"
+      },
+      {
+        "name": "La Sabana Park",
+        "description": "A large park, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Escazú"
+      }
+    ],
+    "localLifestyle": "San José residents enjoy a relaxed lifestyle, often gathering for coffee or exploring nature.",
+    "localCulture": "Pura Vida (pure life) is key; expect a friendly and laid-back approach in business.",
+    "signatureDish": "Gallo Pinto - A rice and bean dish with spices, often served with eggs.",
+    "networkingEvents": [
+      {
+        "name": "San José Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and tech, offering networking with Costa Rican firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be open to a relaxed meeting pace."
+  },
+  {
+    "name": "Guatemala City",
+    "timezone": "UTC-6 (CST), No daylight saving",
+    "timeDifference": "15 hours behind Seoul (UTC+9), 2 hours behind New York (UTC-4), 7 hours behind London (UTC+1)",
+    "businessHub": "Zona 10, a commercial area with corporate offices and upscale dining.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Palace of Culture",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Zona 10"
+      },
+      {
+        "name": "Paseo Cayalá",
+        "description": "A modern complex with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Zona 10"
+      }
+    ],
+    "localLifestyle": "Guatemala City residents enjoy a cultural lifestyle, often gathering for traditional meals or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Pepián - A spicy stew with chicken, pork, or beef, a Guatemalan specialty.",
+    "networkingEvents": [
+      {
+        "name": "Guatemala City Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Guatemalan firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Tegucigalpa",
+    "timezone": "UTC-6 (CST), No daylight saving",
+    "timeDifference": "15 hours behind Seoul (UTC+9), 2 hours behind New York (UTC-4), 7 hours behind London (UTC+1)",
+    "businessHub": "Boulevard Morazán, a commercial area with corporate offices and banks.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Basílica de Suyapa",
+        "description": "A historic church, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Boulevard Morazán"
+      },
+      {
+        "name": "Parque Central",
+        "description": "A central square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Boulevard Morazán"
+      }
+    ],
+    "localLifestyle": "Tegucigalpa residents enjoy a relaxed lifestyle, often gathering for baleadas or visiting parks.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Baleada - A flour tortilla filled with beans, cheese, and cream.",
+    "networkingEvents": [
+      {
+        "name": "Tegucigalpa Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Honduran firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed meeting pace."
+  },
+  {
+    "name": "San Salvador",
+    "timezone": "UTC-6 (CST), No daylight saving",
+    "timeDifference": "15 hours behind Seoul (UTC+9), 2 hours behind New York (UTC-4), 7 hours behind London (UTC+1)",
+    "businessHub": "Zona Rosa, a commercial area with corporate offices and upscale dining.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Palace",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Zona Rosa"
+      },
+      {
+        "name": "Joya de Cerén",
+        "description": "A UNESCO archaeological site, ideal for a unique client experience.",
+        "proximityToBusinessDistrict": "45-minute drive from Zona Rosa"
+      }
+    ],
+    "localLifestyle": "San Salvador residents enjoy a vibrant lifestyle, often gathering for pupusas or visiting volcanoes.",
+    "localCulture": "Hospitality and resilience are key; expect a warm but formal approach in business.",
+    "signatureDish": "Pupusa - A thick corn tortilla stuffed with cheese, beans, or pork.",
+    "networkingEvents": [
+      {
+        "name": "San Salvador Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Salvadoran firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Managua",
+    "timezone": "UTC-6 (CST), No daylight saving",
+    "timeDifference": "15 hours behind Seoul (UTC+9), 2 hours behind New York (UTC-4), 7 hours behind London (UTC+1)",
+    "businessHub": "Metrocentro, a commercial area with corporate offices and shopping centers.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Old Cathedral of Managua",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Metrocentro"
+      },
+      {
+        "name": "Loma de Tiscapa",
+        "description": "A scenic hill with views, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Metrocentro"
+      }
+    ],
+    "localLifestyle": "Managua residents enjoy a relaxed lifestyle, often gathering for gallina rellena or visiting lakes.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Gallo Pinto - A rice and bean dish, similar to Costa Rica but with a local twist.",
+    "networkingEvents": [
+      {
+        "name": "Managua Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Nicaraguan firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed meeting pace."
+  },
+  {
+    "name": "Havana",
+    "timezone": "UTC-5 (CST), Daylight saving applies (Mar 9-Nov 2, 2025, UTC-4)",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "Vedado, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Malecón",
+        "description": "A scenic seawall, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute drive from Vedado"
+      },
+      {
+        "name": "Old Havana",
+        "description": "A UNESCO historic site with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "10-minute drive from Vedado"
+      }
+    ],
+    "localLifestyle": "Havana residents enjoy a vibrant lifestyle, often gathering for music, dance, and Cuban sandwiches.",
+    "localCulture": "Warmth and creativity are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Ropa Vieja - Shredded beef in a tomato-based sauce, served with rice.",
+    "networkingEvents": [
+      {
+        "name": "Havana Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with Cuban firms."
+      }
+    ],
+    "businessTip": "Be prepared for a relaxed pace; confirm logistics due to potential infrastructure challenges."
+  },
+  {
+    "name": "Santo Domingo",
+    "timezone": "UTC-4 (AST), No daylight saving",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Polígono Central, a commercial area with corporate offices and upscale dining.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Colonial Zone",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Polígono Central"
+      },
+      {
+        "name": "Malecón",
+        "description": "A scenic seaside boulevard, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Polígono Central"
+      }
+    ],
+    "localLifestyle": "Santo Domingo residents enjoy a lively lifestyle, often gathering for merengue music and mangu.",
+    "localCulture": "Hospitality and vibrancy are key; expect a friendly but professional approach in business.",
+    "signatureDish": "La Bandera - A traditional meal of rice, beans, and meat.",
+    "networkingEvents": [
+      {
+        "name": "Santo Domingo Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tourism and trade, offering networking with Dominican firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be open to casual conversation before business."
+  },
+  {
+    "name": "Port-au-Prince",
+    "timezone": "UTC-5 (EST), Daylight saving applies (Mar 9-Nov 2, 2025, UTC-4)",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "Pétion-Ville, a commercial area with corporate offices and upscale businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Musée du Panthéon National Haïtien",
+        "description": "A historical museum, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Pétion-Ville"
+      },
+      {
+        "name": "Marché en Fer",
+        "description": "A historic market, great for buying gifts for business partners.",
+        "proximityToBusinessDistrict": "20-minute drive from Pétion-Ville"
+      }
+    ],
+    "localLifestyle": "Port-au-Prince residents lead a resilient lifestyle, often gathering for griot or enjoying local art.",
+    "localCulture": "Hospitality and creativity are key; expect a warm but formal approach in business.",
+    "signatureDish": "Griot - Fried pork shoulder, often served with rice and beans.",
+    "networkingEvents": [
+      {
+        "name": "Port-au-Prince Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in trade and agriculture, offering networking with Haitian firms."
+      }
+    ],
+    "businessTip": "Be prepared for logistical challenges; confirm meeting details in advance."
+  },
+  {
+    "name": "Kingston",
+    "timezone": "UTC-5 (EST), No daylight saving",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "New Kingston, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Bob Marley Museum",
+        "description": "A cultural landmark, perfect for a client outing.",
+        "proximityToBusinessDistrict": "10-minute drive from New Kingston"
+      },
+      {
+        "name": "Devon House",
+        "description": "A historic mansion with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from New Kingston"
+      }
+    ],
+    "localLifestyle": "Kingston residents enjoy a vibrant lifestyle, often gathering for reggae music and jerk chicken.",
+    "localCulture": "Warmth and rhythm are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Jerk Chicken - Spicy grilled chicken marinated with jerk seasoning.",
+    "networkingEvents": [
+      {
+        "name": "Kingston Business Summit",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A summit for professionals in tourism and trade, offering networking with Jamaican firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be open to a relaxed meeting pace."
+  },
+  {
+    "name": "Nassau",
+    "timezone": "UTC-5 (EST), Daylight saving applies (Mar 9-Nov 2, 2025, UTC-4)",
+    "timeDifference": "14 hours behind Seoul (UTC+9), 1 hour behind New York (UTC-4), 6 hours behind London (UTC+1)",
+    "businessHub": "Downtown Nassau, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Atlantis Paradise Island",
+        "description": "A luxury resort, perfect for hosting clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Downtown Nassau"
+      },
+      {
+        "name": "Bay Street",
+        "description": "A bustling street with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute walk from Downtown Nassau"
+      }
+    ],
+    "localLifestyle": "Nassau residents enjoy a tropical lifestyle, often gathering for conch salad or Junkanoo celebrations.",
+    "localCulture": "Hospitality and vibrancy are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Conch Fritters - Deep-fried conch with spices, a Bahamian favorite.",
+    "networkingEvents": [
+      {
+        "name": "Nassau Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and finance, offering networking with Bahamian firms."
+      }
+    ],
+    "businessTip": "Dress smartly; be prepared for a relaxed island pace in meetings."
+  },
+  {
+    "name": "Bridgetown",
+    "timezone": "UTC-4 (AST), No daylight saving",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Warrens, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Harrison's Cave",
+        "description": "A unique limestone cave, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Warrens"
+      },
+      {
+        "name": "Carlisle Bay",
+        "description": "A scenic beach, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Warrens"
+      }
+    ],
+    "localLifestyle": "Bridgetown residents enjoy a tropical lifestyle, often gathering for flying fish or enjoying cricket matches.",
+    "localCulture": "Hospitality and friendliness are key; expect a warm but professional approach in business.",
+    "signatureDish": "Cou-Cou and Flying Fish - Cornmeal with okra, served with steamed fish.",
+    "networkingEvents": [
+      {
+        "name": "Bridgetown Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in tourism and trade, offering networking with Barbadian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed island pace."
+  },
+  {
+    "name": "Port of Spain",
+    "timezone": "UTC-4 (AST), No daylight saving",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Woodbrook, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Queen's Park Savannah",
+        "description": "A large park, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute drive from Woodbrook"
+      },
+      {
+        "name": "Ariapita Avenue",
+        "description": "A lively street with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "5-minute walk from Woodbrook"
+      }
+    ],
+    "localLifestyle": "Port of Spain residents enjoy a festive lifestyle, often gathering for doubles or Carnival celebrations.",
+    "localCulture": "Vibrancy and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Doubles - A street food with curried chickpeas between two flatbreads.",
+    "networkingEvents": [
+      {
+        "name": "Port of Spain Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in energy and tourism, offering networking with Trinidadian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be open to casual conversation before business."
+  },
+  {
+    "name": "Georgetown",
+    "timezone": "UTC-4 (AST), No daylight saving",
+    "timeDifference": "13 hours behind Seoul (UTC+9), same as New York (UTC-4), 5 hours behind London (UTC+1)",
+    "businessHub": "Downtown Georgetown, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "St. George's Cathedral",
+        "description": "A historic wooden cathedral, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "5-minute walk from Downtown Georgetown"
+      },
+      {
+        "name": "Promenade Gardens",
+        "description": "A peaceful garden, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute walk from Downtown Georgetown"
+      }
+    ],
+    "localLifestyle": "Georgetown residents enjoy a tropical lifestyle, often gathering for pepperpot or visiting markets.",
+    "localCulture": "Hospitality and diversity are key; expect a warm but formal approach in business.",
+    "signatureDish": "Pepperpot - A meat stew with cassareep, a Guyanese specialty.",
+    "networkingEvents": [
+      {
+        "name": "Georgetown Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in energy and agriculture, offering networking with Guyanese firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Paramaribo",
+    "timezone": "UTC-3 (SRT), No daylight saving",
+    "timeDifference": "12 hours behind Seoul (UTC+9), 1 hour ahead of New York (UTC-4), 4 hours behind London (UTC+1)",
+    "businessHub": "Waterkant, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Historic Inner City",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "5-minute walk from Waterkant"
+      },
+      {
+        "name": "Suriname River",
+        "description": "A scenic river, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "5-minute walk from Waterkant"
+      }
+    ],
+    "localLifestyle": "Paramaribo residents enjoy a multicultural lifestyle, often gathering for roti or enjoying local festivals.",
+    "localCulture": "Hospitality and diversity are key; expect a friendly but formal approach in business.",
+    "signatureDish": "Pom - A chicken and root vegetable dish with a citrusy sauce, a Surinamese favorite.",
+    "networkingEvents": [
+      {
+        "name": "Paramaribo Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and tourism, offering networking with Surinamese firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Nairobi",
+    "timezone": "UTC+3 (EAT), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Westlands, a commercial area with corporate offices and tech startups.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Nairobi National Park",
+        "description": "A unique park near the city, perfect for a client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Westlands"
+      },
+      {
+        "name": "The Village Market",
+        "description": "A modern complex with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Westlands"
+      }
+    ],
+    "localLifestyle": "Nairobi residents enjoy a dynamic lifestyle, often gathering for nyama choma or visiting markets.",
+    "localCulture": "Hospitality and entrepreneurship are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Nyama Choma - Grilled meat, often served with ugali and kachumbari.",
+    "networkingEvents": [
+      {
+        "name": "Nairobi Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tech and agriculture, offering networking with Kenyan firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; traffic can be heavy, so plan accordingly."
+  },
+  {
+    "name": "Lagos",
+    "timezone": "UTC+1 (WAT), No daylight saving",
+    "timeDifference": "8 hours behind Seoul (UTC+9), 5 hours ahead of New York (UTC-4), same as London (UTC+1)",
+    "businessHub": "Victoria Island, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Lekki Conservation Centre",
+        "description": "A nature reserve with a canopy walkway, perfect for a client outing.",
+        "proximityToBusinessDistrict": "30-minute drive from Victoria Island"
+      },
+      {
+        "name": "Eko Atlantic",
+        "description": "A modern development with restaurants, ideal for a business dinner.",
+        "proximityToBusinessDistrict": "10-minute drive from Victoria Island"
+      }
+    ],
+    "localLifestyle": "Lagos residents lead a fast-paced lifestyle, often gathering for jollof rice or enjoying Afrobeats music.",
+    "localCulture": "Energy and hustle are key; expect a dynamic but professional approach in business.",
+    "signatureDish": "Jollof Rice - A spiced rice dish with tomatoes, often served with chicken.",
+    "networkingEvents": [
+      {
+        "name": "Lagos Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in finance and tech, offering networking with Nigerian firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Accra",
+    "timezone": "UTC+0 (GMT), No daylight saving",
+    "timeDifference": "9 hours behind Seoul (UTC+9), 4 hours ahead of New York (UTC-4), 1 hour behind London (UTC+1)",
+    "businessHub": "Cantonments, a commercial area with corporate offices and embassies.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Labadi Beach",
+        "description": "A popular beach, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Cantonments"
+      },
+      {
+        "name": "Kwame Nkrumah Mausoleum",
+        "description": "A historic site, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Cantonments"
+      }
+    ],
+    "localLifestyle": "Accra residents enjoy a vibrant lifestyle, often gathering for banku or enjoying highlife music.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Banku and Tilapia - Fermented corn dough with grilled fish and spicy sauce.",
+    "networkingEvents": [
+      {
+        "name": "Accra Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Ghanaian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Abidjan",
+    "timezone": "UTC+0 (GMT), No daylight saving",
+    "timeDifference": "9 hours behind Seoul (UTC+9), 4 hours ahead of New York (UTC-4), 1 hour behind London (UTC+1)",
+    "businessHub": "Plateau, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "St. Paul's Cathedral",
+        "description": "A modern cathedral, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "5-minute drive from Plateau"
+      },
+      {
+        "name": "Banco National Park",
+        "description": "A lush park, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Plateau"
+      }
+    ],
+    "localLifestyle": "Abidjan residents enjoy a lively lifestyle, often gathering for attiéké or enjoying zouglou music.",
+    "localCulture": "Hospitality and vibrancy are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Attiéké and Fish - Fermented cassava with grilled fish and spicy sauce.",
+    "networkingEvents": [
+      {
+        "name": "Abidjan Business Summit",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A summit for professionals in trade and agriculture, offering networking with Ivorian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; traffic can be heavy, so plan accordingly."
+  },
+  {
+    "name": "Addis Ababa",
+    "timezone": "UTC+3 (EAT), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Bole, a commercial area with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "National Museum of Ethiopia",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Bole"
+      },
+      {
+        "name": "Meskel Square",
+        "description": "A central square with nearby cafes, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "10-minute drive from Bole"
+      }
+    ],
+    "localLifestyle": "Addis Ababa residents enjoy a cultural lifestyle, often gathering for injera or coffee ceremonies.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Doro Wat - A spicy chicken stew served with injera, a sourdough flatbread.",
+    "networkingEvents": [
+      {
+        "name": "Addis Ababa Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in agriculture and trade, offering networking with Ethiopian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Dar es Salaam",
+    "timezone": "UTC+3 (EAT), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Masaki, a commercial area with corporate offices and upscale businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Coco Beach",
+        "description": "A scenic beach, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "10-minute drive from Masaki"
+      },
+      {
+        "name": "National Museum of Tanzania",
+        "description": "A cultural museum, ideal for a historical outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Masaki"
+      }
+    ],
+    "localLifestyle": "Dar es Salaam residents enjoy a coastal lifestyle, often gathering for ugali or enjoying the beach.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Ugali with Fish - Cornmeal porridge with grilled fish and sauce.",
+    "networkingEvents": [
+      {
+        "name": "Dar es Salaam Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Tanzanian firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Kampala",
+    "timezone": "UTC+3 (EAT), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Nakasero, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kasubi Tombs",
+        "description": "A UNESCO historic site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "15-minute drive from Nakasero"
+      },
+      {
+        "name": "Lake Victoria",
+        "description": "A scenic lake, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "30-minute drive from Nakasero"
+      }
+    ],
+    "localLifestyle": "Kampala residents enjoy a vibrant lifestyle, often gathering for matoke or visiting markets.",
+    "localCulture": "Hospitality and community are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Matoke - Steamed green bananas, often served with peanut sauce or meat.",
+    "networkingEvents": [
+      {
+        "name": "Kampala Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Ugandan firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Lusaka",
+    "timezone": "UTC+2 (CAT), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Cairo Road, a commercial area with corporate offices and financial institutions.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Lusaka National Museum",
+        "description": "A cultural museum, perfect for a historical outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Cairo Road"
+      },
+      {
+        "name": "Manda Hill",
+        "description": "A modern mall with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Cairo Road"
+      }
+    ],
+    "localLifestyle": "Lusaka residents enjoy a relaxed lifestyle, often gathering for nshima or visiting markets.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Nshima with Chicken - Cornmeal porridge with a chicken stew.",
+    "networkingEvents": [
+      {
+        "name": "Lusaka Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in mining and agriculture, offering networking with Zambian firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Harare",
+    "timezone": "UTC+2 (CAT), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Borrowdale, a commercial area with corporate offices and upscale businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Harare Gardens",
+        "description": "A peaceful park, perfect for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Borrowdale"
+      },
+      {
+        "name": "National Gallery of Zimbabwe",
+        "description": "A cultural gallery, ideal for a client outing.",
+        "proximityToBusinessDistrict": "20-minute drive from Borrowdale"
+      }
+    ],
+    "localLifestyle": "Harare residents enjoy a cultural lifestyle, often gathering for sadza or visiting art galleries.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Sadza with Beef Stew - Cornmeal porridge with a hearty beef stew.",
+    "networkingEvents": [
+      {
+        "name": "Harare Business Forum",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and trade, offering networking with Zimbabwean firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for potential logistical challenges."
+  },
+  {
+    "name": "Gaborone",
+    "timezone": "UTC+2 (CAT), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Central Business District, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Gaborone Game Reserve",
+        "description": "A small reserve, perfect for a casual client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from Central Business District"
+      },
+      {
+        "name": "Three Dikgosi Monument",
+        "description": "A historic monument, ideal for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Central Business District"
+      }
+    ],
+    "localLifestyle": "Gaborone residents enjoy a relaxed lifestyle, often gathering for seswaa or visiting nature reserves.",
+    "localCulture": "Hospitality and respect are key; expect a warm but formal approach in business.",
+    "signatureDish": "Seswaa - Slow-cooked shredded beef, often served with pap.",
+    "networkingEvents": [
+      {
+        "name": "Gaborone Business Forum",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A forum for professionals in mining and tourism, offering networking with Batswana firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Maputo",
+    "timezone": "UTC+2 (CAT), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Baixa, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Maputo Central Train Station",
+        "description": "A historic landmark, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "5-minute walk from Baixa"
+      },
+      {
+        "name": "Costa do Sol",
+        "description": "A scenic beach, ideal for a business walk-and-talk.",
+        "proximityToBusinessDistrict": "15-minute drive from Baixa"
+      }
+    ],
+    "localLifestyle": "Maputo residents enjoy a coastal lifestyle, often gathering for prawns or enjoying live music.",
+    "localCulture": "Hospitality and warmth are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Peri-Peri Prawns - Grilled prawns with a spicy peri-peri sauce.",
+    "networkingEvents": [
+      {
+        "name": "Maputo Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in trade and tourism, offering networking with Mozambican firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for a relaxed pace in meetings."
+  },
+  {
+    "name": "Antananarivo",
+    "timezone": "UTC+3 (EAT), No daylight saving",
+    "timeDifference": "6 hours behind Seoul (UTC+9), 7 hours ahead of New York (UTC-4), 2 hours ahead of London (UTC+1)",
+    "businessHub": "Ankorondrano, a commercial area with corporate offices and upscale businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Rova of Antananarivo",
+        "description": "A historic palace, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "20-minute drive from Ankorondrano"
+      },
+      {
+        "name": "Tsimbazaza Zoo",
+        "description": "A botanical and zoological park, ideal for a casual client outing.",
+        "proximityToBusinessDistrict": "15-minute drive from Ankorondrano"
+      }
+    ],
+    "localLifestyle": "Antananarivo residents enjoy a cultural lifestyle, often gathering for romazava or visiting markets.",
+    "localCulture": "Hospitality and tradition are key; expect a warm but formal approach in business.",
+    "signatureDish": "Romazava - A beef and greens stew, a Malagasy specialty.",
+    "networkingEvents": [
+      {
+        "name": "Antananarivo Business Forum",
+        "date": "Jun 12-14, 2025 (tentative)",
+        "description": "A forum for professionals in agriculture and tourism, offering networking with Malagasy firms."
+      }
+    ],
+    "businessTip": "Punctuality is appreciated; be prepared for potential logistical challenges."
+  },
+  {
+    "name": "Cape Town",
+    "timezone": "UTC+2 (SAST), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "V&A Waterfront, a commercial area with corporate offices and tourism businesses.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Table Mountain",
+        "description": "A scenic landmark, perfect for a client outing with a cable car ride.",
+        "proximityToBusinessDistrict": "15-minute drive from V&A Waterfront"
+      },
+      {
+        "name": "Cape Town International Convention Centre",
+        "description": "A modern venue with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "5-minute drive from V&A Waterfront"
+      }
+    ],
+    "localLifestyle": "Cape Town residents enjoy a scenic lifestyle, often gathering for braai or visiting beaches.",
+    "localCulture": "Hospitality and diversity are key; expect a friendly but professional approach in business.",
+    "signatureDish": "Bunny Chow - A hollowed-out bread loaf filled with curry, a South African favorite.",
+    "networkingEvents": [
+      {
+        "name": "Cape Town Business Summit",
+        "date": "May 15-17, 2025 (tentative)",
+        "description": "A summit for professionals in tourism and tech, offering networking with South African firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  },
+  {
+    "name": "Johannesburg",
+    "timezone": "UTC+2 (SAST), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Sandton, the financial district with corporate offices and international firms.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Nelson Mandela Square",
+        "description": "A modern square with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "Located in Sandton"
+      },
+      {
+        "name": "Apartheid Museum",
+        "description": "A historical museum, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "30-minute drive from Sandton"
+      }
+    ],
+    "localLifestyle": "Johannesburg residents lead a fast-paced lifestyle, often gathering for kota or visiting malls.",
+    "localCulture": "Energy and diversity are key; expect a professional approach in business settings.",
+    "signatureDish": "Kota - A street food sandwich with fries, meat, and sauces.",
+    "networkingEvents": [
+      {
+        "name": "Johannesburg Business Summit",
+        "date": "Jun 5-7, 2025 (tentative)",
+        "description": "A summit for professionals in finance and mining, offering networking with South African firms."
+      }
+    ],
+    "businessTip": "Traffic can be heavy; schedule meetings with extra travel time."
+  },
+  {
+    "name": "Pretoria",
+    "timezone": "UTC+2 (SAST), No daylight saving",
+    "timeDifference": "7 hours behind Seoul (UTC+9), 6 hours ahead of New York (UTC-4), 1 hour ahead of London (UTC+1)",
+    "businessHub": "Hatfield, a commercial area with corporate offices and government buildings.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Union Buildings",
+        "description": "A historic government site, perfect for a cultural outing with clients.",
+        "proximityToBusinessDistrict": "10-minute drive from Hatfield"
+      },
+      {
+        "name": "Menlyn Maine",
+        "description": "A modern complex with restaurants, ideal for a business lunch.",
+        "proximityToBusinessDistrict": "15-minute drive from Hatfield"
+      }
+    ],
+    "localLifestyle": "Pretoria residents enjoy a relaxed lifestyle, often gathering for boerewors or visiting parks.",
+    "localCulture": "Hospitality and formality are key; expect a professional approach in business settings.",
+    "signatureDish": "Boerewors - A spiced sausage, often grilled and served with pap.",
+    "networkingEvents": [
+      {
+        "name": "Pretoria Business Forum",
+        "date": "May 22-24, 2025 (tentative)",
+        "description": "A forum for professionals in government and trade, offering networking with South African firms."
+      }
+    ],
+    "businessTip": "Punctuality is expected; dress smartly for business meetings."
+  }
+]
