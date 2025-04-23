@@ -219,3 +219,128 @@ body {
 nav a:focus, .hamburger:focus {
     outline: 2px solid #007bff;
 }
+
+/* Global CSS: Styles applied across all pages */
+
+/* Default Styles */
+body {
+    background-color: #f0f0f0; /* Default theme: Light gray */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Floating Button Styles */
+.floating-theme-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Theme Menu Styles */
+.theme-menu {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.theme-menu.active {
+    display: block;
+}
+
+.theme-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.theme-menu button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Theme Classes */
+.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.pastel-theme {
+    background-color: #C9E4F2;
+    color: #333333;
+}
+
+/* Popup Default Styles */
+#city-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+/* Popup Styles for Themes */
+.dark-theme #city-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+.pastel-theme #city-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .floating-theme-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .theme-menu {
+        bottom: 60px;
+        right: 15px;
+    }
+
+    #city-info {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    #city-info {
+        width: 70%;
+        max-width: 600px;
+        padding: 20px;
+        font-size: 16px;
+    }
+}

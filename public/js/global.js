@@ -57,3 +57,8 @@ fetch('footer.html')
       }
     })
     .catch(error => console.error('Footer load error:', error));
+
+    function toggleThemeMenu() {
+        const themeMenu = document.getElementById('theme-menu');
+        themeMenu.classList.toggle('active');
+    }
