@@ -90,21 +90,21 @@ nav { z-index: 1100; }
 
 .filter-btn.active {
     transform: scale(1.1);
-    transition: transform 0.3s;
+    transition: transform 0.4s;
 }
 
 .filter-btn.active[data-continent=""] {
-    background-color: #D32F2F;
+    background-color: #bb0d0d;
     color: white;
 }
 
 .filter-btn.active[data-continent="Asia"] {
-    background-color: #F57C00;
+    background-color: #eb7601;
     color: white;
 }
 
 .filter-btn.active[data-continent="Europe"] {
-    background-color: #FBC02D;
+    background-color: #f8bc23;
     color: white;
 }
 
@@ -221,12 +221,12 @@ nav { z-index: 1100; }
     display: block;
     margin: 80px auto;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #ee6cc7;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s;
 }
 
 #load-more {
@@ -237,7 +237,8 @@ nav { z-index: 1100; }
   }
 
 #load-more:hover {
-    background-color: #0056D2;
+    background-color: #e848db;
+    transform: scale(1.05);
 }
 
 #load-more:disabled {
@@ -247,7 +248,7 @@ nav { z-index: 1100; }
 
 /* Custom Clocks Section */
 #custom-clocks-section {
-    background: #9dc4da;
+    background: #e8c4d1;
     border: none;
     box-shadow: none;
     padding: 20px;

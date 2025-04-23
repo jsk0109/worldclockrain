@@ -1,6 +1,2 @@
 [build]
   publish = "public"
-[[redirects]]
-  from = "/city/*"
-  to = "/city-details.html"
-  status = 200
