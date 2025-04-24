@@ -758,7 +758,7 @@ async function fetchAllWeatherData() {
             cityInfoDiv.classList.add('show');
             try {
                 for (const file of ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json']) {
-                    const response = await fetch(`/data/json/${file}`); // 특수 문자 완전히 제거, 깨끗한 문자열로 작성
+                    const response = await fetch(`/data/popup/json/${file}`); // 특수 문자 완전히 제거, 깨끗한 문자열로 작성
                     if (!response.ok) continue;
                     const cities = await response.json();
                     const city = cities.find(c => c.name?.trim().toLowerCase() === cityName.toLowerCase());
