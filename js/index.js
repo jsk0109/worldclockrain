@@ -335,12 +335,12 @@ document.addEventListener("DOMContentLoaded", () => {
         "Africa": "#303F9F",
         "Oceania": "#7B1FA2"
     };
-    
+
     // Save custom clocks to localStorage
     function saveCustomClocks() {
         localStorage.setItem('customClocks', JSON.stringify(customClocks.map(city => city.name)));
     }
-    
+
     // Load custom clocks from localStorage
     function loadCustomClocks() {
         const saved = localStorage.getItem('customClocks');
@@ -348,41 +348,50 @@ document.addEventListener("DOMContentLoaded", () => {
             const cityNames = JSON.parse(saved);
             customClocks = cityNames
                 .map(name => cities.find(c => c.name.toLowerCase() === name.toLowerCase()))
-                .filter(city => city); // 유효한 도시만 포함
+                .filter(city => city);
             return customClocks;
         }
         return [];
     }
-    
+
     let allClocks = [];
     let displayedClocks = 0;
     const clocksPerLoad = 25;
     let customClocks = [];
-    
+
     const WEATHER_CACHE_KEY = "weatherDataCache";
-    const CACHE_DURATION = 28800000; // 8시간 (28,800,000ms)
-    
+    const CACHE_DURATION = 3600000; // 1시간
+    const memoryWeatherCache = new Map(); // 메모리 캐싱 추가
+
     // localStorage에서 캐싱된 날씨 데이터 가져오기
     function getCachedWeather() {
         const cached = localStorage.getItem(WEATHER_CACHE_KEY);
         return cached ? JSON.parse(cached) : {};
     }
-    
+
     // localStorage에 날씨 데이터 저장
     function setCachedWeather(weatherData) {
         localStorage.setItem(WEATHER_CACHE_KEY, JSON.stringify(weatherData));
     }
-    
+
     // Fetch weather data
     async function fetchWeather(lat, lon, city) {
         const cacheKey = `${lat},${lon}`;
-        let weatherCache = getCachedWeather();
-        const cached = weatherCache[cacheKey];
-    
-        if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
-            return cached.data;
+        
+        // 메모리 캐싱 먼저 확인
+        const cachedMemory = memoryWeatherCache.get(cacheKey);
+        if (cachedMemory && (Date.now() - cachedMemory.timestamp) < CACHE_DURATION) {
+            return cachedMemory.data;
         }
-    
+
+        // localStorage 캐싱 확인
+        let weatherCache = getCachedWeather();
+        const cachedLocal = weatherCache[cacheKey];
+        if (cachedLocal && (Date.now() - cachedLocal.timestamp) < CACHE_DURATION) {
+            memoryWeatherCache.set(cacheKey, cachedLocal);
+            return cachedLocal.data;
+        }
+
         try {
             const response = await fetch(
                 `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code`
@@ -394,7 +403,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 humidity: data.current.relative_humidity_2m,
                 code: data.current.weather_code,
             };
-            weatherCache[cacheKey] = { data: weather, timestamp: Date.now() };
+            const cacheData = { data: weather, timestamp: Date.now() };
+            memoryWeatherCache.set(cacheKey, cacheData);
+            weatherCache[cacheKey] = cacheData;
             setCachedWeather(weatherCache);
             return weather;
         } catch (error) {
@@ -402,7 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return { temp: "N/A", humidity: "N/A", code: 0 };
         }
     }
-    
+
     // Map weather code to icon
     function getWeatherIcon(code) {
         const weatherIcons = {
@@ -412,29 +423,29 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         return weatherIcons[code] || "🌍";
     }
-    
+
     // Create a clock
     function createClock(city, containerId, isCustom = false) {
         const container = document.createElement("div");
         container.className = "clock-container";
         container.dataset.city = city.name;
         container.dataset.continent = city.continent;
-    
+
         const flag = document.createElement("img");
         flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
         flag.alt = `${city.name} flag`;
-    
+
         const cityName = document.createElement("h2");
         cityName.appendChild(flag);
         cityName.append(` ${city.name}`);
-    
+
         const time = document.createElement("div");
         time.className = "clock-time";
         time.style.color = continentColors[city.continent] || "#000";
-    
+
         const weatherInfo = document.createElement("div");
         weatherInfo.className = "weather-info";
-    
+
         if (isCustom) {
             const removeBtn = document.createElement("button");
             removeBtn.className = "remove-clock";
@@ -442,7 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
             removeBtn.setAttribute("aria-label", `Remove ${city.name} clock`);
             container.appendChild(removeBtn);
         }
-    
+
         container.append(cityName, time, weatherInfo);
         const targetContainer = document.getElementById(containerId);
         if (targetContainer) {
@@ -451,12 +462,12 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error(`Container ${containerId} not found!`);
             return null;
         }
-    
+
         async function updateWeather() {
             const weather = await fetchWeather(city.lat, city.lon, city.name);
             weatherInfo.innerHTML = `Weather: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp}°C</span>, Humidity: <span class="humidity">${weather.humidity}%</span>`;
         }
-    
+
         function updateClock() {
             const now = new Date();
             const utc = now.getTime() + now.getTimezoneOffset() * 60000;
@@ -466,27 +477,27 @@ document.addEventListener("DOMContentLoaded", () => {
             const seconds = String(localTime.getSeconds()).padStart(2, "0");
             time.innerHTML = `${hours}:${minutes}<span class="seconds">:${seconds}</span>`;
         }
-    
+
         updateClock();
         updateWeather();
         setInterval(updateClock, 1000);
-        setInterval(updateWeather, CACHE_DURATION); // 8시간마다 날씨 갱신
-    
+        setInterval(updateWeather, CACHE_DURATION);
+
         return { clock: container, updateWeather };
     }
-    
+
     // Initialize main clocks
     async function initializeClocks() {
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.disabled = true;
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
         let chunk = cities;
-    
+
         if (activeContinent && activeContinent !== "") {
             chunk = cities.filter(city => city.continent === activeContinent);
         }
         chunk = chunk.slice(0, 50);
-    
+
         allClocks = [];
         document.getElementById("clocks-container").innerHTML = "";
         for (const city of chunk) {
@@ -494,22 +505,22 @@ document.addEventListener("DOMContentLoaded", () => {
             if (clock) allClocks.push(clock);
         }
         displayedClocks = chunk.length;
-    
+
         const totalCities = activeContinent && activeContinent !== ""
             ? cities.filter(city => city.continent === activeContinent).length
             : cities.length;
         if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
-    
+
         filterClocks();
     }
-    
+
     // Load more clocks
     async function loadMoreClocks() {
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.disabled = true;
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
         let chunk;
-    
+
         if (activeContinent && activeContinent !== "") {
             chunk = cities
                 .filter(city => city.continent === activeContinent)
@@ -517,27 +528,27 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             chunk = cities.slice(displayedClocks, displayedClocks + clocksPerLoad);
         }
-    
+
         for (const city of chunk) {
             const clock = await createClock(city, "clocks-container");
             if (clock) allClocks.push(clock);
         }
         displayedClocks += chunk.length;
-    
+
         const totalCities = activeContinent && activeContinent !== ""
             ? cities.filter(city => city.continent === activeContinent).length
             : cities.length;
         if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
-    
+
         filterClocks();
     }
-    
+
     // Create filter buttons
     function createFilterButtons() {
         const continents = ["", "Asia", "Europe", "N America", "S America", "Africa", "Oceania"];
         const filterContainer = document.getElementById("filter-buttons");
         if (!filterContainer) return;
-    
+
         filterContainer.innerHTML = "";
         continents.forEach(continent => {
             const button = document.createElement("button");
@@ -554,19 +565,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         filterContainer.firstChild.classList.add("active");
     }
-    
+
     // Filter clocks
     function filterClocks() {
         const searchQuery = document.getElementById("search")?.value.toLowerCase() || "";
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent || "";
-    
+
         allClocks.forEach(({ clock }) => {
             const matchesSearch = searchQuery === "" || clock.dataset.city.toLowerCase().startsWith(searchQuery);
             const matchesContinent = activeContinent === "" || clock.dataset.continent === activeContinent;
             clock.style.display = matchesSearch && matchesContinent ? "block" : "none";
         });
     }
-    
+
     // Setup search
     function setupSearch() {
         const searchInput = document.getElementById("search");
@@ -576,15 +587,15 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
-    
-    // Save custom clocks to localStorage (중복 정의)
+
+    // Save custom clocks to localStorage (중복 정의 제거)
     function saveCustomClocks() {
         const clockNames = customClocks.map(city => city.name);
         localStorage.setItem('customClocks', JSON.stringify(clockNames));
         console.log('Saved to localStorage:', clockNames);
     }
-    
-    // Load custom clocks from localStorage (중복 정의)
+
+    // Load custom clocks from localStorage (중복 정의 제거)
     function loadCustomClocks() {
         const saved = localStorage.getItem('customClocks');
         console.log('Raw localStorage data:', saved);
@@ -609,7 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('No saved clocks found, returning empty array');
         return [];
     }
-    
+
     function initializeCustomClocks() {
         console.log('Initializing custom clocks...');
         customClocks = loadCustomClocks();
@@ -621,7 +632,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             console.error('custom-clocks-container not found!');
         }
-    
+
         if (customClocks.length === 0) {
             console.log('No saved clocks, adding default cities...');
             const defaultCities = ["New York", "London"];
@@ -633,7 +644,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }
-    
+
         customClocks.forEach(city => {
             console.log(`Rendering clock for: ${city.name}`);
             const newClock = createClock(city, "custom-clocks-container", true);
@@ -651,10 +662,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-    
+
         updateClockCount();
         console.log('Clock count updated:', customClocks.length);
-    
+
         function bindClockEvents() {
             const clocks = document.querySelectorAll('.clock-container');
             console.log('Rebinding clocks:', clocks.length);
@@ -663,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 clock.addEventListener('click', handleClick);
             });
         }
-    
+
         const handleClick = async (e) => {
             e.preventDefault();
             const cityName = e.currentTarget.dataset.city?.trim();
@@ -676,7 +687,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cityInfoDiv.classList.add('show');
             try {
                 for (const file of ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json']) {
-                    const response = await fetch(`/data/json/${file}`); // 특수 문자 완전히 제거, 깨끗한 문자열로 작성
+                    const response = await fetch(`/data/json/${file}`);
                     if (!response.ok) continue;
                     const cities = await response.json();
                     const city = cities.find(c => c.name?.trim().toLowerCase() === cityName.toLowerCase());
@@ -720,12 +731,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
         };
-    
+
         bindClockEvents();
         const observer = new MutationObserver(bindClockEvents);
         observer.observe(document.getElementById('custom-clocks-section'), { childList: true, subtree: true });
     }
-    
+
     function addCustomClock(city) {
         console.log(`Adding custom clock: ${city.name}`);
         if (customClocks.length >= 6) {
@@ -738,7 +749,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('City already added:', city.name);
             return;
         }
-    
+
         customClocks.push(city);
         const newClock = createClock(city, "custom-clocks-container", true);
         if (newClock) {
@@ -754,7 +765,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
         }
-    
+
         updateClockCount();
         saveCustomClocks();
         const searchInput = document.getElementById("custom-city-search");
@@ -763,7 +774,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('Cleared search input');
         }
     }
-    
+
     function clearCustomClocks() {
         console.log('Clearing all custom clocks');
         customClocks = [];
@@ -778,7 +789,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateClockCount();
         console.log('Custom clocks cleared and saved');
     }
-    
+
     // Update clock count
     function updateClockCount() {
         const countElement = document.querySelector(".clock-count");
@@ -786,18 +797,18 @@ document.addEventListener("DOMContentLoaded", () => {
             countElement.textContent = `${customClocks.length}/6 Clocks Added`;
         }
     }
-    
+
     // Setup custom search
     function setupCustomSearch() {
         const searchInput = document.getElementById("custom-city-search");
         const suggestions = document.getElementById("custom-suggestions");
         if (!searchInput || !suggestions) return;
-    
+
         searchInput.addEventListener("input", () => {
             const query = searchInput.value.toLowerCase();
             suggestions.innerHTML = "";
             suggestions.style.display = query.length >= 2 ? "block" : "none";
-    
+
             if (query.length >= 2) {
                 const matches = cities.filter(city => city.name.toLowerCase().startsWith(query));
                 if (matches.length === 0) {
@@ -819,27 +830,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-    
+
         searchInput.addEventListener("keypress", (e) => {
             if (e.key === "Enter" && searchInput.value) {
                 const city = cities.find(c => c.name.toLowerCase() === searchInput.value.toLowerCase());
                 if (city) addCustomClock(city);
             }
         });
-    
+
         document.addEventListener("click", (e) => {
             if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
                 suggestions.style.display = "none";
             }
         });
     }
-    
+
     // Handle add custom clock
     function handleAddCustomClock() {
         const searchInput = document.getElementById("custom-city-search");
         const cityName = searchInput.value.trim();
         const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
-    
+
         if (city) {
             addCustomClock(city);
             searchInput.value = "";
@@ -848,7 +859,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("City not found!");
         }
     }
-    
+
     // Initialize
     if (document.getElementById("clocks-container")) {
         createFilterButtons();
@@ -857,11 +868,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.addEventListener("click", loadMoreClocks);
     }
-    
+
     if (document.getElementById("custom-clocks-section")) {
         initializeCustomClocks();
         setupCustomSearch();
-        // Bind Add and Clear buttons
         const addButton = document.getElementById("add-custom-clock");
         const clearButton = document.getElementById("clear-custom-clocks");
         if (addButton && clearButton) {
@@ -878,7 +888,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Add or Clear button not found!', { addButton, clearButton });
         }
     }
-    
+
     document.addEventListener('DOMContentLoaded', () => {
         const cityInfoDiv = document.getElementById('city-info');
         const jsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
@@ -934,4 +944,4 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-})
+});
