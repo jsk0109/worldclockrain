@@ -490,9 +490,13 @@ async function initializeClocks() {
         const clocksContainer = document.getElementById("clocks-container");
         clocksContainer.innerHTML = ""; // 초기화는 처음 한 번만
         for (const city of cities) {
-            const clock = await createClock(city, "clocks-container");
-            if (clock) {
-                allClocks.push(clock);
+            // 중복 시계 생성 방지
+            const existingClock = allClocks.find(c => c.clock.dataset.city === city.name);
+            if (!existingClock) {
+                const clock = await createClock(city, "clocks-container");
+                if (clock) {
+                    allClocks.push(clock);
+                }
             }
         }
     }
@@ -512,12 +516,8 @@ async function initializeClocks() {
         : cities.length;
     if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
 
+    console.log("Rebinding clocks:", allClocks.length); // 디버깅 로그
     filterClocks(); // 필터링만 수행
-
-    // 필터링 후에는 updateWeather 호출 방지
-    allClocks.forEach(({ updateWeather }) => {
-        // updateWeather는 주기적으로 실행되지만, 필터링 시에는 호출되지 않음
-    });
 }
 
     // Load more clocks
@@ -543,6 +543,7 @@ async function initializeClocks() {
         : cities.length;
     if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
 
+    console.log("Rebinding clocks:", allClocks.length); // 디버깅 로그
     filterClocks(); // 필터링만 수행
 }
 
