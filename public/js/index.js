@@ -377,44 +377,60 @@ async function fetchAllWeatherData() {
     }
 
     const weatherData = {};
-    const BATCH_SIZE = 40; // 배치 사이즈 조정
+    const BATCH_SIZE = 20; // 더 작은 배치로 나눔
     
-    for (let i = 0; i < cities.length; i += BATCH_SIZE) {
-        const batch = cities.slice(i, i + BATCH_SIZE);
-        const promises = batch.map(async (city) => {
-            try {
-                const response = await fetch(
-                    `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,weather_code`
-                );
-                
-                if (!response.ok) throw new Error('API failed');
+    try {
+        for (let i = 0; i < cities.length; i += BATCH_SIZE) {
+            const batch = cities.slice(i, i + BATCH_SIZE);
+            
+            // 각 도시의 날씨를 순차적으로 가져오기
+            for (const city of batch) {
+                try {
+                    const response = await fetch(
+                        `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,weather_code`
+                    );
+                    
+                    if (!response.ok) continue;
 
-                const data = await response.json();
-                return {
-                    city: city.name,
-                    data: {
+                    const data = await response.json();
+                    weatherData[city.name] = {
                         temp: data.current.temperature_2m,
                         humidity: data.current.relative_humidity_2m,
-                        code: data.current.weather_code
-                    }
-                };
-            } catch (error) {
-                return { city: city.name, error: true };
+                        code: data.current.weather_code,
+                        lastUpdated: new Intl.DateTimeFormat('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric',
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            hour12: true
+                        }).format(new Date())
+                    };
+                } catch (error) {
+                    continue;
+                }
+                
+                // 각 요청 사이에 약간의 딜레이
+                await new Promise(resolve => setTimeout(resolve, 100));
             }
-        });
-
-        const results = await Promise.all(promises);
-        results.forEach(result => {
-            if (!result.error) {
-                weatherData[result.city] = result.data;
+            
+            // 각 배치 사이에 더 긴 딜레이
+            if (i + BATCH_SIZE < cities.length) {
+                await new Promise(resolve => setTimeout(resolve, 1000));
             }
-        });
 
-        // 배치 사이의 딜레이 증가
-        if (i + BATCH_SIZE < cities.length) {
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // 현재까지의 데이터를 캐시에 저장
+            setCachedWeather({
+                data: weatherData,
+                lastBatchUpdate: now
+            });
         }
+    } catch (error) {
+        console.error('Error fetching weather:', error);
     }
+
+    return weatherData;
+}
 
     setCachedWeather({
         data: weatherData,
