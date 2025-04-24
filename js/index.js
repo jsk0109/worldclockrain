@@ -374,37 +374,26 @@ function setCachedWeather(weatherData) {
 
 async function fetchWeather(lat, lon, city) {
     const cacheKey = `${lat},${lon}`;
+    const weatherCache = getCachedWeather();
 
-    const cachedMemory = memoryWeatherCache.get(cacheKey);
-    if (cachedMemory && (Date.now() - cachedMemory.timestamp) < CACHE_DURATION) {
-        console.log(`Using memory cache for ${city}`);
-        return cachedMemory.data;
+    // 캐싱된 데이터가 있으면 사용
+    const cached = weatherCache[cacheKey];
+    if (cached && (Date.now() - cached.timestamp) < CACHE_DURATION) {
+        return cached.data;
     }
 
-    let weatherCache = getCachedWeather();
-    const cachedLocal = weatherCache[cacheKey];
-    if (cachedLocal && (Date.now() - cachedLocal.timestamp) < CACHE_DURATION) {
-        console.log(`Using localStorage cache for ${city}`);
-        memoryWeatherCache.set(cacheKey, cachedLocal);
-        return cachedLocal.data;
-    }
-
+    // 캐싱 없으면 Netlify Functions 호출
     try {
-        console.log(`Fetching new weather data for ${city}`);
-        const response = await fetch(
-            `/.netlify/functions/weatherApi?lat=${lat}&lon=${lon}&city=${city}`
-        );
+        const response = await fetch(`/.netlify/functions/weatherApi?lat=${lat}&lon=${lon}&city=${city}`);
         if (!response.ok) throw new Error("Weather API failed");
         const weather = await response.json();
 
-        const cacheData = { data: weather, timestamp: Date.now() };
-        memoryWeatherCache.set(cacheKey, cacheData);
-        weatherCache[cacheKey] = cacheData;
+        // 캐싱 저장
+        weatherCache[cacheKey] = { data: weather, timestamp: Date.now() };
         setCachedWeather(weatherCache);
 
         return weather;
     } catch (error) {
-        console.error(`Failed to fetch weather for ${city}:`, error);
         return { temp: "N/A", humidity: "N/A", code: 0 };
     }
 }
