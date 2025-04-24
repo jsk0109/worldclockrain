@@ -384,7 +384,7 @@ async function fetchWeather(lat, lon, city) {
 
     // 캐싱 없으면 Netlify Functions 호출
     try {
-        const response = await fetch(`/.netlify/functions/weatherApi?lat=${lat}&lon=${lon}&city=${city}`);
+        const response = await fetch(`/.netlify/functions/weatherApi?lat=${lat}&lon=${lon}`);
         if (!response.ok) throw new Error("Weather API failed");
         const weather = await response.json();
 
@@ -474,12 +474,12 @@ async function initializeClocks() {
     const loadMoreBtn = document.getElementById("load-more");
     if (loadMoreBtn) loadMoreBtn.disabled = true;
 
-    // 페이지가 처음 로드될 때 한 번만 시계 생성
+    // allClocks가 비어 있을 때만 시계 생성
     if (allClocks.length === 0) {
         const clocksContainer = document.getElementById("clocks-container");
-        clocksContainer.innerHTML = ""; // 초기화는 처음 한 번만
+        clocksContainer.innerHTML = ""; // 컨테이너 초기화
+
         for (const city of cities) {
-            // 중복 시계 생성 방지
             const existingClock = allClocks.find(c => c.clock.dataset.city === city.name);
             if (!existingClock) {
                 const clock = await createClock(city, "clocks-container");
@@ -510,30 +510,64 @@ async function initializeClocks() {
 }
 
     // Load more clocks
- async function loadMoreClocks() {
-    const loadMoreBtn = document.getElementById("load-more");
-    if (loadMoreBtn) loadMoreBtn.disabled = true;
+async function loadCustomClocks() {
+    console.log("Initializing custom clocks...");
+    const rawData = localStorage.getItem("savedClocks");
+    console.log("Raw localStorage data:", rawData);
 
-    const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
-    let chunk;
-
-    if (activeContinent && activeContinent !== "") {
-        chunk = cities
-            .filter(city => city.continent === activeContinent)
-            .slice(displayedClocks, displayedClocks + clocksPerLoad);
-    } else {
-        chunk = cities.slice(displayedClocks, displayedClocks + clocksPerLoad);
+    let savedClocks = [];
+    if (rawData) {
+        try {
+            savedClocks = JSON.parse(rawData);
+            console.log("Parsed saved clocks:", savedClocks);
+        } catch (error) {
+            console.error("Failed to parse saved clocks:", error);
+        }
     }
 
-    displayedClocks += chunk.length;
+    if (!savedClocks || savedClocks.length === 0) {
+        console.log("No saved clocks found, returning empty array");
+        savedClocks = [];
+    }
 
-    const totalCities = activeContinent && activeContinent !== ""
-        ? cities.filter(city => city.continent === activeContinent).length
-        : cities.length;
-    if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
+    let customClocks = [...savedClocks];
+    console.log("customClocks after load:", customClocks);
 
-    console.log("Rebinding clocks:", allClocks.length); // 디버깅 로그
-    filterClocks(); // 필터링만 수행
+    const customContainer = document.getElementById("custom-clocks-container");
+    if (customContainer) {
+        console.log("Cleared custom-clocks-container");
+        customContainer.innerHTML = "";
+    }
+
+    if (customClocks.length === 0) {
+        console.log("No saved clocks, adding default cities...");
+        const defaultCities = [
+            { name: "New York", lat: 40.7128, lon: -74.0060, offset: -5, flag: "us", continent: "N America" },
+            { name: "London", lat: 51.5074, lon: -0.1278, offset: 0, flag: "gb", continent: "Europe" }
+        ];
+
+        defaultCities.forEach(city => {
+            if (!customClocks.some(c => c.name === city.name)) {
+                customClocks.push(city);
+                console.log("Added default city:", city.name);
+            }
+        });
+
+        localStorage.setItem("savedClocks", JSON.stringify(customClocks));
+    }
+
+    // allClocks에서 중복 확인 후 추가
+    for (const city of customClocks) {
+        console.log("Rendering clock for:", city.name);
+        const existingClock = allClocks.find(c => c.clock.dataset.city === city.name);
+        if (!existingClock) {
+            const clock = await createClock(city, "custom-clocks-container", true);
+            if (clock) allClocks.push(clock);
+        }
+    }
+
+    console.log("Clock count updated:", allClocks.length);
+    bindCustomClockButtons();
 }
 
     // Create filter buttons
