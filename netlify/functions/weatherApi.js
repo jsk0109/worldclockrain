@@ -61,3 +61,18 @@ exports.handler = async (event) => {
         body: JSON.stringify(weather),
     };
 };
+
+async function saveWeatherToS3(weatherCache) {
+    try {
+        console.log("Saving to S3...");
+        await s3.putObject({
+            Bucket: S3_BUCKET,
+            Key: S3_KEY,
+            Body: JSON.stringify(weatherCache),
+            ContentType: "application/json",
+        }).promise();
+        console.log("Successfully saved to S3");
+    } catch (error) {
+        console.error("Failed to save to S3:", error);
+    }
+}
