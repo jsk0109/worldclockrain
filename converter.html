@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6076627813468062"
+     crossorigin="anonymous"></script>
+    <title>Zone Shift | World Clocks Rainbow</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/converter.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+     <meta name="description" content="Fast time converter for world time zones and time differences. Simplify travel and global meetings with our world clock tool!">
+     <meta name="keywords" content="time converter, time zones, time difference, world clock, travel time zones, real-time converter">
+     <meta name="robots" content="index, follow">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPCXS5MFDV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-EPCXS5MFDV');  <!-- 여기에 본인의 GA4 Measurement ID를 삽입 -->
+  </script>
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation">☰</button>
+        <ul>
+            <li><a href="index.html">Time Base</a></li>
+            <li><a href="about.html">WCR Story</a></li>
+            <li><a href="privacy-policy.html">Safe Zone</a></li>
+            <li><a href="contact.html">Drop a Line</a></li>
+            <li><a href="guides.html">Guide Space</a></li>
+            <li><a href="converter.html" aria-label="Go to time zone converter">Zone Shift</a></li>
+            <li><a href="blog.html">Time Tales</a></li>
+        </ul>
+    </nav>
+    <section class="hero-section">
+        <h1>Zone Shift 🌈</h1>
+        <p>Compare and convert time zones across cities with ease.</p>
+    </section>
+    <section class="converter-content">
+        <h2>Select Cities</h2>
+        <div class="instruction">
+            <p>Search and add up to 5 cities to compare their time zones and weather.</p>
+            <p>How to use the Time Zone Converter:</p>
+            <ol>
+                <li>Search for a city in the input box (e.g., "Seoul").</li>
+                <li>Select a city from the dropdown to add it.</li>
+                <li>Click "Add City" to compare time zones.</li>
+                <li>View time differences and weather below.</li>
+                <li>Click "Suggest Meeting" for optimal meeting times.</li>
+            </ol>
+        </div>
+        <div class="city-input-group">
+            <div class="city-input">
+                <div class="search-wrapper">
+                    <input type="text" id="city-search" placeholder="Search for a city..." aria-label="Search city">
+                    <span class="search-icon">🔍</span>
+                    <div class="suggestions" id="suggestions"></div>
+                </div>
+                <button class="add-city-btn" id="add-city-btn" aria-label="Add selected city">Add City</button>
+            </div>
+        </div>
+        <div id="selected-cities"></div>
+        <div id="time-comparison"></div>
+        <button id="suggest-meeting">Suggest Meeting Time</button>
+        <div id="meeting-suggestion"></div>
+        <div id="notification" class="notification"></div>
+    </section>
+    <div id="footer-container"></div>
+    <script src="js/global.js"></script>
+    <script src="js/converter.js"></script>
+</body>
+</html>
