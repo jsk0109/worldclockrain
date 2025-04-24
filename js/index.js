@@ -484,61 +484,63 @@ async function fetchWeather(lat, lon, city) {
     }
 
     // Initialize main clocks
-    async function initializeClocks() {
-        const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.disabled = true;
-        const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
-        let chunk = cities;
+ async function initializeClocks() {
+    const loadMoreBtn = document.getElementById("load-more");
+    if (loadMoreBtn) loadMoreBtn.disabled = true;
 
-        if (activeContinent && activeContinent !== "") {
-            chunk = cities.filter(city => city.continent === activeContinent);
-        }
-        chunk = chunk.slice(0, 50);
+    const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
+    let chunk = cities;
 
-        allClocks = [];
-        document.getElementById("clocks-container").innerHTML = "";
-        for (const city of chunk) {
+    if (activeContinent && activeContinent !== "") {
+        chunk = cities.filter(city => city.continent === activeContinent);
+    }
+    chunk = chunk.slice(0, 50);
+
+    // 시계를 새로 생성하지 않고, 처음 한 번만 생성
+    if (allClocks.length === 0) {
+        const clocksContainer = document.getElementById("clocks-container");
+        clocksContainer.innerHTML = ""; // 초기화는 처음 한 번만
+        for (const city of cities) { // 모든 도시의 시계를 한 번에 생성
             const clock = await createClock(city, "clocks-container");
             if (clock) allClocks.push(clock);
         }
-        displayedClocks = chunk.length;
-
-        const totalCities = activeContinent && activeContinent !== ""
-            ? cities.filter(city => city.continent === activeContinent).length
-            : cities.length;
-        if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
-
-        filterClocks();
     }
+
+    displayedClocks = chunk.length;
+
+    const totalCities = activeContinent && activeContinent !== ""
+        ? cities.filter(city => city.continent === activeContinent).length
+        : cities.length;
+    if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
+
+    filterClocks(); // 필터링만 수행
+}
 
     // Load more clocks
-    async function loadMoreClocks() {
-        const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.disabled = true;
-        const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
-        let chunk;
+ async function loadMoreClocks() {
+    const loadMoreBtn = document.getElementById("load-more");
+    if (loadMoreBtn) loadMoreBtn.disabled = true;
 
-        if (activeContinent && activeContinent !== "") {
-            chunk = cities
-                .filter(city => city.continent === activeContinent)
-                .slice(displayedClocks, displayedClocks + clocksPerLoad);
-        } else {
-            chunk = cities.slice(displayedClocks, displayedClocks + clocksPerLoad);
-        }
+    const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
+    let chunk;
 
-        for (const city of chunk) {
-            const clock = await createClock(city, "clocks-container");
-            if (clock) allClocks.push(clock);
-        }
-        displayedClocks += chunk.length;
-
-        const totalCities = activeContinent && activeContinent !== ""
-            ? cities.filter(city => city.continent === activeContinent).length
-            : cities.length;
-        if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
-
-        filterClocks();
+    if (activeContinent && activeContinent !== "") {
+        chunk = cities
+            .filter(city => city.continent === activeContinent)
+            .slice(displayedClocks, displayedClocks + clocksPerLoad);
+    } else {
+        chunk = cities.slice(displayedClocks, displayedClocks + clocksPerLoad);
     }
+
+    displayedClocks += chunk.length;
+
+    const totalCities = activeContinent && activeContinent !== ""
+        ? cities.filter(city => city.continent === activeContinent).length
+        : cities.length;
+    if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
+
+    filterClocks(); // 필터링만 수행
+}
 
     // Create filter buttons
     function createFilterButtons() {
@@ -563,17 +565,16 @@ async function fetchWeather(lat, lon, city) {
         filterContainer.firstChild.classList.add("active");
     }
 
-    // Filter clocks
-    function filterClocks() {
-        const searchQuery = document.getElementById("search")?.value.toLowerCase() || "";
-        const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent || "";
+function filterClocks() {
+    const searchQuery = document.getElementById("search")?.value.toLowerCase() || "";
+    const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent || "";
 
-        allClocks.forEach(({ clock }) => {
-            const matchesSearch = searchQuery === "" || clock.dataset.city.toLowerCase().startsWith(searchQuery);
-            const matchesContinent = activeContinent === "" || clock.dataset.continent === activeContinent;
-            clock.style.display = matchesSearch && matchesContinent ? "block" : "none";
-        });
-    }
+    allClocks.forEach(({ clock }) => {
+        const matchesSearch = searchQuery === "" || clock.dataset.city.toLowerCase().startsWith(searchQuery);
+        const matchesContinent = activeContinent === "" || clock.dataset.continent === activeContinent;
+        clock.style.display = matchesSearch && matchesContinent ? "block" : "none";
+    });
+}
 
     // Setup search
     function setupSearch() {
