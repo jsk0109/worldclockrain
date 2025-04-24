@@ -360,60 +360,57 @@ document.addEventListener("DOMContentLoaded", () => {
     let customClocks = [];
 
     const WEATHER_CACHE_KEY = "weatherDataCache";
-    const CACHE_DURATION = 3600000; // 1시간
-    const memoryWeatherCache = new Map(); // 메모리 캐싱 추가
+const CACHE_DURATION = 3600000; // 1시간
+const memoryWeatherCache = new Map(); // 메모리 캐싱
 
-    // localStorage에서 캐싱된 날씨 데이터 가져오기
-    function getCachedWeather() {
-        const cached = localStorage.getItem(WEATHER_CACHE_KEY);
-        return cached ? JSON.parse(cached) : {};
+// localStorage에서 캐싱된 날씨 데이터 가져오기
+function getCachedWeather() {
+    const cached = localStorage.getItem(WEATHER_CACHE_KEY);
+    return cached ? JSON.parse(cached) : {};
+}
+
+// localStorage에 날씨 데이터 저장
+function setCachedWeather(weatherData) {
+    localStorage.setItem(WEATHER_CACHE_KEY, JSON.stringify(weatherData));
+}
+
+// Netlify Functions를 통해 날씨 데이터 가져오기
+async function fetchWeather(lat, lon, city) {
+    const cacheKey = `${lat},${lon}`;
+
+    // 메모리 캐싱 먼저 확인
+    const cachedMemory = memoryWeatherCache.get(cacheKey);
+    if (cachedMemory && (Date.now() - cachedMemory.timestamp) < CACHE_DURATION) {
+        return cachedMemory.data;
     }
 
-    // localStorage에 날씨 데이터 저장
-    function setCachedWeather(weatherData) {
-        localStorage.setItem(WEATHER_CACHE_KEY, JSON.stringify(weatherData));
+    // localStorage 캐싱 확인
+    let weatherCache = getCachedWeather();
+    const cachedLocal = weatherCache[cacheKey];
+    if (cachedLocal && (Date.now() - cachedLocal.timestamp) < CACHE_DURATION) {
+        memoryWeatherCache.set(cacheKey, cachedLocal);
+        return cachedLocal.data;
     }
 
-    // Fetch weather data
-    async function fetchWeather(lat, lon, city) {
-        const cacheKey = `${lat},${lon}`;
-        
-        // 메모리 캐싱 먼저 확인
-        const cachedMemory = memoryWeatherCache.get(cacheKey);
-        if (cachedMemory && (Date.now() - cachedMemory.timestamp) < CACHE_DURATION) {
-            return cachedMemory.data;
-        }
+    try {
+        const response = await fetch(
+            `/.netlify/functions/weatherApi?lat=${lat}&lon=${lon}&city=${city}`
+        );
+        if (!response.ok) throw new Error("Weather API failed");
+        const weather = await response.json();
 
-        // localStorage 캐싱 확인
-        let weatherCache = getCachedWeather();
-        const cachedLocal = weatherCache[cacheKey];
-        if (cachedLocal && (Date.now() - cachedLocal.timestamp) < CACHE_DURATION) {
-            memoryWeatherCache.set(cacheKey, cachedLocal);
-            return cachedLocal.data;
-        }
+        // 캐시에 저장
+        const cacheData = { data: weather, timestamp: Date.now() };
+        memoryWeatherCache.set(cacheKey, cacheData);
+        weatherCache[cacheKey] = cacheData;
+        setCachedWeather(weatherCache);
 
-        try {
-            const response = await fetch(
-                `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code`
-            );
-            if (!response.ok) throw new Error("Weather API failed");
-            const data = await response.json();
-            const weather = {
-                temp: data.current.temperature_2m,
-                humidity: data.current.relative_humidity_2m,
-                code: data.current.weather_code,
-            };
-            const cacheData = { data: weather, timestamp: Date.now() };
-            memoryWeatherCache.set(cacheKey, cacheData);
-            weatherCache[cacheKey] = cacheData;
-            setCachedWeather(weatherCache);
-            return weather;
-        } catch (error) {
-            console.error(`Failed to fetch weather for ${city}:`, error);
-            return { temp: "N/A", humidity: "N/A", code: 0 };
-        }
+        return weather;
+    } catch (error) {
+        console.error(`Failed to fetch weather for ${city}:`, error);
+        return { temp: "N/A", humidity: "N/A", code: 0 };
     }
-
+}
     // Map weather code to icon
     function getWeatherIcon(code) {
         const weatherIcons = {
