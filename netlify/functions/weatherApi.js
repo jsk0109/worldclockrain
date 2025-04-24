@@ -1,40 +1,24 @@
-// weatherApi.js 파일을 수정하겠습니다
-exports.handler = async function(event, context) {
+// weatherApi.js
+// 서버에서 캐시된 날씨 데이터를 가져오는 로직으로 전환
+
+// 서버에서 날씨 데이터를 가져오는 함수
+async function fetchWeather(lat, lon, city) {
     try {
-        let cache = context.clientContext?.cache || {};
-        const now = Date.now();
-        
-        // 캐시가 있고 2시간 이내라면 캐시된 데이터 반환
-        if (cache.weather && 
-            cache.timestamp && 
-            (now - cache.timestamp < 2 * 60 * 60 * 1000)) {
-            return {
-                statusCode: 200,
-                body: JSON.stringify(cache.weather)
-            };
+        // 서버의 캐시된 날씨 데이터를 요청
+        const response = await fetch(`/weather?lat=${lat}&lon=${lon}`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch weather from server');
         }
-
-        // 여기에 실제 날씨 API 호출 코드가 들어갈 예정입니다
-        // 지금은 테스트 데이터로 진행
-        const testData = {
-            message: "Weather data will be here",
-            timestamp: new Date().toISOString()
-        };
-
-        // 캐시 업데이트
-        cache = {
-            weather: testData,
-            timestamp: now
-        };
-
-        return {
-            statusCode: 200,
-            body: JSON.stringify(testData)
-        };
+        const weatherData = await response.json();
+        return weatherData; // 서버에서 반환된 데이터 사용
     } catch (error) {
+        console.error(`Failed to fetch weather for ${city}:`, error);
         return {
-            statusCode: 500,
-            body: JSON.stringify({ error: "Something went wrong" })
-        };
+            temp: "N/A",
+            humidity: "N/A",
+            code: 0
+        }; // 에러 시 기본값 반환
     }
-};
+}
+
+export { fetchWeather };
