@@ -463,74 +463,113 @@ async function fetchAllWeatherData() {
     
     // Create a clock
     function createClock(city, containerId, isCustom = false) {
-        const container = document.createElement("div");
-        container.className = "clock-container";
-        container.dataset.city = city.name;
-        container.dataset.continent = city.continent;
-    
-        const flag = document.createElement("img");
-        flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
-        flag.alt = `${city.name} flag`;
-    
-        const cityName = document.createElement("h2");
-        cityName.appendChild(flag);
-        cityName.append(` ${city.name}`);
-    
-        const time = document.createElement("div");
-        time.className = "clock-time";
-        time.style.color = continentColors[city.continent] || "#000";
-    
-        const weatherInfo = document.createElement("div");
-        weatherInfo.className = "weather-info";
-    
-        if (isCustom) {
-            const removeBtn = document.createElement("button");
-            removeBtn.className = "remove-clock";
-            removeBtn.textContent = "X";
-            removeBtn.setAttribute("aria-label", `Remove ${city.name} clock`);
-            container.appendChild(removeBtn);
-        }
-    
-        container.append(cityName, time, weatherInfo);
-        const targetContainer = document.getElementById(containerId);
-        if (targetContainer) {
-            targetContainer.appendChild(container);
-        } else {
-            console.error(`Container ${containerId} not found!`);
-            return null;
-        }
-    
-        async function updateWeather() {
-            const weather = await fetchWeather(city.lat, city.lon, city.name);
-            let weatherHtml = `Weather: ${getWeatherIcon(weather.code)} `;
-            
-            if (weather.error) {
-                weatherHtml += `<span class="error">${weather.error}</span>`;
-            } else {
-                weatherHtml += `<span class="temp">${weather.temp}°C</span>, Humidity: <span class="humidity">${weather.humidity}%</span>`;
-            }
-            
-            weatherHtml += `<br><span class="last-updated">Last updated: ${weather.lastUpdated}</span>`;
-            weatherInfo.innerHTML = weatherHtml;
-        }
-    
-        function updateClock() {
-            const now = new Date();
-            const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-            const localTime = new Date(utc + city.offset * 3600000);
-            const hours = String(localTime.getHours()).padStart(2, "0");
-            const minutes = String(localTime.getMinutes()).padStart(2, "0");
-            const seconds = String(localTime.getSeconds()).padStart(2, "0");
-            time.innerHTML = `${hours}:${minutes}<span class="seconds">:${seconds}</span>`;
-        }
-    
-        updateClock();
-        updateWeather();
-        setInterval(updateClock, 1000);
-        setInterval(updateWeather, WEATHER_UPDATE_INTERVAL); // 2시간마다 날씨 갱신
-    
-        return { clock: container, updateWeather };
+    const container = document.createElement("div");
+    container.className = "clock-container";
+    container.dataset.city = city.name;
+    container.dataset.continent = city.continent;
+
+    const flag = document.createElement("img");
+    flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
+    flag.alt = `${city.name} flag`;
+
+    const cityName = document.createElement("h2");
+    cityName.appendChild(flag);
+    cityName.append(` ${city.name}`);
+
+    const time = document.createElement("div");
+    time.className = "clock-time";
+    time.style.color = continentColors[city.continent] || "#000";
+
+    const weatherInfo = document.createElement("div");
+    weatherInfo.className = "weather-info";
+
+    if (isCustom) {
+        const removeBtn = document.createElement("button");
+        removeBtn.className = "remove-clock";
+        removeBtn.textContent = "X";
+        removeBtn.setAttribute("aria-label", `Remove ${city.name} clock`);
+        container.appendChild(removeBtn);
     }
+
+    container.append(cityName, time, weatherInfo);
+    
+    // 팝업 이벤트 핸들러 추가
+    container.addEventListener('click', async function(e) {
+        // 삭제 버튼 클릭은 무시
+        if (e.target.closest('.remove-clock')) {
+            return;
+        }
+
+        try {
+            // 1부터 5까지의 파일 시도
+            for (let i = 1; i <= 5; i++) {
+                try {
+                    const response = await fetch(`/data/popup/cities${i}.json`);
+                    if (!response.ok) continue;
+                    
+                    const citiesData = await response.json();
+                    const cityData = citiesData.find(c => c.name === city.name);
+                    
+                    if (cityData) {
+                        console.log('Found city data in file:', i, cityData);  // 디버깅용
+                        showCityInfo(cityData);
+                        return;
+                    }
+                } catch (err) {
+                    console.log(`Trying next file after error in cities${i}.json:`, err);
+                }
+            }
+            console.error('City data not found in any file:', city.name);
+        } catch (error) {
+            console.error('Error loading city data:', error);
+        }
+    });
+
+    const targetContainer = document.getElementById(containerId);
+    if (targetContainer) {
+        targetContainer.appendChild(container);
+    } else {
+        console.error(`Container ${containerId} not found!`);
+        return null;
+    }
+
+    async function updateWeather() {
+        const weather = await fetchWeather(city.lat, city.lon, city.name);
+        let weatherHtml = `Weather: ${getWeatherIcon(weather.code)} `;
+        
+        if (weather.error) {
+            weatherHtml += `<span class="error">${weather.error}</span>`;
+        } else {
+            weatherHtml += `<span class="temp">${weather.temp}°C</span>, Humidity: <span class="humidity">${weather.humidity}%</span>`;
+        }
+        
+        if (weather.lastUpdated) {
+            weatherHtml += `<br><span class="last-updated">Last updated: ${weather.lastUpdated}</span>`;
+        }
+        weatherInfo.innerHTML = weatherHtml;
+    }
+
+    function updateClock() {
+        const options = {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        };
+        
+        const now = new Date();
+        const cityTime = new Date(now.toLocaleString('en-US', { timeZone: city.timeZone }));
+        time.textContent = cityTime.toLocaleTimeString('en-US', options);
+    }
+
+    updateClock();
+    updateWeather();
+    
+    setInterval(updateClock, 1000);
+    setInterval(updateWeather, WEATHER_UPDATE_INTERVAL);
+
+    return { clock: container, updateWeather };
+}
     
     // Initialize main clocks
     async function initializeClocks() {
