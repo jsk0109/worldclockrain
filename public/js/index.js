@@ -376,28 +376,52 @@ async function fetchAllWeatherData() {
         return weatherCache.data || {};
     }
 
-    try {
-        const response = await fetch('/.netlify/functions/getWeather', {
-            method: 'POST',
-            body: JSON.stringify(cities)
+    const weatherData = {};
+    const BATCH_SIZE = 40; // 배치 사이즈 조정
+    
+    for (let i = 0; i < cities.length; i += BATCH_SIZE) {
+        const batch = cities.slice(i, i + BATCH_SIZE);
+        const promises = batch.map(async (city) => {
+            try {
+                const response = await fetch(
+                    `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,weather_code`
+                );
+                
+                if (!response.ok) throw new Error('API failed');
+
+                const data = await response.json();
+                return {
+                    city: city.name,
+                    data: {
+                        temp: data.current.temperature_2m,
+                        humidity: data.current.relative_humidity_2m,
+                        code: data.current.weather_code
+                    }
+                };
+            } catch (error) {
+                return { city: city.name, error: true };
+            }
         });
-        
-        if (!response.ok) {
-            throw new Error('Weather API failed');
+
+        const results = await Promise.all(promises);
+        results.forEach(result => {
+            if (!result.error) {
+                weatherData[result.city] = result.data;
+            }
+        });
+
+        // 배치 사이의 딜레이 증가
+        if (i + BATCH_SIZE < cities.length) {
+            await new Promise(resolve => setTimeout(resolve, 2000));
         }
-
-        const weatherData = await response.json();
-        
-        setCachedWeather({
-            data: weatherData,
-            lastBatchUpdate: now
-        });
-
-        return weatherData;
-    } catch (error) {
-        console.error('Failed to fetch weather:', error);
-        return {};
     }
+
+    setCachedWeather({
+        data: weatherData,
+        lastBatchUpdate: now
+    });
+
+    return weatherData;
 }
 
     // localStorage에서 캐싱된 날씨 데이터 가져오기
