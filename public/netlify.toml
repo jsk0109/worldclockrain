@@ -1,9 +1,3 @@
 [build]
   publish = "public"
-
-[[redirects]]
-  from = "https://www.worldclocks.it.com/*"
-  to = "https://worldclocks.it.com/:splat"
-  status = 301
-  force = true
-
+  functions = "netlify/functions"
