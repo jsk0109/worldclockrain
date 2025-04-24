@@ -1,18 +1,16 @@
 const fetch = require("node-fetch");
 const AWS = require("aws-sdk");
 
-// AWS S3 설정
 const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     region: process.env.CUSTOM_REGION || "us-east-1",
 });
 
-const CACHE_DURATION = 3600000; // 1시간
+const CACHE_DURATION = 3600000;
 const S3_BUCKET = "my-weather-cache";
 const S3_KEY = "weather-data.json";
 
-// S3에서 캐싱된 데이터 가져오기
 async function getWeatherFromS3() {
     try {
         console.log("Checking S3 for cache...");
@@ -27,10 +25,9 @@ async function getWeatherFromS3() {
     }
 }
 
-// S3에 데이터 저장
 async function saveWeatherToS3(weatherCache) {
     try {
-        console.log("Saving to S3...");
+        console.log("Attempting to save to S3...");
         await s3.putObject({
             Bucket: S3_BUCKET,
             Key: S3_KEY,
@@ -43,14 +40,13 @@ async function saveWeatherToS3(weatherCache) {
     }
 }
 
-// 모든 도시 데이터를 가져오는 함수
 async function fetchAllWeatherData(cities) {
     const weatherCache = {};
     for (const city of cities) {
         const cacheKey = `${city.lat},${city.lon}`;
         try {
             const response = await fetch(
-                `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}¤t=temperature_2m,relative_humidity_2m,weather_code`
+                `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,weather_code`
             );
             if (!response.ok) throw new Error("Weather API failed");
             const data = await response.json();
@@ -74,14 +70,12 @@ async function fetchAllWeatherData(cities) {
     return weatherCache;
 }
 
-// Netlify Function 핸들러
 exports.handler = async (event) => {
     const params = event.queryStringParameters || {};
     const lat = params.lat;
     const lon = params.lon;
     const citiesParam = params.cities;
 
-    // lat과 lon이 없으면 전체 데이터를 요청하는 것으로 간주
     if (!lat && !lon && citiesParam) {
         let cities;
         try {
@@ -112,7 +106,6 @@ exports.handler = async (event) => {
         };
     }
 
-    // 개별 도시 요청 처리
     if (!lat || !lon) {
         return {
             statusCode: 400,
@@ -129,7 +122,7 @@ exports.handler = async (event) => {
         console.log(`Fetching new weather data for ${cacheKey}`);
         try {
             const response = await fetch(
-                `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}¤t=temperature_2m,relative_humidity_2m,weather_code`
+                `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code`
             );
             if (!response.ok) throw new Error("Weather API failed");
             const data = await response.json();
