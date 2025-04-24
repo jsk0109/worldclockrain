@@ -4,7 +4,7 @@ exports.handler = async function(event, context) {
     try {
         const cities = JSON.parse(event.body || '[]');
         const weatherData = {};
-        const batchSize = 50;
+        const batchSize = 30; // 50에서 30으로 줄임
         
         for (let i = 0; i < cities.length; i += batchSize) {
             const batch = cities.slice(i, i + batchSize);
@@ -23,13 +23,24 @@ exports.handler = async function(event, context) {
                         throw new Error('Invalid weather data format');
                     }
 
+                    // 날짜 형식 통일
+                    const now = new Date();
+                    const formattedDate = new Intl.DateTimeFormat('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        hour12: true
+                    }).format(now);
+
                     return {
                         city: city.name,
                         data: {
                             temp: data.current.temperature_2m,
                             humidity: data.current.relative_humidity_2m,
                             code: data.current.weather_code,
-                            lastUpdated: new Date().toISOString()
+                            lastUpdated: formattedDate
                         }
                     };
                 } catch (error) {
@@ -48,8 +59,9 @@ exports.handler = async function(event, context) {
                 }
             });
 
+            // API 제한 회피를 위한 지연 시간 증가
             if (i + batchSize < cities.length) {
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise(resolve => setTimeout(resolve, 2000));
             }
         }
 
