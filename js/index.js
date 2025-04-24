@@ -484,19 +484,11 @@ async function fetchWeather(lat, lon, city) {
     }
 
     // Initialize main clocks
- async function initializeClocks() {
+async function initializeClocks() {
     const loadMoreBtn = document.getElementById("load-more");
     if (loadMoreBtn) loadMoreBtn.disabled = true;
 
-    const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
-    let chunk = cities;
-
-    if (activeContinent && activeContinent !== "") {
-        chunk = cities.filter(city => city.continent === activeContinent);
-    }
-    chunk = chunk.slice(0, 50);
-
-    // 시계를 새로 생성하지 않고, 처음 한 번만 생성
+    // 페이지가 처음 로드될 때 한 번만 시계 생성
     if (allClocks.length === 0) {
         const clocksContainer = document.getElementById("clocks-container");
         clocksContainer.innerHTML = ""; // 초기화는 처음 한 번만
@@ -505,6 +497,14 @@ async function fetchWeather(lat, lon, city) {
             if (clock) allClocks.push(clock);
         }
     }
+
+    const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
+    let chunk = cities;
+
+    if (activeContinent && activeContinent !== "") {
+        chunk = cities.filter(city => city.continent === activeContinent);
+    }
+    chunk = chunk.slice(0, 50);
 
     displayedClocks = chunk.length;
 
