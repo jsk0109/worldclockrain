@@ -15,8 +15,8 @@ async function fetchWeatherData(lat, lon) {
     try {
         console.log(`Fetching new weather data for ${cacheKey}`);
         const response = await fetch(
-            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}¤t=temperature_2m,relative_humidity_2m,weather_code`
-        );
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code`
+);
         if (!response.ok) throw new Error("Weather API failed");
         const data = await response.json();
 
