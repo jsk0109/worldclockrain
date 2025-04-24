@@ -983,7 +983,7 @@ async function fetchAllWeatherData() {
                 try {
                     for (const file of jsonFiles) {
                         console.log('Fetching:', `/data/json/${file}`);
-                        const response = await fetch(`/data/json/${file}`);
+                        const response = await fetch(`/data/popup/json/${file}`);
                         if (!response.ok) {
                             console.error(`Failed to fetch ${file}: ${response.status}`);
                             continue;
