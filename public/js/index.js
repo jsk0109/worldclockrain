@@ -558,20 +558,15 @@ async function fetchAllWeatherData() {
     }
 
     async function updateWeather() {
-        const weather = await fetchWeather(city.lat, city.lon, city.name);
-        let weatherHtml = `Weather: ${getWeatherIcon(weather.code)} `;
-        
-        if (weather.error) {
-            weatherHtml += `<span class="error">${weather.error}</span>`;
-        } else {
-            weatherHtml += `<span class="temp">${weather.temp}°C</span>, Humidity: <span class="humidity">${weather.humidity}%</span>`;
-        }
-        
-        if (weather.lastUpdated) {
-            weatherHtml += `<br><span class="last-updated">Last updated: ${weather.lastUpdated}</span>`;
-        }
-        weatherInfo.innerHTML = weatherHtml;
+    const weather = await fetchWeather(city.lat, city.lon, city.name);
+    let weatherHtml = `Weather: ${getWeatherIcon(weather.code)} `;
+    
+    if (!weather.error) {
+        weatherHtml += `${weather.temp}°C, Humidity: ${weather.humidity}%`;
     }
+    
+    weatherInfo.innerHTML = weatherHtml;
+}
 
     function updateClock() {
         const options = {
