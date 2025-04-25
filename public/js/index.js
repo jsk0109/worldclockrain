@@ -687,7 +687,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cityInfoDiv.classList.add('show');
                 try {
                     for (const file of ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json']) {
-                        const response = await fetch(`data/popup/json/${file}`);
+                        const response = await fetch(`/data/json/${file}`);
                         if (!response.ok) continue;
                         const cities = await response.json();
                         const city = cities.find(c => c.name?.trim().toLowerCase() === cityName.toLowerCase());
