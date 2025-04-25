@@ -85,7 +85,7 @@ nav ul li a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 150px;
+    min-height: 120px;
 }
 
 .hero-section h1 {
