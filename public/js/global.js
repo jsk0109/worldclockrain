@@ -118,3 +118,4 @@ fetch('footer.html')
             }
         });
     };
+
