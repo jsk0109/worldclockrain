@@ -72,8 +72,8 @@ nav ul li a.active {
 }
 
 .hamburger svg { 
-    width: 24px; 
-    height: 24px; 
+    width: 28px; 
+    height: 28px; 
     stroke: #fff; 
     stroke-width: 4; 
     filter: brightness(1.5) contrast(1.5); 
@@ -170,7 +170,7 @@ nav ul li a.active {
         width: 24px; 
         height: 24px; 
         stroke: #fff; 
-        stroke-width: 4; 
+        stroke-width: 3; 
         filter: brightness(1.5) contrast(1.5);
     }
     
