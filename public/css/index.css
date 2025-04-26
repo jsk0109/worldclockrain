@@ -149,6 +149,41 @@ nav { z-index: 1100; }
     flex: 0 0 auto;
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.clock-container:hover {
+    transform: scale(1.05);
+}
+
+/* 풀스크린 모드에서 hover 효과 비활성화 */
+.fullscreen-clock .clock-container:hover {
+    transform: none;
+}
+
+.button-wrapper-clock {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.fullscreen-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.fullscreen-btn:hover {
+    color: #007bff;
 }
 
 #custom-clocks-container .clock-container {
@@ -210,6 +245,7 @@ nav { z-index: 1100; }
     font-size: 16px;
     color: #ff6f61;
     cursor: pointer;
+    display: inline-block; /* 항상 보이도록 */
 }
 
 .clock-container .remove-clock:hover {
@@ -277,7 +313,7 @@ nav { z-index: 1100; }
 }
 
 #custom-clocks-section h2 {
-    font-size: 30px;
+    font-size: 25px;
     color: #333;
     border-bottom: none;
     padding-bottom: 10px;
@@ -302,6 +338,9 @@ nav { z-index: 1100; }
         width: 100%; /* 모바일에서 전체 너비 */
         padding: 10px; /* 여백 줄임 */
     }
+    #add-custom-clock, #clear-custom-clocks {
+        display: none; /* 모바일에서 버튼 숨김 */
+    }
 }
 
 .custom-clock-input {
@@ -309,13 +348,13 @@ nav { z-index: 1100; }
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     width: 100%;
 }
 
 .search-wrapper {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -323,8 +362,8 @@ nav { z-index: 1100; }
 
 #custom-city-search {
     width: 100%;
-    max-width: 400px;
-    padding: 12px;
+    max-width: 300px;
+    padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -471,9 +510,5 @@ nav { z-index: 1100; }
         font-size: 14px;
         flex: 1;
         max-width: 140px;
-    }
-    #custom-clocks-container {
-        padding: 10px;
-        gap: 10px;
     }
 }
