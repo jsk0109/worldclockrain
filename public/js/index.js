@@ -635,7 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
             if (customClocks.length === 0) {
                 console.log('No saved clocks, adding default cities...');
-                const defaultCities = ["New York", "London"];
+                const defaultCities = ["London"];
                 defaultCities.forEach(cityName => {
                     const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
                     if (city && !customClocks.some(c => c.name.toLowerCase() === cityName.toLowerCase())) {
