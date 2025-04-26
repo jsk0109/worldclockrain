@@ -511,4 +511,16 @@ nav { z-index: 1100; }
         flex: 1;
         max-width: 140px;
     }
+        .hero-section {
+        background: linear-gradient(135deg, #ff6f61, #ffeb3b, #4caf50, #2196f3, #9c27b0);
+        padding: 20px 10px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 70px;
+    }
 }
