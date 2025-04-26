@@ -148,10 +148,8 @@ nav ul li a.active {
     nav .hamburger {
         display: block;
         color: #ffffff; 
-        opacity: 1; 
-        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5); 
+        opacity: 1;  
         font-size: 24px; /* 크기 조정, 원하는 값으로 변경 가능 */
-        font-weight: bold;
     }
     nav ul {
         display: block;
