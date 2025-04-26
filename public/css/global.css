@@ -147,7 +147,10 @@ nav ul li a.active {
 @media (max-width: 768px) {
     nav .hamburger {
         display: block;
-        color: #fff; opacity: 1;
+        color: #333; 
+        opacity: 1; 
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5); 
+        font-size: 24px; /* 크기 조정, 원하는 값으로 변경 가능 */
     }
     nav ul {
         display: block;
