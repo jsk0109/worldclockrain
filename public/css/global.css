@@ -147,6 +147,7 @@ nav ul li a.active {
 @media (max-width: 768px) {
     nav .hamburger {
         display: block;
+        color: #fff; opacity: 1;
     }
     nav ul {
         display: block;
