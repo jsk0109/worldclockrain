@@ -69,7 +69,7 @@ async function handleRequest(event) {
   if (!latitude || !longitude) {
     return new Response(JSON.stringify({ error: 'lat and lon query parameters are required' }), {
       status: 400,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
     });
   }
 
