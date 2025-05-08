@@ -1,3 +1,91 @@
+// --- Preview Handler Logic (기존 preview-handler.js 내용) ---
+const productionHostname = 'worldclocks.it.com';
+const previewParam = 'mode';
+const previewValue = 'preview';
+const previewSessionKey = 'worldclocksPreviewMode'; // Site-specific key
+
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+let isInPreviewMode = false;
+const urlPreviewParam = getQueryParam(previewParam);
+
+if (urlPreviewParam === previewValue) {
+  try {
+    sessionStorage.setItem(previewSessionKey, 'true');
+    isInPreviewMode = true;
+    console.log('WorldClocks: Preview mode activated via URL parameter and saved to session.');
+  } catch (e) {
+    console.error('WorldClocks: Session storage is not available or failed:', e);
+    isInPreviewMode = true; // Fallback to URL param if session storage fails
+  }
+} else {
+  try {
+    if (sessionStorage.getItem(previewSessionKey) === 'true') {
+      isInPreviewMode = true;
+      console.log('WorldClocks: Preview mode active via session storage.');
+    }
+  } catch (e) {
+    console.error('WorldClocks: Session storage is not available or failed:', e);
+  }
+}
+
+const isProduction = window.location.hostname === productionHostname;
+
+if (isProduction && !isInPreviewMode) {
+  // Google Analytics for worldclocks.it.com
+  const gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-EPCXS5MFDV'; // GA ID for worldclocks
+  document.head.appendChild(gaScript);
+
+  const gaInitScript = document.createElement('script');
+  gaInitScript.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EPCXS5MFDV'); // GA ID for worldclocks
+  `;
+  document.head.appendChild(gaInitScript);
+  console.log('WorldClocks: Google Analytics loaded for production.');
+
+  // Google AdSense for worldclocks.it.com
+  const adSenseScript = document.createElement('script');
+  adSenseScript.async = true;
+  adSenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6076627813468062'; // AdSense Client ID
+  adSenseScript.crossOrigin = 'anonymous';
+  document.head.appendChild(adSenseScript);
+  console.log('WorldClocks: Google AdSense loaded for production.');
+
+} else {
+  console.log('WorldClocks: Analytics and AdSense skipped for:', window.location.hostname, isInPreviewMode ? '(Preview Mode Active)' : '');
+
+  if (isInPreviewMode) {
+    document.addEventListener('DOMContentLoaded', () => {
+      const adPlaceholders = document.querySelectorAll('.adsbygoogle, .ad-placeholder, [data-ad-slot]');
+      adPlaceholders.forEach(el => {
+        el.style.display = 'none';
+        if (el.classList.contains('adsbygoogle') && el.style.insStyle) {
+            el.style.setProperty('display', 'none', 'important');
+        }
+      });
+      console.log('WorldClocks: Attempted to hide ad placeholders for preview mode.');
+    });
+  }
+}
+
+if (urlPreviewParam === 'exitpreview') {
+    try {
+        sessionStorage.removeItem(previewSessionKey);
+        console.log('WorldClocks: Preview mode session flag removed.');
+    } catch (e) {
+        console.error('WorldClocks: Session storage is not available or failed:', e);
+    }
+}
+// --- End of Preview Handler Logic ---
+
 document.addEventListener("DOMContentLoaded", () => {
     // Load footer
     const includes = document.querySelectorAll("include[src]");
