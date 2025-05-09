@@ -252,34 +252,43 @@ nav { z-index: 1100; }
     color: #e65a50;
 }
 
-/* Load More Button */
 #load-more {
-    display: block;
-    margin: 80px auto;
-    padding: 10px 20px;
-    background-color: #ee6cc7;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    width: 210px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #6772E5 0%, #574AE2 100%);
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.4s;
-}
-
-#load-more {
-    width: 180px; /* 버튼 가로 크기 */
-    height: 50px; /* 버튼 세로 크기 */
-    padding: 10px 20px; /* 내부 여백 (세로 10px, 가로 20px) */
-    font-size: 25px; /* 텍스트 크기 */
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(103, 114, 229, 0.35);
+    transition: all 0.25s ease-out;
+    letter-spacing: 0.3px;
   }
 
-#load-more:hover {
-    background-color: #e848db;
-    transform: scale(1.05);
+#load-more:hover:not(:disabled) {
+    background: linear-gradient(135deg, #5A65D8 0%, #4D3FCB 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 7px 18px rgba(90, 101, 216, 0.4);
+}
+
+#load-more:active:not(:disabled) {
+    transform: translateY(0px) scale(0.98);
+    box-shadow: 0 3px 10px rgba(90, 101, 216, 0.3);
 }
 
 #load-more:disabled {
-    background-color: #ccc;
+    background: #D1D5DB;
+    color: #6B7280;
     cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
 /* Custom Clocks Section */
