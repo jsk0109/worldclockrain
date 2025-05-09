@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
 
-                const continentColors = {
+                   const continentColors = {
         "N America": "#388E3C",
         "Europe": "#FBC02D",
         "Asia": "#F57C00",
@@ -361,37 +361,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // For pre-loading detailed city data
     let allDetailedCityDataMap = new Map();
-    let detailedDataLoaded = false;
+    let detailedDataPromise = null; // Promise to ensure data is loaded once
     const detailedCityJsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
 
-    async function loadAllDetailedCityData() {
-        if (detailedDataLoaded) {
-            return;
-        }
-        console.log("Starting to pre-load all detailed city data...");
-        for (const file of detailedCityJsonFiles) {
-            try {
-                const response = await fetch(`/data/json/${file}`); // Corrected path
-                if (!response.ok) {
-                    console.warn(`Failed to fetch ${file} for pre-loading: ${response.status}`);
-                    continue;
-                }
-                const detailedCitiesFromFile = await response.json();
-                if (Array.isArray(detailedCitiesFromFile)) {
-                    detailedCitiesFromFile.forEach(city => {
-                        if (city && city.name) {
-                            allDetailedCityDataMap.set(city.name.toLowerCase(), city);
+    async function loadAllDetailedCityDataOnce() {
+        if (!detailedDataPromise) {
+            console.log("DEBUG: Initializing pre-load of all detailed city data...");
+            detailedDataPromise = (async () => {
+                for (const file of detailedCityJsonFiles) {
+                    try {
+                        const response = await fetch(`/data/json/${file}`);
+                        if (!response.ok) {
+                            console.warn(`DEBUG: Failed to fetch ${file} for pre-loading: ${response.status}`);
+                            continue;
                         }
-                    });
-                } else {
-                    console.warn(`Data from ${file} is not an array during pre-loading.`);
+                        const detailedCitiesFromFile = await response.json();
+                        if (Array.isArray(detailedCitiesFromFile)) {
+                            detailedCitiesFromFile.forEach(city => {
+                                if (city && city.name) {
+                                    allDetailedCityDataMap.set(city.name.toLowerCase(), city);
+                                }
+                            });
+                        } else {
+                            console.warn(`DEBUG: Data from ${file} is not an array during pre-loading.`);
+                        }
+                    } catch (fetchError) {
+                        console.warn(`DEBUG: Error fetching or parsing ${file} for pre-loading:`, fetchError);
+                    }
                 }
-            } catch (fetchError) {
-                console.warn(`Error fetching or parsing ${file} for pre-loading:`, fetchError);
-            }
+                console.log("DEBUG: Finished pre-loading all detailed city data. Total cities loaded:", allDetailedCityDataMap.size);
+                return allDetailedCityDataMap;
+            })();
         }
-        detailedDataLoaded = true;
-        console.log("Finished pre-loading all detailed city data. Total cities loaded:", allDetailedCityDataMap.size);
+        return detailedDataPromise;
     }
 
 
@@ -445,7 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         } catch (error) {
             console.error(`Failed to fetch weather via Worker for ${cityName}:`, error);
-            return { temp: "N/A", humidity: "N/A", code: 0 }; // Default weather data on error
+            return { temp: "N/A", humidity: "N/A", code: 0 };
         }
     }
 
@@ -539,11 +541,17 @@ document.addEventListener("DOMContentLoaded", () => {
         chunk = chunk.slice(0, clocksPerLoad);
 
         allClocks = [];
-        document.getElementById("clocks-container").innerHTML = "";
-        for (const city of chunk) {
-            const clockData = createClock(city, "clocks-container");
-            if (clockData) allClocks.push(clockData);
+        const clocksContainerElement = document.getElementById("clocks-container");
+        if (clocksContainerElement) {
+            clocksContainerElement.innerHTML = ""; // Clear previous clocks
+            for (const city of chunk) {
+                const clockData = createClock(city, "clocks-container");
+                if (clockData) allClocks.push(clockData);
+            }
+        } else {
+            console.error("CRITICAL: #clocks-container not found during initializeClocks.");
         }
+
         displayedClocks = chunk.length;
 
         const totalCities = activeContinent && activeContinent !== ""
@@ -599,22 +607,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
                 displayedClocks = 0;
-                initializeClocks();
+                initializeClocks(); // This will re-render clocks and re-attach listeners via MutationObserver
             });
             filterContainer.appendChild(button);
         });
-        filterContainer.firstChild.classList.add("active");
+        const firstButton = filterContainer.firstChild;
+        if (firstButton) firstButton.classList.add("active");
     }
 
     // Filter clocks based on search and continent
     function filterClocks() {
         const searchQuery = document.getElementById("search")?.value.toLowerCase() || "";
-        const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent || "";
+        // No need to re-query activeContinent here, it's handled by initializeClocks
 
         allClocks.forEach(({ clock }) => {
             const matchesSearch = searchQuery === "" || clock.dataset.city.toLowerCase().startsWith(searchQuery);
-            const matchesContinent = activeContinent === "" || clock.dataset.continent === activeContinent;
-            clock.style.display = matchesSearch && matchesContinent ? "block" : "none";
+            // Continent filtering is implicitly handled by initializeClocks re-rendering the correct set.
+            // We only need to ensure search query matches.
+            clock.style.display = matchesSearch ? "block" : "none";
         });
     }
 
@@ -622,7 +632,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function setupSearch() {
         const searchInput = document.getElementById("search");
         if (searchInput) {
-            searchInput.addEventListener("input", filterClocks);
+            searchInput.addEventListener("input", () => {
+                // When searching, we don't re-initialize all clocks, just filter the current view.
+                // The continent filter is already applied by initializeClocks.
+                filterClocks();
+            });
         }
     }
 
@@ -633,7 +647,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (clocksContainer) {
             clocksContainer.innerHTML = "";
         } else {
-            console.error('custom-clocks-container not found!');
+            console.error('DEBUG: custom-clocks-container not found!');
             return;
         }
 
@@ -649,7 +663,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         customClocks.forEach(city => {
             const newClockData = createClock(city, "custom-clocks-container", true);
-            if (newClockData) {
+            if (newClockData && newClockData.clock) {
                 const removeBtn = newClockData.clock.querySelector(".remove-clock");
                 if (removeBtn) {
                     removeBtn.addEventListener("click", (e) => {
@@ -679,7 +693,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         customClocks.push(city);
         const newClockData = createClock(city, "custom-clocks-container", true);
-        if (newClockData) {
+        if (newClockData && newClockData.clock) {
             const removeBtn = newClockData.clock.querySelector(".remove-clock");
             if (removeBtn) {
                 removeBtn.addEventListener("click", (e) => {
@@ -690,17 +704,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     saveCustomClocks();
                 });
             }
-            if (newClockData.clock) {
-                 newClockData.clock.removeEventListener('click', handleCityInfoClick);
-                 newClockData.clock.addEventListener('click', handleCityInfoClick);
-            }
+            console.log("DEBUG: Attaching listener to newly added custom clock:", newClockData.clock.dataset.city);
+            newClockData.clock.removeEventListener('click', handleCityInfoClick);
+            newClockData.clock.addEventListener('click', handleCityInfoClick);
         }
         updateClockCount();
         saveCustomClocks();
         const searchInput = document.getElementById("custom-city-search");
         if (searchInput) {
             searchInput.value = "";
-            document.getElementById("custom-suggestions").style.display = "none";
+            const suggestionsEl = document.getElementById("custom-suggestions");
+            if (suggestionsEl) suggestionsEl.style.display = "none";
         }
     }
 
@@ -764,7 +778,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         document.addEventListener("click", (e) => {
-            if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+            if (suggestionsContainer && searchInput && !searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
                 suggestionsContainer.style.display = "none";
             }
         });
@@ -773,6 +787,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle click on "Add Clock" button for custom clocks
     function handleAddCustomClock() {
         const searchInput = document.getElementById("custom-city-search");
+        if (!searchInput) return;
         const cityName = searchInput.value.trim();
         const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
 
@@ -785,33 +800,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to handle click on a clock to show city info
     async function handleCityInfoClick(e) {
+        console.log("DEBUG: handleCityInfoClick called. Clicked element:", e.currentTarget);
         e.preventDefault();
         const clockContainer = e.currentTarget;
         const cityName = clockContainer.dataset.city?.trim();
         const cityInfoDiv = document.getElementById('city-info');
+        console.log("DEBUG: cityInfoDiv element:", cityInfoDiv);
 
         if (!cityInfoDiv) {
-            console.error('city-info div not found. Please ensure <div id="city-info"> exists in your HTML.');
-            return;
-        }
-        if (!cityName) {
-            console.error('No city name in dataset for the clicked clock. Element:', clockContainer);
-            cityInfoDiv.innerHTML = '<p>No city selected or city name missing from clock data.</p><span class="close-btn">×</span>';
-            cityInfoDiv.classList.add('show');
-            cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+            console.error('CRITICAL: city-info div not found in HTML. Cannot show popup.');
             return;
         }
 
+        console.log("DEBUG: cityName from dataset:", cityName);
+        if (!cityName) {
+            console.error('CRITICAL: No city name in dataset for the clicked clock. Element:', clockContainer);
+            cityInfoDiv.innerHTML = '<p>No city selected or city name missing.</p><span class="close-btn">×</span>';
+            cityInfoDiv.classList.add('show');
+            const closeBtn = cityInfoDiv.querySelector('.close-btn');
+            if (closeBtn) closeBtn.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+            return;
+        }
+
+        console.log("DEBUG: Setting popup to 'Loading...' and adding 'show' class for city:", cityName);
         cityInfoDiv.innerHTML = '<p>Loading...</p><span class="close-btn">×</span>';
         cityInfoDiv.classList.add('show');
-        cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+        const closeBtnPopup = cityInfoDiv.querySelector('.close-btn');
+        if (closeBtnPopup) closeBtnPopup.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
 
-        if (!detailedDataLoaded) {
-            await loadAllDetailedCityData(); // Ensure data is loaded before trying to access it
-        }
+        // Ensure detailed data is loaded
+        await loadAllDetailedCityDataOnce(); // This will wait if still loading, or resolve immediately if done.
+        console.log("DEBUG: Detailed city data should be available now.");
 
         try {
             const foundCityDetails = allDetailedCityDataMap.get(cityName.toLowerCase());
+            console.log("DEBUG: Searched for city in pre-loaded data. Found:", foundCityDetails);
 
             if (foundCityDetails) {
                 let attractionsHtml = '';
@@ -851,18 +874,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     cityInfoDiv.innerHTML = '<p>City information not found.</p><span class="close-btn">×</span>';
                 }
             }
-            cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+            const finalCloseBtn = cityInfoDiv.querySelector('.close-btn');
+            if (finalCloseBtn) finalCloseBtn.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
         } catch (error) {
-            console.error('Error processing city details in handleCityInfoClick:', error);
+            console.error('DEBUG: Error processing city details in handleCityInfoClick:', error);
             cityInfoDiv.innerHTML = '<p>Error loading city data.</p><span class="close-btn">×</span>';
-            cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+            const errorCloseBtn = cityInfoDiv.querySelector('.close-btn');
+            if (errorCloseBtn) errorCloseBtn.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
         }
     }
 
     // Bind click events to initially loaded custom clocks
     function bindCustomClockClickEvents() {
+        console.log("DEBUG: bindCustomClockClickEvents called.");
         const customClockElements = document.querySelectorAll("#custom-clocks-container .clock-container");
+        console.log("DEBUG: Found custom clock elements to attach listeners:", customClockElements.length);
         customClockElements.forEach(clockEl => {
+            console.log("DEBUG: Attaching listener to custom clock:", clockEl.dataset.city);
             clockEl.removeEventListener('click', handleCityInfoClick);
             clockEl.addEventListener('click', handleCityInfoClick);
         });
@@ -873,13 +901,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("clocks-container")) {
         createFilterButtons();
         setupSearch();
-        initializeClocks();
+        initializeClocks(); // This will also trigger MutationObserver for main clocks
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.addEventListener("click", loadMoreClocks);
     }
 
     if (document.getElementById("custom-clocks-section")) {
-        initializeCustomClocks();
+        initializeCustomClocks(); // This will trigger bindCustomClockClickEvents
         setupCustomSearch();
         const addButton = document.getElementById("add-custom-clock");
         const clearButton = document.getElementById("clear-custom-clocks");
@@ -893,21 +921,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const mainClocksContainer = document.getElementById('clocks-container');
     if (mainClocksContainer) {
-        const mainClocksObserver = new MutationObserver(() => {
-            const allClockElements = document.querySelectorAll('#clocks-container .clock-container');
-            allClockElements.forEach(clockEl => {
-                clockEl.removeEventListener('click', handleCityInfoClick);
-                clockEl.addEventListener('click', handleCityInfoClick);
+        const mainClocksObserver = new MutationObserver((mutationsList, observer) => {
+            // console.log("DEBUG: Main clocks MutationObserver triggered. Mutations count:", mutationsList.length); // Can be too verbose
+            mutationsList.forEach(mutation => {
+                if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                    mutation.addedNodes.forEach(node => {
+                        if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('clock-container')) {
+                            // console.log("DEBUG: MutationObserver - Attaching listener to newly added clock:", node.dataset.city); // Can be too verbose
+                            node.removeEventListener('click', handleCityInfoClick);
+                            node.addEventListener('click', handleCityInfoClick);
+                        }
+                    });
+                }
             });
         });
-        mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false });
+        mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false }); // subtree: false is important if clock-container is a direct child
+        console.log("DEBUG: Main clocks MutationObserver initialized and observing.");
+    } else {
+        console.error("CRITICAL: #clocks-container not found for MutationObserver setup.");
     }
 
-    // Pre-load detailed city data after other initializations
-    loadAllDetailedCityData().then(() => {
-        console.log("Initial pre-load of detailed city data complete and available.");
+    // Start pre-loading detailed city data as soon as the DOM is ready
+    loadAllDetailedCityDataOnce().then(() => {
+        console.log("DEBUG: Initial pre-load of detailed city data promise resolved.");
     }).catch(err => {
-        console.error("Error during initial pre-load of detailed city data:", err);
+        console.error("DEBUG: Error during initial pre-load of detailed city data:", err);
     });
 });
 
