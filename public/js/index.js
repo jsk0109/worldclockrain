@@ -326,8 +326,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Thimphu", lat: 27.4712, lon: 89.6386, offset: 6, flag: "bt", continent: "Asia" },
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
-    
-      const continentColors = {
+
+    const continentColors = {
         "N America": "#388E3C",
         "Europe": "#FBC02D",
         "Asia": "#F57C00",
@@ -356,8 +356,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let allClocks = [];
     let displayedClocks = 0;
-    const clocksPerLoad = 25;
-    let customClocks = loadCustomClocks(); // Initialize customClocks here
+    const clocksPerLoad = 25; // 더 적은 수로 시작 (예: 25 또는 50)
+    let customClocks = loadCustomClocks();
+
+    // --- 동시에 실행되는 Promise 개수를 제한하는 간단한 큐 ---
+    class PromiseQueue {
+        constructor(concurrency = 5) { // 동시에 최대 5개의 요청만 허용 (필요시 조절)
+            this.concurrency = concurrency;
+            this.running = 0; // 현재 실행 중인 작업 수
+            this.queue = [];  // 대기 중인 작업 목록
+        }
+
+        add(task) { // task는 Promise를 반환하는 함수여야 합니다.
+            return new Promise((resolve, reject) => {
+                this.queue.push({ task, resolve, reject });
+                this._processQueue(); // 큐 처리 시도
+            });
+        }
+
+        _processQueue() {
+            if (this.running >= this.concurrency || this.queue.length === 0) {
+                return; // 실행 중인 작업이 너무 많거나 큐가 비었으면 반환
+            }
+            this.running++;
+            const { task, resolve, reject } = this.queue.shift(); // 큐에서 작업 하나 꺼내기
+            task()
+                .then(resolve)
+                .catch(reject)
+                .finally(() => {
+                    this.running--; // 작업 완료 후 실행 중인 작업 수 감소
+                    this._processQueue(); // 다음 작업 처리 시도
+                });
+        }
+    }
+    const weatherFetchQueue = new PromiseQueue(5); // 날씨 정보 요청 큐 (동시성 5로 설정)
+
 
     // Fetch weather data via Cloudflare Worker
     async function fetchWeatherViaWorker(latitude, longitude, cityName) {
@@ -370,7 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(errorData.error || `Weather worker request failed: ${response.statusText}`);
             }
             const data = await response.json();
-            // Assuming Worker returns data in the format: { temperature_2m: X, relative_humidity_2m: Y, weather_code: Z }
             return {
                 temp: data.temperature_2m,
                 humidity: data.relative_humidity_2m,
@@ -403,9 +435,9 @@ document.addEventListener("DOMContentLoaded", () => {
         flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
         flag.alt = `${city.name} flag`;
 
-        const cityName = document.createElement("h2");
-        cityName.appendChild(flag);
-        cityName.append(` ${city.name}`);
+        const cityNameElement = document.createElement("h2"); // 변수명 변경
+        cityNameElement.appendChild(flag);
+        cityNameElement.append(` ${city.name}`);
 
         const time = document.createElement("div");
         time.className = "clock-time";
@@ -413,6 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const weatherInfo = document.createElement("div");
         weatherInfo.className = "weather-info";
+        weatherInfo.innerHTML = `날씨: <span class="loading-dots">...</span>`; // 초기 로딩 표시
 
         if (isCustom) {
             const removeBtn = document.createElement("button");
@@ -422,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(removeBtn);
         }
 
-        container.append(cityName, time, weatherInfo);
+        container.append(cityNameElement, time, weatherInfo); // 변경된 변수명 사용
         const targetContainer = document.getElementById(containerId);
         if (targetContainer) {
             targetContainer.appendChild(container);
@@ -431,9 +464,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return null;
         }
 
-        async function updateWeather() {
-            const weather = await fetchWeatherViaWorker(city.lat, city.lon, city.name);
-            weatherInfo.innerHTML = `Weather: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp}°C</span>, Humidity: <span class="humidity">${weather.humidity}%</span>`;
+        function updateWeather() { // async 키워드 제거, PromiseQueue가 처리
+            // 날씨 정보 가져오는 작업을 큐에 추가
+            return weatherFetchQueue.add(async () => {
+                const weather = await fetchWeatherViaWorker(city.lat, city.lon, city.name);
+                weatherInfo.innerHTML = `날씨: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp !== "N/A" ? weather.temp + "°C" : "N/A"}</span>, 습도: <span class="humidity">${weather.humidity !== "N/A" ? weather.humidity + "%" : "N/A"}</span>`;
+            }).catch(error => {
+                console.error(`${city.name} 날씨 정보 업데이트 중 오류 (큐):`, error);
+                weatherInfo.innerHTML = `날씨: <span class="error">오류</span>`; // 오류 발생 시 UI 업데이트
+            });
         }
 
         function updateClock() {
@@ -447,18 +486,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         updateClock();
-        updateWeather(); // Initial weather fetch
+        updateWeather(); // 초기 날씨 정보 가져오기 (큐를 통해 실행됨)
         setInterval(updateClock, 1000);
-        // Weather updates will be handled by Cloudflare Worker's cache,
-        // but we can still periodically refresh on the client if desired,
-        // though it's less critical now. For simplicity, let's remove client-side interval for weather.
-        // setInterval(updateWeather, CACHE_DURATION); // CACHE_DURATION was for client-side cache
 
-        return { clock: container, updateWeather };
+        return { clock: container, updateWeather }; // updateWeather는 이제 Promise를 반환
     }
 
     // Initialize main clocks
-    async function initializeClocks() {
+    function initializeClocks() { // async 제거
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.disabled = true;
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
@@ -467,13 +502,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (activeContinent && activeContinent !== "") {
             chunk = cities.filter(city => city.continent === activeContinent);
         }
-        chunk = chunk.slice(0, 50); // Initial load limit
+        chunk = chunk.slice(0, clocksPerLoad); // clocksPerLoad 사용
 
-        allClocks = []; // Reset allClocks array
-        document.getElementById("clocks-container").innerHTML = ""; // Clear previous clocks
+        allClocks = [];
+        document.getElementById("clocks-container").innerHTML = "";
         for (const city of chunk) {
-            const clock = await createClock(city, "clocks-container");
-            if (clock) allClocks.push(clock);
+            const clockData = createClock(city, "clocks-container"); // await 제거
+            if (clockData) allClocks.push(clockData);
         }
         displayedClocks = chunk.length;
 
@@ -482,13 +517,13 @@ document.addEventListener("DOMContentLoaded", () => {
             : cities.length;
         if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
 
-        filterClocks(); // Apply initial filter (if any search query exists)
+        filterClocks();
     }
 
     // Load more clocks
-    async function loadMoreClocks() {
+    function loadMoreClocks() { // async 제거
         const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.disabled = true; // Disable button during load
+        if (loadMoreBtn) loadMoreBtn.disabled = true;
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
         let chunk;
 
@@ -501,8 +536,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         for (const city of chunk) {
-            const clock = await createClock(city, "clocks-container");
-            if (clock) allClocks.push(clock);
+            const clockData = createClock(city, "clocks-container"); // await 제거
+            if (clockData) allClocks.push(clockData);
         }
         displayedClocks += chunk.length;
 
@@ -511,7 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
             : cities.length;
         if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
 
-        filterClocks(); // Apply filter after loading more
+        filterClocks();
     }
 
     // Create filter buttons
@@ -520,7 +555,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const filterContainer = document.getElementById("filter-buttons");
         if (!filterContainer) return;
 
-        filterContainer.innerHTML = ""; // Clear existing buttons
+        filterContainer.innerHTML = "";
         continents.forEach(continent => {
             const button = document.createElement("button");
             button.className = "filter-btn";
@@ -529,12 +564,12 @@ document.addEventListener("DOMContentLoaded", () => {
             button.addEventListener("click", () => {
                 document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
-                displayedClocks = 0; // Reset for new filter
-                initializeClocks(); // Re-initialize with new filter
+                displayedClocks = 0;
+                initializeClocks();
             });
             filterContainer.appendChild(button);
         });
-        filterContainer.firstChild.classList.add("active"); // Default to "All"
+        filterContainer.firstChild.classList.add("active");
     }
 
     // Filter clocks based on search and continent
@@ -553,24 +588,23 @@ document.addEventListener("DOMContentLoaded", () => {
     function setupSearch() {
         const searchInput = document.getElementById("search");
         if (searchInput) {
-            searchInput.addEventListener("input", filterClocks); // Use filterClocks directly
+            searchInput.addEventListener("input", filterClocks);
         }
     }
 
     // Initialize custom clocks section
     function initializeCustomClocks() {
-        customClocks = loadCustomClocks(); // Load from localStorage
+        customClocks = loadCustomClocks();
         const clocksContainer = document.getElementById("custom-clocks-container");
         if (clocksContainer) {
-            clocksContainer.innerHTML = ""; // Clear previous custom clocks
+            clocksContainer.innerHTML = "";
         } else {
             console.error('custom-clocks-container not found!');
-            return; // Exit if container not found
+            return;
         }
 
         if (customClocks.length === 0) {
-            // Optionally add default custom clocks if none are saved
-            const defaultCustomCityNames = ["London"]; // Example default
+            const defaultCustomCityNames = ["London"];
             defaultCustomCityNames.forEach(cityName => {
                 const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
                 if (city && !customClocks.some(c => c.name.toLowerCase() === cityName.toLowerCase())) {
@@ -580,22 +614,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         customClocks.forEach(city => {
-            const newClock = createClock(city, "custom-clocks-container", true);
-            if (newClock) {
-                const removeBtn = newClock.clock.querySelector(".remove-clock");
+            const newClockData = createClock(city, "custom-clocks-container", true); // await 제거
+            if (newClockData) {
+                const removeBtn = newClockData.clock.querySelector(".remove-clock");
                 if (removeBtn) {
                     removeBtn.addEventListener("click", (e) => {
-                        e.stopPropagation(); // Prevent clock click event
+                        e.stopPropagation();
                         customClocks = customClocks.filter(c => c.name !== city.name);
-                        newClock.clock.remove();
+                        newClockData.clock.remove();
                         updateClockCount();
-                        saveCustomClocks(); // Save changes to localStorage
+                        saveCustomClocks();
                     });
                 }
             }
         });
         updateClockCount();
-        bindCustomClockClickEvents(); // Bind click events for info display
+        bindCustomClockClickEvents();
     }
 
     // Add a clock to the custom section
@@ -610,30 +644,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         customClocks.push(city);
-        const newClock = createClock(city, "custom-clocks-container", true);
-        if (newClock) {
-            const removeBtn = newClock.clock.querySelector(".remove-clock");
+        const newClockData = createClock(city, "custom-clocks-container", true); // await 제거
+        if (newClockData) {
+            const removeBtn = newClockData.clock.querySelector(".remove-clock");
             if (removeBtn) {
                 removeBtn.addEventListener("click", (e) => {
                     e.stopPropagation();
                     customClocks = customClocks.filter(c => c.name !== city.name);
-                    newClock.clock.remove();
+                    newClockData.clock.remove();
                     updateClockCount();
                     saveCustomClocks();
                 });
             }
-            // Bind click event for the newly added clock
-            if (newClock.clock) {
-                 newClock.clock.removeEventListener('click', handleCityInfoClick); // Remove if already exists
-                 newClock.clock.addEventListener('click', handleCityInfoClick);
+            if (newClockData.clock) {
+                 newClockData.clock.removeEventListener('click', handleCityInfoClick);
+                 newClockData.clock.addEventListener('click', handleCityInfoClick);
             }
         }
         updateClockCount();
         saveCustomClocks();
         const searchInput = document.getElementById("custom-city-search");
         if (searchInput) {
-            searchInput.value = ""; // Clear search input
-            document.getElementById("custom-suggestions").style.display = "none"; // Hide suggestions
+            searchInput.value = "";
+            document.getElementById("custom-suggestions").style.display = "none";
         }
     }
 
@@ -664,7 +697,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         searchInput.addEventListener("input", () => {
             const query = searchInput.value.toLowerCase().trim();
-            suggestionsContainer.innerHTML = ""; // Clear previous suggestions
+            suggestionsContainer.innerHTML = "";
             suggestionsContainer.style.display = query.length >= 2 ? "block" : "none";
 
             if (query.length >= 2) {
@@ -676,12 +709,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         const suggestionDiv = document.createElement("div");
                         suggestionDiv.innerHTML = `<img src="https://flagcdn.com/16x12/${city.flag}.png" alt="${city.name} flag"> ${city.name}`;
                         suggestionDiv.addEventListener("click", () => {
-                            // For mobile, add directly. For desktop, fill input.
                             if (window.innerWidth <= 480) {
                                 addCustomClock(city);
                             } else {
-                                searchInput.value = city.name; // Fill input for desktop
-                                suggestionsContainer.style.display = "none"; // Hide suggestions
+                                searchInput.value = city.name;
+                                suggestionsContainer.style.display = "none";
                             }
                         });
                         suggestionsContainer.appendChild(suggestionDiv);
@@ -690,7 +722,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Handle Enter key press in custom search
         searchInput.addEventListener("keypress", (e) => {
             if (e.key === "Enter" && searchInput.value) {
                 const city = cities.find(c => c.name.toLowerCase() === searchInput.value.toLowerCase().trim());
@@ -698,7 +729,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Hide suggestions when clicking outside
         document.addEventListener("click", (e) => {
             if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
                 suggestionsContainer.style.display = "none";
@@ -722,7 +752,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to handle click on a clock to show city info
     async function handleCityInfoClick(e) {
         e.preventDefault();
-        const clockContainer = e.currentTarget; // The .clock-container div
+        const clockContainer = e.currentTarget;
         const cityName = clockContainer.dataset.city?.trim();
         const cityInfoDiv = document.getElementById('city-info');
 
@@ -743,18 +773,9 @@ document.addEventListener("DOMContentLoaded", () => {
         cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
 
         try {
-            // Assuming city details are now in a single, larger JSON or fetched differently
-            // For this example, let's simulate fetching from a combined source or a specific endpoint
-            // This part needs to be adapted based on how you decide to store/fetch detailed city info
-            // For now, we'll use the 'cities' array if it contains enough details,
-            // or a placeholder if not.
-
             const cityDetails = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
 
-            if (cityDetails) { // Assuming 'cities' array has enough details or you'll fetch more
-                // This is a simplified display. You'll need to fetch more detailed JSON
-                // if the 'cities' array doesn't have all the info like 'businessHub', 'topAttractionsForProfessionals' etc.
-                // For now, we'll display what's available in the 'cities' array.
+            if (cityDetails) {
                 cityInfoDiv.innerHTML = `
                     <div>
                         <h2>${cityDetails.name}</h2>
@@ -780,23 +801,23 @@ document.addEventListener("DOMContentLoaded", () => {
     function bindCustomClockClickEvents() {
         const customClockElements = document.querySelectorAll("#custom-clocks-container .clock-container");
         customClockElements.forEach(clockEl => {
-            clockEl.removeEventListener('click', handleCityInfoClick); // Remove previous if any
+            clockEl.removeEventListener('click', handleCityInfoClick);
             clockEl.addEventListener('click', handleCityInfoClick);
         });
     }
 
 
     // Initialize sections based on current page
-    if (document.getElementById("clocks-container")) { // Main page clocks
+    if (document.getElementById("clocks-container")) {
         createFilterButtons();
         setupSearch();
-        initializeClocks(); // This will also call filterClocks
+        initializeClocks();
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.addEventListener("click", loadMoreClocks);
     }
 
-    if (document.getElementById("custom-clocks-section")) { // Custom clocks section (can be on any page)
-        initializeCustomClocks(); // This will also call updateClockCount and bindCustomClockClickEvents
+    if (document.getElementById("custom-clocks-section")) {
+        initializeCustomClocks();
         setupCustomSearch();
         const addButton = document.getElementById("add-custom-clock");
         const clearButton = document.getElementById("clear-custom-clocks");
@@ -808,18 +829,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // This MutationObserver is to re-bind click events if clocks are dynamically added/removed
-    // to the main clocks container (e.g., by filtering or load more)
     const mainClocksContainer = document.getElementById('clocks-container');
     if (mainClocksContainer) {
         const mainClocksObserver = new MutationObserver(() => {
             const allClockElements = document.querySelectorAll('#clocks-container .clock-container');
             allClockElements.forEach(clockEl => {
-                clockEl.removeEventListener('click', handleCityInfoClick); // Prevent multiple bindings
+                clockEl.removeEventListener('click', handleCityInfoClick);
                 clockEl.addEventListener('click', handleCityInfoClick);
             });
         });
         mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false });
     }
 });
-
