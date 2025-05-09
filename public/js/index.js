@@ -326,628 +326,579 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Thimphu", lat: 27.4712, lon: 89.6386, offset: 6, flag: "bt", continent: "Asia" },
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
+    
+        const continentColors = {
+            "N America": "#388E3C",
+            "Europe": "#FBC02D",
+            "Asia": "#F57C00",
+            "S America": "#1976D2",
+            "Africa": "#303F9F",
+            "Oceania": "#7B1FA2"
+        };
+    
+        let allClocks = [];
+        let displayedClocks = 0;
+        const clocksPerLoad = 25;
+        let customClocks = [];
 
-                   const continentColors = {
-        "N America": "#388E3C",
-        "Europe": "#FBC02D",
-        "Asia": "#F57C00",
-        "S America": "#1976D2",
-        "Africa": "#303F9F",
-        "Oceania": "#7B1FA2"
-    };
-
-    // Save custom clocks to localStorage
-    function saveCustomClocks() {
-        localStorage.setItem('customClocks', JSON.stringify(customClocks.map(city => city.name)));
-    }
-
-    // Load custom clocks from localStorage
-    function loadCustomClocks() {
-        const saved = localStorage.getItem('customClocks');
-        if (saved) {
-            const cityNames = JSON.parse(saved);
-            customClocks = cityNames
-                .map(name => cities.find(c => c.name.toLowerCase() === name.toLowerCase()))
-                .filter(city => city); // Ensure only valid cities are kept
-            return customClocks;
-        }
-        return [];
-    }
-
-    let allClocks = [];
-    let displayedClocks = 0;
-    const clocksPerLoad = 25;
-    let customClocks = loadCustomClocks();
-
-    // For pre-loading detailed city data
-    let allDetailedCityDataMap = new Map();
-    let detailedDataPromise = null; // Promise to ensure data is loaded once
-    const detailedCityJsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
-
-    async function loadAllDetailedCityDataOnce() {
-        if (!detailedDataPromise) {
-            console.log("DEBUG: Initializing pre-load of all detailed city data...");
-            detailedDataPromise = (async () => {
-                for (const file of detailedCityJsonFiles) {
+        // Fetch weather data via Cloudflare Worker
+        async function fetchWeather(lat, lon, city) {
+            const workerUrl = `https://weather-proxy.jsk0109.workers.dev/?lat=${lat}&lon=${lon}`;
+            try {
+                const response = await fetch(workerUrl);
+                if (!response.ok) {
+                    let errorData;
                     try {
-                        const response = await fetch(`/data/json/${file}`);
-                        if (!response.ok) {
-                            console.warn(`DEBUG: Failed to fetch ${file} for pre-loading: ${response.status}`);
-                            continue;
-                        }
-                        const detailedCitiesFromFile = await response.json();
-                        if (Array.isArray(detailedCitiesFromFile)) {
-                            detailedCitiesFromFile.forEach(city => {
-                                if (city && city.name) {
-                                    allDetailedCityDataMap.set(city.name.toLowerCase(), city);
-                                }
-                            });
-                        } else {
-                            console.warn(`DEBUG: Data from ${file} is not an array during pre-loading.`);
-                        }
-                    } catch (fetchError) {
-                        console.warn(`DEBUG: Error fetching or parsing ${file} for pre-loading:`, fetchError);
+                        errorData = await response.json();
+                    } catch (e) {
+                        // If response is not JSON, create a generic error object
+                        errorData = { error: `Weather worker request failed with status: ${response.status}` };
+                    }
+                    console.error(`Worker request failed for ${city} with status: ${response.status}`, errorData);
+                    throw new Error(errorData.error || `Weather worker request failed: ${response.statusText}`);
+                }
+                const data = await response.json();
+                // The worker returns: temperature_2m, relative_humidity_2m, weather_code
+                const weather = {
+                    temp: data.temperature_2m,
+                    humidity: data.relative_humidity_2m,
+                    code: data.weather_code,
+                };
+                return weather;
+            } catch (error) {
+                console.error(`Failed to fetch weather via Worker for ${city}:`, error);
+                return { temp: "N/A", humidity: "N/A", code: 0 };
+            }
+        }
+    
+        // Map weather code to icon
+        function getWeatherIcon(code) {
+            const weatherIcons = {
+                0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️", 45: "🌫️", 48: "🌫️",
+                51: "🌧️", 53: "🌧️", 55: "🌧️", 61: "🌧️", 63: "🌧️", 65: "🌧️",
+                71: "❄️", 73: "❄️", 75: "❄️", 95: "⛈️",
+            };
+            return weatherIcons[code] || "🌍";
+        }
+    
+        // Create a clock
+        function createClock(city, containerId, isCustom = false) {
+            const container = document.createElement("div");
+            container.className = "clock-container";
+            container.dataset.city = city.name;
+            container.dataset.continent = city.continent;
+    
+            const flag = document.createElement("img");
+            flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
+            flag.alt = `${city.name} flag`;
+    
+            const cityName = document.createElement("h2");
+            cityName.appendChild(flag);
+            cityName.append(` ${city.name}`);
+    
+            const time = document.createElement("div");
+            time.className = "clock-time";
+            time.style.color = continentColors[city.continent] || "#000";
+    
+            const weatherInfo = document.createElement("div");
+            weatherInfo.className = "weather-info";
+    
+            if (isCustom) {
+                const removeBtn = document.createElement("button");
+                removeBtn.className = "remove-clock";
+                removeBtn.textContent = "X";
+                removeBtn.setAttribute("aria-label", `Remove ${city.name} clock`);
+                container.appendChild(removeBtn);
+            }
+    
+            container.append(cityName, time, weatherInfo);
+            const targetContainer = document.getElementById(containerId);
+            if (targetContainer) {
+                targetContainer.appendChild(container);
+            } else {
+                console.error(`Container ${containerId} not found!`);
+                return null;
+            }
+    
+            async function updateWeather() {
+                const weather = await fetchWeather(city.lat, city.lon, city.name);
+                weatherInfo.innerHTML = `Weather: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp !== "N/A" ? weather.temp + "°C" : "N/A"}</span>, Humidity: <span class="humidity">${weather.humidity !== "N/A" ? weather.humidity + "%" : "N/A"}</span>`;
+            }
+    
+            function updateClock() {
+                const now = new Date();
+                const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+                const localTime = new Date(utc + city.offset * 3600000);
+                const hours = String(localTime.getHours()).padStart(2, "0");
+                const minutes = String(localTime.getMinutes()).padStart(2, "0");
+                const seconds = String(localTime.getSeconds()).padStart(2, "0");
+                time.innerHTML = `${hours}:${minutes}<span class="seconds">:${seconds}</span>`;
+            }
+    
+            updateClock();
+            updateWeather();
+            setInterval(updateClock, 1000);
+            setInterval(updateWeather, 3 * 60 * 60 * 1000); // 3시간 간격으로 날씨 업데이트 (Worker 캐시와 동기화)
+    
+            return { clock: container, updateWeather };
+        }
+    
+        // Initialize main clocks
+        async function initializeClocks() {
+            const loadMoreBtn = document.getElementById("load-more");
+            if (loadMoreBtn) loadMoreBtn.disabled = true;
+            const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
+            let chunk = cities;
+    
+            if (activeContinent && activeContinent !== "") {
+                chunk = cities.filter(city => city.continent === activeContinent);
+            }
+            chunk = chunk.slice(0, 50);
+    
+            allClocks = [];
+            document.getElementById("clocks-container").innerHTML = "";
+            for (const city of chunk) {
+                const clock = await createClock(city, "clocks-container");
+                if (clock) allClocks.push(clock);
+            }
+            displayedClocks = chunk.length;
+    
+            const totalCities = activeContinent && activeContinent !== ""
+                ? cities.filter(city => city.continent === activeContinent).length
+                : cities.length;
+            if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
+    
+            filterClocks();
+        }
+    
+        // Load more clocks
+        async function loadMoreClocks() {
+            const loadMoreBtn = document.getElementById("load-more");
+            if (loadMoreBtn) loadMoreBtn.disabled = true;
+            const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
+            let chunk;
+    
+            if (activeContinent && activeContinent !== "") {
+                chunk = cities
+                    .filter(city => city.continent === activeContinent)
+                    .slice(displayedClocks, displayedClocks + clocksPerLoad);
+            } else {
+                chunk = cities.slice(displayedClocks, displayedClocks + clocksPerLoad);
+            }
+    
+            for (const city of chunk) {
+                const clock = await createClock(city, "clocks-container");
+                if (clock) allClocks.push(clock);
+            }
+            displayedClocks += chunk.length;
+    
+            const totalCities = activeContinent && activeContinent !== ""
+                ? cities.filter(city => city.continent === activeContinent).length
+                : cities.length;
+            if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
+    
+            filterClocks();
+        }
+    
+        // Create filter buttons
+        function createFilterButtons() {
+            const continents = ["", "Asia", "Europe", "N America", "S America", "Africa", "Oceania"];
+            const filterContainer = document.getElementById("filter-buttons");
+            if (!filterContainer) return;
+    
+            filterContainer.innerHTML = "";
+            continents.forEach(continent => {
+                const button = document.createElement("button");
+                button.className = "filter-btn";
+                button.dataset.continent = continent;
+                button.textContent = continent || "All";
+                button.addEventListener("click", () => {
+                    document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+                    displayedClocks = 0;
+                    initializeClocks();
+                });
+                filterContainer.appendChild(button);
+            });
+            filterContainer.firstChild.classList.add("active");
+        }
+    
+        // Filter clocks
+        function filterClocks() {
+            const searchQuery = document.getElementById("search")?.value.toLowerCase() || "";
+            const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent || "";
+    
+            allClocks.forEach(({ clock }) => {
+                const matchesSearch = searchQuery === "" || clock.dataset.city.toLowerCase().startsWith(searchQuery);
+                const matchesContinent = activeContinent === "" || clock.dataset.continent === activeContinent;
+                clock.style.display = matchesSearch && matchesContinent ? "block" : "none";
+            });
+        }
+    
+        // Setup search
+        function setupSearch() {
+            const searchInput = document.getElementById("search");
+            if (searchInput) {
+                searchInput.addEventListener("input", () => {
+                    filterClocks();
+                });
+            }
+        }
+    
+        // Save custom clocks to localStorage (중복 정의 제거)
+        function saveCustomClocks() {
+            const clockNames = customClocks.map(city => city.name);
+            localStorage.setItem('customClocks', JSON.stringify(clockNames));
+            console.log('Saved to localStorage:', clockNames);
+        }
+    
+        // Load custom clocks from localStorage (중복 정의 제거)
+        function loadCustomClocks() {
+            const saved = localStorage.getItem('customClocks');
+            console.log('Raw localStorage data:', saved);
+            if (saved) {
+                try {
+                    const cityNames = JSON.parse(saved);
+                    console.log('Parsed city names:', cityNames);
+                    const loadedClocks = cityNames
+                        .map(name => {
+                            const city = cities.find(c => c.name.toLowerCase() === name.toLowerCase());
+                            if (!city) console.warn(`City not found in cities array: ${name}`);
+                            return city;
+                        })
+                        .filter(city => city);
+                    console.log('Loaded clocks:', loadedClocks);
+                    return loadedClocks;
+                } catch (e) {
+                    console.error('Error parsing localStorage data:', e);
+                    return [];
+                }
+            }
+            console.log('No saved clocks found, returning empty array');
+            return [];
+        }
+    
+        function initializeCustomClocks() {
+            console.log('Initializing custom clocks...');
+            customClocks = loadCustomClocks();
+            console.log('customClocks after load:', customClocks);
+            const clocksContainer = document.getElementById("custom-clocks-container");
+            if (clocksContainer) {
+                clocksContainer.innerHTML = "";
+                console.log('Cleared custom-clocks-container');
+            } else {
+                console.error('custom-clocks-container not found!');
+            }
+    
+            if (customClocks.length === 0) {
+                console.log('No saved clocks, adding default cities...');
+                const defaultCities = ["London"];
+                defaultCities.forEach(cityName => {
+                    const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
+                    if (city && !customClocks.some(c => c.name.toLowerCase() === cityName.toLowerCase())) {
+                        customClocks.push(city);
+                        console.log(`Added default city: ${cityName}`);
+                    }
+                });
+            }
+    
+            customClocks.forEach(city => {
+                console.log(`Rendering clock for: ${city.name}`);
+                const newClock = createClock(city, "custom-clocks-container", true);
+                if (newClock) {
+                    const removeBtn = newClock.clock.querySelector(".remove-clock");
+                    if (removeBtn) {
+                        removeBtn.addEventListener("click", (e) => {
+                            e.stopPropagation();
+                            console.log(`Removing clock: ${city.name}`);
+                            customClocks = customClocks.filter(c => c.name !== city.name);
+                            newClock.clock.remove();
+                            updateClockCount();
+                            saveCustomClocks();
+                        });
                     }
                 }
-                console.log("DEBUG: Finished pre-loading all detailed city data. Total cities loaded:", allDetailedCityDataMap.size);
-                return allDetailedCityDataMap;
-            })();
-        }
-        return detailedDataPromise;
-    }
-
-
-    class PromiseQueue {
-        constructor(concurrency = 5) {
-            this.concurrency = concurrency;
-            this.running = 0;
-            this.queue = [];
-        }
-
-        add(task) {
-            return new Promise((resolve, reject) => {
-                this.queue.push({ task, resolve, reject });
-                this._processQueue();
             });
+    
+            updateClockCount();
+            console.log('Clock count updated:', customClocks.length);
+    
+            function bindClockEvents() {
+                const clocks = document.querySelectorAll('.clock-container');
+                console.log('Rebinding clocks:', clocks.length);
+                clocks.forEach(clock => {
+                    clock.removeEventListener('click', handleClick);
+                    clock.addEventListener('click', handleClick);
+                });
+            }
+    
+            const handleClick = async (e) => {
+                e.preventDefault();
+                const cityName = e.currentTarget.dataset.city?.trim();
+                const cityInfoDiv = document.getElementById('city-info');
+                if (!cityInfoDiv) {
+                    console.error('city-info div not found');
+                    return;
+                }
+                cityInfoDiv.innerHTML = '<p>Loading...</p><span class="close-btn">×</span>';
+                cityInfoDiv.classList.add('show');
+                try {
+                    for (const file of ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json']) {
+                        const response = await fetch(`/data/json/${file}`);
+                        if (!response.ok) continue;
+                        const cities = await response.json();
+                        const city = cities.find(c => c.name?.trim().toLowerCase() === cityName.toLowerCase());
+                        if (city) {
+                            const attractions = (city.topAttractionsForProfessionals || []).map(attr => `
+                                <li>${attr.name || 'N/A'}: ${attr.description || 'N/A'} (${attr.proximityToBusinessDistrict || 'N/A'})</li>
+                            `).join('');
+                            const events = (city.networkingEvents || []).map(event => `
+                                <li>${event.name || 'N/A'} (${event.date || 'N/A'}): ${event.description || 'N/A'}</li>
+                            `).join('');
+                            cityInfoDiv.innerHTML = `
+                                <h2>${city.name}</h2>
+                                <p><strong>Timezone:</strong> ${city.timezone || 'N/A'}</p>
+                                <p><strong>Time Difference:</strong> ${city.timeDifference || 'N/A'}</p>
+                                <p><strong>Business Hub:</strong> ${city.businessHub || 'N/A'}</p>
+                                <p><strong>Top Attractions for Professionals:</strong></p>
+                                <ul>${attractions || 'N/A'}</ul>
+                                <p><strong>Local Lifestyle:</strong> ${city.localLifestyle || 'N/A'}</p>
+                                <p><strong>Local Culture:</strong> ${city.localCulture || 'N/A'}</p>
+                                <p><strong>Signature Dish:</strong> ${city.signatureDish || 'N/A'}</p>
+                                <p><strong>Networking Events:</strong></p>
+                                <ul>${events || 'N/A'}</ul>
+                                <p><strong>Business Tip:</strong> ${city.businessTip || 'N/A'}</p>
+                                <span class="close-btn">×</span>
+                            `;
+                            cityInfoDiv.classList.add('show');
+                            cityInfoDiv.querySelector('.close-btn').addEventListener('click', () => {
+                                cityInfoDiv.classList.remove('show');
+                            });
+                            return;
+                        }
+                    }
+                    cityInfoDiv.innerHTML = '<p>City not found</p><span class="close-btn">×</span>';
+                    cityInfoDiv.querySelector('.close-btn').addEventListener('click', () => {
+                        cityInfoDiv.classList.remove('show');
+                    });
+                } catch (error) {
+                    cityInfoDiv.innerHTML = '<p>Error loading data</p><span class="close-btn">×</span>';
+                    cityInfoDiv.querySelector('.close-btn').addEventListener('click', () => {
+                        cityInfoDiv.classList.remove('show');
+                    });
+                }
+            };
+    
+            bindClockEvents();
+            const observer = new MutationObserver(bindClockEvents);
+            observer.observe(document.getElementById('custom-clocks-section'), { childList: true, subtree: true });
         }
-
-        _processQueue() {
-            if (this.running >= this.concurrency || this.queue.length === 0) {
+    
+        function addCustomClock(city) {
+            console.log(`Adding custom clock: ${city.name}`);
+            if (customClocks.length >= 6) {
+                alert("You can only add up to 6 clocks!");
+                console.log('Max clock limit reached');
                 return;
             }
-            this.running++;
-            const { task, resolve, reject } = this.queue.shift();
-            task()
-                .then(resolve)
-                .catch(reject)
-                .finally(() => {
-                    this.running--;
-                    this._processQueue();
-                });
-        }
-    }
-    const weatherFetchQueue = new PromiseQueue(5);
-
-
-    // Fetch weather data via Cloudflare Worker
-    async function fetchWeatherViaWorker(latitude, longitude, cityName) {
-        const workerUrl = `https://weather-proxy.jsk0109.workers.dev/?lat=${latitude}&lon=${longitude}`;
-        try {
-            const response = await fetch(workerUrl);
-            if (!response.ok) {
-                console.error(`Worker request failed for ${cityName} with status: ${response.status}`);
-                const errorData = await response.json().catch(() => ({ error: "Unknown worker error" }));
-                throw new Error(errorData.error || `Weather worker request failed: ${response.statusText}`);
+            if (customClocks.some(c => c.name.toLowerCase() === city.name.toLowerCase())) {
+                alert("This city is already added!");
+                console.log('City already added:', city.name);
+                return;
             }
-            const data = await response.json();
-            return {
-                temp: data.temperature_2m,
-                humidity: data.relative_humidity_2m,
-                code: data.weather_code,
-            };
-        } catch (error) {
-            console.error(`Failed to fetch weather via Worker for ${cityName}:`, error);
-            return { temp: "N/A", humidity: "N/A", code: 0 };
-        }
-    }
-
-    // Map weather code to icon
-    function getWeatherIcon(code) {
-        const weatherIcons = {
-            0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️", 45: "🌫️", 48: "🌫️",
-            51: "🌧️", 53: "🌧️", 55: "🌧️", 61: "🌧️", 63: "🌧️", 65: "🌧️",
-            71: "❄️", 73: "❄️", 75: "❄️", 95: "⛈️",
-        };
-        return weatherIcons[code] || "🌍";
-    }
-
-    // Create a clock
-    function createClock(city, containerId, isCustom = false) {
-        const container = document.createElement("div");
-        container.className = "clock-container";
-        container.dataset.city = city.name;
-        container.dataset.continent = city.continent;
-
-        const flag = document.createElement("img");
-        flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
-        flag.alt = `${city.name} flag`;
-
-        const cityNameElement = document.createElement("h2");
-        cityNameElement.appendChild(flag);
-        cityNameElement.append(` ${city.name}`);
-
-        const time = document.createElement("div");
-        time.className = "clock-time";
-        time.style.color = continentColors[city.continent] || "#000";
-
-        const weatherInfo = document.createElement("div");
-        weatherInfo.className = "weather-info";
-        weatherInfo.innerHTML = `Weather: <span class="loading-dots">...</span>`;
-
-        if (isCustom) {
-            const removeBtn = document.createElement("button");
-            removeBtn.className = "remove-clock";
-            removeBtn.textContent = "X";
-            removeBtn.setAttribute("aria-label", `Remove ${city.name} clock`);
-            container.appendChild(removeBtn);
-        }
-
-        container.append(cityNameElement, time, weatherInfo);
-        const targetContainer = document.getElementById(containerId);
-        if (targetContainer) {
-            targetContainer.appendChild(container);
-        } else {
-            console.error(`Container ${containerId} not found!`);
-            return null;
-        }
-
-        function updateWeather() {
-            return weatherFetchQueue.add(async () => {
-                const weather = await fetchWeatherViaWorker(city.lat, city.lon, city.name);
-                weatherInfo.innerHTML = `Weather: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp !== "N/A" ? weather.temp + "°C" : "N/A"}</span>, Humidity: <span class="humidity">${weather.humidity !== "N/A" ? weather.humidity + "%" : "N/A"}</span>`;
-            }).catch(error => {
-                console.error(`Error updating weather for ${city.name} (queue):`, error);
-                weatherInfo.innerHTML = `Weather: <span class="error">Error</span>`;
-            });
-        }
-
-        function updateClock() {
-            const now = new Date();
-            const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-            const localTime = new Date(utc + city.offset * 3600000);
-            const hours = String(localTime.getHours()).padStart(2, "0");
-            const minutes = String(localTime.getMinutes()).padStart(2, "0");
-            const seconds = String(localTime.getSeconds()).padStart(2, "0");
-            time.innerHTML = `${hours}:${minutes}<span class="seconds">:${seconds}</span>`;
-        }
-
-        updateClock();
-        updateWeather();
-        setInterval(updateClock, 1000);
-
-        return { clock: container, updateWeather };
-    }
-
-    // Initialize main clocks
-    function initializeClocks() {
-        const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.disabled = true;
-        const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
-        let chunk = cities;
-
-        if (activeContinent && activeContinent !== "") {
-            chunk = cities.filter(city => city.continent === activeContinent);
-        }
-        chunk = chunk.slice(0, clocksPerLoad);
-
-        allClocks = [];
-        const clocksContainerElement = document.getElementById("clocks-container");
-        if (clocksContainerElement) {
-            clocksContainerElement.innerHTML = ""; // Clear previous clocks
-            for (const city of chunk) {
-                const clockData = createClock(city, "clocks-container");
-                if (clockData) allClocks.push(clockData);
-            }
-        } else {
-            console.error("CRITICAL: #clocks-container not found during initializeClocks.");
-        }
-
-        displayedClocks = chunk.length;
-
-        const totalCities = activeContinent && activeContinent !== ""
-            ? cities.filter(city => city.continent === activeContinent).length
-            : cities.length;
-        if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
-
-        filterClocks();
-    }
-
-    // Load more clocks
-    function loadMoreClocks() {
-        const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.disabled = true;
-        const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
-        let chunk;
-
-        if (activeContinent && activeContinent !== "") {
-            chunk = cities
-                .filter(city => city.continent === activeContinent)
-                .slice(displayedClocks, displayedClocks + clocksPerLoad);
-        } else {
-            chunk = cities.slice(displayedClocks, displayedClocks + clocksPerLoad);
-        }
-
-        for (const city of chunk) {
-            const clockData = createClock(city, "clocks-container");
-            if (clockData) allClocks.push(clockData);
-        }
-        displayedClocks += chunk.length;
-
-        const totalCities = activeContinent && activeContinent !== ""
-            ? cities.filter(city => city.continent === activeContinent).length
-            : cities.length;
-        if (loadMoreBtn) loadMoreBtn.disabled = displayedClocks >= totalCities;
-
-        filterClocks();
-    }
-
-    // Create filter buttons
-    function createFilterButtons() {
-        const continents = ["", "Asia", "Europe", "N America", "S America", "Africa", "Oceania"];
-        const filterContainer = document.getElementById("filter-buttons");
-        if (!filterContainer) return;
-
-        filterContainer.innerHTML = "";
-        continents.forEach(continent => {
-            const button = document.createElement("button");
-            button.className = "filter-btn";
-            button.dataset.continent = continent;
-            button.textContent = continent || "All";
-            button.addEventListener("click", () => {
-                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-                button.classList.add("active");
-                displayedClocks = 0;
-                initializeClocks(); // This will re-render clocks and re-attach listeners via MutationObserver
-            });
-            filterContainer.appendChild(button);
-        });
-        const firstButton = filterContainer.firstChild;
-        if (firstButton) firstButton.classList.add("active");
-    }
-
-    // Filter clocks based on search and continent
-    function filterClocks() {
-        const searchQuery = document.getElementById("search")?.value.toLowerCase() || "";
-        // No need to re-query activeContinent here, it's handled by initializeClocks
-
-        allClocks.forEach(({ clock }) => {
-            const matchesSearch = searchQuery === "" || clock.dataset.city.toLowerCase().startsWith(searchQuery);
-            // Continent filtering is implicitly handled by initializeClocks re-rendering the correct set.
-            // We only need to ensure search query matches.
-            clock.style.display = matchesSearch ? "block" : "none";
-        });
-    }
-
-    // Setup search input
-    function setupSearch() {
-        const searchInput = document.getElementById("search");
-        if (searchInput) {
-            searchInput.addEventListener("input", () => {
-                // When searching, we don't re-initialize all clocks, just filter the current view.
-                // The continent filter is already applied by initializeClocks.
-                filterClocks();
-            });
-        }
-    }
-
-    // Initialize custom clocks section
-    function initializeCustomClocks() {
-        customClocks = loadCustomClocks();
-        const clocksContainer = document.getElementById("custom-clocks-container");
-        if (clocksContainer) {
-            clocksContainer.innerHTML = "";
-        } else {
-            console.error('DEBUG: custom-clocks-container not found!');
-            return;
-        }
-
-        if (customClocks.length === 0) {
-            const defaultCustomCityNames = ["London"];
-            defaultCustomCityNames.forEach(cityName => {
-                const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
-                if (city && !customClocks.some(c => c.name.toLowerCase() === cityName.toLowerCase())) {
-                    customClocks.push(city);
-                }
-            });
-        }
-
-        customClocks.forEach(city => {
-            const newClockData = createClock(city, "custom-clocks-container", true);
-            if (newClockData && newClockData.clock) {
-                const removeBtn = newClockData.clock.querySelector(".remove-clock");
+    
+            customClocks.push(city);
+            const newClock = createClock(city, "custom-clocks-container", true);
+            if (newClock) {
+                const removeBtn = newClock.clock.querySelector(".remove-clock");
                 if (removeBtn) {
                     removeBtn.addEventListener("click", (e) => {
                         e.stopPropagation();
+                        console.log(`Removing clock: ${city.name}`);
                         customClocks = customClocks.filter(c => c.name !== city.name);
-                        newClockData.clock.remove();
+                        newClock.clock.remove();
                         updateClockCount();
                         saveCustomClocks();
                     });
                 }
             }
-        });
-        updateClockCount();
-        bindCustomClockClickEvents();
-    }
-
-    // Add a clock to the custom section
-    function addCustomClock(city) {
-        if (customClocks.length >= 6) {
-            alert("You can only add up to 6 clocks!");
-            return;
-        }
-        if (customClocks.some(c => c.name.toLowerCase() === city.name.toLowerCase())) {
-            alert("This city is already added!");
-            return;
-        }
-
-        customClocks.push(city);
-        const newClockData = createClock(city, "custom-clocks-container", true);
-        if (newClockData && newClockData.clock) {
-            const removeBtn = newClockData.clock.querySelector(".remove-clock");
-            if (removeBtn) {
-                removeBtn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    customClocks = customClocks.filter(c => c.name !== city.name);
-                    newClockData.clock.remove();
-                    updateClockCount();
-                    saveCustomClocks();
-                });
+    
+            updateClockCount();
+            saveCustomClocks();
+            const searchInput = document.getElementById("custom-city-search");
+            if (searchInput) {
+                searchInput.value = "";
+                console.log('Cleared search input');
             }
-            console.log("DEBUG: Attaching listener to newly added custom clock:", newClockData.clock.dataset.city);
-            newClockData.clock.removeEventListener('click', handleCityInfoClick);
-            newClockData.clock.addEventListener('click', handleCityInfoClick);
         }
-        updateClockCount();
-        saveCustomClocks();
-        const searchInput = document.getElementById("custom-city-search");
-        if (searchInput) {
-            searchInput.value = "";
-            const suggestionsEl = document.getElementById("custom-suggestions");
-            if (suggestionsEl) suggestionsEl.style.display = "none";
-        }
-    }
-
-    // Clear all custom clocks
-    function clearCustomClocks() {
-        customClocks = [];
-        const clocksContainer = document.getElementById("custom-clocks-container");
-        if (clocksContainer) {
-            clocksContainer.innerHTML = "";
-        }
-        saveCustomClocks();
-        updateClockCount();
-    }
-
-    // Update the displayed count of custom clocks
-    function updateClockCount() {
-        const countElement = document.querySelector(".clock-count");
-        if (countElement) {
-            countElement.textContent = `${customClocks.length}/6 Clocks Added`;
-        }
-    }
-
-    // Setup search for custom clocks
-    function setupCustomSearch() {
-        const searchInput = document.getElementById("custom-city-search");
-        const suggestionsContainer = document.getElementById("custom-suggestions");
-        if (!searchInput || !suggestionsContainer) return;
-
-        searchInput.addEventListener("input", () => {
-            const query = searchInput.value.toLowerCase().trim();
-            suggestionsContainer.innerHTML = "";
-            suggestionsContainer.style.display = query.length >= 2 ? "block" : "none";
-
-            if (query.length >= 2) {
-                const matches = cities.filter(city => city.name.toLowerCase().startsWith(query));
-                if (matches.length === 0) {
-                    suggestionsContainer.innerHTML = "<div>No results found</div>";
-                } else {
-                    matches.forEach(city => {
-                        const suggestionDiv = document.createElement("div");
-                        suggestionDiv.innerHTML = `<img src="https://flagcdn.com/16x12/${city.flag}.png" alt="${city.name} flag"> ${city.name}`;
-                        suggestionDiv.addEventListener("click", () => {
-                            if (window.innerWidth <= 480) {
-                                addCustomClock(city);
-                            } else {
-                                searchInput.value = city.name;
-                                suggestionsContainer.style.display = "none";
-                            }
-                        });
-                        suggestionsContainer.appendChild(suggestionDiv);
-                    });
-                }
-            }
-        });
-
-        searchInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter" && searchInput.value) {
-                const city = cities.find(c => c.name.toLowerCase() === searchInput.value.toLowerCase().trim());
-                if (city) addCustomClock(city);
-            }
-        });
-
-        document.addEventListener("click", (e) => {
-            if (suggestionsContainer && searchInput && !searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
-                suggestionsContainer.style.display = "none";
-            }
-        });
-    }
-
-    // Handle click on "Add Clock" button for custom clocks
-    function handleAddCustomClock() {
-        const searchInput = document.getElementById("custom-city-search");
-        if (!searchInput) return;
-        const cityName = searchInput.value.trim();
-        const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
-
-        if (city) {
-            addCustomClock(city);
-        } else {
-            alert("City not found!");
-        }
-    }
-
-    // Function to handle click on a clock to show city info
-    async function handleCityInfoClick(e) {
-        console.log("DEBUG: handleCityInfoClick called. Clicked element:", e.currentTarget);
-        e.preventDefault();
-        const clockContainer = e.currentTarget;
-        const cityName = clockContainer.dataset.city?.trim();
-        const cityInfoDiv = document.getElementById('city-info');
-        console.log("DEBUG: cityInfoDiv element:", cityInfoDiv);
-
-        if (!cityInfoDiv) {
-            console.error('CRITICAL: city-info div not found in HTML. Cannot show popup.');
-            return;
-        }
-
-        console.log("DEBUG: cityName from dataset:", cityName);
-        if (!cityName) {
-            console.error('CRITICAL: No city name in dataset for the clicked clock. Element:', clockContainer);
-            cityInfoDiv.innerHTML = '<p>No city selected or city name missing.</p><span class="close-btn">×</span>';
-            cityInfoDiv.classList.add('show');
-            const closeBtn = cityInfoDiv.querySelector('.close-btn');
-            if (closeBtn) closeBtn.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
-            return;
-        }
-
-        console.log("DEBUG: Setting popup to 'Loading...' and adding 'show' class for city:", cityName);
-        cityInfoDiv.innerHTML = '<p>Loading...</p><span class="close-btn">×</span>';
-        cityInfoDiv.classList.add('show');
-        const closeBtnPopup = cityInfoDiv.querySelector('.close-btn');
-        if (closeBtnPopup) closeBtnPopup.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
-
-        // Ensure detailed data is loaded
-        await loadAllDetailedCityDataOnce(); // This will wait if still loading, or resolve immediately if done.
-        console.log("DEBUG: Detailed city data should be available now.");
-
-        try {
-            const foundCityDetails = allDetailedCityDataMap.get(cityName.toLowerCase());
-            console.log("DEBUG: Searched for city in pre-loaded data. Found:", foundCityDetails);
-
-            if (foundCityDetails) {
-                let attractionsHtml = '';
-                if (foundCityDetails.topAttractionsForProfessionals && foundCityDetails.topAttractionsForProfessionals.length > 0) {
-                    attractionsHtml = `<h3>Top Attractions for Professionals:</h3><ul>${foundCityDetails.topAttractionsForProfessionals.map(attr => {
-                        if (typeof attr === 'object' && attr !== null && attr.description) {
-                            return `<li>${attr.name || 'Attraction'}: ${attr.description}</li>`;
-                        } else if (typeof attr === 'string') {
-                            return `<li>${attr}</li>`;
-                        }
-                        return '';
-                    }).join('')}</ul>`;
-                }
-
-                cityInfoDiv.innerHTML = `
-                    <div>
-                        <h2>${foundCityDetails.name}</h2>
-                        <p><strong>Timezone:</strong> ${foundCityDetails.timezone || 'N/A'}</p>
-                        ${foundCityDetails.businessHub ? `<p><strong>Business Hub:</strong> ${foundCityDetails.businessHub}</p>` : ''}
-                        ${foundCityDetails.economicProfile ? `<p><strong>Economic Profile:</strong> ${foundCityDetails.economicProfile}</p>` : ''}
-                        ${foundCityDetails.bestTimeToVisitForBusiness ? `<p><strong>Best Time for Business:</strong> ${foundCityDetails.bestTimeToVisitForBusiness}</p>` : ''}
-                        ${attractionsHtml}
-                    </div>
-                    <span class="close-btn">×</span>`;
+    
+        function clearCustomClocks() {
+            console.log('Clearing all custom clocks');
+            customClocks = [];
+            const clocksContainer = document.getElementById("custom-clocks-container");
+            if (clocksContainer) {
+                clocksContainer.innerHTML = "";
+                console.log('Cleared custom-clocks-container');
             } else {
-                const basicCityDetails = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
-                if (basicCityDetails) {
-                    cityInfoDiv.innerHTML = `
-                        <div>
-                            <h2>${basicCityDetails.name}</h2>
-                            <p><strong>Continent:</strong> ${basicCityDetails.continent || 'N/A'}</p>
-                            <p><strong>Time Offset (UTC):</strong> ${basicCityDetails.offset !== undefined ? basicCityDetails.offset : 'N/A'}</p>
-                            <p><em>Detailed information not available.</em></p>
-                        </div>
-                        <span class="close-btn">×</span>`;
-                } else {
-                    cityInfoDiv.innerHTML = '<p>City information not found.</p><span class="close-btn">×</span>';
-                }
+                console.error('custom-clocks-container not found!');
             }
-            const finalCloseBtn = cityInfoDiv.querySelector('.close-btn');
-            if (finalCloseBtn) finalCloseBtn.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
-        } catch (error) {
-            console.error('DEBUG: Error processing city details in handleCityInfoClick:', error);
-            cityInfoDiv.innerHTML = '<p>Error loading city data.</p><span class="close-btn">×</span>';
-            const errorCloseBtn = cityInfoDiv.querySelector('.close-btn');
-            if (errorCloseBtn) errorCloseBtn.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+            saveCustomClocks();
+            updateClockCount();
+            console.log('Custom clocks cleared and saved');
         }
-    }
-
-    // Bind click events to initially loaded custom clocks
-    function bindCustomClockClickEvents() {
-        console.log("DEBUG: bindCustomClockClickEvents called.");
-        const customClockElements = document.querySelectorAll("#custom-clocks-container .clock-container");
-        console.log("DEBUG: Found custom clock elements to attach listeners:", customClockElements.length);
-        customClockElements.forEach(clockEl => {
-            console.log("DEBUG: Attaching listener to custom clock:", clockEl.dataset.city);
-            clockEl.removeEventListener('click', handleCityInfoClick);
-            clockEl.addEventListener('click', handleCityInfoClick);
-        });
-    }
-
-
-    // Initialize sections based on current page
-    if (document.getElementById("clocks-container")) {
-        createFilterButtons();
-        setupSearch();
-        initializeClocks(); // This will also trigger MutationObserver for main clocks
-        const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.addEventListener("click", loadMoreClocks);
-    }
-
-    if (document.getElementById("custom-clocks-section")) {
-        initializeCustomClocks(); // This will trigger bindCustomClockClickEvents
-        setupCustomSearch();
-        const addButton = document.getElementById("add-custom-clock");
-        const clearButton = document.getElementById("clear-custom-clocks");
-        if (addButton) {
-            addButton.addEventListener("click", handleAddCustomClock);
+    
+        // Update clock count
+        function updateClockCount() {
+            const countElement = document.querySelector(".clock-count");
+            if (countElement) {
+                countElement.textContent = `${customClocks.length}/6 Clocks Added`;
+            }
         }
-        if (clearButton) {
-            clearButton.addEventListener("click", clearCustomClocks);
-        }
-    }
-
-    const mainClocksContainer = document.getElementById('clocks-container');
-    if (mainClocksContainer) {
-        const mainClocksObserver = new MutationObserver((mutationsList, observer) => {
-            // console.log("DEBUG: Main clocks MutationObserver triggered. Mutations count:", mutationsList.length); // Can be too verbose
-            mutationsList.forEach(mutation => {
-                if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-                    mutation.addedNodes.forEach(node => {
-                        if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('clock-container')) {
-                            // console.log("DEBUG: MutationObserver - Attaching listener to newly added clock:", node.dataset.city); // Can be too verbose
-                            node.removeEventListener('click', handleCityInfoClick);
-                            node.addEventListener('click', handleCityInfoClick);
-                        }
-                    });
+    
+        // Setup custom search
+        function setupCustomSearch() {
+            const searchInput = document.getElementById("custom-city-search");
+            const suggestions = document.getElementById("custom-suggestions");
+            if (!searchInput || !suggestions) return;
+    
+            searchInput.addEventListener("input", () => {
+                const query = searchInput.value.toLowerCase();
+                suggestions.innerHTML = "";
+                suggestions.style.display = query.length >= 2 ? "block" : "none";
+    
+                if (query.length >= 2) {
+                    const matches = cities.filter(city => city.name.toLowerCase().startsWith(query));
+                    if (matches.length === 0) {
+                        suggestions.innerHTML = "<div>No results found</div>";
+                    } else {
+                        matches.forEach(city => {
+                            const suggestion = document.createElement("div");
+                            suggestion.innerHTML = `<img src="https://flagcdn.com/16x12/${city.flag}.png" alt="${city.name} flag"> ${city.name}`;
+                            suggestion.addEventListener("click", () => {
+                                if (window.innerWidth <= 480) {
+                                    addCustomClock(city);
+                                } else {
+                                    searchInput.value = city.name;
+                                    suggestions.style.display = "none";
+                                }
+                            });
+                            suggestions.appendChild(suggestion);
+                        });
+                    }
                 }
             });
+    
+            searchInput.addEventListener("keypress", (e) => {
+                if (e.key === "Enter" && searchInput.value) {
+                    const city = cities.find(c => c.name.toLowerCase() === searchInput.value.toLowerCase());
+                    if (city) addCustomClock(city);
+                }
+            });
+    
+            document.addEventListener("click", (e) => {
+                if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+                    suggestions.style.display = "none";
+                }
+            });
+        }
+    
+        // Handle add custom clock
+        function handleAddCustomClock() {
+            const searchInput = document.getElementById("custom-city-search");
+            const cityName = searchInput.value.trim();
+            const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
+    
+            if (city) {
+                addCustomClock(city);
+                searchInput.value = "";
+                document.getElementById("custom-suggestions").style.display = "none";
+            } else {
+                alert("City not found!");
+            }
+        }
+    
+        // Initialize
+        if (document.getElementById("clocks-container")) {
+            createFilterButtons();
+            setupSearch();
+            initializeClocks();
+            const loadMoreBtn = document.getElementById("load-more");
+            if (loadMoreBtn) loadMoreBtn.addEventListener("click", loadMoreClocks);
+        }
+    
+        if (document.getElementById("custom-clocks-section")) {
+            initializeCustomClocks();
+            setupCustomSearch();
+            const addButton = document.getElementById("add-custom-clock");
+            const clearButton = document.getElementById("clear-custom-clocks");
+            if (addButton && clearButton) {
+                console.log('Binding buttons for custom clocks');
+                addButton.addEventListener("click", () => {
+                    console.log('Add Clock button clicked');
+                    handleAddCustomClock();
+                });
+                clearButton.addEventListener("click", () => {
+                    console.log('Clear All button clicked');
+                    clearCustomClocks();
+                });
+            } else {
+                console.error('Add or Clear button not found!', { addButton, clearButton });
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const cityInfoDiv = document.getElementById('city-info');
+            const jsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
+            console.log('Binding click events to clocks:', document.querySelectorAll('.clock-container').length);
+            document.querySelectorAll('.clock-container').forEach(clock => {
+                clock.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    const cityName = clock.dataset.city?.trim();
+                    console.log('Clicked city:', cityName);
+                    if (!cityInfoDiv) {
+                        console.error('city-info div not found');
+                        return;
+                    }
+                    if (!cityName) {
+                        console.error('No city name in dataset');
+                        cityInfoDiv.innerHTML = '<p>No city selected</p>';
+                        return;
+                    }
+                    cityInfoDiv.innerHTML = '<p>Loading...</p>';
+                    try {
+                        for (const file of jsonFiles) {
+                            console.log('Fetching:', `/data/json/${file}`);
+                            const response = await fetch(`/data/json/${file}`);
+                            if (!response.ok) {
+                                console.error(`Failed to fetch ${file}: ${response.status}`);
+                                continue;
+                            }
+                            const cities = await response.json();
+                            console.log('Loaded cities:', cities.length);
+                            const city = cities.find(c => {
+                                const name = c.name?.trim();
+                                return name && name.toLowerCase() === cityName.toLowerCase();
+                            });
+                            if (city) {
+                                console.log('Found city:', city);
+                                cityInfoDiv.innerHTML = `
+                                    <div>
+                                        <h2>${city.name}</h2>
+                                        <p>Timezone: ${city.timezone || 'N/A'}</p>
+                                        <p>${city.businessHub || 'N/A'}</p>
+                                        <ul>${(city.topAttractionsForProfessionals || []).map(attr => `<li>${attr.description || 'No description'}</li>`).join('')}</ul>
+                                    </div>
+                                `;
+                                return;
+                            }
+                        }
+                        console.log('City not found in JSON:', cityName);
+                        cityInfoDiv.innerHTML = '<p>City not found</p>';
+                    } catch (error) {
+                        console.error('Fetch error:', error);
+                        cityInfoDiv.innerHTML = '<p>Error loading data</p>';
+                    }
+                });
+            });
         });
-        mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false }); // subtree: false is important if clock-container is a direct child
-        console.log("DEBUG: Main clocks MutationObserver initialized and observing.");
-    } else {
-        console.error("CRITICAL: #clocks-container not found for MutationObserver setup.");
-    }
-
-    // Start pre-loading detailed city data as soon as the DOM is ready
-    loadAllDetailedCityDataOnce().then(() => {
-        console.log("DEBUG: Initial pre-load of detailed city data promise resolved.");
-    }).catch(err => {
-        console.error("DEBUG: Error during initial pre-load of detailed city data:", err);
     });
-});
-
-
-

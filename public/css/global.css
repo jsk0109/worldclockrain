@@ -245,7 +245,7 @@ nav a:focus, .hamburger:focus {
 /* Floating Button Styles */
 .floating-theme-btn {
     position: fixed;
-    bottom: 45px;
+    bottom: 120px;
     right: 20px;
     background: linear-gradient(to right, #ff6f61 0%, #ffeb3b 25%, #4caf50 50%, #2196f3 75%, #9c27b0 100%);
     background-size: 400% 400%;

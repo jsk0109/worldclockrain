@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // localStorage에서 cities 로드
     let cities = JSON.parse(localStorage.getItem('selectedCities')) || [];
-    let weatherCache = JSON.parse(localStorage.getItem('weatherCache')) || {};
+    // let weatherCache = JSON.parse(localStorage.getItem('weatherCache')) || {}; // Worker가 캐싱을 담당하므로 제거
     console.log('Loaded cities from localStorage:', cities); // 디버깅용
     const maxCities = 6;
 
@@ -427,42 +427,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Fetch weather data via Cloudflare Worker
     async function fetchWeather(city) {
-        const cacheKey = `${city.name}_${city.lat}_${city.lon}`;
-        const now = Date.now();
-        const cached = weatherCache[cacheKey];
-    
-        // 캐시 있으면 10분 내 데이터 재사용
-        if (cached && now - cached.timestamp < 600000) {
-            console.log('Using cached weather for', city.name);
-            return cached.data;
-        }
-    
+        const workerUrl = `https://weather-proxy.jsk0109.workers.dev/?lat=${city.lat}&lon=${city.lon}`;
         try {
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m`;
-            console.log('Fetching weather:', url);
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            console.log('Fetching weather via Worker:', workerUrl);
+            const response = await fetch(workerUrl);
+            if (!response.ok) {
+                let errorData;
+                try {
+                    errorData = await response.json();
+                } catch (e) {
+                    errorData = { error: `Weather worker request failed for ${city.name} with status: ${response.status}` };
+                }
+                console.error(`Worker request failed for ${city.name} with status: ${response.status}`, errorData);
+                throw new Error(errorData.error || `Weather worker request failed: ${response.statusText}`);
+            }
             const data = await response.json();
-            if (!data.current) throw new Error('No current weather data');
-    
+            // Worker returns: temperature_2m, relative_humidity_2m, weather_code
+            // converter.js 현재는 temp와 humidity만 사용합니다.
             const weatherData = {
-                temp: Math.round(data.current.temperature_2m),
-                humidity: data.current.relative_humidity_2m
+                temp: Math.round(data.temperature_2m),
+                humidity: data.relative_humidity_2m
             };
-    
-            // 캐시에 저장
-            weatherCache[cacheKey] = { data: weatherData, timestamp: now };
-            localStorage.setItem('weatherCache', JSON.stringify(weatherCache));
-            console.log('Saved to weatherCache:', weatherCache[cacheKey]);
             return weatherData;
         } catch (error) {
-            console.error('Weather fetch error:', error);
-            // 캐시 있으면 에러 시 이전 데이터 반환
-            if (cached) {
-                console.log('Falling back to cached weather for', city.name);
-                return cached.data;
-            }
+            console.error(`Weather fetch error for ${city.name} via Worker:`, error);
+            // 에러를 다시 던져서 호출하는 쪽(updateTimeComparison)의 .catch에서 처리하도록 합니다.
+            // 이렇게 하면 "Weather unavailable" 메시지가 표시됩니다.
             throw error;
         }
     }
