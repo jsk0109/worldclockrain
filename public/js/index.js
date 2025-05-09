@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
 
-            const continentColors = {
+                const continentColors = {
         "N America": "#388E3C",
         "Europe": "#FBC02D",
         "Asia": "#F57C00",
@@ -358,6 +358,42 @@ document.addEventListener("DOMContentLoaded", () => {
     let displayedClocks = 0;
     const clocksPerLoad = 25;
     let customClocks = loadCustomClocks();
+
+    // For pre-loading detailed city data
+    let allDetailedCityDataMap = new Map();
+    let detailedDataLoaded = false;
+    const detailedCityJsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
+
+    async function loadAllDetailedCityData() {
+        if (detailedDataLoaded) {
+            return;
+        }
+        console.log("Starting to pre-load all detailed city data...");
+        for (const file of detailedCityJsonFiles) {
+            try {
+                const response = await fetch(`/data/json/${file}`); // Corrected path
+                if (!response.ok) {
+                    console.warn(`Failed to fetch ${file} for pre-loading: ${response.status}`);
+                    continue;
+                }
+                const detailedCitiesFromFile = await response.json();
+                if (Array.isArray(detailedCitiesFromFile)) {
+                    detailedCitiesFromFile.forEach(city => {
+                        if (city && city.name) {
+                            allDetailedCityDataMap.set(city.name.toLowerCase(), city);
+                        }
+                    });
+                } else {
+                    console.warn(`Data from ${file} is not an array during pre-loading.`);
+                }
+            } catch (fetchError) {
+                console.warn(`Error fetching or parsing ${file} for pre-loading:`, fetchError);
+            }
+        }
+        detailedDataLoaded = true;
+        console.log("Finished pre-loading all detailed city data. Total cities loaded:", allDetailedCityDataMap.size);
+    }
+
 
     class PromiseQueue {
         constructor(concurrency = 5) {
@@ -602,7 +638,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (customClocks.length === 0) {
-            const defaultCustomCityNames = ["London"]; // Default city if none are saved
+            const defaultCustomCityNames = ["London"];
             defaultCustomCityNames.forEach(cityName => {
                 const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
                 if (city && !customClocks.some(c => c.name.toLowerCase() === cityName.toLowerCase())) {
@@ -707,9 +743,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         const suggestionDiv = document.createElement("div");
                         suggestionDiv.innerHTML = `<img src="https://flagcdn.com/16x12/${city.flag}.png" alt="${city.name} flag"> ${city.name}`;
                         suggestionDiv.addEventListener("click", () => {
-                            if (window.innerWidth <= 480) { // On smaller screens, add directly
+                            if (window.innerWidth <= 480) {
                                 addCustomClock(city);
-                            } else { // On larger screens, fill input and hide suggestions
+                            } else {
                                 searchInput.value = city.name;
                                 suggestionsContainer.style.display = "none";
                             }
@@ -747,8 +783,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const detailedCityJsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
-
     // Function to handle click on a clock to show city info
     async function handleCityInfoClick(e) {
         e.preventDefault();
@@ -757,12 +791,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const cityInfoDiv = document.getElementById('city-info');
 
         if (!cityInfoDiv) {
-            console.error('city-info div not found');
+            console.error('city-info div not found. Please ensure <div id="city-info"> exists in your HTML.');
             return;
         }
         if (!cityName) {
-            console.error('No city name in dataset for the clicked clock');
-            cityInfoDiv.innerHTML = '<p>No city selected</p><span class="close-btn">×</span>';
+            console.error('No city name in dataset for the clicked clock. Element:', clockContainer);
+            cityInfoDiv.innerHTML = '<p>No city selected or city name missing from clock data.</p><span class="close-btn">×</span>';
             cityInfoDiv.classList.add('show');
             cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
             return;
@@ -772,31 +806,24 @@ document.addEventListener("DOMContentLoaded", () => {
         cityInfoDiv.classList.add('show');
         cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
 
+        if (!detailedDataLoaded) {
+            await loadAllDetailedCityData(); // Ensure data is loaded before trying to access it
+        }
+
         try {
-            let foundCityDetails = null;
-            for (const file of detailedCityJsonFiles) {
-                try {
-                    const response = await fetch(`/data/json/${file}`); // Corrected path
-                    if (!response.ok) {
-                        console.warn(`Failed to fetch ${file}: ${response.status}`);
-                        continue; // Try next file
-                    }
-                    const detailedCities = await response.json();
-                    const city = detailedCities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
-                    if (city) {
-                        foundCityDetails = city;
-                        break; // Found the city, no need to check other files
-                    }
-                } catch (fetchError) {
-                    console.warn(`Error fetching or parsing ${file}:`, fetchError);
-                }
-            }
+            const foundCityDetails = allDetailedCityDataMap.get(cityName.toLowerCase());
 
             if (foundCityDetails) {
-                // Display detailed information
                 let attractionsHtml = '';
                 if (foundCityDetails.topAttractionsForProfessionals && foundCityDetails.topAttractionsForProfessionals.length > 0) {
-                    attractionsHtml = `<h3>Top Attractions for Professionals:</h3><ul>${foundCityDetails.topAttractionsForProfessionals.map(attr => `<li>${attr.name || 'Attraction'}: ${attr.description}</li>`).join('')}</ul>`;
+                    attractionsHtml = `<h3>Top Attractions for Professionals:</h3><ul>${foundCityDetails.topAttractionsForProfessionals.map(attr => {
+                        if (typeof attr === 'object' && attr !== null && attr.description) {
+                            return `<li>${attr.name || 'Attraction'}: ${attr.description}</li>`;
+                        } else if (typeof attr === 'string') {
+                            return `<li>${attr}</li>`;
+                        }
+                        return '';
+                    }).join('')}</ul>`;
                 }
 
                 cityInfoDiv.innerHTML = `
@@ -810,7 +837,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <span class="close-btn">×</span>`;
             } else {
-                // Fallback to basic info from the main 'cities' array if not found in JSON
                 const basicCityDetails = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
                 if (basicCityDetails) {
                     cityInfoDiv.innerHTML = `
@@ -827,7 +853,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
         } catch (error) {
-            console.error('Error processing city details:', error);
+            console.error('Error processing city details in handleCityInfoClick:', error);
             cityInfoDiv.innerHTML = '<p>Error loading city data.</p><span class="close-btn">×</span>';
             cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
         }
@@ -837,7 +863,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function bindCustomClockClickEvents() {
         const customClockElements = document.querySelectorAll("#custom-clocks-container .clock-container");
         customClockElements.forEach(clockEl => {
-            clockEl.removeEventListener('click', handleCityInfoClick); // Prevent multiple listeners
+            clockEl.removeEventListener('click', handleCityInfoClick);
             clockEl.addEventListener('click', handleCityInfoClick);
         });
     }
@@ -865,20 +891,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Add event listeners to dynamically created clocks in the main section
     const mainClocksContainer = document.getElementById('clocks-container');
     if (mainClocksContainer) {
         const mainClocksObserver = new MutationObserver(() => {
             const allClockElements = document.querySelectorAll('#clocks-container .clock-container');
             allClockElements.forEach(clockEl => {
-                // Remove existing listener to prevent duplicates if any, then add
                 clockEl.removeEventListener('click', handleCityInfoClick);
                 clockEl.addEventListener('click', handleCityInfoClick);
             });
         });
-        // Observe changes to the clocks-container (when new clocks are added)
         mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false });
     }
+
+    // Pre-load detailed city data after other initializations
+    loadAllDetailedCityData().then(() => {
+        console.log("Initial pre-load of detailed city data complete and available.");
+    }).catch(err => {
+        console.error("Error during initial pre-load of detailed city data:", err);
+    });
 });
+
 
 
