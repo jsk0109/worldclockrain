@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
 
-        const continentColors = {
+            const continentColors = {
         "N America": "#388E3C",
         "Europe": "#FBC02D",
         "Asia": "#F57C00",
@@ -747,6 +747,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    const detailedCityJsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
+
     // Function to handle click on a clock to show city info
     async function handleCityInfoClick(e) {
         e.preventDefault();
@@ -771,25 +773,61 @@ document.addEventListener("DOMContentLoaded", () => {
         cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
 
         try {
-            const cityDetails = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
+            let foundCityDetails = null;
+            for (const file of detailedCityJsonFiles) {
+                try {
+                    const response = await fetch(`/data/json/${file}`); // Corrected path
+                    if (!response.ok) {
+                        console.warn(`Failed to fetch ${file}: ${response.status}`);
+                        continue; // Try next file
+                    }
+                    const detailedCities = await response.json();
+                    const city = detailedCities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
+                    if (city) {
+                        foundCityDetails = city;
+                        break; // Found the city, no need to check other files
+                    }
+                } catch (fetchError) {
+                    console.warn(`Error fetching or parsing ${file}:`, fetchError);
+                }
+            }
 
-            if (cityDetails) {
+            if (foundCityDetails) {
+                // Display detailed information
+                let attractionsHtml = '';
+                if (foundCityDetails.topAttractionsForProfessionals && foundCityDetails.topAttractionsForProfessionals.length > 0) {
+                    attractionsHtml = `<h3>Top Attractions for Professionals:</h3><ul>${foundCityDetails.topAttractionsForProfessionals.map(attr => `<li>${attr.name || 'Attraction'}: ${attr.description}</li>`).join('')}</ul>`;
+                }
+
                 cityInfoDiv.innerHTML = `
                     <div>
-                        <h2>${cityDetails.name}</h2>
-                        <p><strong>Continent:</strong> ${cityDetails.continent || 'N/A'}</p>
-                        <p><strong>Time Offset (UTC):</strong> ${cityDetails.offset !== undefined ? cityDetails.offset : 'N/A'}</p>
-                        <p><em>More detailed information would require fetching from a dedicated city info JSON.</em></p>
+                        <h2>${foundCityDetails.name}</h2>
+                        <p><strong>Timezone:</strong> ${foundCityDetails.timezone || 'N/A'}</p>
+                        ${foundCityDetails.businessHub ? `<p><strong>Business Hub:</strong> ${foundCityDetails.businessHub}</p>` : ''}
+                        ${foundCityDetails.economicProfile ? `<p><strong>Economic Profile:</strong> ${foundCityDetails.economicProfile}</p>` : ''}
+                        ${foundCityDetails.bestTimeToVisitForBusiness ? `<p><strong>Best Time for Business:</strong> ${foundCityDetails.bestTimeToVisitForBusiness}</p>` : ''}
+                        ${attractionsHtml}
                     </div>
-                    <span class="close-btn">×</span>
-                `;
-                cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+                    <span class="close-btn">×</span>`;
             } else {
-                cityInfoDiv.innerHTML = '<p>Detailed city information not found.</p><span class="close-btn">×</span>';
-                cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
+                // Fallback to basic info from the main 'cities' array if not found in JSON
+                const basicCityDetails = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
+                if (basicCityDetails) {
+                    cityInfoDiv.innerHTML = `
+                        <div>
+                            <h2>${basicCityDetails.name}</h2>
+                            <p><strong>Continent:</strong> ${basicCityDetails.continent || 'N/A'}</p>
+                            <p><strong>Time Offset (UTC):</strong> ${basicCityDetails.offset !== undefined ? basicCityDetails.offset : 'N/A'}</p>
+                            <p><em>Detailed information not available.</em></p>
+                        </div>
+                        <span class="close-btn">×</span>`;
+                } else {
+                    cityInfoDiv.innerHTML = '<p>City information not found.</p><span class="close-btn">×</span>';
+                }
             }
+            cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
         } catch (error) {
-            console.error('Error fetching city details:', error);
+            console.error('Error processing city details:', error);
             cityInfoDiv.innerHTML = '<p>Error loading city data.</p><span class="close-btn">×</span>';
             cityInfoDiv.querySelector('.close-btn')?.addEventListener('click', () => cityInfoDiv.classList.remove('show'));
         }
@@ -842,4 +880,5 @@ document.addEventListener("DOMContentLoaded", () => {
         mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false });
     }
 });
+
 
