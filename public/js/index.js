@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
 
-    const continentColors = {
+        const continentColors = {
         "N America": "#388E3C",
         "Europe": "#FBC02D",
         "Asia": "#F57C00",
@@ -356,40 +356,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let allClocks = [];
     let displayedClocks = 0;
-    const clocksPerLoad = 25; // 더 적은 수로 시작 (예: 25 또는 50)
+    const clocksPerLoad = 25;
     let customClocks = loadCustomClocks();
 
-    // --- 동시에 실행되는 Promise 개수를 제한하는 간단한 큐 ---
     class PromiseQueue {
-        constructor(concurrency = 5) { // 동시에 최대 5개의 요청만 허용 (필요시 조절)
+        constructor(concurrency = 5) {
             this.concurrency = concurrency;
-            this.running = 0; // 현재 실행 중인 작업 수
-            this.queue = [];  // 대기 중인 작업 목록
+            this.running = 0;
+            this.queue = [];
         }
 
-        add(task) { // task는 Promise를 반환하는 함수여야 합니다.
+        add(task) {
             return new Promise((resolve, reject) => {
                 this.queue.push({ task, resolve, reject });
-                this._processQueue(); // 큐 처리 시도
+                this._processQueue();
             });
         }
 
         _processQueue() {
             if (this.running >= this.concurrency || this.queue.length === 0) {
-                return; // 실행 중인 작업이 너무 많거나 큐가 비었으면 반환
+                return;
             }
             this.running++;
-            const { task, resolve, reject } = this.queue.shift(); // 큐에서 작업 하나 꺼내기
+            const { task, resolve, reject } = this.queue.shift();
             task()
                 .then(resolve)
                 .catch(reject)
                 .finally(() => {
-                    this.running--; // 작업 완료 후 실행 중인 작업 수 감소
-                    this._processQueue(); // 다음 작업 처리 시도
+                    this.running--;
+                    this._processQueue();
                 });
         }
     }
-    const weatherFetchQueue = new PromiseQueue(5); // 날씨 정보 요청 큐 (동시성 5로 설정)
+    const weatherFetchQueue = new PromiseQueue(5);
 
 
     // Fetch weather data via Cloudflare Worker
@@ -435,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
         flag.src = `https://flagcdn.com/64x48/${city.flag}.png`;
         flag.alt = `${city.name} flag`;
 
-        const cityNameElement = document.createElement("h2"); // 변수명 변경
+        const cityNameElement = document.createElement("h2");
         cityNameElement.appendChild(flag);
         cityNameElement.append(` ${city.name}`);
 
@@ -445,7 +444,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const weatherInfo = document.createElement("div");
         weatherInfo.className = "weather-info";
-        weatherInfo.innerHTML = `날씨: <span class="loading-dots">...</span>`; // 초기 로딩 표시
+        weatherInfo.innerHTML = `Weather: <span class="loading-dots">...</span>`;
 
         if (isCustom) {
             const removeBtn = document.createElement("button");
@@ -455,7 +454,7 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(removeBtn);
         }
 
-        container.append(cityNameElement, time, weatherInfo); // 변경된 변수명 사용
+        container.append(cityNameElement, time, weatherInfo);
         const targetContainer = document.getElementById(containerId);
         if (targetContainer) {
             targetContainer.appendChild(container);
@@ -464,14 +463,13 @@ document.addEventListener("DOMContentLoaded", () => {
             return null;
         }
 
-        function updateWeather() { // async 키워드 제거, PromiseQueue가 처리
-            // 날씨 정보 가져오는 작업을 큐에 추가
+        function updateWeather() {
             return weatherFetchQueue.add(async () => {
                 const weather = await fetchWeatherViaWorker(city.lat, city.lon, city.name);
-                weatherInfo.innerHTML = `날씨: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp !== "N/A" ? weather.temp + "°C" : "N/A"}</span>, 습도: <span class="humidity">${weather.humidity !== "N/A" ? weather.humidity + "%" : "N/A"}</span>`;
+                weatherInfo.innerHTML = `Weather: ${getWeatherIcon(weather.code)} <span class="temp">${weather.temp !== "N/A" ? weather.temp + "°C" : "N/A"}</span>, Humidity: <span class="humidity">${weather.humidity !== "N/A" ? weather.humidity + "%" : "N/A"}</span>`;
             }).catch(error => {
-                console.error(`${city.name} 날씨 정보 업데이트 중 오류 (큐):`, error);
-                weatherInfo.innerHTML = `날씨: <span class="error">오류</span>`; // 오류 발생 시 UI 업데이트
+                console.error(`Error updating weather for ${city.name} (queue):`, error);
+                weatherInfo.innerHTML = `Weather: <span class="error">Error</span>`;
             });
         }
 
@@ -486,14 +484,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         updateClock();
-        updateWeather(); // 초기 날씨 정보 가져오기 (큐를 통해 실행됨)
+        updateWeather();
         setInterval(updateClock, 1000);
 
-        return { clock: container, updateWeather }; // updateWeather는 이제 Promise를 반환
+        return { clock: container, updateWeather };
     }
 
     // Initialize main clocks
-    function initializeClocks() { // async 제거
+    function initializeClocks() {
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.disabled = true;
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
@@ -502,12 +500,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (activeContinent && activeContinent !== "") {
             chunk = cities.filter(city => city.continent === activeContinent);
         }
-        chunk = chunk.slice(0, clocksPerLoad); // clocksPerLoad 사용
+        chunk = chunk.slice(0, clocksPerLoad);
 
         allClocks = [];
         document.getElementById("clocks-container").innerHTML = "";
         for (const city of chunk) {
-            const clockData = createClock(city, "clocks-container"); // await 제거
+            const clockData = createClock(city, "clocks-container");
             if (clockData) allClocks.push(clockData);
         }
         displayedClocks = chunk.length;
@@ -521,7 +519,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Load more clocks
-    function loadMoreClocks() { // async 제거
+    function loadMoreClocks() {
         const loadMoreBtn = document.getElementById("load-more");
         if (loadMoreBtn) loadMoreBtn.disabled = true;
         const activeContinent = document.querySelector(".filter-btn.active")?.dataset.continent;
@@ -536,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         for (const city of chunk) {
-            const clockData = createClock(city, "clocks-container"); // await 제거
+            const clockData = createClock(city, "clocks-container");
             if (clockData) allClocks.push(clockData);
         }
         displayedClocks += chunk.length;
@@ -604,7 +602,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (customClocks.length === 0) {
-            const defaultCustomCityNames = ["London"];
+            const defaultCustomCityNames = ["London"]; // Default city if none are saved
             defaultCustomCityNames.forEach(cityName => {
                 const city = cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
                 if (city && !customClocks.some(c => c.name.toLowerCase() === cityName.toLowerCase())) {
@@ -614,7 +612,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         customClocks.forEach(city => {
-            const newClockData = createClock(city, "custom-clocks-container", true); // await 제거
+            const newClockData = createClock(city, "custom-clocks-container", true);
             if (newClockData) {
                 const removeBtn = newClockData.clock.querySelector(".remove-clock");
                 if (removeBtn) {
@@ -644,7 +642,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         customClocks.push(city);
-        const newClockData = createClock(city, "custom-clocks-container", true); // await 제거
+        const newClockData = createClock(city, "custom-clocks-container", true);
         if (newClockData) {
             const removeBtn = newClockData.clock.querySelector(".remove-clock");
             if (removeBtn) {
@@ -709,9 +707,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         const suggestionDiv = document.createElement("div");
                         suggestionDiv.innerHTML = `<img src="https://flagcdn.com/16x12/${city.flag}.png" alt="${city.name} flag"> ${city.name}`;
                         suggestionDiv.addEventListener("click", () => {
-                            if (window.innerWidth <= 480) {
+                            if (window.innerWidth <= 480) { // On smaller screens, add directly
                                 addCustomClock(city);
-                            } else {
+                            } else { // On larger screens, fill input and hide suggestions
                                 searchInput.value = city.name;
                                 suggestionsContainer.style.display = "none";
                             }
@@ -801,7 +799,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function bindCustomClockClickEvents() {
         const customClockElements = document.querySelectorAll("#custom-clocks-container .clock-container");
         customClockElements.forEach(clockEl => {
-            clockEl.removeEventListener('click', handleCityInfoClick);
+            clockEl.removeEventListener('click', handleCityInfoClick); // Prevent multiple listeners
             clockEl.addEventListener('click', handleCityInfoClick);
         });
     }
@@ -829,15 +827,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Add event listeners to dynamically created clocks in the main section
     const mainClocksContainer = document.getElementById('clocks-container');
     if (mainClocksContainer) {
         const mainClocksObserver = new MutationObserver(() => {
             const allClockElements = document.querySelectorAll('#clocks-container .clock-container');
             allClockElements.forEach(clockEl => {
+                // Remove existing listener to prevent duplicates if any, then add
                 clockEl.removeEventListener('click', handleCityInfoClick);
                 clockEl.addEventListener('click', handleCityInfoClick);
             });
         });
+        // Observe changes to the clocks-container (when new clocks are added)
         mainClocksObserver.observe(mainClocksContainer, { childList: true, subtree: false });
     }
 });
+
