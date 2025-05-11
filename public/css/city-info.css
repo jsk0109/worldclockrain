@@ -38,7 +38,7 @@
 }
 
 .city-info-content h1 img {
-    width: 40px; /* Adjust flag size as needed */
+    width: 50px; /* Adjust flag size as needed */
     height: auto;
     margin-right: 15px;
     border: 1px solid var(--border-color, #ddd);
