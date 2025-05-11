@@ -18,8 +18,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const decodedCityName = decodeURIComponent(cityNameFromUrl);
-    document.title = `Loading ${decodedCityName} Information... | WorldClocks`;
-    if (loadingMessage) loadingMessage.textContent = `Loading detailed information for ${decodedCityName}...`;
+    // 초기 document.title 변경은 유지하되, loadingMessage 내용은 좀 더 일반적인 것으로 두거나,
+    // 아예 이 시점에서는 변경하지 않고, 데이터 로드 성공/실패 시에만 업데이트하도록 합니다.
+    document.title = `Loading Information... | WorldClocks`; // 좀 더 일반적인 로딩 제목
+    if (loadingMessage) loadingMessage.textContent = `Loading information, please wait...`; // 일반적인 로딩 메시지
 
     const jsonFiles = [
         '/data/json/cities1.json',
@@ -34,15 +36,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         for (const filePath of jsonFiles) {
-            console.log(`Attempting to fetch city data for "${decodedCityName}" from ${filePath}`);
+            // console.log(`Attempting to fetch city data for "${decodedCityName}" from ${filePath}`); // 상세 로그는 개발 중에만 유용
             try {
                 const response = await fetch(filePath);
                 if (!response.ok) {
-                    console.warn(`Failed to load ${filePath}. (Status: ${response.status}) - Will try next file.`);
+                    // console.warn(`Failed to load ${filePath}. (Status: ${response.status}) - Will try next file.`);
                     continue; 
                 }
                 const citiesList = await response.json();
-                console.log(`Successfully parsed ${filePath}, found ${citiesList.length} cities.`);
+                // console.log(`Successfully parsed ${filePath}, found ${citiesList.length} cities.`);
                 
                 cityData = citiesList.find(c => c.name?.trim().toLowerCase() === decodedCityName.toLowerCase());
                 
@@ -52,13 +54,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     break; 
                 }
             } catch (fileError) {
-                console.error(`Error processing file ${filePath}:`, fileError.message, "- Will try next file.");
+                // console.error(`Error processing file ${filePath}:`, fileError.message, "- Will try next file.");
             }
         }
 
         if (cityData) {
             console.log('Found city data:', cityData);
             document.title = `${cityData.name} - Detailed Information | WorldClocks`;
+            // 데이터를 성공적으로 찾은 후에 로딩 메시지를 숨기거나 내용을 업데이트합니다.
+            // 여기서는 cityDetailContainer.innerHTML 로 전체가 교체되므로, loadingMessage를 직접 제어할 필요는 없을 수 있습니다.
+            // if (loadingMessage) loadingMessage.style.display = 'none'; // 또는 loadingMessage.remove();
             const metaDescTag = document.querySelector('meta[name="description"]');
             if (metaDescTag) {
                 metaDescTag.setAttribute('content', `Find detailed information for ${cityData.name}, including timezone, standard business hours, major public holidays, business tips, and recommended attractions. Discover everything about ${cityData.name} on WorldClocks.`);
@@ -114,12 +119,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
         } else {
             console.warn(`Information for '${decodedCityName}' not found in any of the checked JSON files.`);
-            cityDetailContainer.innerHTML = `<p>Detailed information for '${decodedCityName}' could not be found. Please check the city name.</p>`;
+            const errorMessage = `<p>Detailed information for '${decodedCityName}' could not be found. Please check the city name or try a different one.</p>`;
+            if (loadingMessage) loadingMessage.innerHTML = errorMessage; else cityDetailContainer.innerHTML = errorMessage;
             document.title = `Information Not Found | ${decodedCityName} | WorldClocks`;
         }
     } catch (error) {
         console.error('Error loading city details:', error);
-        cityDetailContainer.innerHTML = `<p>An error occurred while loading information: ${error.message}. Please try again later.</p>`;
+        const errorMessage = `<p>An error occurred while loading information: ${error.message}. Please try again later.</p>`;
+        if (loadingMessage) loadingMessage.innerHTML = errorMessage; else cityDetailContainer.innerHTML = errorMessage;
         document.title = "Error Loading Data | WorldClocks";
     }
 });

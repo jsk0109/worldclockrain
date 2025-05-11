@@ -23,21 +23,17 @@
     padding-bottom: 10px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; and flex-wrap: wrap; were for the clock */
+    justify-content: center;
+}
 }
 
-/* Assuming the original image was styled directly or with a generic class */
+
 .city-info-content h1 img {
     width: 40px;
     height: auto;
     margin-right: 10px;
     border: 1px solid var(--border-color, #ddd);
     border-radius: 4px;
-    /* If you had specific styles for #city-detail-flag,
-       and your reverted JS uses that ID, you can keep those styles.
-       Otherwise, this more generic selector might be closer to the original.
-       The key is that #city-header-datetime and related styles are removed.
-    */
 }
 
 .city-info-content h2 {
