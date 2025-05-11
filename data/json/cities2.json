@@ -1,0 +1,2947 @@
+[
+  {
+    "name": "Phoenix",
+    "country": "United States",
+    "lat": 33.4484,
+    "lon": -112.0740,
+    "offset": -7,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Phoenix",
+    "timeDifference": "UTC-7 (MST, no DST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is formal (suits) in finance, but smart-casual in tech and creative sectors. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Business lunches are common.",
+    "localLifestyle": "Sunny, active, and suburban. Strong focus on outdoor activities, tech, and Southwestern culture. Public transport is limited; cars are common.",
+    "localCulture": "A blend of Native American, Hispanic, and Anglo influences. Phoenicians value hospitality, innovation, and desert living. Communication is straightforward.",
+    "signatureDish": "Sonoran Hot Dog, Chimichanga, Navajo Taco, Prickly Pear Margaritas",
+    "businessHub": "A hub for technology, healthcare, and real estate. Downtown Phoenix and Scottsdale are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Phoenix",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Desert Botanical Garden",
+        "description": "A showcase of desert flora, suitable for client entertainment or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      },
+      {
+        "name": "Heard Museum",
+        "description": "A museum of Native American art, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Phoenix, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Phoenix Tech Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for tech, healthcare, and real estate professionals to network."
+      },
+      {
+        "name": "Industry Events (e.g., Phoenix Startup Week, AZ Tech Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and entrepreneurship, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Phoenix’s growing tech and startup scene. Be prepared for a direct communication style and appreciate the desert culture to build rapport."
+  },
+  {
+    "name": "Taipei",
+    "country": "Taiwan",
+    "lat": 25.0330,
+    "lon": 121.5654,
+    "offset": 8,
+    "flag": "tw",
+    "continent": "Asia",
+    "timezone": "Asia/Taipei",
+    "timeDifference": "UTC+8",
+    "standardBusinessHours": "Typically 9:00 AM - 6:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Chinese New Year (varies, Jan/Feb)", "Peace Memorial Day (Feb 28)", "Tomb Sweeping Day (Apr 4 or 5)", "Dragon Boat Festival (varies, Jun)", "Mid-Autumn Festival (varies, Sep/Oct)", "National Day (Oct 10)"],
+    "businessEtiquette": "Punctuality is critical. Handshakes are common; use titles (Mr., Ms.) initially. Business cards are exchanged formally with both hands. Business attire is formal (suits). Respect for hierarchy is key. Mandarin is the primary language; English is common in business.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Chinese New Year.",
+    "localLifestyle": "Dynamic, tech-savvy, and food-centric. Strong focus on night markets, temples, and innovation. Public transport (MRT) is world-class.",
+    "localCulture": "A blend of Chinese, Japanese, and indigenous influences. Taiwanese value respect, humility, and hospitality. Communication is polite and indirect.",
+    "signatureDish": "Beef Noodle Soup, Bubble Tea, Xiao Long Bao, Stinky Tofu",
+    "businessHub": "Taiwan’s economic and political hub, strong in technology, manufacturing, and finance. Xinyi and Zhongshan are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Xinyi Business District",
+        "description": "A modern hub with corporate offices, Taipei 101, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "National Palace Museum",
+        "description": "A world-class museum of Chinese art, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Accessible from Xinyi"
+      },
+      {
+        "name": "Raohe Night Market",
+        "description": "A vibrant food market, suitable for informal outings or client entertainment.",
+        "proximityToBusinessDistrict": "Central Taipei, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Taipei Tech Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for tech, manufacturing, and finance professionals to network."
+      },
+      {
+        "name": "Industry Events (e.g., Computex Taipei, Taiwan Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Major trade shows for technology and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Taiwanese business etiquette, including formal card exchanges. Building trust is key; proficiency in Mandarin or basic phrases will enhance rapport."
+  },
+  {
+    "name": "Warsaw",
+    "country": "Poland",
+    "lat": 52.2297,
+    "lon": 21.0122,
+    "offset": 1,
+    "flag": "pl",
+    "continent": "Europe",
+    "timezone": "Europe/Warsaw",
+    "timeDifference": "UTC+2 (CEST) / UTC+1 (CET)",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Epiphany (Jan 6)", "Easter Monday", "Labour Day (May 1)", "Constitution Day (May 3)", "Corpus Christi (varies, May/Jun)", "Assumption Day (Aug 15)", "All Saints' Day (Nov 1)", "Independence Day (Nov 11)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is formal (suits). Use titles (Pan, Pani) initially. Communication is professional and direct. Polish is the primary language; English is widely used in business.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Business lunches are common.",
+    "localLifestyle": "Cultural, historic, and vibrant. Strong focus on history, cuisine, and arts. Public transport (trams, Metro) is efficient.",
+    "localCulture": "Proud, resilient, and hospitable, with Slavic and European influences. Poles value tradition, family, and community. Communication is straightforward.",
+    "signatureDish": "Pierogi, Bigos, Żurek, Kotlet Schabowy",
+    "businessHub": "Poland’s economic and political hub, strong in finance, technology, and manufacturing. Centrum and Wola are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Centrum Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Warsaw Uprising Museum",
+        "description": "A museum on Poland’s WWII history, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Warsaw, accessible"
+      },
+      {
+        "name": "Łazienki Park",
+        "description": "A historic park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Near Centrum"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Warsaw Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in finance, tech, and manufacturing to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Warsaw Economic Forum, Poland IT Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and business, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Be professional and punctual; Poles value efficiency and respect. Appreciating Warsaw’s history and cuisine will enhance rapport. Basic Polish phrases will be appreciated."
+  },
+  {
+    "name": "Medellin",
+    "country": "Colombia",
+    "lat": 6.2442,
+    "lon": -75.5812,
+    "offset": -5,
+    "flag": "co",
+    "continent": "S America",
+    "timezone": "America/Bogota",
+    "timeDifference": "UTC-5",
+    "standardBusinessHours": "Typically 8:00 AM - 5:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Epiphany (Jan 6)", "St. Joseph’s Day (varies, Mar)", "Good Friday", "Labour Day (May 1)", "Ascension Day (varies, May/Jun)", "Independence Day (Jul 20)", "Battle of Boyacá (Aug 7)", "Immaculate Conception (Dec 8)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Señor, Señora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Spanish is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during lunch or major holidays.",
+    "localLifestyle": "Vibrant, innovative, and cultural. Strong focus on coffee, music, and community. Public transport (Metro) is efficient; the city is hilly.",
+    "localCulture": "Warm, proud, and resilient, with Paisa (Antioquian) influences. Colombians value hospitality, creativity, and family. Communication is expressive.",
+    "signatureDish": "Bandeja Paisa, Sancocho, Arepas, Ajiaco",
+    "businessHub": "Colombia’s innovation and industrial hub, strong in technology, textiles, and tourism. El Poblado and Laureles are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "El Poblado Business District",
+        "description": "A modern hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Plaza Botero",
+        "description": "A cultural square with Botero sculptures, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Medellin, accessible"
+      },
+      {
+        "name": "Parque Arví",
+        "description": "A nature reserve, suitable for informal outings or team-building activities.",
+        "proximityToBusinessDistrict": "Accessible from El Poblado"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Medellin Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tech, textiles, and tourism to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Colombiatex, Medellin Startup Week)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for textiles and innovation, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Colombians value trust and warmth. Appreciating Medellin’s coffee culture and innovation will enhance rapport. Basic Spanish is essential."
+  },
+  {
+    "name": "Casablanca",
+    "country": "Morocco",
+    "lat": 33.5731,
+    "lon": -7.5898,
+    "offset": 1,
+    "flag": "ma",
+    "continent": "Africa",
+    "timezone": "Africa/Casablanca",
+    "timeDifference": "UTC+1",
+    "standardBusinessHours": "Typically 8:30 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Independence Manifesto Day (Jan 11)", "Labour Day (May 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Throne Day (Jul 30)", "Independence Day (Nov 18)"],
+    "businessEtiquette": "Punctuality is valued, though flexibility exists. Handshakes are common; use titles (Monsieur, Madame) initially. Business attire is formal (suits). Arabic and French are primary business languages; English is less common.",
+    "recommendedMeetingTimes": "Morning (9:00 AM - 11:30 AM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Ramadan or major holidays.",
+    "localLifestyle": "Cosmopolitan, coastal, and vibrant. Strong focus on trade, culture, and cuisine. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, diverse, and hospitable, with Arab, Berber, and French influences. Moroccans value respect, tradition, and hospitality. Communication is polite.",
+    "signatureDish": "Tagine, Couscous, Pastilla, Mint Tea",
+    "businessHub": "Morocco’s economic hub, strong in finance, trade, and manufacturing. Maarif and Anfa are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Maarif Business District",
+        "description": "A modern hub with corporate offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Hassan II Mosque",
+        "description": "An iconic landmark, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Casablanca, accessible"
+      },
+      {
+        "name": "Corniche Ain Diab",
+        "description": "A coastal promenade, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Maarif"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Casablanca Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in finance, trade, and manufacturing to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Casablanca International Trade Fair, Morocco Business Expo)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and industry, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Morocco’s cultural and religious traditions. Building trust is key; proficiency in French or Arabic will enhance rapport."
+  },
+  {
+    "name": "Sydney",
+    "country": "Australia",
+    "lat": -33.8688,
+    "lon": 151.2093,
+    "offset": 10,
+    "flag": "au",
+    "continent": "Oceania",
+    "timezone": "Australia/Sydney",
+    "timeDifference": "UTC+10 (AEST) / UTC+11 (AEDT)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Australia Day (Jan 26)", "Anzac Day (Apr 25)", "King's Birthday (2nd Mon in Jun)", "Labour Day (1st Mon in Oct)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is highly valued. A firm handshake and direct eye contact are standard. Business attire is formal in finance, smart-casual in creative sectors. Australians are egalitarian; communication is direct and friendly. First names are often used.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Business lunches are common.",
+    "localLifestyle": "Vibrant, coastal, and cosmopolitan. Strong focus on beaches, finance, and culture. Public transport (trains, ferries) is efficient.",
+    "localCulture": "A blend of Indigenous, British, and global influences. Aussies value fairness, informality, and outdoor living. Sydney is known for its dynamic and multicultural vibe.",
+    "signatureDish": "Vegemite Toast, Meat Pie, Seafood Platter, Pavlova",
+    "businessHub": "Australia’s financial and economic hub, strong in finance, technology, and tourism. The Central Business District (CBD) and North Sydney are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Sydney CBD",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Sydney Opera House",
+        "description": "An iconic cultural venue, great for client entertainment or high-profile events.",
+        "proximityToBusinessDistrict": "Located in the CBD"
+      },
+      {
+        "name": "Royal Botanic Garden",
+        "description": "A scenic park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Located in the CBD"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Sydney Business Networking",
+        "date": "Regularly (check Eventbrite or local chambers of commerce)",
+        "description": "Events for professionals in finance, tech, and tourism to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Sydney Startup Week, FinTech Australia Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and finance, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Emphasize collaboration and respect for Indigenous culture. Aussies appreciate straightforwardness and a professional approach. Stay updated on Sydney’s financial and tech trends."
+  },
+  {
+    "name": "Seattle",
+    "country": "United States",
+    "lat": 47.6062,
+    "lon": -122.3321,
+    "offset": -7,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Los_Angeles",
+    "timeDifference": "UTC-7 (PDT) / UTC-8 (PST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday. Tech sector may have flexible hours.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is smart-casual in tech, formal in finance. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee meetings are popular.",
+    "localLifestyle": "Innovative, outdoor-oriented, and coffee-centric. Strong focus on tech, nature, and culture. Public transport is reliable; traffic can be heavy.",
+    "localCulture": "Progressive, diverse, and creative, with Native American and global influences. Seattleites value sustainability, innovation, and community. Communication is straightforward.",
+    "signatureDish": "Salmon, Dungeness Crab, Pho, Coffee (e.g., Starbucks)",
+    "businessHub": "A global hub for technology, aerospace, and retail. Downtown and South Lake Union are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Seattle",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Chihuly Garden and Glass",
+        "description": "A glass art museum, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Downtown"
+      },
+      {
+        "name": "Pike Place Market",
+        "description": "A historic market, suitable for informal meetings or client outings.",
+        "proximityToBusinessDistrict": "Located in Downtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Seattle Tech Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for tech, aerospace, and retail professionals to network."
+      },
+      {
+        "name": "Industry Events (e.g., Seattle Tech Week, AWS re:Invent)",
+        "date": "Varies throughout the year",
+        "description": "Major events for technology and innovation, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Seattle’s tech and sustainability focus. Be prepared for a direct communication style and appreciate the coffee culture to build rapport."
+  },
+  {
+    "name": "Dhaka",
+    "country": "Bangladesh",
+    "lat": 23.8103,
+    "lon": 90.4125,
+    "offset": 6,
+    "flag": "bd",
+    "continent": "Asia",
+    "timezone": "Asia/Dhaka",
+    "timeDifference": "UTC+6",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Sunday to Thursday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Durga Puja (varies, Oct)", "Buddha Purnima (varies, May)", "Independence Day (Mar 26)", "Bengali New Year (Apr 14)", "Victory Day (Dec 16)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits). Respect for hierarchy is key. Bengali and English are primary business languages.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Eid or major holidays.",
+    "localLifestyle": "Bustling, vibrant, and community-oriented. Strong focus on textiles, food, and religion. Traffic is heavy; rickshaws and buses are common.",
+    "localCulture": "Warm, resilient, and diverse, with Bengali influences. Bangladeshis value hospitality, respect, and community. Communication is polite and expressive.",
+    "signatureDish": "Biryani, Hilsa Fish Curry, Pitha, Fuchka",
+    "businessHub": "Bangladesh’s economic hub, strong in textiles, trade, and manufacturing. Gulshan and Motijheel are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Gulshan Business District",
+        "description": "A modern hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Ahsan Manzil",
+        "description": "A historic palace, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Dhaka, accessible"
+      },
+      {
+        "name": "Lalbagh Fort",
+        "description": "A Mughal fortress, suitable for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from Gulshan"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Dhaka Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in textiles, trade, and manufacturing to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Dhaka International Trade Fair, Textile Expo)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for textiles and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Bangladesh’s cultural and religious diversity. Building relationships is key; basic Bengali phrases will be appreciated."
+  },
+  {
+    "name": "Budapest",
+    "country": "Hungary",
+    "lat": 47.4979,
+    "lon": 19.0402,
+    "offset": 1,
+    "flag": "hu",
+    "continent": "Europe",
+    "timezone": "Europe/Budapest",
+    "timeDifference": "UTC+2 (CEST) / UTC+1 (CET)",
+    "standardBusinessHours": "Typically 8:00 AM - 4:30 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "National Day (Mar 15)", "Good Friday", "Easter Monday", "Labour Day (May 1)", "Whit Monday", "State Foundation Day (Aug 20)", "National Day (Oct 23)", "All Saints' Day (Nov 1)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is formal (suits). Use titles (Úr, Asszony) initially. Communication is professional and direct. Hungarian is the primary language; English is widely used in business.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Business lunches are common.",
+    "localLifestyle": "Cultural, historic, and vibrant. Strong focus on thermal baths, cuisine, and arts. Public transport (trams, Metro) is efficient.",
+    "localCulture": "Proud, intellectual, and hospitable, with Magyar and European influences. Hungarians value tradition, creativity, and community. Communication is straightforward.",
+    "signatureDish": "Goulash, Lángos, Paprikás Csirke, Dobos Torte",
+    "businessHub": "Hungary’s economic and cultural hub, strong in technology, manufacturing, and tourism. District V and Infopark are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "District V Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Buda Castle",
+        "description": "A historic landmark, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Budapest, accessible"
+      },
+      {
+        "name": "Széchenyi Thermal Bath",
+        "description": "A famous spa, suitable for relaxation or unique client outings.",
+        "proximityToBusinessDistrict": "Accessible from District V"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Budapest Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tech, manufacturing, and tourism to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Budapest Startup Week, Hungary Tech Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Be professional and punctual; Hungarians value efficiency and respect. Appreciating Budapest’s thermal baths and cuisine will enhance rapport. Basic Hungarian phrases will be appreciated."
+  },
+  {
+    "name": "Brasilia",
+    "country": "Brazil",
+    "lat": -15.8267,
+    "lon": -47.9218,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Sao_Paulo",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Planned, political, and modern. Strong focus on government, architecture, and community. Public transport is limited; cars are common.",
+    "localCulture": "Warm, proud, and diverse, with Brazilian and modernist influences. Brazilians value hospitality, creativity, and community. Communication is expressive.",
+    "signatureDish": "Feijoada, Pão de Queijo, Acarajé, Brigadeiro",
+    "businessHub": "Brazil’s political capital, strong in government and services. The Administrative Region is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Administrative Region",
+        "description": "The heart of government and business with ministries and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Cathedral of Brasília",
+        "description": "An iconic Niemeyer-designed landmark, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in the Administrative Region"
+      },
+      {
+        "name": "Parque da Cidade",
+        "description": "A large urban park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Central Brasília, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Brasília Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in government and services to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Brasília Policy Forum, Brazil Governance Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for public sector and governance, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Brazilians value trust and warmth. Appreciating Brasília’s modernist architecture will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Luanda",
+    "country": "Angola",
+    "lat": -8.8390,
+    "lon": 13.2894,
+    "offset": 1,
+    "flag": "ao",
+    "continent Fiji": "Africa",
+    "timezone": "Africa/Luanda",
+    "timeDifference": "UTC+1",
+    "standardBusinessHours": "Typically 8:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Liberation Movement Day (Feb 4)", "Carnival (varies, Feb/Mar)", "Peace Day (Apr 4)", "Labour Day (May 1)", "National Heroes’ Day (Sep 17)", "Independence Day (Nov 11)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Portuguese is the primary language; English is less common.",
+    "recommendedMeetingTimes": "Morning (9:00 AM - 11:30 AM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Vibrant, coastal, and industrious. Strong focus on oil, music, and community. Traffic is heavy; public transport is limited.",
+    "localCulture": "Warm, resilient, and diverse, with African and Portuguese influences. Angolans value respect, hospitality, and community. Communication is polite.",
+    "signatureDish": "Muamba de Galinha, Funge, Calulu, Mufete",
+    "businessHub": "Angola’s economic and political hub, strong in oil, gas, and trade. Cidade Alta and Talatona are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Talatona Business District",
+        "description": "A modern hub with corporate offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Fortaleza de São Miguel",
+        "description": "A historic fortress, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Luanda, accessible"
+      },
+      {
+        "name": "Ilha do Cabo",
+        "description": "A coastal area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Talatona"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Luanda Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in oil, gas, and trade to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Angola Oil & Gas Expo, Luanda Trade Fair)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for energy and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Angola’s cultural diversity and economic focus on oil. Building relationships is key; proficiency in Portuguese is highly recommended."
+  },
+  {
+    "name": "Fiji",
+    "country": "Fiji",
+    "lat": -17.7134,
+    "lon": 178.0650,
+    "offset": 12,
+    "flag": "fj",
+    "continent": "Oceania",
+    "timezone": "Pacific/Fiji",
+    "timeDifference": "UTC+12",
+    "standardBusinessHours": "Typically 8:00 AM - 4:30 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "Fiji Day (Oct 10)", "Diwali (varies, Oct/Nov)", "Prophet Muhammad’s Birthday (varies)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or sulu). Respect for hierarchy is key. English is the primary business language; Fijian and Hindi are also used.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on tourism, culture, and nature. Public transport is limited; taxis are common.",
+    "localCulture": "Warm, diverse, and spiritual, with Fijian, Indian, and Pacific influences. Fijians value respect, hospitality, and community. Communication is polite.",
+    "signatureDish": "Kokoda, Lovo, Roti, Fish in Lolo",
+    "businessHub": "Fiji’s economic hub, strong in tourism, agriculture, and services. Suva’s Central Business District is the key business area.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Suva CBD",
+        "description": "The heart of business with government offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Fiji Museum",
+        "description": "A cultural museum, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in Suva CBD"
+      },
+      {
+        "name": "Colo-i-Suva Forest Park",
+        "description": "A nature reserve, suitable for informal outings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Suva"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Suva Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in tourism, agriculture, and services to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Fiji Tourism Expo, Pacific Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for tourism and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Fiji’s multicultural heritage and relaxed pace. Building relationships is key; appreciating Fijian customs will enhance rapport."
+  },
+  {
+    "name": "Boston",
+    "country": "United States",
+    "lat": 42.3601,
+    "lon": -71.0589,
+    "offset": -4,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/New_York",
+    "timeDifference": "UTC-4 (EDT) / UTC-5 (EST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday. Finance and academia may have longer hours.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Patriots’ Day (3rd Mon in Apr)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is formal (suits) in finance, smart-casual in tech and academia. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee meetings are popular.",
+    "localLifestyle": "Intellectual, historic, and vibrant. Strong focus on education, innovation, and sports. Public transport (MBTA) is efficient; winters are cold.",
+    "localCulture": "Progressive, diverse, and proud, with Irish, Italian, and New England influences. Bostonians value education, history, and community. Communication is straightforward.",
+    "signatureDish": "Clam Chowder, Lobster Roll, Boston Cream Pie, Baked Beans",
+    "businessHub": "A hub for education, healthcare, and finance. Downtown and Cambridge are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Boston",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Harvard University",
+        "description": "A world-class institution in Cambridge, great for academic or client visits.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      },
+      {
+        "name": "Freedom Trail",
+        "description": "A historic walking trail, suitable for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Downtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Boston Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in education, healthcare, and finance to network."
+      },
+      {
+        "name": "Industry Events (e.g., Boston TechJam, BioPharma Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and biotech, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Boston’s academic and innovation ecosystem. Be prepared for a direct communication style and appreciate the city’s history to build rapport."
+  },
+  {
+    "name": "Colombo",
+    "country": "Sri Lanka",
+    "lat": 6.9271,
+    "lon": 79.8612,
+    "offset": 5.5,
+    "flag": "lk",
+    "continent": "Asia",
+    "timezone": "Asia/Colombo",
+    "timeDifference": "UTC+5:30",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Tamil Thai Pongal (Jan 14)", "Independence Day (Feb 4)", "Vesak (varies, May)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Deepavali (varies, Oct/Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or sarong for men). Respect for hierarchy is key. English, Sinhala, and Tamil are business languages.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Vesak or major holidays.",
+    "localLifestyle": "Vibrant, coastal, and cultural. Strong focus on tea, religion, and community. Traffic is heavy; tuk-tuks and buses are common.",
+    "localCulture": "Warm, diverse, and spiritual, with Sinhala, Tamil, and colonial influences. Sri Lankans value respect, hospitality, and community. Communication is polite.",
+    "signatureDish": "Rice and Curry, Kottu Roti, Hoppers, Crab Curry",
+    "businessHub": "Sri Lanka’s economic hub, strong in trade, tourism, and textiles. Fort and Cinnamon Gardens are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Fort Business District",
+        "description": "A central hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Gangaramaya Temple",
+        "description": "A cultural and religious site, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Colombo, accessible"
+      },
+      {
+        "name": "Galle Face Green",
+        "description": "A coastal promenade, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Located in Fort"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Colombo Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in trade, tourism, and textiles to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Colombo International Tea Convention, Sri Lanka Trade Expo)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for tea and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Sri Lanka’s multicultural heritage and religious diversity. Building relationships is key; basic Sinhala or Tamil phrases will be appreciated."
+  },
+  {
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "lat": 55.6761,
+    "lon": 12.5683,
+    "offset": 1,
+    "flag": "dk",
+    "continent": "Europe",
+    "timezone": "Europe/Copenhagen",
+    "timeDifference": "UTC+2 (CEST) / UTC+1 (CET)",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Maundy Thursday", "Good Friday", "Easter Monday", "Labour Day (May 1)", "Ascension Day", "Whit Monday", "Constitution Day (Jun 5)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is smart-casual to formal. Danes value equality and consensus; communication is direct and transparent. English is widely used; Danish is primary.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during summer holidays (Jul-Aug).",
+    "localLifestyle": "Sustainable, cultural, and bike-friendly. Strong focus on design, cuisine, and work-life balance. Public transport (Metro, bikes) is world-class.",
+    "localCulture": "Progressive, egalitarian, and innovative. Danes value hygge (coziness), collaboration, and environmental care. Communication is straightforward.",
+    "signatureDish": "Smørrebrød, Frikadeller, Æbleskiver, Danish Pastries",
+    "businessHub": "Denmark’s economic and cultural hub, strong in technology, design, and shipping. Ørestad and Indre By are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Indre By Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Tivoli Gardens",
+        "description": "A historic amusement park, great for client entertainment or relaxation.",
+        "proximityToBusinessDistrict": "Located in Indre By"
+      },
+      {
+        "name": "National Museum of Denmark",
+        "description": "A cultural institution, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in Indre By"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Copenhagen Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tech, design, and shipping to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Copenhagen Fashion Week, TechBBQ)",
+        "date": "Varies throughout the year",
+        "description": "Events for design and technology, offering networking opportunities."
+      }
+    ],
+    "businessmaarif": "Emphasize collaboration and sustainability; Danes value transparency and equality. Be punctual and respect work-life balance. Basic Danish phrases will be appreciated."
+  },
+  {
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "lat": -22.9068,
+    "lon": -43.1729,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Sao_Paulo",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, coastal, and festive. Strong focus on beaches, music, and culture. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and diverse, with African, Portuguese, and indigenous influences. Cariocas value hospitality, creativity, and community. Communication is expressive.",
+    "signatureDish": "Feijoada, Pão de Queijo, Moqueca, Caipirinha",
+    "businessHub": "Brazil’s cultural and economic hub, strong in tourism, energy, and media. Centro and Barra da Tijuca are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Centro Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Sugarloaf Mountain",
+        "description": "An iconic landmark with cable car views, great for client entertainment.",
+        "proximityToBusinessDistrict": "Central Rio, accessible"
+      },
+      {
+        "name": "Copacabana Beach",
+        "description": "A famous beach, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Centro"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Rio Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tourism, energy, and media to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Rio Oil & Gas, Rio Innovation Week)",
+        "date": "Varies throughout the year",
+        "description": "Events for energy and innovation, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Cariocas value trust and warmth. Appreciating Rio’s vibrant culture and beaches will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Khartoum",
+    "country": "Sudan",
+    "lat": 15.5007,
+    "lon": 32.5599,
+    "offset": 2,
+    "flag": "sd",
+    "continent": "Africa",
+    "timezone": "Africa/Khartoum",
+    "timeDifference": "UTC+2",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Sunday to Thursday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Independence Day (Jan 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Islamic New Year (varies)", "Prophet Muhammad’s Birthday (varies)", "Revolution Day (Jun 30)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits). Arabic is the primary language; English is used in business.",
+    "recommendedMeetingTimes": "Morning (9:00 AM - 11:30 AM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Ramadan or major holidays.",
+    "localLifestyle": "Cultural, historic, and community-oriented. Strong focus on the Nile, religion, and trade. Traffic is heavy; public transport is limited.",
+    "localCulture": "Warm, diverse, and resilient, with Arab, African, and Nubian influences. Sudanese value respect, hospitality, and community. Communication is polite.",
+    "signatureDish": "Ful Medames, Kisra, Shaiyah, Asida",
+    "businessHub": "Sudan’s economic and political hub, strong in trade, agriculture, and oil. Al Amarat and Riyadh are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Al Amarat Business District",
+        "description": "A central hub with corporate offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "National Museum of Sudan",
+        "description": "A museum of Nubian history, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Khartoum, accessible"
+      },
+      {
+        "name": "Nile Street",
+        "description": "A riverside area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Al Amarat"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Khartoum Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, agriculture, and oil to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Khartoum International Fair, Sudan Trade Expo)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and agriculture, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Sudan’s cultural and religious traditions. Building relationships is key; proficiency in Arabic will enhance rapport."
+  },
+  {
+    "name": "Port Moresby",
+    "country": "Papua New Guinea",
+    "lat": -9.4438,
+    "lon": 147.1803,
+    "offset": 10,
+    "flag": "pg",
+    "continent": "Oceania",
+    "timezone": "Pacific/Port_Moresby",
+    "timeDifference": "UTC+10",
+    "standardBusinessHours": "Typically 8:00 AM - 4:30 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "King's Birthday (2nd Mon in Jun)", "Remembrance Day (Jul 23)", "Independence Day (Sep 16)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or island shirts). English is the primary business language; Tok Pisin is also used.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Tropical, cultural, and community-oriented. Strong focus on mining, culture, and nature. Public transport is limited; taxis are common.",
+    "localCulture": "Diverse, traditional, and vibrant, with Melanesian influences. Papua New Guineans value respect, community, and hospitality. Communication is polite.",
+    "signatureDish": "Mumu, Kokoda, Sago, Taro",
+    "businessHub": "Papua New Guinea’s economic hub, strong in mining, oil, and trade. Downtown and Waigani are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Port Moresby",
+        "description": "The heart of business with corporate offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "National Museum and Art Gallery",
+        "description": "A cultural institution, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      },
+      {
+        "name": "Ela Beach",
+        "description": "A coastal area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Near Downtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Port Moresby Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in mining, oil, and trade to connect."
+      },
+      {
+        "name": "Industry Events (e.g., PNG Mining and Petroleum Conference, Pacific Trade Expo)",
+        "date": "Varies throughout the year",
+        "description": "Events for mining and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Papua New Guinea’s diverse cultures and traditional values. Building relationships is key; appreciating local customs will enhance rapport."
+  },
+  {
+    "name": "Denver",
+    "country": "United States",
+    "lat": 39.7392,
+    "lon": -104.9903,
+    "offset": -6,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Denver",
+    "timeDifference": "UTC-6 (MDT) / UTC-7 (MST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is smart-casual in tech, formal in finance. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee meetings are popular.",
+    "localLifestyle": "Active, outdoor-oriented, and vibrant. Strong focus on tech, nature, and craft beer. Public transport is improving; cars are common.",
+    "localCulture": "Progressive, diverse, and adventurous, with Native American and Western influences. Denverites value sustainability, innovation, and community. Communication is straightforward.",
+    "signatureDish": "Green Chili, Bison Steak, Rocky Mountain Oysters, Craft Beer",
+    "businessHub": "A hub for technology, energy, and aerospace. Downtown and Denver Tech Center are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Denver",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Red Rocks Amphitheatre",
+        "description": "An iconic venue, great for client entertainment or team outings.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      },
+      {
+        "name": "Denver Botanic Gardens",
+        "description": "A scenic park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Central Denver, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Denver Tech Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for tech, energy, and aerospace professionals to network."
+      },
+      {
+        "name": "Industry Events (e.g., Denver Startup Week, Colorado Tech Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and innovation, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Denver’s tech and outdoor culture. Be prepared for a direct communication style and appreciate the city’s craft beer scene to build rapport."
+  },
+  {
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "lat": 27.7172,
+    "lon": 85.3240,
+    "offset": 5.75,
+    "flag": "np",
+    "continent": "Asia",
+    "timezone": "Asia/Kathmandu",
+    "timeDifference": "UTC+5:45",
+    "standardBusinessHours": "Typically 10:00 AM - 5:00 PM, Sunday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Maghe Sankranti (Jan 14)", "Maha Shivaratri (varies, Feb/Mar)", "Holi (varies, Mar)", "Dashain (varies, Sep/Oct)", "Tihar (varies, Oct/Nov)", "Constitution Day (Sep 19)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or daura suruwal). Respect for hierarchy is key. Nepali and English are primary business languages.",
+    "recommendedMeetingTimes": "Mid-morning (10:30 AM - 12:30 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Dashain or Tihar.",
+    "localLifestyle": "Cultural, spiritual, and vibrant. Strong focus on religion, markets, and trekking. Traffic is heavy; public transport is limited.",
+    "localCulture": "Warm, diverse, and spiritual, with Hindu, Buddhist, and indigenous influences. Nepalis value respect, hospitality, and community. Communication is polite.",
+    "signatureDish": "Dal Bhat, Momo, Sel Roti, Thukpa",
+    "businessHub": "Nepal’s economic and political hub, strong in tourism, trade, and agriculture. Thamel and Durbar Marg are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Durbar Marg Business District",
+        "description": "A central hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Swayambhunath Stupa",
+        "description": "A historic Buddhist site, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Kathmandu, accessible"
+      },
+      {
+        "name": "Thamel",
+        "description": "A vibrant commercial area, suitable for informal meetings or client outings.",
+        "proximityToBusinessDistrict": "Near Durbar Marg"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Kathmandu Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tourism, trade, and agriculture to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Nepal Tourism Expo, Kathmandu Trade Fair)",
+        "date": "Varies throughout the year",
+        "description": "Events for tourism and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Nepal’s spiritual and cultural heritage. Building relationships is key; basic Nepali phrases and appreciating momos will enhance rapport."
+  },
+  {
+    "name": "Lisbon",
+    "country": "Portugal",
+    "lat": 38.7223,
+    "lon": -9.1393,
+    "offset": 0,
+    "flag": "pt",
+    "continent": "Europe",
+    "timezone": "Europe/Lisbon",
+    "timeDifference": "UTC+1 (WEST) / UTC+0 (WET)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday, with a lunch break from 12:30 PM - 2:00 PM.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Freedom Day (Apr 25)", "Labour Day (May 1)", "Portugal Day (Jun 10)", "Assumption of Mary (Aug 15)", "Republic Day (Oct 5)", "All Saints' Day (Nov 1)", "Independence Restoration Day (Dec 1)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Portuguese is the primary language; English is widely used in business. Building relationships is important.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during lunch or major holidays.",
+    "localLifestyle": "Vibrant, coastal, and cultural. Strong focus on history, seafood, and fado music. Public transport (Metro, trams) is efficient.",
+    "localCulture": "Warm, proud, and hospitable, with maritime and European influences. Lisboetas value tradition, community, and creativity. Communication is polite and expressive.",
+    "signatureDish": "Bacalhau à Brás, Pastel de Nata, Caldo Verde, Grilled Sardines",
+    "businessHub": "Portugal’s economic and cultural hub, strong in tourism, technology, and trade. Parque das Nações and Marquês de Pombal are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Parque das Nações",
+        "description": "A modern business hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Belém Tower",
+        "description": "A historic landmark, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Accessible from Parque das Nações"
+      },
+      {
+        "name": "LX Factory",
+        "description": "A creative hub with coworking spaces and restaurants, suitable for informal meetings.",
+        "proximityToBusinessDistrict": "Central Lisbon, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Lisbon Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tourism, tech, and trade to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Web Summit, Lisbon Tech Week)",
+        "date": "Varies throughout the year",
+        "description": "Major events for technology and innovation, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships and show respect for Portuguese traditions. Appreciating Lisbon’s history and cuisine, like pastel de nata, will enhance rapport. Basic Portuguese phrases are appreciated."
+  },
+  {
+    "name": "Guayaquil",
+    "country": "Ecuador",
+    "lat": -2.1700,
+    "lon": -79.9224,
+    "offset": -5,
+    "flag": "ec",
+    "continent": "S America",
+    "timezone": "America/Guayaquil",
+    "timeDifference": "UTC-5",
+    "standardBusinessHours": "Typically 8:00 AM - 5:00 PM, Monday to Friday, with a lunch break from 12:00 PM - 2:00 PM.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Labour Day (May 1)", "Battle of Pichincha (May 24)", "Independence Day (Aug 10)", "Guayaquil Independence Day (Oct 9)", "Day of the Dead (Nov 2)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Señor, Señora) initially. Business attire is formal (suits). Spanish is the primary language. Building personal relationships is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during lunch or Carnival.",
+    "localLifestyle": "Vibrant, coastal, and commercial. Strong focus on trade, seafood, and festivals. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and festive, with mestizo and coastal influences. Guayaquileños value hospitality, community, and celebration. Communication is expressive.",
+    "signatureDish": "Ceviche, Encebollado, Bolón de Verde, Arroz con Menestra",
+    "businessHub": "Ecuador’s economic hub, strong in trade, shipping, and agriculture. Centro and Urdesa are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Centro Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Malecón 2000",
+        "description": "A scenic riverfront promenade, great for informal meetings or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Centro"
+      },
+      {
+        "name": "Parque Histórico",
+        "description": "A cultural park showcasing Guayaquil’s history, suitable for client visits.",
+        "proximityToBusinessDistrict": "Accessible from Centro"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Guayaquil Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in trade, shipping, and agriculture to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Guayaquil Trade Expo, Ecuador Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and agriculture, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Ecuadorians value trust and warmth. Appreciating Guayaquil’s ceviche and coastal culture will enhance rapport. Basic Spanish is essential."
+  },
+  {
+    "name": "Pretoria",
+    "country": "South Africa",
+    "lat": -25.7479,
+    "lon": 28.2293,
+    "offset": 2,
+    "flag": "za",
+    "continent": "Africa",
+    "timezone": "Africa/Johannesburg",
+    "timeDifference": "UTC+2",
+    "standardBusinessHours": "Typically 8:00 AM - 4:30 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Human Rights Day (Mar 21)", "Freedom Day (Apr 27)", "Workers' Day (May 1)", "Youth Day (Jun 16)", "National Women's Day (Aug 9)", "Heritage Day (Sep 24)", "Day of Reconciliation (Dec 16)", "Christmas Day (Dec 25)", "Day of Goodwill (Dec 26)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is formal (suits). English is the primary business language; Afrikaans and Zulu are also used. Communication is direct and professional.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Administrative, cultural, and green. Strong focus on government, history, and jacaranda trees. Public transport is limited; cars are common.",
+    "localCulture": "Diverse, proud, and resilient, with African, Afrikaner, and British influences. South Africans value respect, community, and heritage. Communication is straightforward.",
+    "signatureDish": "Bunny Chow, Bobotie, Boerewors, Malva Pudding",
+    "businessHub": "South Africa’s administrative capital, strong in government, education, and diplomacy. Hatfield and Menlyn are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Hatfield Business District",
+        "description": "A hub with corporate offices, embassies, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Union Buildings",
+        "description": "The seat of government, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Pretoria, accessible"
+      },
+      {
+        "name": "Freedom Park",
+        "description": "A heritage site, suitable for cultural visits or reflection.",
+        "proximityToBusinessDistrict": "Accessible from Hatfield"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Pretoria Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in government, education, and diplomacy to connect."
+      },
+      {
+        "name": "Industry Events (e.g., South Africa Governance Forum, Pretoria Business Expo)",
+        "date": "Varies throughout the year",
+        "description": "Events for public sector and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for South Africa’s diverse cultures and history. Be professional and punctual; appreciating Pretoria’s heritage and cuisine will enhance rapport."
+  },
+  {
+    "name": "Nauru",
+    "country": "Nauru",
+    "lat": -0.5228,
+    "lon": 166.9315,
+    "offset": 12,
+    "flag": "nr",
+    "continent": "Oceania",
+    "timezone": "Pacific/Nauru",
+    "timeDifference": "UTC+12",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Independence Day (Jan 31)", "Good Friday", "Easter Monday", "Constitution Day (May 17)", "Angam Day (Oct 26)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or island shirts). English is the primary language. Respect for community is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on phosphate mining and fishing. Public transport is minimal; walking or cars are common.",
+    "localCulture": "Warm, resilient, and traditional, with Micronesian influences. Nauruans value community, hospitality, and respect. Communication is polite.",
+    "signatureDish": "Coconut Fish, Taro Fries, Pandanus Fruit, Iced Coffee",
+    "businessHub": "Nauru’s economic and administrative center, strong in phosphate mining and government. Yaren is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Yaren Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Buada Lagoon",
+        "description": "A scenic lagoon, great for relaxation or informal client outings.",
+        "proximityToBusinessDistrict": "Central Nauru, accessible"
+      },
+      {
+        "name": "Anibare Bay",
+        "description": "A coastal area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Yaren"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Nauru Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in mining and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Pacific Islands Forum, Nauru Trade Talks)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for commerce and governance, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Nauru’s small, tight-knit community and traditional values. Building relationships is key; appreciating local cuisine will enhance rapport."
+  },
+  {
+    "name": "Atlanta",
+    "country": "United States",
+    "lat": 33.7490,
+    "lon": -84.3880,
+    "offset": -4,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/New_York",
+    "timeDifference": "UTC-4 (EDT) / UTC-5 (EST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is formal in finance, smart-casual in tech. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee meetings are popular.",
+    "localLifestyle": "Dynamic, diverse, and urban. Strong focus on business, culture, and Southern hospitality. Public transport (MARTA) is available; traffic is heavy.",
+    "localCulture": "Vibrant, progressive, and proud, with African American, Southern, and global influences. Atlantans value hospitality, innovation, and community. Communication is straightforward.",
+    "signatureDish": "Fried Chicken, Peach Cobbler, Collard Greens, Shrimp and Grits",
+    "businessHub": "A hub for transportation, media, and technology. Downtown, Midtown, and Buckhead are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Atlanta",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Martin Luther King Jr. National Historical Park",
+        "description": "A historic site, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Atlanta, accessible"
+      },
+      {
+        "name": "Atlanta Botanical Garden",
+        "description": "A scenic park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Midtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Atlanta Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in transportation, media, and tech to network."
+      },
+      {
+        "name": "Industry Events (e.g., Atlanta Tech Week, AmericasMart Trade Shows)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Atlanta’s diversity and business-friendly environment. Be prepared for a direct communication style and appreciate Southern cuisine to build rapport."
+  },
+  {
+    "name": "Islamabad",
+    "country": "Pakistan",
+    "lat": 33.6844,
+    "lon": 73.0479,
+    "offset": 5,
+    "flag": "pk",
+    "continent": "Asia",
+    "timezone": "Asia/Karachi",
+    "timeDifference": "UTC+5",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["Kashmir Day (Feb 5)", "Pakistan Day (Mar 23)", "Labour Day (May 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Independence Day (Aug 14)", "Iqbal Day (Nov 9)", "Quaid-e-Azam Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or shalwar kameez). Urdu and English are primary business languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Eid or Ramadan.",
+    "localLifestyle": "Planned, green, and diplomatic. Strong focus on government, culture, and nature. Public transport is limited; cars are common.",
+    "localCulture": "Warm, respectful, and diverse, with Islamic and South Asian influences. Pakistanis value hospitality, tradition, and community. Communication is polite.",
+    "signatureDish": "Biryani, Nihari, Chapli Kebab, Halwa Puri",
+    "businessHub": "Pakistan’s political capital, strong in government, diplomacy, and technology. Blue Area and F-7 are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Blue Area Business District",
+        "description": "The heart of business with corporate offices, embassies, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Faisal Mosque",
+        "description": "An iconic landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Islamabad, accessible"
+      },
+      {
+        "name": "Daman-e-Koh",
+        "description": "A scenic viewpoint, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Blue Area"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Islamabad Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in government, diplomacy, and tech to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Islamabad Tech Summit, Pakistan Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and governance, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Pakistan’s Islamic traditions and cultural diversity. Building relationships is key; basic Urdu phrases will be appreciated."
+  },
+  {
+    "name": "Athens",
+    "country": "Greece",
+    "lat": 37.9838,
+    "lon": 23.7275,
+    "offset": 2,
+    "flag": "gr",
+    "continent": "Europe",
+    "timezone": "Europe/Athens",
+    "timeDifference": "UTC+3 (EEST) / UTC+2 (EET)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday, with a lunch break from 1:00 PM - 3:00 PM.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Epiphany (Jan 6)", "Clean Monday (varies, Feb/Mar)", "Independence Day (Mar 25)", "Good Friday", "Easter Monday", "Labour Day (May 1)", "Assumption of Mary (Aug 15)", "Ochi Day (Oct 28)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Kyrie, Kyria) initially. Business attire is formal (suits). Greek is the primary language; English is widely used. Building relationships is important.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (3:00 PM - 5:00 PM). Avoid scheduling during August or major holidays.",
+    "localLifestyle": "Historic, vibrant, and Mediterranean. Strong focus on history, cuisine, and culture. Public transport (Metro) is efficient.",
+    "localCulture": "Proud, hospitable, and resilient, with ancient and Orthodox influences. Greeks value family, tradition, and community. Communication is expressive.",
+    "signatureDish": "Moussaka, Souvlaki, Tzatziki, Baklava",
+    "businessHub": "Greece’s economic and cultural hub, strong in tourism, shipping, and finance. Syntagma and Kolonaki are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Syntagma Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Acropolis",
+        "description": "An iconic ancient site, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Athens, accessible"
+      },
+      {
+        "name": "Plaka",
+        "description": "A historic neighborhood, suitable for informal meetings or client outings.",
+        "proximityToBusinessDistrict": "Near Syntagma"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Athens Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tourism, shipping, and finance to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Athens Tourism Expo, Greece Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for tourism and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships and show respect for Greece’s ancient heritage. Appreciating Athens’ cuisine and history will enhance rapport. Basic Greek phrases are appreciated."
+  },
+  {
+    "name": "Salvador",
+    "country": "Brazil",
+    "lat": -12.9714,
+    "lon": -38.5014,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Bahia",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, cultural, and coastal. Strong focus on Afro-Brazilian culture, music, and beaches. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and festive, with African, Portuguese, and indigenous influences. Baianos value hospitality, creativity, and community. Communication is expressive.",
+    "signatureDish": "Acarajé, Moqueca, Vatapá, Caruru",
+    "businessHub": "A cultural and economic hub, strong in tourism, oil, and services. Comércio and Barra are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Comércio Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Pelourinho",
+        "description": "A historic district, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Salvador, accessible"
+      },
+      {
+        "name": "Farol da Barra",
+        "description": "A scenic beach and lighthouse, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Comércio"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Salvador Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tourism, oil, and services to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Salvador Tourism Expo, Bahia Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for tourism and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Baianos value trust and warmth. Appreciating Salvador’s Afro-Brazilian culture and cuisine will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Abidjan",
+    "country": "Ivory Coast",
+    "lat": 5.3599,
+    "lon": -4.0083,
+    "offset": 0,
+    "flag": "ci",
+    "continent": "Africa",
+    "timezone": "Africa/Abidjan",
+    "timeDifference": "UTC+0",
+    "standardBusinessHours": "Typically 8:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Labour Day (May 1)", "Independence Day (Aug 7)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "All Saints' Day (Nov 1)", "Peace Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Monsieur, Madame) initially. Business attire is formal (suits). French is the primary language. Building relationships is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Ramadan or major holidays.",
+    "localLifestyle": "Vibrant, coastal, and commercial. Strong focus on trade, music, and cuisine. Traffic is heavy; public transport is improving.",
+    "localCulture": "Warm, diverse, and dynamic, with African and French influences. Ivoirians value hospitality, respect, and community. Communication is polite.",
+    "signatureDish": "Attiéké, Kedjenou, Alloco, Bangui",
+    "businessHub": "Ivory Coast’s economic hub, strong in trade, finance, and agriculture. Plateau and Cocody are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Plateau Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "St. Paul’s Cathedral",
+        "description": "An iconic landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in Plateau"
+      },
+      {
+        "name": "Banco National Park",
+        "description": "A nature reserve, suitable for informal outings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Plateau"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Abidjan Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, finance, and agriculture to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Abidjan Trade Expo, West Africa Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and agriculture, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Ivory Coast’s cultural diversity and economic growth. Building relationships is key; proficiency in French will enhance rapport."
+  },
+  {
+    "name": "Tonga",
+    "country": "Tonga",
+    "lat": -21.1393,
+    "lon": -175.2049,
+    "offset": 13,
+    "flag": "to",
+    "continent": "Oceania",
+    "timezone": "Pacific/Tongatapu",
+    "timeDifference": "UTC+13",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "Anzac Day (Apr 25)", "Emancipation Day (Jun 4)", "King's Birthday (varies, Jul)", "Constitution Day (Nov 4)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or ta’ovala). English and Tongan are primary languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and spiritual. Strong focus on agriculture, fishing, and religion. Public transport is limited; taxis are common.",
+    "localCulture": "Warm, traditional, and community-oriented, with Polynesian influences. Tongans value respect, hospitality, and family. Communication is polite.",
+    "signatureDish": "Lu Pulu, ‘Ota Ika, Faikakai, Kava",
+    "businessHub": "Tonga’s economic and administrative center, strong in agriculture, tourism, and government. Nuku’alofa is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Nuku’alofa Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Royal Palace",
+        "description": "A historic landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in Nuku’alofa"
+      },
+      {
+        "name": "Talamahu Market",
+        "description": "A vibrant market, suitable for informal meetings or client outings.",
+        "proximityToBusinessDistrict": "Located in Nuku’alofa"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Nuku’alofa Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in agriculture, tourism, and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Pacific Islands Forum, Tonga Trade Talks)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for commerce and governance, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Tonga’s monarchy and traditional values. Building relationships is key; appreciating Tongan customs and kava ceremonies will enhance rapport."
+  },
+  {
+    "name": "Philadelphia",
+    "country": "United States",
+    "lat": 39.9526,
+    "lon": -75.1652,
+    "offset": -4,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/New_York",
+    "timeDifference": "UTC-4 (EDT) / UTC-5 (EST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is formal (suits) in law and finance, smart-casual in tech. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee meetings are popular.",
+    "localLifestyle": "Historic, vibrant, and urban. Strong focus on history, sports, and innovation. Public transport (SEPTA) is reliable; traffic can be heavy.",
+    "localCulture": "Diverse, proud, and gritty, with Irish, Italian, and African American influences. Philadelphians value community, history, and resilience. Communication is straightforward.",
+    "signatureDish": "Cheesesteak, Soft Pretzel, Hoagie, Water Ice",
+    "businessHub": "A hub for healthcare, education, and finance. Center City and University City are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Center City",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Independence National Historical Park",
+        "description": "Home to the Liberty Bell and Independence Hall, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in Center City"
+      },
+      {
+        "name": "Philadelphia Museum of Art",
+        "description": "A cultural landmark, suitable for client entertainment or relaxation.",
+        "proximityToBusinessDistrict": "Central Philadelphia, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Philadelphia Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in healthcare, education, and finance to network."
+      },
+      {
+        "name": "Industry Events (e.g., Philly Tech Week, BioPharma Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and healthcare, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Philadelphia’s historical significance and innovation hub. Be prepared for a direct communication style and appreciate the city’s cheesesteak culture to build rapport."
+  },
+  {
+    "name": "Karachi",
+    "country": "Pakistan",
+    "lat": 24.8607,
+    "lon": 67.0011,
+    "offset": 5,
+    "flag": "pk",
+    "continent": "Asia",
+    "timezone": "Asia/Karachi",
+    "timeDifference": "UTC+5",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["Kashmir Day (Feb 5)", "Pakistan Day (Mar 23)", "Labour Day (May 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Independence Day (Aug 14)", "Iqbal Day (Nov 9)", "Quaid-e-Azam Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or shalwar kameez). Urdu and English are primary business languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Eid or Ramadan.",
+    "localLifestyle": "Bustling, coastal, and commercial. Strong focus on trade, food, and culture. Traffic is heavy; public transport is limited.",
+    "localCulture": "Warm, diverse, and resilient, with Sindhi, Urdu, and Islamic influences. Karachiites value hospitality, community, and tradition. Communication is polite and expressive.",
+    "signatureDish": "Biryani, Nihari, Karahi, Halwa Puri",
+    "businessHub": "Pakistan’s economic hub, strong in trade, finance, and shipping. Clifton and I.I. Chundrigar Road are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "I.I. Chundrigar Road",
+        "description": "The financial hub with corporate offices, banks, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Quaid-e-Azam’s Mausoleum",
+        "description": "A historic landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Karachi, accessible"
+      },
+      {
+        "name": "Clifton Beach",
+        "description": "A coastal area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from I.I. Chundrigar Road"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Karachi Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in trade, finance, and shipping to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Karachi Trade Expo, Pakistan Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and industry, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Pakistan’s cultural and religious diversity. Building relationships is key; appreciating Karachi’s cuisine and coastal vibe will enhance rapport."
+  },
+  {
+    "name": "Dublin",
+    "country": "Ireland",
+    "lat": 53.3498,
+    "lon": -6.2603,
+    "offset": 0,
+    "flag": "ie",
+    "continent": "Europe",
+    "timezone": "Europe/Dublin",
+    "timeDifference": "UTC+1 (IST) / UTC+0 (GMT)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "St. Patrick’s Day (Mar 17)", "Good Friday", "Easter Monday", "May Day (1st Mon in May)", "June Bank Holiday (1st Mon in Jun)", "August Bank Holiday (1st Mon in Aug)", "October Bank Holiday (Last Mon in Oct)", "Christmas Day (Dec 25)", "St. Stephen’s Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is formal in finance, smart-casual in tech. Communication is direct and friendly. English is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Pub meetings are common for informal discussions.",
+    "localLifestyle": "Vibrant, cultural, and tech-savvy. Strong focus on literature, tech, and pub culture. Public transport (Luas, DART) is efficient.",
+    "localCulture": "Warm, witty, and proud, with Celtic and European influences. Dubliners value hospitality, storytelling, and community. Communication is straightforward with humor.",
+    "signatureDish": "Irish Stew, Soda Bread, Fish and Chips, Guinness",
+    "businessHub": "Ireland’s economic and tech hub, strong in technology, finance, and pharmaceuticals. IFSC and Silicon Docks are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Silicon Docks",
+        "description": "The tech hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Trinity College",
+        "description": "Home to the Book of Kells, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Dublin, accessible"
+      },
+      {
+        "name": "Phoenix Park",
+        "description": "A large urban park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Silicon Docks"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Dublin Tech Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in tech, finance, and pharmaceuticals to network."
+      },
+      {
+        "name": "Industry Events (e.g., Dublin Tech Summit, MoneyConf)",
+        "date": "Varies throughout the year",
+        "description": "Major events for technology and finance, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Emphasize collaboration and respect for Ireland’s tech ecosystem. Appreciating Dublin’s pub culture and literary heritage will enhance rapport."
+  },
+  {
+    "name": "Recife",
+    "country": "Brazil",
+    "lat": -8.0578,
+    "lon": -34.8829,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Recife",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, coastal, and cultural. Strong focus on Carnival, beaches, and technology. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and festive, with African, Portuguese, and indigenous influences. Pernambucanos value hospitality, creativity, and community. Communication is expressive.",
+    "signatureDish": "Bolo de Rolo, Tapioca, Caldo de Cana, Peixada Pernambucana",
+    "businessHub": "A hub for technology, tourism, and trade. Boa Viagem and Porto Digital are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Porto Digital",
+        "description": "A tech hub with corporate offices, startups, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Marco Zero",
+        "description": "A historic square in Bairro do Recife, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Porto Digital"
+      },
+      {
+        "name": "Boa Viagem Beach",
+        "description": "A popular beach, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Porto Digital"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Recife Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tech, tourism, and trade to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Recife Tech Summit, Pernambuco Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Pernambucanos value trust and warmth. Appreciating Recife’s Carnival and tech innovation will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Kinshasa",
+    "country": "Democratic Republic of the Congo",
+    "lat": -4.4419,
+    "lon": 15.2663,
+    "offset": 1,
+    "flag": "cd",
+    "continent": "Africa",
+    "timezone": "Africa/Kinshasa",
+    "timeDifference": "UTC+1",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martyrs’ Day (Jan 4)", "Heroes’ Day (Jan 16-17)", "Labour Day (May 1)", "Independence Day (Jun 30)", "Parents’ Day (Aug 1)", "Kimbanguist Christmas (Oct 12)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Monsieur, Madame) initially. Business attire is formal (suits). French is the primary language; Lingala is also used. Building relationships is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Vibrant, urban, and musical. Strong focus on trade, music, and community. Traffic is heavy; public transport is limited.",
+    "localCulture": "Dynamic, diverse, and resilient, with Congolese and African influences. Kinshasans value hospitality, respect, and community. Communication is polite and expressive.",
+    "signatureDish": "Moambe Chicken, Fufu, Saka Saka, Liboke",
+    "businessHub": "DRC’s economic and political hub, strong in trade, mining, and services. Gombe is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Gombe Business District",
+        "description": "The heart of business with corporate offices, embassies, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "National Museum of the DRC",
+        "description": "A cultural institution, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Kinshasa, accessible"
+      },
+      {
+        "name": "Kinshasa Botanical Garden",
+        "description": "A green space, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Gombe"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Kinshasa Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, mining, and services to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Kinshasa Trade Expo, Congo Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and mining, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Congo’s cultural diversity and economic potential. Building relationships is key; proficiency in French will enhance rapport."
+  },
+  {
+    "name": "Samoa",
+    "country": "Samoa",
+    "lat": -13.7590,
+    "lon": -172.1046,
+    "offset": 13,
+    "flag": "ws",
+    "continent": "Oceania",
+    "timezone": "Pacific/Apia",
+    "timeDifference": "UTC+13",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "Mother’s Day (2nd Mon in May)", "Independence Day (Jun 1)", "Father’s Day (2nd Mon in Aug)", "White Sunday (2nd Sun in Oct)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or lava-lava). English and Samoan are primary languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on tourism, fishing, and religion. Public transport is limited; taxis are common.",
+    "localCulture": "Warm, spiritual, and traditional, with Polynesian influences. Samoans value respect, hospitality, and family. Communication is polite.",
+    "signatureDish": "Palusami, Oka I’a, Sapasui, Pani Popo",
+    "businessHub": "Samoa’s economic and administrative center, strong in tourism, agriculture, and government. Apia is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Apia Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Robert Louis Stevenson Museum",
+        "description": "A cultural site, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from Apia"
+      },
+      {
+        "name": "Mulinu’u Peninsula",
+        "description": "A historic coastal area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Located in Apia"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Apia Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in tourism, agriculture, and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Samoa Tourism Expo, Pacific Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for tourism and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Samoa’s traditional values and community focus. Building relationships is key; appreciating Samoan customs will enhance rapport."
+  },
+  {
+    "name": "Detroit",
+    "country": "United States",
+    "lat": 42.3314,
+    "lon": -83.0458,
+    "offset": -4,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Detroit",
+    "timeDifference": "UTC-4 (EDT) / UTC-5 (EST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is formal in automotive and finance, smart-casual in tech. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee meetings are popular.",
+    "localLifestyle": "Resilient, industrial, and cultural. Strong focus on automotive, music, and revitalization. Public transport is limited; cars are common.",
+    "localCulture": "Gritty, diverse, and proud, with African American, Polish, and Midwestern influences. Detroiters value community, innovation, and resilience. Communication is straightforward.",
+    "signatureDish": "Coney Dog, Detroit-Style Pizza, Better Made Chips, Vernors Ginger Ale",
+    "businessHub": "A hub for automotive, manufacturing, and technology. Downtown and New Center are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Detroit",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "The Henry Ford Museum",
+        "description": "A museum of innovation, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      },
+      {
+        "name": "Detroit Riverwalk",
+        "description": "A scenic promenade, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Located in Downtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Detroit Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in automotive, manufacturing, and tech to network."
+      },
+      {
+        "name": "Industry Events (e.g., Detroit Auto Show, Michigan Tech Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for automotive and technology, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Detroit’s automotive heritage and revitalization efforts. Be prepared for a direct communication style and appreciate the city’s coney dogs to build rapport."
+  },
+  {
+    "name": "Lahore",
+    "country": "Pakistan",
+    "lat": 31.5497,
+    "lon": 74.3436,
+    "offset": 5,
+    "flag": "pk",
+    "continent": "Asia",
+    "timezone": "Asia/Karachi",
+    "timeDifference": "UTC+5",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["Kashmir Day (Feb 5)", "Pakistan Day (Mar 23)", "Labour Day (May 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Independence Day (Aug 14)", "Iqbal Day (Nov 9)", "Quaid-e-Azam Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or shalwar kameez). Urdu, Punjabi, and English are primary business languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Eid or Ramadan.",
+    "localLifestyle": "Vibrant, cultural, and historic. Strong focus on food, arts, and Mughal heritage. Traffic is heavy; rickshaws and buses are common.",
+    "localCulture": "Warm, proud, and artistic, with Punjabi and Islamic influences. Lahoris value hospitality, tradition, and community. Communication is polite and expressive.",
+    "signatureDish": "Lahori Chargha, Paye, Haleem, Falooda",
+    "businessHub": "Pakistan’s cultural and economic hub, strong in textiles, education, and trade. Gulberg and MM Alam Road are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Gulberg Business District",
+        "description": "A modern hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Badshahi Mosque",
+        "description": "A Mughal-era landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Lahore, accessible"
+      },
+      {
+        "name": "Food Street (Gawalmandi)",
+        "description": "A vibrant food hub, suitable for informal client outings.",
+        "proximityToBusinessDistrict": "Accessible from Gulberg"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Lahore Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in textiles, education, and trade to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Lahore Textile Expo, Pakistan Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for textiles and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Lahore’s rich cultural heritage and Islamic traditions. Building relationships is key; appreciating Lahori cuisine will enhance rapport."
+  },
+  {
+    "name": "Helsinki",
+    "country": "Finland",
+    "lat": 60.1699,
+    "lon": 24.9384,
+    "offset": 2,
+    "flag": "fi",
+    "continent": "Europe",
+    "timezone": "Europe/Helsinki",
+    "timeDifference": "UTC+3 (EEST) / UTC+2 (EET)",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Epiphany (Jan 6)", "Good Friday", "Easter Monday", "May Day (May 1)", "Ascension Day", "Midsummer Day (varies, Jun)", "All Saints' Day (varies, Nov)", "Independence Day (Dec 6)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is smart-casual to formal. Finns value equality and transparency; communication is direct and concise. English is widely used; Finnish is primary.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during summer holidays (Jul-Aug).",
+    "localLifestyle": "Innovative, green, and Nordic. Strong focus on technology, design, and saunas. Public transport (Metro, trams) is world-class.",
+    "localCulture": "Reserved, egalitarian, and nature-loving, with Nordic and Baltic influences. Finns value honesty, privacy, and sustainability. Communication is straightforward.",
+    "signatureDish": "Salmon Soup, Karjalanpiirakka, Reindeer Stew, Rye Bread",
+    "businessHub": "Finland’s economic and tech hub, strong in technology, design, and gaming. Kamppi and Ruoholahti are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Kamppi Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Helsinki Cathedral",
+        "description": "An iconic landmark, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Helsinki, accessible"
+      },
+      {
+        "name": "Suomenlinna Sea Fortress",
+        "description": "A UNESCO site, suitable for cultural visits or client outings.",
+        "proximityToBusinessDistrict": "Accessible from Kamppi"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Helsinki Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tech, design, and gaming to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Slush, Helsinki Tech Week)",
+        "date": "Varies throughout the year",
+        "description": "Major events for technology and startups, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Emphasize transparency and punctuality; Finns value efficiency and equality. Appreciating Helsinki’s sauna culture and tech innovation will enhance rapport."
+  },
+  {
+    "name": "Fortaleza",
+    "country": "Brazil",
+    "lat": -3.7172,
+    "lon": -38.5434,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Fortaleza",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, coastal, and festive. Strong focus on beaches, tourism, and culture. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and festive, with indigenous, African, and Portuguese influences. Cearenses value hospitality, creativity, and community. Communication is expressive.",
+    "signatureDish": "Baião de Dois, Caranguejo, Peixada Cearense, Tapioca",
+    "businessHub": "A hub for tourism, trade, and renewable energy. Aldeota and Meireles are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Aldeota Business District",
+        "description": "A modern hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Dragão do Mar Cultural Center",
+        "description": "A cultural hub, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Fortaleza, accessible"
+      },
+      {
+        "name": "Praia do Futuro",
+        "description": "A popular beach, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Aldeota"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Fortaleza Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tourism, trade, and renewable energy to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Fortaleza Tourism Expo, Ceará Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for tourism and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Cearenses value trust and warmth. Appreciating Fortaleza’s beach culture and cuisine will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Bamako",
+    "country": "Mali",
+    "lat": 12.6392,
+    "lon": -8.0029,
+    "offset": 0,
+    "flag": "ml",
+    "continent": "Africa",
+    "timezone": "Africa/Bamako",
+    "timeDifference": "UTC+0",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday, with a lunch break from 12:00 PM - 2:00 PM.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Armed Forces Day (Jan 20)", "Martyrs' Day (Mar 26)", "Labour Day (May 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Independence Day (Sep 22)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Monsieur, Madame) initially. Business attire is formal (suits or traditional attire). French is the primary language; Bambara is also used. Building relationships is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Ramadan or major holidays.",
+    "localLifestyle": "Vibrant, cultural, and communal. Strong focus on trade, music, and markets. Public transport is limited; taxis and motorbikes are common.",
+    "localCulture": "Warm, diverse, and resilient, with Malian and West African influences. Malians value hospitality, respect, and community. Communication is polite and expressive.",
+    "signatureDish": "Tiguadege Na, Jollof Rice, Poulet Yassa, Fakoye",
+    "businessHub": "Mali’s economic and political hub, strong in trade, agriculture, and gold mining. ACI 2000 is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "ACI 2000 Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "National Museum of Mali",
+        "description": "A cultural institution, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Bamako, accessible"
+      },
+      {
+        "name": "Bamako Grand Mosque",
+        "description": "A historic landmark, suitable for cultural visits or reflection.",
+        "proximityToBusinessDistrict": "Accessible from ACI 2000"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Bamako Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, agriculture, and mining to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Bamako Trade Expo, West Africa Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and agriculture, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Mali’s cultural diversity and economic potential. Building relationships is key; proficiency in French and appreciation of local cuisine will enhance rapport."
+  },
+  {
+    "name": "Vanuatu",
+    "country": "Vanuatu",
+    "lat": -17.7333,
+    "lon": 168.3167,
+    "offset": 11,
+    "flag": "vu",
+    "continent": "Oceania",
+    "timezone": "Pacific/Efate",
+    "timeDifference": "UTC+11",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Father Walter Lini Day (Feb 21)", "Custom Chiefs' Day (Mar 5)", "Good Friday", "Easter Monday", "Labour Day (May 1)", "Independence Day (Jul 30)", "Assumption Day (Aug 15)", "Constitution Day (Oct 5)", "Unity Day (Nov 29)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or island shirts). Bislama, English, and French are primary languages. Respect for community is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on tourism, agriculture, and fishing. Public transport is minimal; taxis are common.",
+    "localCulture": "Warm, traditional, and resilient, with Melanesian influences. Ni-Vanuatu value community, hospitality, and respect. Communication is polite.",
+    "signatureDish": "Laplap, Tuluk, Coconut Crab, Kava",
+    "businessHub": "Vanuatu’s economic and administrative center, strong in tourism, agriculture, and offshore finance. Port Vila is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Port Vila Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Mele Cascades",
+        "description": "A scenic waterfall, great for relaxation or informal client outings.",
+        "proximityToBusinessDistrict": "Accessible from Port Vila"
+      },
+      {
+        "name": "Port Vila Market",
+        "description": "A vibrant market, suitable for informal meetings or client outings.",
+        "proximityToBusinessDistrict": "Located in Port Vila"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Port Vila Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in tourism, agriculture, and finance to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Pacific Islands Forum, Vanuatu Trade Talks)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for commerce and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Vanuatu’s small, tight-knit community and traditional values. Building relationships is key; appreciating local kava culture will enhance rapport."
+  },
+  {
+    "name": "San Diego",
+    "country": "United States",
+    "lat": 32.7157,
+    "lon": -117.1611,
+    "offset": -7,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Los_Angeles",
+    "timeDifference": "UTC-7 (PDT) / UTC-8 (PST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is formal in biotech, smart-casual in tech. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee or lunch meetings are popular.",
+    "localLifestyle": "Relaxed, coastal, and innovative. Strong focus on biotech, tourism, and outdoor activities. Public transport is limited; cars are common.",
+    "localCulture": "Diverse, laid-back, and progressive, with Mexican, Asian, and Californian influences. San Diegans value community, innovation, and sustainability. Communication is straightforward.",
+    "signatureDish": "Fish Tacos, California Burrito, Carne Asada Fries, Craft Beer",
+    "businessHub": "A hub for biotechnology, tourism, and defense. Downtown and Sorrento Valley are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown San Diego",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Balboa Park",
+        "description": "A cultural hub with museums and gardens, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central San Diego, accessible"
+      },
+      {
+        "name": "La Jolla Shores",
+        "description": "A scenic beach, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "San Diego Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in biotech, tourism, and tech to network."
+      },
+      {
+        "name": "Industry Events (e.g., BIO International Convention, San Diego Tech Week)",
+        "date": "Varies throughout the year",
+        "description": "Events for biotechnology and technology, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage San Diego’s biotech and tourism strengths. Be prepared for a direct communication style and appreciate the city’s fish tacos and beach culture to build rapport."
+  },
+  {
+    "name": "Chennai",
+    "country": "India",
+    "lat": 13.0827,
+    "lon": 80.2707,
+    "offset": 5.5,
+    "flag": "in",
+    "continent": "Asia",
+    "timezone": "Asia/Kolkata",
+    "timeDifference": "UTC+5:30",
+    "standardBusinessHours": "Typically 9:00 AM - 6:00 PM, Monday to Saturday.",
+    "majorPublicHolidays": ["Republic Day (Jan 26)", "Independence Day (Aug 15)", "Gandhi Jayanti (Oct 2)", "Diwali (varies, Oct/Nov)", "Pongal (Jan 14-17)", "Tamil New Year (Apr 14)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes or namaste greetings are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or traditional attire). English and Tamil are primary business languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Diwali or Pongal.",
+    "localLifestyle": "Vibrant, coastal, and traditional. Strong focus on IT, culture, and cuisine. Public transport (Metro, buses) is improving; traffic is heavy.",
+    "localCulture": "Warm, proud, and diverse, with Tamil and South Indian influences. Chennaiites value hospitality, tradition, and education. Communication is polite and expressive.",
+    "signatureDish": "Dosa, Idli, Sambar, Chettinad Chicken, Filter Coffee",
+    "businessHub": "India’s IT and automotive hub, strong in technology, manufacturing, and finance. OMR and Guindy are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "OMR (Old Mahabalipuram Road)",
+        "description": "The IT hub with corporate offices, tech parks, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Marina Beach",
+        "description": "A scenic promenade, great for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Central Chennai, accessible"
+      },
+      {
+        "name": "Kapaleeshwarar Temple",
+        "description": "A historic temple, suitable for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from OMR"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Chennai Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in IT, manufacturing, and finance to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Chennai Tech Summit, Auto Expo India)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and automotive industries, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Chennai’s cultural heritage and tech prowess. Building relationships is key; appreciating Tamil cuisine and traditions will enhance rapport."
+  },
+  {
+    "name": "Brussels",
+    "country": "Belgium",
+    "lat": 50.8503,
+    "lon": 4.3517,
+    "offset": 1,
+    "flag": "be",
+    "continent": "Europe",
+    "timezone": "Europe/Brussels",
+    "timeDifference": "UTC+2 (CEST) / UTC+1 (CET)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Labour Day (May 1)", "Belgian National Day (Jul 21)", "Assumption of Mary (Aug 15)", "All Saints' Day (Nov 1)", "Armistice Day (Nov 11)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is formal (suits). Dutch, French, and English are primary business languages. Communication is professional and direct.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during summer holidays (Jul-Aug).",
+    "localLifestyle": "Cosmopolitan, historic, and culinary. Strong focus on EU governance, chocolate, and beer. Public transport (Metro, trams) is efficient.",
+    "localCulture": "Diverse, diplomatic, and proud, with Flemish, Walloon, and European influences. Belgians value discretion, professionalism, and community. Communication is straightforward.",
+    "signatureDish": "Moules-Frites, Belgian Waffles, Carbonnade Flamande, Chocolate",
+    "businessHub": "Europe’s political hub, strong in EU governance, finance, and technology. European Quarter and Louise are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "European Quarter",
+        "description": "The heart of EU governance with corporate offices, embassies, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Grand Place",
+        "description": "A historic square, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Brussels, accessible"
+      },
+      {
+        "name": "Atomium",
+        "description": "An iconic landmark, suitable for cultural visits or client outings.",
+        "proximityToBusinessDistrict": "Accessible from European Quarter"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Brussels Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in EU governance, finance, and tech to connect."
+      },
+      {
+        "name": "Industry Events (e.g., European Business Summit, Brussels Tech Week)",
+        "date": "Varies throughout the year",
+        "description": "Events for governance and technology, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Emphasize professionalism and respect for Belgium’s multilingual culture. Appreciating Brussels’ culinary heritage and EU significance will enhance rapport."
+  },
+  {
+    "name": "Manaus",
+    "country": "Brazil",
+    "lat": -3.1190,
+    "lon": -60.0217,
+    "offset": -4,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Manaus",
+    "timeDifference": "UTC-4",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, tropical, and industrial. Strong focus on trade, tourism, and the Amazon. Public transport is limited; boats and taxis are common.",
+    "localCulture": "Warm, proud, and diverse, with indigenous, Portuguese, and Amazonian influences. Manauaras value hospitality, nature, and community. Communication is expressive.",
+    "signatureDish": "Tacacá, Pirarucu de Casaca, Tambaqui Assado, Açaí",
+    "businessHub": "A hub for trade, manufacturing, and ecotourism. Distrito Industrial and Centro are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Centro Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Teatro Amazonas",
+        "description": "A historic opera house, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Centro"
+      },
+      {
+        "name": "Meeting of the Waters",
+        "description": "A natural phenomenon, suitable for client outings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Centro"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Manaus Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in trade, manufacturing, and ecotourism to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Amazonas Trade Expo, Brazil Ecotourism Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for trade and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Manauaras value trust and warmth. Appreciating Manaus’ Amazonian culture and cuisine will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Dakar",
+    "country": "Senegal",
+    "lat": 14.6928,
+    "lon": -17.4467,
+    "offset": 0,
+    "flag": "sn",
+    "continent": "Africa",
+    "timezone": "Africa/Dakar",
+    "timeDifference": "UTC+0",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Independence Day (Apr 4)", "Labour Day (May 1)", "Eid al-Fitr (varies)", "Eid al-Adha (varies)", "Tamkharit (varies)", "Magal de Touba (varies)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is appreciated, though flexibility exists. Handshakes are common; use titles (Monsieur, Madame) initially. Business attire is formal (suits or traditional attire). French is the primary language; Wolof is also used. Building relationships is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Ramadan or major holidays.",
+    "localLifestyle": "Vibrant, coastal, and cultural. Strong focus on trade, music, and cuisine. Public transport is improving; traffic is heavy.",
+    "localCulture": "Warm, diverse, and dynamic, with Wolof, French, and Islamic influences. Senegalese value hospitality, respect, and community. Communication is polite and expressive.",
+    "signatureDish": "Thiéboudienne, Yassa Poulet, Mafé, Dibi",
+    "businessHub": "Senegal’s economic and political hub, strong in trade, finance, and tourism. Plateau is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Plateau Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Gorée Island",
+        "description": "A historic UNESCO site, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from Plateau"
+      },
+      {
+        "name": "Dakar Grand Mosque",
+        "description": "A cultural landmark, suitable for cultural visits or reflection.",
+        "proximityToBusinessDistrict": "Central Dakar, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Dakar Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, finance, and tourism to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Dakar Trade Expo, West Africa Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Senegal’s cultural diversity and economic growth. Building relationships is key; proficiency in French and appreciation of thiéboudienne will enhance rapport."
+  },
+  {
+    "name": "Solomon Islands",
+    "country": "Solomon Islands",
+    "lat": -9.4280,
+    "lon": 159.9729,
+    "offset": 11,
+    "flag": "sb",
+    "continent": "Oceania",
+    "timezone": "Pacific/Guadalcanal",
+    "timeDifference": "UTC+11",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "Queen’s Birthday (varies, Jun)", "Independence Day (Jul 7)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or island shirts). English is the primary language; Pijin is also used. Respect for community is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on fishing, tourism, and agriculture. Public transport is minimal; boats and taxis are common.",
+    "localCulture": "Warm, traditional, and resilient, with Melanesian influences. Solomon Islanders value community, hospitality, and respect. Communication is polite.",
+    "signatureDish": "Cassava Pudding, Fish Curry, Pana, Coconut Milk Dishes",
+    "businessHub": "Solomon Islands’ economic and administrative center, strong in tourism, fishing, and government. Honiara is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Honiara Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Honiara Central Market",
+        "description": "A vibrant market, suitable for informal meetings or client outings.",
+        "proximityToBusinessDistrict": "Located in Honiara"
+      },
+      {
+        "name": "National Museum",
+        "description": "A cultural institution, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Honiara, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Honiara Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in tourism, fishing, and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Pacific Islands Forum, Solomon Islands Trade Talks)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for commerce and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for the Solomon Islands’ small, tight-knit community and traditional values. Building relationships is key; appreciating local cuisine will enhance rapport."
+  },
+  {
+    "name": "Portland",
+    "country": "United States",
+    "lat": 45.5152,
+    "lon": -122.6784,
+    "offset": -7,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Los_Angeles",
+    "timeDifference": "UTC-7 (PDT) / UTC-8 (PST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is smart-casual, especially in tech and creative industries. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee or brewery meetings are popular.",
+    "localLifestyle": "Creative, green, and progressive. Strong focus on technology, sustainability, and outdoor activities. Public transport (MAX, buses) is efficient.",
+    "localCulture": "Eclectic, inclusive, and innovative, with Pacific Northwest influences. Portlanders value sustainability, community, and creativity. Communication is straightforward with a casual tone.",
+    "signatureDish": "Voodoo Doughnuts, Food Cart Dishes, Craft Beer, Marionberry Pie",
+    "businessHub": "A hub for technology, sportswear, and creative industries. Downtown and Pearl District are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Portland",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Washington Park",
+        "description": "Home to the Japanese Garden and Zoo, great for relaxation or client outings.",
+        "proximityToBusinessDistrict": "Accessible from Downtown"
+      },
+      {
+        "name": "Powell’s City of Books",
+        "description": "A cultural landmark, suitable for informal meetings or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Pearl District"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Portland Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in tech, sportswear, and creative industries to network."
+      },
+      {
+        "name": "Industry Events (e.g., Portland TechFest, Design Week Portland)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and design, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Portland’s creative and sustainable ethos. Be prepared for a direct yet casual communication style and appreciate the city’s craft beer and food cart culture to build rapport."
+  },
+  {
+    "name": "Hyderabad",
+    "country": "India",
+    "lat": 17.3850,
+    "lon": 78.4867,
+    "offset": 5.5,
+    "flag": "in",
+    "continent": "Asia",
+    "timezone": "Asia/Kolkata",
+    "timeDifference": "UTC+5:30",
+    "standardBusinessHours": "Typically 9:00 AM - 6:00 PM, Monday to Saturday.",
+    "majorPublicHolidays": ["Republic Day (Jan 26)", "Independence Day (Aug 15)", "Gandhi Jayanti (Oct 2)", "Diwali (varies, Oct/Nov)", "Eid al-Fitr (varies)", "Dussehra (varies, Sep/Oct)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes or namaste greetings are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or traditional attire). English and Telugu are primary business languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Diwali or Dussehra.",
+    "localLifestyle": "Dynamic, historic, and tech-driven. Strong focus on IT, cuisine, and culture. Public transport (Metro) is improving; traffic is heavy.",
+    "localCulture": "Warm, proud, and diverse, with Telugu, Urdu, and South Indian influences. Hyderabadis value hospitality, tradition, and innovation. Communication is polite and expressive.",
+    "signatureDish": "Hyderabadi Biryani, Haleem, Qubani ka Meetha, Irani Chai",
+    "businessHub": "India’s IT and pharmaceutical hub, strong in technology, biotech, and trade. HITEC City and Gachibowli are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "HITEC City",
+        "description": "The IT hub with corporate offices, tech parks, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Golconda Fort",
+        "description": "A historic fortress, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Accessible from HITEC City"
+      },
+      {
+        "name": "Hussain Sagar Lake",
+        "description": "A scenic lake, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Central Hyderabad, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Hyderabad Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in IT, biotech, and trade to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Hyderabad Tech Summit, BioAsia)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and biotechnology, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Hyderabad’s cultural heritage and tech prowess. Building relationships is key; appreciating Hyderabadi biryani and traditions will enhance rapport."
+  },
+  {
+    "name": "Oslo",
+    "country": "Norway",
+    "lat": 59.9139,
+    "lon": 10.7522,
+    "offset": 1,
+    "flag": "no",
+    "continent": "Europe",
+    "timezone": "Europe/Oslo",
+    "timeDifference": "UTC+2 (CEST) / UTC+1 (CET)",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Maundy Thursday", "Good Friday", "Easter Monday", "Labour Day (May 1)", "Constitution Day (May 17)", "Ascension Day", "Whit Monday", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is critical. A firm handshake and direct eye contact are standard. Business attire is smart-casual to formal. Norwegians value equality and transparency; communication is direct and concise. English is widely used; Norwegian is primary.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during summer holidays (Jul-Aug).",
+    "localLifestyle": "Green, innovative, and outdoor-focused. Strong focus on technology, maritime industries, and nature. Public transport (Metro, trams) is world-class.",
+    "localCulture": "Reserved, egalitarian, and nature-loving, with Nordic influences. Norwegians value honesty, sustainability, and community. Communication is straightforward.",
+    "signatureDish": "Rakfisk, Lutefisk, Kjøttkaker, Brunost",
+    "businessHub": "Norway’s economic and maritime hub, strong in technology, energy, and shipping. Aker Brygge and Bjørvika are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Aker Brygge",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Vigeland Sculpture Park",
+        "description": "A cultural landmark, great for relaxation or client outings.",
+        "proximityToBusinessDistrict": "Central Oslo, accessible"
+      },
+      {
+        "name": "Oslo Opera House",
+        "description": "An iconic venue, suitable for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Bjørvika"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Oslo Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in tech, energy, and shipping to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Oslo Innovation Week, Norway Energy Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and energy, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Emphasize transparency and punctuality; Norwegians value efficiency and equality. Appreciating Oslo’s maritime heritage and outdoor culture will enhance rapport."
+  },
+  {
+    "name": "Porto Alegre",
+    "country": "Brazil",
+    "lat": -30.0346,
+    "lon": -51.2177,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Sao_Paulo",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, cultural, and industrial. Strong focus on trade, agriculture, and gaucho culture. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and traditional, with gaucho, German, and Italian influences. Gaúchos value hospitality, tradition, and community. Communication is expressive.",
+    "signatureDish": "Churrasco, Arroz Carreteiro, Chimarrão, Cuca",
+    "businessHub": "A hub for trade, agriculture, and industry. Moinhos de Vento and Centro Histórico are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Moinhos de Vento",
+        "description": "A modern hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Public Market",
+        "description": "A historic market, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Located in Centro Histórico"
+      },
+      {
+        "name": "Guaíba Lake",
+        "description": "A scenic waterfront, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Moinhos de Vento"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Porto Alegre Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in trade, agriculture, and industry to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Porto Alegre Trade Expo, South Brazil Business Forum)",
+        "date": "Varies throughout the year",
+        "description": "Events for trade and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Gaúchos value trust and warmth. Appreciating Porto Alegre’s churrasco and gaucho culture will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Harare",
+    "country": "Zimbabwe",
+    "lat": -17.8252,
+    "lon": 31.0335,
+    "offset": 2,
+    "flag": "zw",
+    "continent": "Africa",
+    "timezone": "Africa/Harare",
+    "timeDifference": "UTC+2",
+    "standardBusinessHours": "Typically 8:00 AM - 4:30 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Independence Day (Apr 18)", "Workers' Day (May 1)", "Heroes' Day (2nd Mon in Aug)", "Defence Forces Day (Tue after Heroes' Day)", "Unity Day (Dec 22)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is valued, though flexibility exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits). English is the primary business language; Shona and Ndebele are also used. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Vibrant, cultural, and resilient. Strong focus on trade, agriculture, and community. Public transport is limited; cars are common.",
+    "localCulture": "Warm, proud, and diverse, with Shona, Ndebele, and African influences. Zimbabweans value hospitality, respect, and community. Communication is polite and expressive.",
+    "signatureDish": "Sadza, Nyama, Muriwo Unedovi, Bota",
+    "businessHub": "Zimbabwe’s economic and political hub, strong in trade, agriculture, and mining. Avondale and CBD are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Harare CBD",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "National Gallery of Zimbabwe",
+        "description": "A cultural institution, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Harare, accessible"
+      },
+      {
+        "name": "Harare Gardens",
+        "description": "A green space, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Located in CBD"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Harare Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, agriculture, and mining to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Zimbabwe International Trade Fair, Harare Business Expo)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and agriculture, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Zimbabwe’s cultural diversity and economic resilience. Building relationships is key; appreciating sadza and local traditions will enhance rapport."
+  },
+  {
+    "name": "Kiribati",
+    "country": "Kiribati",
+    "lat": 1.8709,
+    "lon": -157.3626,
+    "offset": 14,
+    "flag": "ki",
+    "continent": "Oceania",
+    "timezone": "Pacific/Kiritimati",
+    "timeDifference": "UTC+14",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "Independence Day (Jul 12)", "Youth Day (1st Fri in Aug)", "Human Rights and Peace Day (Dec 10)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or island attire). English and Gilbertese are primary languages. Respect for community is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on fishing, tourism, and culture. Public transport is minimal; boats are common.",
+    "localCulture": "Warm, traditional, and resilient, with Micronesian influences. I-Kiribati value community, hospitality, and respect. Communication is polite.",
+    "signatureDish": "Palu Sami, Te Bua Toro, Coconut Fish, Pandanus Fruit",
+    "businessHub": "Kiribati’s economic and administrative center, strong in fishing, tourism, and government. Tarawa is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "South Tarawa Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Parliament House",
+        "description": "A cultural and political landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in South Tarawa"
+      },
+      {
+        "name": "Betio Beach",
+        "description": "A coastal area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from South Tarawa"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Tarawa Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in fishing, tourism, and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Pacific Islands Forum, Kiribati Trade Talks)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for commerce and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Kiribati’s small, tight-knit community and traditional values. Building relationships is key; appreciating local cuisine and culture will enhance rapport."
+  },
+  {
+    "name": "Austin",
+    "country": "United States",
+    "lat": 30.2672,
+    "lon": -97.7431,
+    "offset": -5,
+    "flag": "us",
+    "continent": "N America",
+    "timezone": "America/Chicago",
+    "timeDifference": "UTC-5 (CDT) / UTC-6 (CST)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Martin Luther King Jr. Day (3rd Mon in Jan)", "Memorial Day (Last Mon in May)", "Juneteenth (Jun 19)", "Independence Day (Jul 4)", "Labor Day (1st Mon in Sep)", "Thanksgiving Day (4th Thu in Nov)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is crucial. A firm handshake and direct eye contact are standard. Business attire is smart-casual, especially in tech. Communication is direct and professional. Networking is highly valued.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Coffee or BBQ meetings are popular.",
+    "localLifestyle": "Vibrant, creative, and tech-driven. Strong focus on technology, music, and outdoor activities. Public transport is limited; cars are common.",
+    "localCulture": "Eclectic, progressive, and proud, with Texan and global influences. Austinites value innovation, community, and creativity. Communication is straightforward with a casual tone.",
+    "signatureDish": "Texas BBQ Brisket, Breakfast Tacos, Chili Con Carne, Pecan Pie",
+    "businessHub": "A hub for technology, music, and startups. Downtown and Domain are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Downtown Austin",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Zilker Park",
+        "description": "A large urban park, great for relaxation or client outings.",
+        "proximityToBusinessDistrict": "Central Austin, accessible"
+      },
+      {
+        "name": "Texas State Capitol",
+        "description": "A historic landmark, suitable for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Located in Downtown"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Austin Business Meetups",
+        "date": "Regularly (check Meetup.com or Eventbrite)",
+        "description": "Events for professionals in tech, music, and startups to network."
+      },
+      {
+        "name": "Industry Events (e.g., SXSW, Austin Tech Week)",
+        "date": "Varies throughout the year",
+        "description": "Major events for technology and music, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Leverage Austin’s tech and music ecosystem. Be prepared for a direct yet casual communication style and appreciate the city’s BBQ and live music culture to build rapport."
+  },
+  {
+    "name": "Delhi",
+    "country": "India",
+    "lat": 28.7041,
+    "lon": 77.1025,
+    "offset": 5.5,
+    "flag": "in",
+    "continent": "Asia",
+    "timezone": "Asia/Kolkata",
+    "timeDifference": "UTC+5:30",
+    "standardBusinessHours": "Typically 9:00 AM - 6:00 PM, Monday to Saturday.",
+    "majorPublicHolidays": ["Republic Day (Jan 26)", "Independence Day (Aug 15)", "Gandhi Jayanti (Oct 2)", "Diwali (varies, Oct/Nov)", "Holi (varies, Mar)", "Eid al-Fitr (varies)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes or namaste greetings are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or traditional attire). English and Hindi are primary business languages. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Diwali or Holi.",
+    "localLifestyle": "Dynamic, historic, and cosmopolitan. Strong focus on trade, politics, and culture. Public transport (Metro) is efficient; traffic is heavy.",
+    "localCulture": "Warm, proud, and diverse, with North Indian, Mughal, and global influences. Delhiites value hospitality, tradition, and ambition. Communication is polite and expressive.",
+    "signatureDish": "Butter Chicken, Chole Bhature, Paratha, Dilli Chaat",
+    "businessHub": "India’s political and economic hub, strong in trade, technology, and government. Connaught Place and Gurgaon are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Connaught Place",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "India Gate",
+        "description": "A historic monument, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Delhi, accessible"
+      },
+      {
+        "name": "Qutub Minar",
+        "description": "A UNESCO site, suitable for cultural visits or client outings.",
+        "proximityToBusinessDistrict": "Accessible from Connaught Place"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Delhi Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in trade, technology, and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., India Business Summit, Delhi Tech Expo)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Delhi’s cultural heritage and political significance. Building relationships is key; appreciating local chaat and traditions will enhance rapport."
+  },
+  {
+    "name": "Bucharest",
+    "country": "Romania",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "offset": 2,
+    "flag": "ro",
+    "continent": "Europe",
+    "timezone": "Europe/Bucharest",
+    "timeDifference": "UTC+3 (EEST) / UTC+2 (EET)",
+    "standardBusinessHours": "Typically 9:00 AM - 5:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Orthodox Easter (varies)", "Labour Day (May 1)", "Pentecost (varies)", "St. Mary’s Day (Aug 15)", "St. Andrew’s Day (Nov 30)", "National Day (Dec 1)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued. A firm handshake and direct eye contact are standard. Business attire is formal (suits). Romanian is the primary language; English is widely used in business. Communication is professional and direct.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during Orthodox Easter or December holidays.",
+    "localLifestyle": "Vibrant, historic, and cosmopolitan. Strong focus on technology, culture, and cuisine. Public transport (Metro) is efficient.",
+    "localCulture": "Proud, hospitable, and resilient, with Latin and Eastern European influences. Romanians value tradition, community, and ambition. Communication is straightforward.",
+    "signatureDish": "Sarmale, Mămăligă, Mici, Papanași",
+    "businessHub": "Romania’s economic and cultural hub, strong in technology, finance, and manufacturing. Pipera and Unirii are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Pipera Business District",
+        "description": "The heart of business with corporate offices, tech parks, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Palace of the Parliament",
+        "description": "A historic landmark, great for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Bucharest, accessible"
+      },
+      {
+        "name": "Herăstrău Park",
+        "description": "A large urban park, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Pipera"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Bucharest Business Networking",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in technology, finance, and manufacturing to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Bucharest Tech Week, Romania Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Emphasize professionalism and respect for Romania’s cultural heritage. Appreciating Bucharest’s cuisine and history will enhance rapport; basic Romanian phrases are appreciated."
+  },
+  {
+    "name": "Belo Horizonte",
+    "country": "Brazil",
+    "lat": -19.9167,
+    "lon": -43.9345,
+    "offset": -3,
+    "flag": "br",
+    "continent": "S America",
+    "timezone": "America/Sao_Paulo",
+    "timeDifference": "UTC-3",
+    "standardBusinessHours": "Typically 8:00 AM - 6:00 PM, Monday to Friday, with a 1-hour lunch break.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Carnival (varies, Feb/Mar)", "Good Friday", "Tiradentes Day (Apr 21)", "Labour Day (May 1)", "Independence Day (Sep 7)", "Our Lady of Aparecida (Oct 12)", "All Souls' Day (Nov 2)", "Republic Day (Nov 15)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though slight delays may occur. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Building personal relationships is key; small talk is valued. Portuguese is the primary language.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or mid-afternoon (2:00 PM - 4:00 PM). Avoid scheduling during Carnival or lunch hours.",
+    "localLifestyle": "Vibrant, cultural, and industrial. Strong focus on mining, technology, and cuisine. Public transport is improving; traffic can be heavy.",
+    "localCulture": "Warm, proud, and festive, with Portuguese, African, and indigenous influences. Mineiros value hospitality, tradition, and community. Communication is expressive.",
+    "signatureDish": "Pão de Queijo, Feijão Tropeiro, Tutu de Feijão, Doce de Leite",
+    "businessHub": "A hub for mining, technology, and trade. Savassi and Funcionários are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Savassi Business District",
+        "description": "A modern hub with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Praça da Liberdade",
+        "description": "A cultural square, great for cultural visits or client entertainment.",
+        "proximityToBusinessDistrict": "Central Belo Horizonte, accessible"
+      },
+      {
+        "name": "Pampulha Lake",
+        "description": "A scenic area, suitable for informal meetings or relaxation.",
+        "proximityToBusinessDistrict": "Accessible from Savassi"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Belo Horizonte Business Meetups",
+        "date": "Regularly (check Eventbrite or LinkedIn)",
+        "description": "Events for professionals in mining, technology, and trade to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Minas Gerais Trade Expo, Brazil Tech Summit)",
+        "date": "Varies throughout the year",
+        "description": "Events for technology and commerce, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Build personal relationships; Mineiros value trust and warmth. Appreciating Belo Horizonte’s pão de queijo and cultural vibrancy will enhance rapport. Basic Portuguese is essential."
+  },
+  {
+    "name": "Maputo",
+    "country": "Mozambique",
+    "lat": -25.9655,
+    "lon": 32.5832,
+    "offset": 2,
+    "flag": "mz",
+    "continent": "Africa",
+    "timezone": "Africa/Maputo",
+    "timeDifference": "UTC+2",
+    "standardBusinessHours": "Typically 8:00 AM - 4:30 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Heroes' Day (Feb 3)", "Women’s Day (Apr 7)", "Workers' Day (May 1)", "Independence Day (Jun 25)", "Victory Day (Sep 7)", "Armed Forces Day (Sep 25)", "Peace Day (Oct 4)", "Christmas Day (Dec 25)"],
+    "businessEtiquette": "Punctuality is valued, though flexibility exists. Handshakes are common; use titles (Senhor, Senhora) initially. Business attire is formal (suits). Portuguese is the primary language; English is used in business. Respect for hierarchy is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Vibrant, coastal, and cultural. Strong focus on trade, seafood, and music. Public transport is limited; taxis are common.",
+    "localCulture": "Warm, proud, and diverse, with Bantu, Portuguese, and Indian influences. Mozambicans value hospitality, community, and resilience. Communication is polite and expressive.",
+    "signatureDish": "Piri-Piri Prawns, Matapa, Peri-Peri Chicken, Xima",
+    "businessHub": "Mozambique’s economic and political hub, strong in trade, mining, and tourism. Baixa and Polana are key business districts.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Baixa Business District",
+        "description": "The heart of business with corporate offices, hotels, and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Maputo Central Market",
+        "description": "A vibrant market, great for cultural visits or client outings.",
+        "proximityToBusinessDistrict": "Located in Baixa"
+      },
+      {
+        "name": "Fortress of Maputo",
+        "description": "A historic landmark, suitable for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Maputo, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Maputo Business Networking",
+        "date": "Regularly (check local chambers of commerce)",
+        "description": "Events for professionals in trade, mining, and tourism to connect."
+      },
+      {
+        "name": "Industry Fairs (e.g., Maputo Trade Expo, Mozambique Business Summit)",
+        "date": "Varies throughout the year",
+        "description": "Trade shows for commerce and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Mozambique’s cultural diversity and economic growth. Building relationships is key; appreciating piri-piri prawns and local traditions will enhance rapport."
+  },
+    {
+    "name": "Tuvalu",
+    "country": "Tuvalu",
+    "lat": -8.5200,
+    "lon": 179.1981,
+    "offset": 12,
+    "flag": "tv",
+    "continent": "Oceania",
+    "timezone": "Pacific/Funafuti",
+    "timeDifference": "UTC+12",
+    "standardBusinessHours": "Typically 8:00 AM - 4:00 PM, Monday to Friday.",
+    "majorPublicHolidays": ["New Year's Day (Jan 1)", "Good Friday", "Easter Monday", "Gospel Day (2nd Mon in May)", "Queen’s Birthday (varies, Jun)", "Independence Day (Oct 1)", "Tuvalu Day (Oct 1-2)", "Christmas Day (Dec 25)", "Boxing Day (Dec 26)"],
+    "businessEtiquette": "Punctuality is appreciated, though a relaxed approach exists. Handshakes are common; use titles (Mr., Ms.) initially. Business attire is formal (suits or island attire). English and Tuvaluan are primary languages. Respect for community is key.",
+    "recommendedMeetingTimes": "Mid-morning (10:00 AM - 12:00 PM) or early afternoon (1:00 PM - 3:00 PM). Avoid scheduling during major holidays.",
+    "localLifestyle": "Relaxed, tropical, and community-oriented. Strong focus on fishing, tourism, and culture. Public transport is minimal; boats and bicycles are common.",
+    "localCulture": "Warm, traditional, and resilient, with Polynesian influences. Tuvaluans value community, hospitality, and respect. Communication is polite.",
+    "signatureDish": "Pulaka, Coconut Fish, Funa Funa, Palusami",
+    "businessHub": "Tuvalu’s economic and administrative center, strong in fishing, tourism, and government. Funafuti is the key business district.",
+    "topAttractionsForProfessionals": [
+      {
+        "name": "Funafuti Business District",
+        "description": "The administrative hub with government offices and event spaces, ideal for meetings and networking.",
+        "proximityToBusinessDistrict": "Is a primary business district"
+      },
+      {
+        "name": "Funafuti Lagoon",
+        "description": "A scenic lagoon, great for relaxation or informal client outings.",
+        "proximityToBusinessDistrict": "Located in Funafuti"
+      },
+      {
+        "name": "Tuvalu National Library",
+        "description": "A cultural institution, suitable for cultural visits or client education.",
+        "proximityToBusinessDistrict": "Central Funafuti, accessible"
+      }
+    ],
+    "networkingEvents": [
+      {
+        "name": "Funafuti Business Networking",
+        "date": "Occasionally (check local government announcements)",
+        "description": "Small-scale events for professionals in fishing, tourism, and government to connect."
+      },
+      {
+        "name": "Industry Events (e.g., Pacific Islands Forum, Tuvalu Trade Talks)",
+        "date": "Varies throughout the year",
+        "description": "Regional events for commerce and tourism, offering networking opportunities."
+      }
+    ],
+    "businessTip": "Show respect for Tuvalu’s small, tight-knit community and traditional values. Building relationships is key; appreciating local cuisine and culture will enhance rapport."
+  }
+]
+
+
+
+
+  
