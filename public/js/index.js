@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (activeContinent && activeContinent !== "") {
                 chunk = cities.filter(city => city.continent === activeContinent);
             }
-            chunk = chunk.slice(0, 50);
+            chunk = chunk.slice(0, 25);
     
             allClocks = [];
             document.getElementById("clocks-container").innerHTML = "";
