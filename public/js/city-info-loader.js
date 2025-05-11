@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loadingMessageElement = document.querySelector('#city-detail-container .loading-message'); // 로딩 메시지 요소 직접 참조
 
     const params = new URLSearchParams(window.location.search);
-    const cityNameFromUrl = params.get('name'); 
+    const cityNameFromUrl = params.get('city'); // URL 파라미터 이름을 'city'로 변경
 
     if (!cityNameFromUrl) {
         if (loadingMessageElement) {
