@@ -1,27 +1,22 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const cityDetailContainer = document.getElementById('city-detail-container');
-    const loadingMessage = document.querySelector('.loading-message');
+    const loadingMessageElement = document.querySelector('#city-detail-container .loading-message'); // 로딩 메시지 요소 직접 참조
 
-    if (!cityDetailContainer) {
-        console.error('City detail container not found.');
-        if (loadingMessage) loadingMessage.textContent = 'Error: Page layout components not found.';
-        return;
-    }
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const cityNameFromUrl = urlParams.get('city');
+    const params = new URLSearchParams(window.location.search);
+    const cityNameFromUrl = params.get('name'); 
 
     if (!cityNameFromUrl) {
-        cityDetailContainer.innerHTML = '<p>No city specified to display. Please specify a city in the URL using the format: ?city=CityName.</p>';
-        document.title = "Error | WorldClocks";
+        if (loadingMessageElement) {
+            loadingMessageElement.textContent = 'City name not provided in URL.';
+        } else if (cityDetailContainer) {
+            cityDetailContainer.innerHTML = '<p>City name not provided in URL.</p>';
+        }
+        document.title = "Error: City Not Specified | WorldClocks";
         return;
     }
 
     const decodedCityName = decodeURIComponent(cityNameFromUrl);
-    // 초기 document.title 변경은 유지하되, loadingMessage 내용은 좀 더 일반적인 것으로 두거나,
-    // 아예 이 시점에서는 변경하지 않고, 데이터 로드 성공/실패 시에만 업데이트하도록 합니다.
-    document.title = `Loading Information... | WorldClocks`; // 좀 더 일반적인 로딩 제목
-    if (loadingMessage) loadingMessage.textContent = `Loading information, please wait...`; // 일반적인 로딩 메시지
+    document.title = `Loading ${decodedCityName}... | WorldClocks`;
 
     const jsonFiles = [
         '/data/json/cities1.json',
@@ -31,102 +26,92 @@ document.addEventListener('DOMContentLoaded', async () => {
         '/data/json/cities5.json',
         '/data/json/cities6.json'
     ];
+
     let cityData = null;
-    let foundInFile = null;
 
     try {
         for (const filePath of jsonFiles) {
-            // console.log(`Attempting to fetch city data for "${decodedCityName}" from ${filePath}`); // 상세 로그는 개발 중에만 유용
             try {
                 const response = await fetch(filePath);
                 if (!response.ok) {
-                    // console.warn(`Failed to load ${filePath}. (Status: ${response.status}) - Will try next file.`);
-                    continue; 
+                    
+                    continue;
                 }
                 const citiesList = await response.json();
-                // console.log(`Successfully parsed ${filePath}, found ${citiesList.length} cities.`);
-                
                 cityData = citiesList.find(c => c.name?.trim().toLowerCase() === decodedCityName.toLowerCase());
-                
                 if (cityData) {
-                    foundInFile = filePath;
-                    console.log(`Found "${decodedCityName}" in ${foundInFile}`);
-                    break; 
+                    break;
                 }
             } catch (fileError) {
-                // console.error(`Error processing file ${filePath}:`, fileError.message, "- Will try next file.");
             }
         }
 
         if (cityData) {
-            console.log('Found city data:', cityData);
             document.title = `${cityData.name} - Detailed Information | WorldClocks`;
-            // 데이터를 성공적으로 찾은 후에 로딩 메시지를 숨기거나 내용을 업데이트합니다.
-            // 여기서는 cityDetailContainer.innerHTML 로 전체가 교체되므로, loadingMessage를 직접 제어할 필요는 없을 수 있습니다.
-            // if (loadingMessage) loadingMessage.style.display = 'none'; // 또는 loadingMessage.remove();
             const metaDescTag = document.querySelector('meta[name="description"]');
             if (metaDescTag) {
                 metaDescTag.setAttribute('content', `Find detailed information for ${cityData.name}, including timezone, standard business hours, major public holidays, business tips, and recommended attractions. Discover everything about ${cityData.name} on WorldClocks.`);
             }
 
-            const attractionsHtml = (cityData.topAttractionsForProfessionals || [])
-                .map(attr => `<li><strong>${attr.name || 'Not available'}</strong>: ${attr.description || 'Not available'} (Proximity: ${attr.proximityToBusinessDistrict || 'Not available'})</li>`)
-                .join('');
+            const heroTitle = document.querySelector('.city-info-hero h1');
+            if (heroTitle) heroTitle.textContent = cityData.name;
+            const heroSubtitle = document.querySelector('.city-info-hero p');
+            if (heroSubtitle) heroSubtitle.textContent = `Explore the wonders of ${cityData.name}.`;
 
-            const eventsHtml = (cityData.networkingEvents || [])
-                .map(event => `<li><strong>${event.name || 'Not available'}</strong> (${event.date || 'Date not available'}): ${event.description || 'Not available'}</li>`)
-                .join('');
-            
-            const holidaysHtml = (cityData.majorPublicHolidays || [])
-                .map(holiday => `<li>${holiday}</li>`).join('');
+            const flagUrl = cityData.flag ? `https://flagcdn.com/w40/${cityData.flag.toLowerCase()}.png` : '';
+            const countryName = typeof cityData.country === 'string' ? cityData.country : 'N/A';
+            const cityName = typeof cityData.name === 'string' ? cityData.name : 'N/A';
 
             cityDetailContainer.innerHTML = `
                 <article class="city-info-content">
                     <h1>
-                        <span class="city-name-group">
-                            <img id="city-detail-flag" src="https://flagcdn.com/w40/${cityData.flag?.toLowerCase()}.png" alt="${cityData.country || cityData.name} Flag">
-                            <span id="displayed-city-name">${cityData.name}</span>
-                        </span>
-                        <span id="city-header-datetime"></span>
+                        ${flagUrl ? `<img src="${flagUrl}" alt="${countryName} Flag">` : ''}
+                        <span>${cityName}</span>
                     </h1>
-                    <p><strong>Country:</strong> ${cityData.country || 'Not available'}</p>
+                    <p><strong>Country:</strong> ${countryName}</p>
                     <p><strong>Continent:</strong> ${cityData.continent || 'Not available'}</p>
-                    <p><strong>Timezone:</strong> ${cityData.timezone || 'Not available'} (${cityData.timeDifference || 'Not available'})</p>
+                    <p><strong>Population:</strong> ${cityData.population ? cityData.population.toLocaleString() : 'Not available'}</p>
+                    <p><strong>Area:</strong> ${cityData.area_sq_km ? cityData.area_sq_km.toLocaleString() + ' km²' : 'Not available'}</p>
                     
-                    <h2>General Information</h2>
-                    <p><strong>Standard Business Hours:</strong> ${cityData.standardBusinessHours || 'Not available'}</p>
-                    <p><strong>Recommended Meeting Times:</strong> ${cityData.recommendedMeetingTimes || 'Not available'}</p>
+                    <h2>Description</h2>
+                    <p>${cityData.description || 'No description available.'}</p>
                     
-                    <h2>Major Public Holidays</h2>
-                    <ul>${holidaysHtml || '<li>Public holiday information not available.</li>'}</ul>
+                    ${cityData.attractions && cityData.attractions.length > 0 ? `
+                        <h2>Main Attractions</h2>
+                        <ul>
+                            ${cityData.attractions.map(attraction => `<li>${attraction}</li>`).join('')}
+                        </ul>
+                    ` : ''}
                     
-                    <h2>Business Environment</h2>
-                    <p><strong>Business Hub Information:</strong> ${cityData.businessHub || 'Not available'}</p>
-                    <p><strong>Business Etiquette:</strong> ${cityData.businessEtiquette || 'Not available'}</p>
-                    <p><strong>Business Tips:</strong> ${cityData.businessTip || 'Not available'}</p>
-                    
-                    <h2>Local Life & Culture</h2>
-                    <p><strong>Lifestyle:</strong> ${cityData.localLifestyle || 'Not available'}</p>
-                    <p><strong>Cultural Highlights:</strong> ${cityData.localCulture || 'Not available'}</p>
-                    <p><strong>Signature Dish:</strong> ${cityData.signatureDish || 'Not available'}</p>
-                    
-                    <h2>Recommended Attractions for Professionals</h2>
-                    <ul>${attractionsHtml || '<li>Attraction information not available.</li>'}</ul>
-                    
-                    <h2>Networking Events</h2>
-                    <ul>${eventsHtml || '<li>Networking event information not available.</li>'}</ul>
+                    ${cityData.fun_facts && cityData.fun_facts.length > 0 ? `
+                        <h2>Fun Facts</h2>
+                        <ul>
+                            ${cityData.fun_facts.map(fact => `<li>${fact}</li>`).join('')}
+                        </ul>
+                    ` : ''}
+
+                    ${cityData.coordinates ? `
+                        <h2>Coordinates</h2>
+                        <p>Latitude: ${cityData.coordinates.lat}, Longitude: ${cityData.coordinates.lon}</p>
+                    ` : ''}
                 </article>
             `;
         } else {
-            console.warn(`Information for '${decodedCityName}' not found in any of the checked JSON files.`);
-            const errorMessage = `<p>Detailed information for '${decodedCityName}' could not be found. Please check the city name or try a different one.</p>`;
-            if (loadingMessage) loadingMessage.innerHTML = errorMessage; else cityDetailContainer.innerHTML = errorMessage;
+            const notFoundMessage = `<p>Detailed information for '${decodedCityName}' could not be found. Please check the city name or try a different one.</p>`;
+            if (loadingMessageElement && cityDetailContainer.contains(loadingMessageElement)) {
+                loadingMessageElement.innerHTML = notFoundMessage;
+            } else if (cityDetailContainer) {
+                cityDetailContainer.innerHTML = notFoundMessage;
+            }
             document.title = `Information Not Found | ${decodedCityName} | WorldClocks`;
         }
     } catch (error) {
-        console.error('Error loading city details:', error);
-        const errorMessage = `<p>An error occurred while loading information: ${error.message}. Please try again later.</p>`;
-        if (loadingMessage) loadingMessage.innerHTML = errorMessage; else cityDetailContainer.innerHTML = errorMessage;
+        const errorMessageText = `<p>An error occurred while loading information. Please try again later.</p>`;
+        if (loadingMessageElement && cityDetailContainer.contains(loadingMessageElement)) {
+            loadingMessageElement.innerHTML = errorMessageText;
+        } else if (cityDetailContainer) {
+            cityDetailContainer.innerHTML = errorMessageText;
+        }
         document.title = "Error Loading Data | WorldClocks";
     }
 });
