@@ -684,58 +684,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const handleClick = async (e) => {
                 e.preventDefault();
                 const cityName = e.currentTarget.dataset.city?.trim();
-                const cityInfoDiv = document.getElementById('city-info');
-                if (!cityInfoDiv) {
-                    console.error('city-info div not found');
+                // const cityInfoDiv = document.getElementById('city-info'); // 더 이상 사용하지 않음
+
+                if (!cityName) {
+                    console.error('City name not found in dataset for clicked clock element.');
                     return;
                 }
-                cityInfoDiv.innerHTML = '<p>Loading...</p><span class="close-btn">×</span>';
-                cityInfoDiv.classList.add('show');
-                try {
-                    for (const file of ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json']) {
-                        const response = await fetch(`/data/json/${file}`);
-                        if (!response.ok) continue;
-                        const cities = await response.json();
-                        const city = cities.find(c => c.name?.trim().toLowerCase() === cityName.toLowerCase());
-                        if (city) {
-                            const attractions = (city.topAttractionsForProfessionals || []).map(attr => `
-                                <li>${attr.name || 'N/A'}: ${attr.description || 'N/A'} (${attr.proximityToBusinessDistrict || 'N/A'})</li>
-                            `).join('');
-                            const events = (city.networkingEvents || []).map(event => `
-                                <li>${event.name || 'N/A'} (${event.date || 'N/A'}): ${event.description || 'N/A'}</li>
-                            `).join('');
-                            cityInfoDiv.innerHTML = `
-                                <h2>${city.name}</h2>
-                                <p><strong>Timezone:</strong> ${city.timezone || 'N/A'}</p>
-                                <p><strong>Time Difference:</strong> ${city.timeDifference || 'N/A'}</p>
-                                <p><strong>Business Hub:</strong> ${city.businessHub || 'N/A'}</p>
-                                <p><strong>Top Attractions for Professionals:</strong></p>
-                                <ul>${attractions || 'N/A'}</ul>
-                                <p><strong>Local Lifestyle:</strong> ${city.localLifestyle || 'N/A'}</p>
-                                <p><strong>Local Culture:</strong> ${city.localCulture || 'N/A'}</p>
-                                <p><strong>Signature Dish:</strong> ${city.signatureDish || 'N/A'}</p>
-                                <p><strong>Networking Events:</strong></p>
-                                <ul>${events || 'N/A'}</ul>
-                                <p><strong>Business Tip:</strong> ${city.businessTip || 'N/A'}</p>
-                                <span class="close-btn">×</span>
-                            `;
-                            cityInfoDiv.classList.add('show');
-                            cityInfoDiv.querySelector('.close-btn').addEventListener('click', () => {
-                                cityInfoDiv.classList.remove('show');
-                            });
-                            return;
-                        }
-                    }
-                    cityInfoDiv.innerHTML = '<p>City not found</p><span class="close-btn">×</span>';
-                    cityInfoDiv.querySelector('.close-btn').addEventListener('click', () => {
-                        cityInfoDiv.classList.remove('show');
-                    });
-                } catch (error) {
-                    cityInfoDiv.innerHTML = '<p>Error loading data</p><span class="close-btn">×</span>';
-                    cityInfoDiv.querySelector('.close-btn').addEventListener('click', () => {
-                        cityInfoDiv.classList.remove('show');
-                    });
-                }
+
+                // 새로운 city-info.html 페이지로 이동하면서 도시 이름을 파라미터로 전달
+                const cityInfoUrl = `city-info.html?city=${encodeURIComponent(cityName)}`;
+                console.log(`Redirecting to: ${cityInfoUrl}`);
+                window.location.href = cityInfoUrl;
             };
     
             bindClockEvents();
