@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (heroSubtitle) heroSubtitle.textContent = `Explore the wonders of ${cityData.name}.`;
 
             const flagUrl = cityData.flag ? `https://flagcdn.com/w40/${cityData.flag.toLowerCase()}.png` : '';
-            const countryName = typeof cityData.country === 'string' ? cityData.country : 'N/A';
-            const cityName = typeof cityData.name === 'string' ? cityData.name : 'N/A';
+            const countryName = typeof cityData.country === 'string' && cityData.country ? cityData.country : 'Data not available';
+            const cityName = typeof cityData.name === 'string' && cityData.name ? cityData.name : 'City Name Unavailable';
 
             cityDetailContainer.innerHTML = `
                 <article class="city-info-content">
@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <span>${cityName}</span>
                     </h1>
                     <p><strong>Country:</strong> ${countryName}</p>
-                    <p><strong>Continent:</strong> ${cityData.continent || 'Not available'}</p>
-                    <p><strong>Population:</strong> ${cityData.population ? cityData.population.toLocaleString() : 'Not available'}</p>
-                    <p><strong>Area:</strong> ${cityData.area_sq_km ? cityData.area_sq_km.toLocaleString() + ' km²' : 'Not available'}</p>
+                    <p><strong>Continent:</strong> ${cityData.continent || 'Data not available'}</p>
+                    <p><strong>Population:</strong> ${cityData.population ? cityData.population.toLocaleString() : 'Data not available'}</p>
+                    <p><strong>Area:</strong> ${cityData.area_sq_km ? cityData.area_sq_km.toLocaleString() + ' km²' : 'Data not available'}</p>
                     
                     <h2>Description</h2>
-                    <p>${cityData.description || 'No description available.'}</p>
+                    <p>${cityData.description || 'No specific description available for this city.'}</p>
                     
                     ${cityData.attractions && cityData.attractions.length > 0 ? `
                         <h2>Main Attractions</h2>
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ` : ''}
 
                     ${cityData.coordinates ? `
-                        <h2>Coordinates</h2>
+                        <h2>Geographical Coordinates</h2>
                         <p>Latitude: ${cityData.coordinates.lat}, Longitude: ${cityData.coordinates.lon}</p>
                     ` : ''}
                 </article>
