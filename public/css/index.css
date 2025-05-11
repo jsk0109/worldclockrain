@@ -272,7 +272,7 @@ nav { z-index: 1100; }
 
 .clock-container .remove-clock {
     position: absolute;
-    top: 5px;
+    top: 3px;
     right: 5px;
     background-color: rgba(0, 0, 0, 0.2); 
     border: none;
