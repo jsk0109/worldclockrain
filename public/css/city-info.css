@@ -10,8 +10,8 @@
 
 #city-detail-container {
     padding: 20px;
-    max-width: 900px; /* Adjust as needed */
-    margin: 30px auto 100px auto;
+    max-width: 800px; /* Adjust as needed */
+    margin: 40px auto 100px auto;
     background-color: var(--background-color, #fff); /* Use theme background or default white */
     color: var(--text-color, #333); /* Use theme text color or default dark grey */
     border-radius: 8px;
