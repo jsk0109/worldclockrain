@@ -342,21 +342,56 @@ document.addEventListener("DOMContentLoaded", () => {
         let customClocks = [];
 
         // Fetch weather data via Cloudflare Worker
+        // Function to toggle fullscreen
+        function toggleFullScreen(elem) {
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen().catch(err => {
+                        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                        alert(`Error attempting to enable full-screen mode: ${err.message}`);
+                    });
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Function to update fullscreen button icon
+        function updateFullscreenButtonIcon(clockElement) {
+            const iconElement = clockElement.querySelector('.fullscreen-btn i');
+
+            if (document.fullscreenElement === clockElement) {
+                // This clock is now fullscreen
+                if (iconElement) {
+                    iconElement.classList.remove('fa-expand');
+                    iconElement.classList.add('fa-compress');
+                    iconElement.parentElement.title = "Exit Fullscreen";
+                }
+                clockElement.classList.add('clock-fullscreen-active'); // Add active class
+            } else {
+                // This clock is NOT fullscreen (or nothing is fullscreen)
+                if (iconElement) {
+                    iconElement.classList.remove('fa-compress');
+                    iconElement.classList.add('fa-expand');
+                    iconElement.parentElement.title = "Toggle Fullscreen";
+                }
+                clockElement.classList.remove('clock-fullscreen-active'); // Remove active class
+            }
+        }
+
         async function fetchWeather(lat, lon, city) {
             const workerUrl = `https://weather-proxy.jsk0109.workers.dev/?lat=${lat}&lon=${lon}`;
             try {
-                const response = await fetch(workerUrl);
-                if (!response.ok) {
-                    let errorData;
-                    try {
-                        errorData = await response.json();
-                    } catch (e) {
-                        // If response is not JSON, create a generic error object
-                        errorData = { error: `Weather worker request failed with status: ${response.status}` };
-                    }
-                    console.error(`Worker request failed for ${city} with status: ${response.status}`, errorData);
-                    throw new Error(errorData.error || `Weather worker request failed: ${response.statusText}`);
-                }
+                const response = await fetch(workerUrl); // Removed redundant error handling already present below
+                if (!response.ok) throw new Error(`Weather worker request failed: ${response.status} ${response.statusText}`);
                 const data = await response.json();
                 // The worker returns: temperature_2m, relative_humidity_2m, weather_code
                 const weather = {
@@ -408,7 +443,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 removeBtn.className = "remove-clock";
                 removeBtn.textContent = "X";
                 removeBtn.setAttribute("aria-label", `Remove ${city.name} clock`);
+                container.appendChild(removeBtn); // Append remove button first
+
+                // Add fullscreen button for custom clocks
+                const fullscreenBtn = document.createElement("button");
+                fullscreenBtn.className = "fullscreen-btn";
+                fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>'; // Font Awesome icon
+                fullscreenBtn.setAttribute("aria-label", `Toggle fullscreen for ${city.name}`);
+                fullscreenBtn.title = "Toggle Fullscreen";
+
+                fullscreenBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // Prevent clock click event (for city info)
+                    toggleFullScreen(container);
+                });
                 container.appendChild(removeBtn);
+                container.appendChild(fullscreenBtn); // Append fullscreen button
             }
     
             container.append(cityName, time, weatherInfo);
@@ -901,4 +950,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
         });
+
+        // Listen for fullscreen changes to update button icons
+        document.addEventListener('fullscreenchange', () => {
+            const customClockContainers = document.querySelectorAll('#custom-clocks-container .clock-container');
+            customClockContainers.forEach(clockElement => {
+                // Call for all custom clocks to ensure class is correctly added/removed
+                updateFullscreenButtonIcon(clockElement);
+            });
+            // If you later add this to main clocks:
+            // const mainClockContainers = document.querySelectorAll('#clocks-container .clock-container');
+            // mainClockContainers.forEach(clockElement => {
+            //     if (clockElement.querySelector('.fullscreen-btn')) {
+            //         updateFullscreenButtonIcon(clockElement);
+            //     }
+            // });
+        });
+        ['webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(eventType => 
+            document.addEventListener(eventType, () => document.dispatchEvent(new Event('fullscreenchange')), false));
     });

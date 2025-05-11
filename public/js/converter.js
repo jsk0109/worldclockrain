@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Converter.js loaded');
 
-    // DOM 요소
     const citySearch = document.getElementById('city-search');
     const suggestions = document.getElementById('suggestions');
     const addCityBtn = document.getElementById('add-city-btn');
@@ -11,17 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const meetingSuggestion = document.getElementById('meeting-suggestion');
     const notification = document.getElementById('notification');
 
-    // 요소 확인
     if (!citySearch || !suggestions || !addCityBtn || !selectedCities || !timeComparison || !suggestMeeting || !meetingSuggestion || !notification) {
         console.error('One or more DOM elements not found');
         return;
     }
     console.log('All DOM elements found');
 
-    // localStorage에서 cities 로드
+    
     let cities = JSON.parse(localStorage.getItem('selectedCities')) || [];
-    // let weatherCache = JSON.parse(localStorage.getItem('weatherCache')) || {}; // Worker가 캐싱을 담당하므로 제거
-    console.log('Loaded cities from localStorage:', cities); // 디버깅용
+    
+    console.log('Loaded cities from localStorage:', cities); 
     const maxCities = 6;
 
     const cityData = [
@@ -352,21 +350,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Bridgetown", lat: 13.0969, lon: -59.6145, offset: -4, flag: "bb", continent: "N America" }
       ];
 
-    // 알림 표시
     function showNotification(message) {
         notification.textContent = message;
         notification.classList.add('show');
         setTimeout(() => notification.classList.remove('show'), 3000);
     }
 
-    // 검색창 초기화
     function clearSearch() {
         citySearch.value = '';
         suggestions.innerHTML = '';
         suggestions.style.display = 'none';
     }
 
-    // 시간 계산
     function getCityTime(city) {
         const now = new Date();
         const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
@@ -374,7 +369,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return cityTime.toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit' });
     }
 
-    // 시간 및 날씨 업데이트
     function updateTimeComparison() {
         timeComparison.innerHTML = cities.length === 0
             ? '<p class="placeholder">Select cities to compare times and weather.</p>'
@@ -404,7 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
             timeComparison.appendChild(div);
         });
 
-        // 선택된 도시 태그 업데이트
         selectedCities.innerHTML = '';
         cities.forEach(city => {
             const tag = document.createElement('div');
@@ -427,7 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fetch weather data via Cloudflare Worker
     async function fetchWeather(city) {
         const workerUrl = `https://weather-proxy.jsk0109.workers.dev/?lat=${city.lat}&lon=${city.lon}`;
         try {
@@ -444,8 +436,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(errorData.error || `Weather worker request failed: ${response.statusText}`);
             }
             const data = await response.json();
-            // Worker returns: temperature_2m, relative_humidity_2m, weather_code
-            // converter.js 현재는 temp와 humidity만 사용합니다.
             const weatherData = {
                 temp: Math.round(data.temperature_2m),
                 humidity: data.relative_humidity_2m
@@ -453,13 +443,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return weatherData;
         } catch (error) {
             console.error(`Weather fetch error for ${city.name} via Worker:`, error);
-            // 에러를 다시 던져서 호출하는 쪽(updateTimeComparison)의 .catch에서 처리하도록 합니다.
-            // 이렇게 하면 "Weather unavailable" 메시지가 표시됩니다.
             throw error;
         }
     }
 
-    // 도시 추가
     function addCity(city) {
         if (cities.length >= maxCities) {
             showNotification(`Maximum ${maxCities} cities allowed.`);
@@ -504,7 +491,6 @@ document.addEventListener('DOMContentLoaded', () => {
         suggestions.style.display = 'block';
     });
 
-    // 엔터 키 처리
     citySearch.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
             console.log('Enter key pressed');
@@ -515,7 +501,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Add City 버튼 처리
     addCityBtn.addEventListener('click', () => {
         console.log('Add City clicked');
         const query = citySearch.value.toLowerCase().trim();
@@ -524,7 +509,6 @@ document.addEventListener('DOMContentLoaded', () => {
         else showNotification('Please select a valid city.');
     });
 
-    // 미팅 시간 제안
     suggestMeeting.addEventListener('click', () => {
         console.log('Suggest Meeting clicked');
         if (cities.length < 2) return;
@@ -586,14 +570,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     });
 
-    // 초기 설정
     suggestMeeting.disabled = cities.length < 2;
     updateTimeComparison();
     setInterval(updateTimeComparison, 900000);
 });
 
-// converter.js 끝에 추가
-const cityInfoDiv = document.getElementById('city-info'); // 이미 있는 div
+const cityInfoDiv = document.getElementById('city-info'); 
 const jsonFiles = ['cities1.json', 'cities2.json', 'cities3.json', 'cities4.json', 'cities5.json'];
 
 document.querySelectorAll('.clock').forEach(clock => {
@@ -616,7 +598,7 @@ document.querySelectorAll('.clock').forEach(clock => {
                     return;
                 }
             }
-            cityInfoDiv.innerHTML = '<p>City not found</p>'; // 210개 중 없는 24개
+            cityInfoDiv.innerHTML = '<p>City not found</p>';
         } catch (error) {
             cityInfoDiv.innerHTML = '<p>Error loading data</p>';
             console.error('Fetch error:', error);

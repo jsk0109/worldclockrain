@@ -1,4 +1,4 @@
-/* Blog Page Content */
+
 .blog-content {
     max-width: 800px;
     margin: 40px auto;
@@ -73,7 +73,7 @@
     color: #01579B;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .blog-content {
         margin: 20px;

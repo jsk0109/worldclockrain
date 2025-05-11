@@ -1,6 +1,6 @@
 
 
-/* Converter Page Specific Styles */
+
 .converter-content {
     max-width: 800px;
     margin: 40px auto;
@@ -10,7 +10,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
     position: relative;
-    min-height: calc(100vh - 150px); /* hero-section과 nav 고려 */
+    min-height: calc(100vh - 150px); 
 }
 
 .converter-content h2 {
@@ -265,7 +265,7 @@
     opacity: 1;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .converter-content {
         margin: 20px;
@@ -334,13 +334,13 @@
     }
 
     .converter-content {
-        min-height: calc(100vh - 150px); /* hero-section과 nav 고려 */
+        min-height: calc(100vh - 150px); 
         padding: 20px;
 
 }
 }
 .instruction p {
-    font-size: 18px; /* 첫 번째 <p> 크기 키움 */
+    font-size: 18px; 
     color: #555;
     margin-bottom: 10px;
 }

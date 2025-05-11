@@ -1,4 +1,4 @@
-/* Guides Page Content */
+
 .guides-content {
     max-width: 800px;
     margin: 40px auto;
@@ -94,7 +94,7 @@
     margin: 0;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .guides-content {
         margin: 20px;
