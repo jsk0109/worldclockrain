@@ -1,9 +1,17 @@
 /* Styles for city-info.html page */
 
+/* Optional: Style for the minimal hero section on city-info page for spacing */
+.city-info-hero {
+    padding-top: 20px; /* Adjust as needed for space below navbar */
+    /* background-color: transparent; */ /* Or a very subtle background if desired */
+    min-height: 5vh; /* Ensure some space even if empty */
+    text-align: center; /* If you add a title */
+}
+
 #city-detail-container {
     padding: 20px;
     max-width: 900px; /* Adjust as needed */
-    margin: 20px auto;
+    margin: 30px auto 100px auto;
     background-color: var(--background-color, #fff); /* Use theme background or default white */
     color: var(--text-color, #333); /* Use theme text color or default dark grey */
     border-radius: 8px;
@@ -79,7 +87,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     #city-detail-container {
-        margin: 10px;
+        margin: 20px 10px 80px 10px;
         padding: 15px;
     }
 
