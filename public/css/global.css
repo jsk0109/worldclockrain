@@ -30,7 +30,8 @@ nav ul {
     flex-wrap: nowrap;
     justify-content: center;
     background-color: transparent;
-    margin: 0;
+        margin: 0;
+        height: 100%; /* Fill nav height */
 }
 
 nav ul li {
@@ -39,12 +40,16 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
+        display: flex; /* Use flex for centering */
+        align-items: center; /* Vertically center content */
+        justify-content: center; /* Horizontally center content */
     padding: 10px;
     color: white;
     text-decoration: none;
     font-size: 16px;
     transition: background 0.5s ease, color 0.5s ease;
+        height: 100%; /* Fill li height */
+        box-sizing: border-box; /* Padding and border included in height/width */
 }
 
 nav ul li a:hover {
@@ -87,7 +92,7 @@ nav ul li a.active {
     background: linear-gradient(135deg, #ff6f61, #ffeb3b, #4caf50, #2196f3, #9c27b0);
     padding: 30px 20px;
     text-align: center;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px; /* 기존 20px에서 10px로 변경 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 34px;
     display: flex;
@@ -310,6 +315,10 @@ nav a:focus, .hamburger:focus {
     background-color: #C9E4F2;
 }
 
+.light-pink-theme {
+    background-color: #FFD1DC;
+}
+
 
 #city-info {
     background-color: rgba(255, 255, 255, 0.9);
@@ -327,6 +336,10 @@ nav a:focus, .hamburger:focus {
 
 .pastel-theme #city-info {
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.light-pink-theme #city-info {
+    background-color: rgba(255, 255, 255, 0.9); /* 연핑크 테마 시 city-info 배경 */
 }
 
 

@@ -78,8 +78,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             cityDetailContainer.innerHTML = `
                 <article class="city-info-content">
                     <h1>
-                        <img src="https://flagcdn.com/w40/${cityData.flag?.toLowerCase()}.png" alt="${cityData.country} Flag" style="margin-right: 10px; vertical-align: middle;">
-                        ${cityData.name}
+                        <span class="city-name-group">
+                            <img id="city-detail-flag" src="https://flagcdn.com/w40/${cityData.flag?.toLowerCase()}.png" alt="${cityData.country || cityData.name} Flag">
+                            <span id="displayed-city-name">${cityData.name}</span>
+                        </span>
+                        <span id="city-header-datetime"></span>
                     </h1>
                     <p><strong>Country:</strong> ${cityData.country || 'Not available'}</p>
                     <p><strong>Continent:</strong> ${cityData.continent || 'Not available'}</p>

@@ -152,6 +152,7 @@ window.onload = () => {
         { name: 'light', icon: 'fa-sun' },
         { name: 'dark', icon: 'fa-moon' },
         { name: 'pastel', icon: 'fa-cloud' },
+        { name: 'light-pink', icon: 'fa-heart' } // 연핑크 테마 추가 (아이콘은 예시입니다)
     ];
     let currentThemeIndex = 0;
 
@@ -169,7 +170,7 @@ window.onload = () => {
             const savedThemeIndex = themes.findIndex(theme => theme.name === savedTheme);
             if (savedThemeIndex !== -1) {
                 currentThemeIndex = savedThemeIndex;
-                body.className = themes[currentThemeIndex].name + '-theme';
+            body.className = themes[currentThemeIndex].name + '-theme'; // CSS 클래스명은 'light-pink-theme'
                 themeIcon.className = 'fas ' + themes[currentThemeIndex].icon;
             }
         }
@@ -181,7 +182,7 @@ window.onload = () => {
             currentThemeIndex = (currentThemeIndex + 1) % themes.length;
             const newTheme = themes[currentThemeIndex];
 
-            body.className = newTheme.name + '-theme';
+            body.className = newTheme.name + '-theme'; // CSS 클래스명은 'light-pink-theme'
             themeIcon.className = 'fas ' + newTheme.icon;
 
             localStorage.setItem('theme', newTheme.name);

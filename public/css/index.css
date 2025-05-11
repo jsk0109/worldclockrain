@@ -295,7 +295,7 @@ nav { z-index: 1100; }
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px auto;
+    margin: 60px auto 110px; /* Top 60px, Left/Right auto, Bottom 110px */
     width: 210px;
     height: 50px;
     font-size: 17px;
@@ -332,17 +332,17 @@ nav { z-index: 1100; }
 
 
 #custom-clocks-section {
-    background: #e8c4d1;
-    border: none;
-    box-shadow: none;
-    padding: 20px;
+    background-color: #dde2e6; /* 기존보다 약간 더 진한 회색으로 변경 */
+    border: 1px solid #dee2e6; /* 은은한 테두리 추가 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
+    padding: 30px; /* 내부 여백 확대 */
     margin: 15px auto;
     width: fit-content; 
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 12px; /* 모서리 둥글게 처리 */
 }
 
 #custom-clocks-container {
@@ -362,7 +362,7 @@ nav { z-index: 1100; }
 
 #custom-clocks-section h2 {
     font-size: 25px;
-    color: #333;
+    color: #343a40; /* 제목 색상 변경 (더 진한 회색) */
     border-bottom: none;
     padding-bottom: 10px;
     margin: 0 0 15px 0;
@@ -371,7 +371,7 @@ nav { z-index: 1100; }
 
 #custom-clocks-section p {
     font-size: 16px;
-    color: #666;
+    color: #495057; /* 문단 색상 변경 (중간 회색) */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -418,8 +418,9 @@ nav { z-index: 1100; }
 }
 
 #custom-city-search:focus {
-    outline: 2px solid #ff6f61;
-    outline-offset: 2px;
+    border-color: #007bff; /* 포커스 시 테두리 색상 변경 */
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); /* 포커스 시 그림자 효과 */
+    outline: none; /* 기본 아웃라인 제거 */
 }
 
 #custom-suggestions {
@@ -460,43 +461,47 @@ nav { z-index: 1100; }
 #add-custom-clock {
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff6f61;
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: #007bff; /* 파란색 계열로 변경 */
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    font-weight: 500;
+    border: 1px solid #007bff;
 }
 
 #add-custom-clock:hover {
-    background-color: #e65a50;
+    background-color: #0056b3; /* 호버 시 더 진한 파란색 */
+    border-color: #0056b3;
     transform: scale(1.05);
 }
 
 #add-custom-clock:focus {
-    outline: 2px solid #ff6f61;
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5); /* 포커스 시 그림자 효과 */
 }
 
 #clear-custom-clocks {
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #6b7280;
-    color: #fff;
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: transparent; /* 배경 투명 */
+    color: #dc3545; /* 빨간색 텍스트 */
+    border: 1px solid #dc3545; /* 빨간색 테두리 */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    font-weight: 500;
 }
 
 #clear-custom-clocks:hover {
-    background-color: #4b5563;
+    background-color: #dc3545; /* 호버 시 빨간색 배경 */
+    color: #fff; /* 호버 시 흰색 텍스트 */
     transform: scale(1.05);
 }
 
 #clear-custom-clocks:focus {
-    outline: 2px solid #6b7280;
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5); /* 포커스 시 그림자 효과 */
 }
 
 #custom-clocks-container {
@@ -572,3 +577,42 @@ nav { z-index: 1100; }
         min-height: 70px;
     }
 }
+
+/* Custom Clocks ("나만의 시계") Button Styling Overrides */
+#custom-clocks-container .clock-container .fullscreen-btn {
+    background-color: transparent;
+    left: 3px; /* 기존 5px(상속)에서 왼쪽으로 2px 더 이동 */
+    color: #000000;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* 부드러운 전환 효과 추가 */
+}
+
+#custom-clocks-container .clock-container .fullscreen-btn i {
+    color: #000000;
+    transition: color 0.2s ease-in-out; /* 아이콘 색상 전환 효과 */
+}
+
+#custom-clocks-container .clock-container .remove-clock {
+    background-color: transparent;
+    color: #000000;
+    right: 1px; /* 기존 3px에서 오른쪽으로 2px 더 이동 (가장자리에 더 가깝게) */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* 부드러운 전환 효과 추가 */
+}
+
+#custom-clocks-container .clock-container .fullscreen-btn:hover,
+#custom-clocks-container .clock-container .remove-clock:hover {
+    color: #FF0000; /* 호버 시 빨간색으로 변경 */
+    transform: scale(1.2); /* 호버 시 20% 확대 */
+}
+
+#custom-clocks-container .clock-container .fullscreen-btn:hover i {
+    color: #FF0000; /* 전체 화면 아이콘 내부 i 태그도 빨간색으로 변경 */
+}
+
+/* "나만의 시계" 내부 도시 이름 크기 조정 */
+#custom-clocks-container .clock-container h2 {
+    font-size: 20px; /* 기존 24px에서 크기 축소 */
+}
+
+.clock-container h2 img {
+    position: relative; /* 위치 조정을 위해 position 속성 추가 */
+    top: -2px; /* 위로 2px 이동 */

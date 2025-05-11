@@ -20,7 +20,20 @@
             <p>Dive into the details of this vibrant location.</p>
         </section>
         <section id="city-detail-container">
-            <p class="loading-message">Loading city information...</p>
+            
+            <div class="city-info-content">
+                <h1>
+    <span class="city-name-group">  
+        <img id="city-detail-flag" src="https://flagcdn.com/w40/${cityData.flag?.toLowerCase()}.png" alt="${cityData.country || cityData.name} Flag"> <!-- ID 추가 및 인라인 스타일 제거 (CSS에서 처리) -->
+        <span id="displayed-city-name">${cityData.name}</span> 
+    </span>
+    <span id="city-header-datetime"></span> 
+</h1>
+
+                <div id="city-details-body">
+                    <p class="loading-message">Loading city details...</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -30,5 +43,6 @@
 
     <script src="/js/global.js"></script>
     <script src="/js/city-info-loader.js"></script>
+    <script src="js/city-datetime.js"></script>
 </body>
 </html>
