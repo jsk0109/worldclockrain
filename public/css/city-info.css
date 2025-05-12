@@ -111,8 +111,7 @@
         flex-direction: row;
         align-items: center;
     }
-    .city-info-content h1 img {
-    }
+
     .city-info-content ul li {
         font-size: 0.9em;
         padding: 8px 12px;
