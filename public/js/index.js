@@ -785,6 +785,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             suggestion.addEventListener("click", () => {
                                 if (window.innerWidth <= 480) {
                                     addCustomClock(city);
+                                    suggestions.style.display = "none";
                                 } else {
                                     searchInput.value = city.name;
                                     suggestions.style.display = "none";
