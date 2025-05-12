@@ -70,7 +70,7 @@ async function handleRequest(event) {
     });
   }
 
-  const cacheKey = new Request(url.toString(), request);
+  const cacheKey = request.url;
   const cache = caches.default;
   const CACHE_DURATION_SECONDS = 3 * 60 * 60;
 
@@ -81,6 +81,7 @@ async function handleRequest(event) {
     Object.entries(CORS_HEADERS).forEach(([key, value]) => {
       newHeaders.set(key, value);
     });
+    newHeaders.set('Cache-Control', `public, max-age=${CACHE_DURATION_SECONDS}, s-maxage=${CACHE_DURATION_SECONDS}`);
 
     response = new Response(response.body, {
         status: response.status,
@@ -97,7 +98,7 @@ async function handleRequest(event) {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': `public, s-maxage=${CACHE_DURATION_SECONDS}`,
+        'Cache-Control': `public, max-age=${CACHE_DURATION_SECONDS}, s-maxage=${CACHE_DURATION_SECONDS}`,
         ...CORS_HEADERS
       }
     });
