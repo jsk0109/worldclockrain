@@ -31,8 +31,6 @@
   <changefreq>yearly</changefreq>
   <priority>0.30</priority>
 </url>
-
-<!-- Dynamically Generated City Detail Pages -->
 <url>
   <loc>https://worldclocks.it.com/city-info.html?city=New%20York</loc>
   <lastmod>2025-05-11T15:44:00+09:00</lastmod>
